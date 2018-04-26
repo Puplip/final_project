@@ -1,5 +1,5 @@
 Analysis & Synthesis report for final_project_top
-Wed Apr 25 22:19:00 2018
+Thu Apr 26 01:38:18 2018
 Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
 
 
@@ -35,11 +35,20 @@ Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
  27. Port Connectivity Checks: "collision_detection:cd|dot_product_scale:cc"
  28. Port Connectivity Checks: "collision_detection:cd|dot_product_scale:vdxc"
  29. Port Connectivity Checks: "collision_detection:cd"
- 30. Port Connectivity Checks: "sphere_reg:firstsph"
- 31. Post-Synthesis Netlist Statistics for Top Partition
- 32. Elapsed Time Per Partition
- 33. Analysis & Synthesis Messages
- 34. Analysis & Synthesis Suppressed Messages
+ 30. Port Connectivity Checks: "sphere_reg_4:sph4|rand_lut:rl|random_0:r0"
+ 31. Port Connectivity Checks: "sphere_reg_4:sph4|add_vector:pva3"
+ 32. Port Connectivity Checks: "sphere_reg_4:sph4|add_vector:pva2"
+ 33. Port Connectivity Checks: "sphere_reg_4:sph4|add_vector:pva1"
+ 34. Port Connectivity Checks: "sphere_reg_4:sph4|add_vector:pva0"
+ 35. Port Connectivity Checks: "sphere_reg_4:sph4|add_vector:va3"
+ 36. Port Connectivity Checks: "sphere_reg_4:sph4|add_vector:va2"
+ 37. Port Connectivity Checks: "sphere_reg_4:sph4|add_vector:va1"
+ 38. Port Connectivity Checks: "sphere_reg_4:sph4|add_vector:va0"
+ 39. Port Connectivity Checks: "sphere_reg_4:sph4"
+ 40. Post-Synthesis Netlist Statistics for Top Partition
+ 41. Elapsed Time Per Partition
+ 42. Analysis & Synthesis Messages
+ 43. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -66,15 +75,15 @@ agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Apr 25 22:19:00 2018      ;
+; Analysis & Synthesis Status        ; Successful - Thu Apr 26 01:38:18 2018      ;
 ; Quartus II 64-Bit Version          ; 15.0.0 Build 145 04/22/2015 SJ Web Edition ;
 ; Revision Name                      ; final_project_top                          ;
 ; Top-level Entity Name              ; final_top_level                            ;
 ; Family                             ; Cyclone IV E                               ;
-; Total logic elements               ; 1,777                                      ;
-;     Total combinational functions  ; 1,776                                      ;
-;     Dedicated logic registers      ; 93                                         ;
-; Total registers                    ; 93                                         ;
+; Total logic elements               ; 2,525                                      ;
+;     Total combinational functions  ; 2,524                                      ;
+;     Dedicated logic registers      ; 169                                        ;
+; Total registers                    ; 169                                        ;
 ; Total pins                         ; 34                                         ;
 ; Total virtual pins                 ; 0                                          ;
 ; Total memory bits                  ; 1,843,200                                  ;
@@ -231,20 +240,20 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimated Total logic elements              ; 1,777          ;
+; Estimated Total logic elements              ; 2,525          ;
 ;                                             ;                ;
-; Total combinational functions               ; 1776           ;
+; Total combinational functions               ; 2524           ;
 ; Logic element usage by number of LUT inputs ;                ;
-;     -- 4 input functions                    ; 700            ;
-;     -- 3 input functions                    ; 806            ;
-;     -- <=2 input functions                  ; 270            ;
+;     -- 4 input functions                    ; 1374           ;
+;     -- 3 input functions                    ; 864            ;
+;     -- <=2 input functions                  ; 286            ;
 ;                                             ;                ;
 ; Logic elements by mode                      ;                ;
-;     -- normal mode                          ; 853            ;
-;     -- arithmetic mode                      ; 923            ;
+;     -- normal mode                          ; 1538           ;
+;     -- arithmetic mode                      ; 986            ;
 ;                                             ;                ;
-; Total registers                             ; 93             ;
-;     -- Dedicated logic registers            ; 93             ;
+; Total registers                             ; 169            ;
+;     -- Dedicated logic registers            ; 169            ;
 ;     -- I/O registers                        ; 0              ;
 ;                                             ;                ;
 ; I/O pins                                    ; 34             ;
@@ -256,9 +265,9 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;     -- PLLs                                 ; 1              ;
 ;                                             ;                ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
-; Maximum fan-out                             ; 279            ;
-; Total fan-out                               ; 13195          ;
-; Average fan-out                             ; 5.91           ;
+; Maximum fan-out                             ; 355            ;
+; Total fan-out                               ; 16395          ;
+; Average fan-out                             ; 5.36           ;
 +---------------------------------------------+----------------+
 
 
@@ -267,7 +276,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                               ; Library Name ;
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------+--------------+
-; |final_top_level                          ; 1776 (1)          ; 93 (2)       ; 1843200     ; 68           ; 0       ; 34        ; 34   ; 0            ; |final_top_level                                                                                                  ; work         ;
+; |final_top_level                          ; 2524 (1)          ; 169 (2)      ; 1843200     ; 68           ; 0       ; 34        ; 34   ; 0            ; |final_top_level                                                                                                  ; work         ;
 ;    |VGA_controller:vga|                   ; 60 (60)           ; 23 (23)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|VGA_controller:vga                                                                               ; work         ;
 ;    |collision_detection:cd|               ; 748 (70)          ; 0 (0)        ; 0           ; 60           ; 0       ; 30        ; 0    ; 0            ; |final_top_level|collision_detection:cd                                                                           ; work         ;
 ;       |dot_product_scale:vdxc|            ; 318 (0)           ; 0 (0)        ; 0           ; 30           ; 0       ; 15        ; 0    ; 0            ; |final_top_level|collision_detection:cd|dot_product_scale:vdxc                                                    ; work         ;
@@ -277,22 +286,41 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;       |mult_real:vsqrmod|                 ; 360 (0)           ; 0 (0)        ; 0           ; 30           ; 0       ; 15        ; 0    ; 0            ; |final_top_level|collision_detection:cd|mult_real:vsqrmod                                                         ; work         ;
 ;          |lpm_mult:Mult0|                 ; 360 (0)           ; 0 (0)        ; 0           ; 30           ; 0       ; 15        ; 0    ; 0            ; |final_top_level|collision_detection:cd|mult_real:vsqrmod|lpm_mult:Mult0                                          ; work         ;
 ;             |mult_v7t:auto_generated|     ; 360 (360)         ; 0 (0)        ; 0           ; 30           ; 0       ; 15        ; 0    ; 0            ; |final_top_level|collision_detection:cd|mult_real:vsqrmod|lpm_mult:Mult0|mult_v7t:auto_generated                  ; work         ;
-;    |frame_buffer:fb|                      ; 280 (44)          ; 6 (0)        ; 1843200     ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|frame_buffer:fb                                                                                  ; work         ;
-;       |altsyncram:buffer_rtl_0|           ; 236 (0)           ; 6 (0)        ; 1843200     ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|frame_buffer:fb|altsyncram:buffer_rtl_0                                                          ; work         ;
-;          |altsyncram_89h1:auto_generated| ; 236 (0)           ; 6 (6)        ; 1843200     ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|frame_buffer:fb|altsyncram:buffer_rtl_0|altsyncram_89h1:auto_generated                           ; work         ;
+;    |color_mapper:colmap|                  ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|color_mapper:colmap                                                                              ; work         ;
+;    |frame_buffer:fb|                      ; 281 (44)          ; 6 (0)        ; 1843200     ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|frame_buffer:fb                                                                                  ; work         ;
+;       |altsyncram:buffer_rtl_0|           ; 237 (0)           ; 6 (0)        ; 1843200     ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|frame_buffer:fb|altsyncram:buffer_rtl_0                                                          ; work         ;
+;          |altsyncram_89h1:auto_generated| ; 237 (0)           ; 6 (6)        ; 1843200     ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|frame_buffer:fb|altsyncram:buffer_rtl_0|altsyncram_89h1:auto_generated                           ; work         ;
 ;             |decode_hua:decode2|          ; 47 (47)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|frame_buffer:fb|altsyncram:buffer_rtl_0|altsyncram_89h1:auto_generated|decode_hua:decode2        ; work         ;
-;             |mux_vob:mux3|                ; 189 (189)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|frame_buffer:fb|altsyncram:buffer_rtl_0|altsyncram_89h1:auto_generated|mux_vob:mux3              ; work         ;
-;    |increment_write:iw|                   ; 44 (44)           ; 20 (20)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|increment_write:iw                                                                               ; work         ;
+;             |mux_vob:mux3|                ; 190 (190)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|frame_buffer:fb|altsyncram:buffer_rtl_0|altsyncram_89h1:auto_generated|mux_vob:mux3              ; work         ;
+;    |increment_write:iw|                   ; 41 (41)           ; 20 (20)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|increment_write:iw                                                                               ; work         ;
 ;    |ray_lut:rl|                           ; 434 (0)           ; 30 (0)       ; 0           ; 8            ; 0       ; 4         ; 0    ; 0            ; |final_top_level|ray_lut:rl                                                                                       ; work         ;
 ;       |mult_real:m0|                      ; 100 (0)           ; 0 (0)        ; 0           ; 8            ; 0       ; 4         ; 0    ; 0            ; |final_top_level|ray_lut:rl|mult_real:m0                                                                          ; work         ;
 ;          |lpm_mult:Mult0|                 ; 100 (0)           ; 0 (0)        ; 0           ; 8            ; 0       ; 4         ; 0    ; 0            ; |final_top_level|ray_lut:rl|mult_real:m0|lpm_mult:Mult0                                                           ; work         ;
 ;             |mult_c6t:auto_generated|     ; 100 (100)         ; 0 (0)        ; 0           ; 8            ; 0       ; 4         ; 0    ; 0            ; |final_top_level|ray_lut:rl|mult_real:m0|lpm_mult:Mult0|mult_c6t:auto_generated                                   ; work         ;
 ;       |sin_lut:s0|                        ; 165 (165)         ; 15 (15)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|ray_lut:rl|sin_lut:s0                                                                            ; work         ;
 ;       |sin_lut:s1|                        ; 169 (169)         ; 15 (15)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|ray_lut:rl|sin_lut:s1                                                                            ; work         ;
+;    |sphere_reg_4:sph4|                    ; 745 (18)          ; 76 (12)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|sphere_reg_4:sph4                                                                                ; work         ;
+;       |rand_lut:rl|                       ; 727 (663)         ; 64 (64)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|sphere_reg_4:sph4|rand_lut:rl                                                                    ; work         ;
+;          |random_0:r0|                    ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|sphere_reg_4:sph4|rand_lut:rl|random_0:r0                                                        ; work         ;
+;          |random_10:r10|                  ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|sphere_reg_4:sph4|rand_lut:rl|random_10:r10                                                      ; work         ;
+;          |random_11:r11|                  ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|sphere_reg_4:sph4|rand_lut:rl|random_11:r11                                                      ; work         ;
+;          |random_12:r12|                  ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|sphere_reg_4:sph4|rand_lut:rl|random_12:r12                                                      ; work         ;
+;          |random_13:r13|                  ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|sphere_reg_4:sph4|rand_lut:rl|random_13:r13                                                      ; work         ;
+;          |random_14:r14|                  ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|sphere_reg_4:sph4|rand_lut:rl|random_14:r14                                                      ; work         ;
+;          |random_15:r15|                  ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|sphere_reg_4:sph4|rand_lut:rl|random_15:r15                                                      ; work         ;
+;          |random_1:r1|                    ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|sphere_reg_4:sph4|rand_lut:rl|random_1:r1                                                        ; work         ;
+;          |random_2:r2|                    ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|sphere_reg_4:sph4|rand_lut:rl|random_2:r2                                                        ; work         ;
+;          |random_3:r3|                    ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|sphere_reg_4:sph4|rand_lut:rl|random_3:r3                                                        ; work         ;
+;          |random_4:r4|                    ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|sphere_reg_4:sph4|rand_lut:rl|random_4:r4                                                        ; work         ;
+;          |random_5:r5|                    ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|sphere_reg_4:sph4|rand_lut:rl|random_5:r5                                                        ; work         ;
+;          |random_6:r6|                    ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|sphere_reg_4:sph4|rand_lut:rl|random_6:r6                                                        ; work         ;
+;          |random_7:r7|                    ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|sphere_reg_4:sph4|rand_lut:rl|random_7:r7                                                        ; work         ;
+;          |random_8:r8|                    ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|sphere_reg_4:sph4|rand_lut:rl|random_8:r8                                                        ; work         ;
+;          |random_9:r9|                    ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|sphere_reg_4:sph4|rand_lut:rl|random_9:r9                                                        ; work         ;
 ;    |vga_clk:vga_clk_instance|             ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|vga_clk:vga_clk_instance                                                                         ; work         ;
 ;       |altpll:altpll_component|           ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|vga_clk:vga_clk_instance|altpll:altpll_component                                                 ; work         ;
 ;          |vga_clk_altpll1:auto_generated| ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|vga_clk:vga_clk_instance|altpll:altpll_component|vga_clk_altpll1:auto_generated                  ; work         ;
-;    |x_ang_lut:xang|                       ; 108 (108)         ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|x_ang_lut:xang                                                                                   ; work         ;
+;    |x_ang_lut:xang|                       ; 107 (107)         ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|x_ang_lut:xang                                                                                   ; work         ;
 ;    |y_ang_lut:yang|                       ; 101 (101)         ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|y_ang_lut:yang                                                                                   ; work         ;
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
@@ -336,238 +364,1020 @@ Encoding Type:  One-Hot
 +---------------+------------------------+
 
 
-+----------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                               ;
-+-----------------------------------------+----------------------------------------+
-; Register name                           ; Reason for Removal                     ;
-+-----------------------------------------+----------------------------------------+
-; x_ang_lut:xang|out[6..15]               ; Stuck at GND due to stuck port data_in ;
-; y_ang_lut:yang|out[6..15]               ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentcol[0][6]    ; Stuck at VCC due to stuck port data_in ;
-; sphere_reg:firstsph|currentcol[0][7]    ; Stuck at VCC due to stuck port data_in ;
-; sphere_reg:firstsph|currentcol[1][6]    ; Stuck at VCC due to stuck port data_in ;
-; sphere_reg:firstsph|currentcol[1][7]    ; Stuck at VCC due to stuck port data_in ;
-; sphere_reg:firstsph|currentcol[2][6]    ; Stuck at VCC due to stuck port data_in ;
-; sphere_reg:firstsph|currentcol[2][7]    ; Stuck at VCC due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[0][0]    ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[0][1]    ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[0][2]    ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[0][3]    ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[0][4]    ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[0][5]    ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[0][6]    ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[0][7]    ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[0][8]    ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[0][9]    ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[0][10]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[0][11]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[0][12]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[0][13]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[0][14]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[0][15]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[0][16]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[0][17]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[0][18]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[0][19]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[0][20]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[0][21]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[0][22]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[0][23]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[0][24]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[0][25]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[0][26]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[0][27]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[0][28]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[0][29]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[0][30]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[0][31]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[0][32]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[0][33]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[0][34]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[0][35]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[0][36]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[0][37]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[0][38]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[0][39]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[0][40]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[0][41]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[0][42]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[0][43]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[0][44]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[0][45]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[0][46]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[0][47]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[0][48]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[0][49]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[0][50]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[0][51]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[0][52]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[0][53]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[0][54]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[0][55]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[0][56]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[0][57]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[0][58]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[0][59]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[0][60]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[0][61]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[0][62]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[0][63]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[1][0]    ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[1][1]    ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[1][2]    ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[1][3]    ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[1][4]    ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[1][5]    ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[1][6]    ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[1][7]    ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[1][8]    ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[1][9]    ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[1][10]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[1][11]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[1][12]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[1][13]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[1][14]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[1][15]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[1][16]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[1][17]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[1][18]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[1][19]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[1][20]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[1][21]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[1][22]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[1][23]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[1][24]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[1][25]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[1][26]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[1][27]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[1][28]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[1][29]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[1][30]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[1][31]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[1][32]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[1][33]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[1][34]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[1][35]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[1][36]   ; Stuck at VCC due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[1][37]   ; Stuck at VCC due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[1][38]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[1][39]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[1][40]   ; Stuck at VCC due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[1][41]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[1][42]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[1][43]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[1][44]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[1][45]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[1][46]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[1][47]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[1][48]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[1][49]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[1][50]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[1][51]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[1][52]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[1][53]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[1][54]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[1][55]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[1][56]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[1][57]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[1][58]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[1][59]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[1][60]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[1][61]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[1][62]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[1][63]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[2][0]    ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[2][1]    ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[2][2]    ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[2][3]    ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[2][4]    ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[2][5]    ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[2][6]    ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[2][7]    ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[2][8]    ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[2][9]    ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[2][10]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[2][11]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[2][12]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[2][13]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[2][14]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[2][15]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[2][16]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[2][17]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[2][18]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[2][19]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[2][20]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[2][21]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[2][22]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[2][23]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[2][24]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[2][25]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[2][26]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[2][27]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[2][28]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[2][29]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[2][30]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[2][31]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[2][32]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[2][33]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[2][34]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[2][35]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[2][36]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[2][37]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[2][38]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[2][39]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[2][40]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[2][41]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[2][42]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[2][43]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[2][44]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[2][45]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[2][46]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[2][47]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[2][48]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[2][49]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[2][50]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[2][51]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[2][52]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[2][53]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[2][54]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[2][55]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[2][56]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[2][57]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[2][58]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[2][59]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[2][60]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[2][61]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[2][62]   ; Stuck at GND due to stuck port data_in ;
-; sphere_reg:firstsph|currentpos[2][63]   ; Stuck at GND due to stuck port data_in ;
-; ray_lut:rl|cos_lut:c0|out[0..15]        ; Lost fanout                            ;
-; ray_lut:rl|cos_lut:c1|out[0..15]        ; Lost fanout                            ;
-; ray_lut:rl|sin_lut:s0|out[15]           ; Stuck at GND due to stuck port data_in ;
-; ray_lut:rl|sin_lut:s1|out[15]           ; Stuck at GND due to stuck port data_in ;
-; State~5                                 ; Lost fanout                            ;
-; State~6                                 ; Lost fanout                            ;
-; State~7                                 ; Lost fanout                            ;
-; State~8                                 ; Lost fanout                            ;
-; State~9                                 ; Lost fanout                            ;
-; State~10                                ; Lost fanout                            ;
-; State~11                                ; Lost fanout                            ;
-; Total Number of Removed Registers = 259 ;                                        ;
-+-----------------------------------------+----------------------------------------+
++--------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                         ;
++------------------------------------------+-------------------------------------------------+
+; Register name                            ; Reason for Removal                              ;
++------------------------------------------+-------------------------------------------------+
+; x_ang_lut:xang|out[6..15]                ; Stuck at GND due to stuck port data_in          ;
+; y_ang_lut:yang|out[6..15]                ; Stuck at GND due to stuck port data_in          ;
+; sphere_reg_4:sph4|pos[3][2][63]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][2][62]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][2][61]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][2][60]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][2][59]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][2][58]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][2][57]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][2][56]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][2][55]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][2][54]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][2][53]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][2][52]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][2][51]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][2][50]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][2][49]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][2][48]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][2][47]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][2][46]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][2][45]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][2][44]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][2][43]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][2][42]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][2][41]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][2][40]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][2][39]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][2][38]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][2][37]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][2][36]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][2][35]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][2][34]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][2][33]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][2][32]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][2][31]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][2][30]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][2][29]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][2][28]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][2][27]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][2][26]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][2][25]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][2][24]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][2][23]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][2][22]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][2][21]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][2][20]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][2][19]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][2][18]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][2][17]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][2][16]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][2][15]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][2][14]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][2][13]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][2][12]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][2][11]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][2][10]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][2][9]           ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][2][8]           ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][2][7]           ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][2][6]           ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][2][5]           ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][2][4]           ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][2][3]           ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][2][2]           ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][2][1]           ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][2][0]           ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][1][63]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][1][62]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][1][61]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][1][60]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][1][59]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][1][58]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][1][57]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][1][56]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][1][55]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][1][54]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][1][53]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][1][52]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][1][51]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][1][50]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][1][49]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][1][48]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][1][47]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][1][46]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][1][45]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][1][44]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][1][43]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][1][42]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][1][41]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][1][40]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][1][39]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][1][38]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][1][37]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][1][36]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][1][35]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][1][34]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][1][33]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][1][32]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][1][31]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][1][30]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][1][29]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][1][28]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][1][27]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][1][26]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][1][25]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][1][24]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][1][23]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][1][22]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][1][21]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][1][20]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][1][19]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][1][18]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][1][17]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][1][16]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][1][15]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][1][14]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][1][13]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][1][12]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][1][11]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][1][10]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][1][9]           ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][1][8]           ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][1][7]           ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][1][6]           ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][1][5]           ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][1][4]           ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][1][3]           ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][1][2]           ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][1][1]           ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][1][0]           ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][0][63]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][0][62]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][0][61]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][0][60]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][0][59]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][0][58]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][0][57]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][0][56]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][0][55]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][0][54]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][0][53]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][0][52]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][0][51]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][0][50]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][0][49]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][0][48]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][0][47]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][0][46]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][0][45]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][0][44]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][0][43]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][0][42]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][0][41]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][0][40]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][0][39]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][0][38]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][0][37]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][0][36]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][0][35]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][0][34]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][0][33]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][0][32]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][0][31]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][0][30]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][0][29]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][0][28]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][0][27]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][0][26]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][0][25]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][0][24]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][0][23]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][0][22]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][0][21]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][0][20]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][0][19]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][0][18]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][0][17]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][0][16]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][0][15]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][0][14]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][0][13]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][0][12]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][0][11]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][0][10]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][0][9]           ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][0][8]           ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][0][7]           ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][0][6]           ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][0][5]           ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][0][4]           ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][0][3]           ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][0][2]           ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][0][1]           ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[3][0][0]           ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][2][63]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][2][62]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][2][61]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][2][60]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][2][59]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][2][58]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][2][57]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][2][56]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][2][55]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][2][54]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][2][53]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][2][52]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][2][51]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][2][50]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][2][49]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][2][48]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][2][47]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][2][46]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][2][45]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][2][44]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][2][43]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][2][42]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][2][41]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][2][40]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][2][39]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][2][38]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][2][37]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][2][36]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][2][35]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][2][34]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][2][33]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][2][32]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][2][31]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][2][30]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][2][29]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][2][28]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][2][27]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][2][26]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][2][25]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][2][24]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][2][23]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][2][22]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][2][21]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][2][20]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][2][19]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][2][18]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][2][17]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][2][16]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][2][15]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][2][14]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][2][13]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][2][12]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][2][11]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][2][10]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][2][9]           ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][2][8]           ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][2][7]           ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][2][6]           ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][2][5]           ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][2][4]           ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][2][3]           ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][2][2]           ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][2][1]           ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][2][0]           ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][1][63]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][1][62]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][1][61]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][1][60]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][1][59]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][1][58]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][1][57]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][1][56]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][1][55]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][1][54]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][1][53]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][1][52]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][1][51]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][1][50]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][1][49]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][1][48]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][1][47]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][1][46]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][1][45]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][1][44]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][1][43]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][1][42]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][1][41]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][1][40]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][1][39]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][1][38]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][1][37]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][1][36]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][1][35]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][1][34]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][1][33]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][1][32]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][1][31]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][1][30]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][1][29]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][1][28]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][1][27]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][1][26]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][1][25]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][1][24]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][1][23]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][1][22]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][1][21]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][1][20]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][1][19]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][1][18]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][1][17]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][1][16]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][1][15]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][1][14]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][1][13]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][1][12]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][1][11]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][1][10]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][1][9]           ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][1][8]           ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][1][7]           ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][1][6]           ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][1][5]           ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][1][4]           ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][1][3]           ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][1][2]           ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][1][1]           ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][1][0]           ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][0][63]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][0][62]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][0][61]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][0][60]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][0][59]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][0][58]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][0][57]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][0][56]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][0][55]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][0][54]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][0][53]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][0][52]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][0][51]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][0][50]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][0][49]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][0][48]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][0][47]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][0][46]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][0][45]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][0][44]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][0][43]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][0][42]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][0][41]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][0][40]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][0][39]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][0][38]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][0][37]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][0][36]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][0][35]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][0][34]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][0][33]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][0][32]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][0][31]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][0][30]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][0][29]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][0][28]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][0][27]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][0][26]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][0][25]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][0][24]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][0][23]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][0][22]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][0][21]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][0][20]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][0][19]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][0][18]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][0][17]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][0][16]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][0][15]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][0][14]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][0][13]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][0][12]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][0][11]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][0][10]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][0][9]           ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][0][8]           ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][0][7]           ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][0][6]           ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][0][5]           ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][0][4]           ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][0][3]           ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][0][2]           ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][0][1]           ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[2][0][0]           ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][2][63]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][2][62]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][2][61]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][2][60]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][2][59]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][2][58]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][2][57]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][2][56]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][2][55]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][2][54]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][2][53]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][2][52]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][2][51]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][2][50]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][2][49]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][2][48]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][2][47]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][2][46]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][2][45]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][2][44]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][2][43]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][2][42]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][2][41]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][2][40]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][2][39]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][2][38]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][2][37]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][2][36]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][2][35]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][2][34]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][2][33]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][2][32]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][2][31]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][2][30]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][2][29]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][2][28]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][2][27]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][2][26]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][2][25]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][2][24]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][2][23]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][2][22]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][2][21]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][2][20]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][2][19]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][2][18]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][2][17]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][2][16]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][2][15]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][2][14]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][2][13]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][2][12]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][2][11]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][2][10]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][2][9]           ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][2][8]           ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][2][7]           ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][2][6]           ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][2][5]           ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][2][4]           ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][2][3]           ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][2][2]           ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][2][1]           ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][2][0]           ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][1][63]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][1][62]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][1][61]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][1][60]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][1][59]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][1][58]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][1][57]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][1][56]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][1][55]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][1][54]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][1][53]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][1][52]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][1][51]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][1][50]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][1][49]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][1][48]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][1][47]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][1][46]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][1][45]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][1][44]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][1][43]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][1][42]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][1][41]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][1][40]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][1][39]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][1][38]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][1][37]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][1][36]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][1][35]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][1][34]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][1][33]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][1][32]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][1][31]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][1][30]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][1][29]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][1][28]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][1][27]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][1][26]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][1][25]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][1][24]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][1][23]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][1][22]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][1][21]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][1][20]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][1][19]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][1][18]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][1][17]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][1][16]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][1][15]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][1][14]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][1][13]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][1][12]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][1][11]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][1][10]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][1][9]           ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][1][8]           ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][1][7]           ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][1][6]           ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][1][5]           ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][1][4]           ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][1][3]           ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][1][2]           ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][1][1]           ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][1][0]           ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][0][63]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][0][62]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][0][61]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][0][60]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][0][59]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][0][58]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][0][57]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][0][56]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][0][55]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][0][54]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][0][53]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][0][52]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][0][51]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][0][50]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][0][49]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][0][48]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][0][47]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][0][46]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][0][45]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][0][44]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][0][43]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][0][42]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][0][41]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][0][40]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][0][39]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][0][38]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][0][37]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][0][36]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][0][35]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][0][34]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][0][33]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][0][32]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][0][31]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][0][30]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][0][29]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][0][28]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][0][27]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][0][26]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][0][25]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][0][24]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][0][23]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][0][22]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][0][21]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][0][20]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][0][19]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][0][18]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][0][17]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][0][16]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][0][15]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][0][14]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][0][13]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][0][12]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][0][11]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][0][10]          ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][0][9]           ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][0][8]           ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][0][7]           ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][0][6]           ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][0][5]           ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][0][4]           ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][0][3]           ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][0][2]           ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][0][1]           ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[0][0][0]           ; Lost fanout                                     ;
+; sphere_reg_4:sph4|col[3][2][7]           ; Lost fanout                                     ;
+; sphere_reg_4:sph4|col[3][2][6]           ; Lost fanout                                     ;
+; sphere_reg_4:sph4|col[3][1][7]           ; Lost fanout                                     ;
+; sphere_reg_4:sph4|col[3][1][6]           ; Lost fanout                                     ;
+; sphere_reg_4:sph4|col[3][0][7]           ; Lost fanout                                     ;
+; sphere_reg_4:sph4|col[3][0][6]           ; Lost fanout                                     ;
+; sphere_reg_4:sph4|col[2][2][7]           ; Lost fanout                                     ;
+; sphere_reg_4:sph4|col[2][2][6]           ; Lost fanout                                     ;
+; sphere_reg_4:sph4|col[2][1][7]           ; Lost fanout                                     ;
+; sphere_reg_4:sph4|col[2][1][6]           ; Lost fanout                                     ;
+; sphere_reg_4:sph4|col[2][0][7]           ; Lost fanout                                     ;
+; sphere_reg_4:sph4|col[2][0][6]           ; Lost fanout                                     ;
+; sphere_reg_4:sph4|col[0][2][7]           ; Lost fanout                                     ;
+; sphere_reg_4:sph4|col[0][2][6]           ; Lost fanout                                     ;
+; sphere_reg_4:sph4|col[0][1][7]           ; Lost fanout                                     ;
+; sphere_reg_4:sph4|col[0][1][6]           ; Lost fanout                                     ;
+; sphere_reg_4:sph4|col[0][0][7]           ; Lost fanout                                     ;
+; sphere_reg_4:sph4|col[0][0][6]           ; Lost fanout                                     ;
+; sphere_reg_4:sph4|pos[1][0][59]          ; Merged with sphere_reg_4:sph4|pos[1][2][63]     ;
+; sphere_reg_4:sph4|pos[1][1][59]          ; Merged with sphere_reg_4:sph4|pos[1][2][63]     ;
+; sphere_reg_4:sph4|pos[1][0][43]          ; Merged with sphere_reg_4:sph4|pos[1][2][63]     ;
+; sphere_reg_4:sph4|pos[1][1][3]           ; Merged with sphere_reg_4:sph4|pos[1][2][63]     ;
+; sphere_reg_4:sph4|pos[1][2][3]           ; Merged with sphere_reg_4:sph4|pos[1][2][63]     ;
+; sphere_reg_4:sph4|pos[1][0][51]          ; Merged with sphere_reg_4:sph4|pos[1][2][63]     ;
+; sphere_reg_4:sph4|pos[1][2][35]          ; Merged with sphere_reg_4:sph4|pos[1][2][63]     ;
+; sphere_reg_4:sph4|pos[1][0][35]          ; Merged with sphere_reg_4:sph4|pos[1][2][63]     ;
+; sphere_reg_4:sph4|pos[1][1][51]          ; Merged with sphere_reg_4:sph4|pos[1][2][63]     ;
+; sphere_reg_4:sph4|pos[1][0][27]          ; Merged with sphere_reg_4:sph4|pos[1][2][63]     ;
+; sphere_reg_4:sph4|pos[1][0][19]          ; Merged with sphere_reg_4:sph4|pos[1][2][63]     ;
+; sphere_reg_4:sph4|pos[1][2][51]          ; Merged with sphere_reg_4:sph4|pos[1][2][63]     ;
+; sphere_reg_4:sph4|pos[1][2][27]          ; Merged with sphere_reg_4:sph4|pos[1][2][63]     ;
+; sphere_reg_4:sph4|pos[1][1][43]          ; Merged with sphere_reg_4:sph4|pos[1][2][63]     ;
+; sphere_reg_4:sph4|pos[1][0][11]          ; Merged with sphere_reg_4:sph4|pos[1][2][63]     ;
+; sphere_reg_4:sph4|pos[1][0][3]           ; Merged with sphere_reg_4:sph4|pos[1][2][63]     ;
+; sphere_reg_4:sph4|pos[1][2][23]          ; Merged with sphere_reg_4:sph4|pos[1][2][63]     ;
+; sphere_reg_4:sph4|pos[1][1][35]          ; Merged with sphere_reg_4:sph4|pos[1][2][63]     ;
+; sphere_reg_4:sph4|pos[1][1][7]           ; Merged with sphere_reg_4:sph4|pos[1][2][63]     ;
+; sphere_reg_4:sph4|pos[1][2][7]           ; Merged with sphere_reg_4:sph4|pos[1][2][63]     ;
+; sphere_reg_4:sph4|pos[1][0][63]          ; Merged with sphere_reg_4:sph4|pos[1][2][63]     ;
+; sphere_reg_4:sph4|pos[1][2][39]          ; Merged with sphere_reg_4:sph4|pos[1][2][63]     ;
+; sphere_reg_4:sph4|pos[1][0][55]          ; Merged with sphere_reg_4:sph4|pos[1][2][63]     ;
+; sphere_reg_4:sph4|pos[1][1][63]          ; Merged with sphere_reg_4:sph4|pos[1][2][63]     ;
+; sphere_reg_4:sph4|pos[1][0][47]          ; Merged with sphere_reg_4:sph4|pos[1][2][63]     ;
+; sphere_reg_4:sph4|pos[1][2][55]          ; Merged with sphere_reg_4:sph4|pos[1][2][63]     ;
+; sphere_reg_4:sph4|pos[1][0][39]          ; Merged with sphere_reg_4:sph4|pos[1][2][63]     ;
+; sphere_reg_4:sph4|pos[1][1][55]          ; Merged with sphere_reg_4:sph4|pos[1][2][63]     ;
+; sphere_reg_4:sph4|pos[1][0][31]          ; Merged with sphere_reg_4:sph4|pos[1][2][63]     ;
+; sphere_reg_4:sph4|pos[1][2][31]          ; Merged with sphere_reg_4:sph4|pos[1][2][63]     ;
+; sphere_reg_4:sph4|pos[1][0][23]          ; Merged with sphere_reg_4:sph4|pos[1][2][63]     ;
+; sphere_reg_4:sph4|pos[1][1][47]          ; Merged with sphere_reg_4:sph4|pos[1][2][63]     ;
+; sphere_reg_4:sph4|pos[1][0][15]          ; Merged with sphere_reg_4:sph4|pos[1][2][63]     ;
+; sphere_reg_4:sph4|pos[1][0][7]           ; Merged with sphere_reg_4:sph4|pos[1][2][63]     ;
+; sphere_reg_4:sph4|pos[1][1][39]          ; Merged with sphere_reg_4:sph4|pos[1][2][63]     ;
+; sphere_reg_4:sph4|pos[1][0][0]           ; Merged with sphere_reg_4:sph4|pos[1][2][63]     ;
+; sphere_reg_4:sph4|pos[1][2][49]          ; Merged with sphere_reg_4:sph4|pos[1][2][63]     ;
+; sphere_reg_4:sph4|pos[1][1][33]          ; Merged with sphere_reg_4:sph4|pos[1][2][63]     ;
+; sphere_reg_4:sph4|pos[1][2][21]          ; Merged with sphere_reg_4:sph4|pos[1][2][63]     ;
+; sphere_reg_4:sph4|pos[1][1][31]          ; Merged with sphere_reg_4:sph4|pos[1][2][63]     ;
+; sphere_reg_4:sph4|pos[1][1][29]          ; Merged with sphere_reg_4:sph4|pos[1][2][63]     ;
+; sphere_reg_4:sph4|pos[1][2][61]          ; Merged with sphere_reg_4:sph4|pos[1][2][63]     ;
+; sphere_reg_4:sph4|pos[1][2][47]          ; Merged with sphere_reg_4:sph4|pos[1][2][63]     ;
+; sphere_reg_4:sph4|pos[1][2][19]          ; Merged with sphere_reg_4:sph4|pos[1][2][63]     ;
+; sphere_reg_4:sph4|pos[1][1][27]          ; Merged with sphere_reg_4:sph4|pos[1][2][63]     ;
+; sphere_reg_4:sph4|pos[1][1][25]          ; Merged with sphere_reg_4:sph4|pos[1][2][63]     ;
+; sphere_reg_4:sph4|pos[1][2][17]          ; Merged with sphere_reg_4:sph4|pos[1][2][63]     ;
+; sphere_reg_4:sph4|pos[1][1][23]          ; Merged with sphere_reg_4:sph4|pos[1][2][63]     ;
+; sphere_reg_4:sph4|pos[1][1][9]           ; Merged with sphere_reg_4:sph4|pos[1][2][63]     ;
+; sphere_reg_4:sph4|pos[1][2][9]           ; Merged with sphere_reg_4:sph4|pos[1][2][63]     ;
+; sphere_reg_4:sph4|pos[1][1][5]           ; Merged with sphere_reg_4:sph4|pos[1][2][63]     ;
+; sphere_reg_4:sph4|pos[1][2][41]          ; Merged with sphere_reg_4:sph4|pos[1][2][63]     ;
+; sphere_reg_4:sph4|pos[1][1][1]           ; Merged with sphere_reg_4:sph4|pos[1][2][63]     ;
+; sphere_reg_4:sph4|pos[1][2][5]           ; Merged with sphere_reg_4:sph4|pos[1][2][63]     ;
+; sphere_reg_4:sph4|pos[1][0][61]          ; Merged with sphere_reg_4:sph4|pos[1][2][63]     ;
+; sphere_reg_4:sph4|pos[1][2][57]          ; Merged with sphere_reg_4:sph4|pos[1][2][63]     ;
+; sphere_reg_4:sph4|pos[1][0][57]          ; Merged with sphere_reg_4:sph4|pos[1][2][63]     ;
+; sphere_reg_4:sph4|pos[1][2][1]           ; Merged with sphere_reg_4:sph4|pos[1][2][63]     ;
+; sphere_reg_4:sph4|pos[1][0][53]          ; Merged with sphere_reg_4:sph4|pos[1][2][63]     ;
+; sphere_reg_4:sph4|pos[1][2][37]          ; Merged with sphere_reg_4:sph4|pos[1][2][63]     ;
+; sphere_reg_4:sph4|pos[1][0][49]          ; Merged with sphere_reg_4:sph4|pos[1][2][63]     ;
+; sphere_reg_4:sph4|pos[1][1][61]          ; Merged with sphere_reg_4:sph4|pos[1][2][63]     ;
+; sphere_reg_4:sph4|pos[1][0][45]          ; Merged with sphere_reg_4:sph4|pos[1][2][63]     ;
+; sphere_reg_4:sph4|pos[1][0][44]          ; Merged with sphere_reg_4:sph4|pos[1][2][63]     ;
+; sphere_reg_4:sph4|pos[1][0][41]          ; Merged with sphere_reg_4:sph4|pos[1][2][63]     ;
+; sphere_reg_4:sph4|pos[1][1][57]          ; Merged with sphere_reg_4:sph4|pos[1][2][63]     ;
+; sphere_reg_4:sph4|pos[1][0][37]          ; Merged with sphere_reg_4:sph4|pos[1][2][63]     ;
+; sphere_reg_4:sph4|pos[1][2][33]          ; Merged with sphere_reg_4:sph4|pos[1][2][63]     ;
+; sphere_reg_4:sph4|pos[1][0][33]          ; Merged with sphere_reg_4:sph4|pos[1][2][63]     ;
+; sphere_reg_4:sph4|pos[1][1][53]          ; Merged with sphere_reg_4:sph4|pos[1][2][63]     ;
+; sphere_reg_4:sph4|pos[1][0][29]          ; Merged with sphere_reg_4:sph4|pos[1][2][63]     ;
+; sphere_reg_4:sph4|pos[1][2][53]          ; Merged with sphere_reg_4:sph4|pos[1][2][63]     ;
+; sphere_reg_4:sph4|pos[1][0][25]          ; Merged with sphere_reg_4:sph4|pos[1][2][63]     ;
+; sphere_reg_4:sph4|pos[1][1][49]          ; Merged with sphere_reg_4:sph4|pos[1][2][63]     ;
+; sphere_reg_4:sph4|pos[1][0][21]          ; Merged with sphere_reg_4:sph4|pos[1][2][63]     ;
+; sphere_reg_4:sph4|pos[1][2][29]          ; Merged with sphere_reg_4:sph4|pos[1][2][63]     ;
+; sphere_reg_4:sph4|pos[1][0][17]          ; Merged with sphere_reg_4:sph4|pos[1][2][63]     ;
+; sphere_reg_4:sph4|pos[1][1][45]          ; Merged with sphere_reg_4:sph4|pos[1][2][63]     ;
+; sphere_reg_4:sph4|pos[1][0][13]          ; Merged with sphere_reg_4:sph4|pos[1][2][63]     ;
+; sphere_reg_4:sph4|pos[1][0][12]          ; Merged with sphere_reg_4:sph4|pos[1][2][63]     ;
+; sphere_reg_4:sph4|pos[1][0][9]           ; Merged with sphere_reg_4:sph4|pos[1][2][63]     ;
+; sphere_reg_4:sph4|pos[1][1][41]          ; Merged with sphere_reg_4:sph4|pos[1][2][63]     ;
+; sphere_reg_4:sph4|pos[1][0][5]           ; Merged with sphere_reg_4:sph4|pos[1][2][63]     ;
+; sphere_reg_4:sph4|pos[1][2][25]          ; Merged with sphere_reg_4:sph4|pos[1][2][63]     ;
+; sphere_reg_4:sph4|pos[1][0][1]           ; Merged with sphere_reg_4:sph4|pos[1][2][63]     ;
+; sphere_reg_4:sph4|pos[1][2][24]          ; Merged with sphere_reg_4:sph4|pos[1][2][63]     ;
+; sphere_reg_4:sph4|pos[1][2][62]          ; Merged with sphere_reg_4:sph4|pos[1][2][63]     ;
+; sphere_reg_4:sph4|pos[1][1][34]          ; Merged with sphere_reg_4:sph4|pos[1][2][63]     ;
+; sphere_reg_4:sph4|pos[1][2][22]          ; Merged with sphere_reg_4:sph4|pos[1][2][63]     ;
+; sphere_reg_4:sph4|pos[1][1][32]          ; Merged with sphere_reg_4:sph4|pos[1][2][63]     ;
+; sphere_reg_4:sph4|pos[1][2][48]          ; Merged with sphere_reg_4:sph4|pos[1][2][63]     ;
+; sphere_reg_4:sph4|pos[1][1][30]          ; Merged with sphere_reg_4:sph4|pos[1][2][63]     ;
+; sphere_reg_4:sph4|pos[1][2][20]          ; Merged with sphere_reg_4:sph4|pos[1][2][63]     ;
+; sphere_reg_4:sph4|pos[1][1][28]          ; Merged with sphere_reg_4:sph4|pos[1][2][63]     ;
+; sphere_reg_4:sph4|pos[1][1][21]          ; Merged with sphere_reg_4:sph4|pos[1][2][63]     ;
+; sphere_reg_4:sph4|pos[1][1][26]          ; Merged with sphere_reg_4:sph4|pos[1][2][63]     ;
+; sphere_reg_4:sph4|pos[1][2][18]          ; Merged with sphere_reg_4:sph4|pos[1][2][63]     ;
+; sphere_reg_4:sph4|pos[1][1][24]          ; Merged with sphere_reg_4:sph4|pos[1][2][63]     ;
+; sphere_reg_4:sph4|pos[1][2][46]          ; Merged with sphere_reg_4:sph4|pos[1][2][63]     ;
+; sphere_reg_4:sph4|pos[1][1][22]          ; Merged with sphere_reg_4:sph4|pos[1][2][63]     ;
+; sphere_reg_4:sph4|pos[1][2][16]          ; Merged with sphere_reg_4:sph4|pos[1][2][60]     ;
+; sphere_reg_4:sph4|pos[1][1][20]          ; Merged with sphere_reg_4:sph4|pos[1][2][60]     ;
+; sphere_reg_4:sph4|pos[1][2][45]          ; Merged with sphere_reg_4:sph4|pos[1][2][60]     ;
+; sphere_reg_4:sph4|pos[1][2][15]          ; Merged with sphere_reg_4:sph4|pos[1][2][60]     ;
+; sphere_reg_4:sph4|pos[1][1][19]          ; Merged with sphere_reg_4:sph4|pos[1][2][60]     ;
+; sphere_reg_4:sph4|pos[1][1][18]          ; Merged with sphere_reg_4:sph4|pos[1][2][60]     ;
+; sphere_reg_4:sph4|pos[1][2][14]          ; Merged with sphere_reg_4:sph4|pos[1][2][60]     ;
+; sphere_reg_4:sph4|pos[1][1][17]          ; Merged with sphere_reg_4:sph4|pos[1][2][60]     ;
+; sphere_reg_4:sph4|pos[1][1][16]          ; Merged with sphere_reg_4:sph4|pos[1][2][60]     ;
+; sphere_reg_4:sph4|pos[1][1][10]          ; Merged with sphere_reg_4:sph4|pos[1][2][60]     ;
+; sphere_reg_4:sph4|pos[1][2][10]          ; Merged with sphere_reg_4:sph4|pos[1][2][60]     ;
+; sphere_reg_4:sph4|pos[1][1][8]           ; Merged with sphere_reg_4:sph4|pos[1][2][60]     ;
+; sphere_reg_4:sph4|pos[1][2][42]          ; Merged with sphere_reg_4:sph4|pos[1][2][60]     ;
+; sphere_reg_4:sph4|pos[1][1][6]           ; Merged with sphere_reg_4:sph4|pos[1][2][60]     ;
+; sphere_reg_4:sph4|pos[1][2][8]           ; Merged with sphere_reg_4:sph4|pos[1][2][60]     ;
+; sphere_reg_4:sph4|pos[1][1][4]           ; Merged with sphere_reg_4:sph4|pos[1][2][60]     ;
+; sphere_reg_4:sph4|pos[1][2][58]          ; Merged with sphere_reg_4:sph4|pos[1][2][60]     ;
+; sphere_reg_4:sph4|pos[1][1][2]           ; Merged with sphere_reg_4:sph4|pos[1][2][60]     ;
+; sphere_reg_4:sph4|pos[1][2][6]           ; Merged with sphere_reg_4:sph4|pos[1][2][60]     ;
+; sphere_reg_4:sph4|pos[1][1][0]           ; Merged with sphere_reg_4:sph4|pos[1][2][60]     ;
+; sphere_reg_4:sph4|pos[1][2][40]          ; Merged with sphere_reg_4:sph4|pos[1][2][60]     ;
+; sphere_reg_4:sph4|pos[1][0][62]          ; Merged with sphere_reg_4:sph4|pos[1][2][60]     ;
+; sphere_reg_4:sph4|pos[1][2][4]           ; Merged with sphere_reg_4:sph4|pos[1][2][60]     ;
+; sphere_reg_4:sph4|pos[1][0][60]          ; Merged with sphere_reg_4:sph4|pos[1][2][60]     ;
+; sphere_reg_4:sph4|pos[1][2][44]          ; Merged with sphere_reg_4:sph4|pos[1][2][60]     ;
+; sphere_reg_4:sph4|pos[1][2][13]          ; Merged with sphere_reg_4:sph4|pos[1][2][60]     ;
+; sphere_reg_4:sph4|pos[1][1][15]          ; Merged with sphere_reg_4:sph4|pos[1][2][60]     ;
+; sphere_reg_4:sph4|pos[1][0][58]          ; Merged with sphere_reg_4:sph4|pos[1][2][60]     ;
+; sphere_reg_4:sph4|pos[1][2][2]           ; Merged with sphere_reg_4:sph4|pos[1][2][60]     ;
+; sphere_reg_4:sph4|pos[1][0][56]          ; Merged with sphere_reg_4:sph4|pos[1][2][60]     ;
+; sphere_reg_4:sph4|pos[1][2][38]          ; Merged with sphere_reg_4:sph4|pos[1][2][60]     ;
+; sphere_reg_4:sph4|pos[1][0][54]          ; Merged with sphere_reg_4:sph4|pos[1][2][60]     ;
+; sphere_reg_4:sph4|pos[1][2][0]           ; Merged with sphere_reg_4:sph4|pos[1][2][60]     ;
+; sphere_reg_4:sph4|pos[1][0][52]          ; Merged with sphere_reg_4:sph4|pos[1][2][60]     ;
+; sphere_reg_4:sph4|pos[1][2][56]          ; Merged with sphere_reg_4:sph4|pos[1][2][60]     ;
+; sphere_reg_4:sph4|pos[1][0][50]          ; Merged with sphere_reg_4:sph4|pos[1][2][60]     ;
+; sphere_reg_4:sph4|pos[1][1][62]          ; Merged with sphere_reg_4:sph4|pos[1][2][60]     ;
+; sphere_reg_4:sph4|pos[1][0][48]          ; Merged with sphere_reg_4:sph4|pos[1][2][60]     ;
+; sphere_reg_4:sph4|pos[1][2][36]          ; Merged with sphere_reg_4:sph4|pos[1][2][60]     ;
+; sphere_reg_4:sph4|pos[1][0][46]          ; Merged with sphere_reg_4:sph4|pos[1][2][60]     ;
+; sphere_reg_4:sph4|pos[1][1][60]          ; Merged with sphere_reg_4:sph4|pos[1][2][60]     ;
+; sphere_reg_4:sph4|pos[1][1][38]          ; Merged with sphere_reg_4:sph4|pos[1][2][60]     ;
+; sphere_reg_4:sph4|pos[1][0][42]          ; Merged with sphere_reg_4:sph4|pos[1][2][60]     ;
+; sphere_reg_4:sph4|pos[1][1][58]          ; Merged with sphere_reg_4:sph4|pos[1][2][60]     ;
+; sphere_reg_4:sph4|pos[1][0][40]          ; Merged with sphere_reg_4:sph4|pos[1][2][60]     ;
+; sphere_reg_4:sph4|pos[1][2][34]          ; Merged with sphere_reg_4:sph4|pos[1][2][60]     ;
+; sphere_reg_4:sph4|pos[1][0][38]          ; Merged with sphere_reg_4:sph4|pos[1][2][60]     ;
+; sphere_reg_4:sph4|pos[1][1][56]          ; Merged with sphere_reg_4:sph4|pos[1][2][60]     ;
+; sphere_reg_4:sph4|pos[1][0][36]          ; Merged with sphere_reg_4:sph4|pos[1][2][60]     ;
+; sphere_reg_4:sph4|pos[1][2][54]          ; Merged with sphere_reg_4:sph4|pos[1][2][60]     ;
+; sphere_reg_4:sph4|pos[1][0][34]          ; Merged with sphere_reg_4:sph4|pos[1][2][60]     ;
+; sphere_reg_4:sph4|pos[1][1][54]          ; Merged with sphere_reg_4:sph4|pos[1][2][60]     ;
+; sphere_reg_4:sph4|pos[1][0][32]          ; Merged with sphere_reg_4:sph4|pos[1][2][60]     ;
+; sphere_reg_4:sph4|pos[1][2][32]          ; Merged with sphere_reg_4:sph4|pos[1][2][60]     ;
+; sphere_reg_4:sph4|pos[1][0][30]          ; Merged with sphere_reg_4:sph4|pos[1][2][60]     ;
+; sphere_reg_4:sph4|pos[1][1][52]          ; Merged with sphere_reg_4:sph4|pos[1][2][60]     ;
+; sphere_reg_4:sph4|pos[1][0][28]          ; Merged with sphere_reg_4:sph4|pos[1][2][60]     ;
+; sphere_reg_4:sph4|pos[1][0][26]          ; Merged with sphere_reg_4:sph4|pos[1][2][60]     ;
+; sphere_reg_4:sph4|pos[1][1][50]          ; Merged with sphere_reg_4:sph4|pos[1][2][60]     ;
+; sphere_reg_4:sph4|pos[1][0][24]          ; Merged with sphere_reg_4:sph4|pos[1][2][60]     ;
+; sphere_reg_4:sph4|pos[1][2][30]          ; Merged with sphere_reg_4:sph4|pos[1][2][60]     ;
+; sphere_reg_4:sph4|pos[1][0][22]          ; Merged with sphere_reg_4:sph4|pos[1][2][60]     ;
+; sphere_reg_4:sph4|pos[1][1][48]          ; Merged with sphere_reg_4:sph4|pos[1][2][60]     ;
+; sphere_reg_4:sph4|pos[1][0][20]          ; Merged with sphere_reg_4:sph4|pos[1][2][60]     ;
+; sphere_reg_4:sph4|pos[1][2][52]          ; Merged with sphere_reg_4:sph4|pos[1][2][60]     ;
+; sphere_reg_4:sph4|pos[1][0][18]          ; Merged with sphere_reg_4:sph4|pos[1][2][60]     ;
+; sphere_reg_4:sph4|pos[1][1][46]          ; Merged with sphere_reg_4:sph4|pos[1][2][60]     ;
+; sphere_reg_4:sph4|pos[1][0][16]          ; Merged with sphere_reg_4:sph4|pos[1][2][60]     ;
+; sphere_reg_4:sph4|pos[1][2][28]          ; Merged with sphere_reg_4:sph4|pos[1][2][60]     ;
+; sphere_reg_4:sph4|pos[1][0][14]          ; Merged with sphere_reg_4:sph4|pos[1][2][60]     ;
+; sphere_reg_4:sph4|pos[1][1][44]          ; Merged with sphere_reg_4:sph4|pos[1][2][60]     ;
+; sphere_reg_4:sph4|pos[1][0][2]           ; Merged with sphere_reg_4:sph4|pos[1][2][60]     ;
+; sphere_reg_4:sph4|pos[1][1][14]          ; Merged with sphere_reg_4:sph4|pos[1][2][60]     ;
+; sphere_reg_4:sph4|pos[1][0][10]          ; Merged with sphere_reg_4:sph4|pos[1][2][60]     ;
+; sphere_reg_4:sph4|pos[1][1][42]          ; Merged with sphere_reg_4:sph4|pos[1][2][60]     ;
+; sphere_reg_4:sph4|pos[1][0][8]           ; Merged with sphere_reg_4:sph4|pos[1][2][60]     ;
+; sphere_reg_4:sph4|pos[1][2][26]          ; Merged with sphere_reg_4:sph4|pos[1][2][60]     ;
+; sphere_reg_4:sph4|pos[1][0][6]           ; Merged with sphere_reg_4:sph4|pos[1][2][60]     ;
+; sphere_reg_4:sph4|pos[1][2][12]          ; Merged with sphere_reg_4:sph4|pos[1][2][60]     ;
+; sphere_reg_4:sph4|pos[1][1][13]          ; Merged with sphere_reg_4:sph4|pos[1][2][60]     ;
+; sphere_reg_4:sph4|pos[1][0][4]           ; Merged with sphere_reg_4:sph4|pos[1][2][60]     ;
+; sphere_reg_4:sph4|pos[1][2][50]          ; Merged with sphere_reg_4:sph4|pos[1][2][60]     ;
+; sphere_reg_4:sph4|pos[1][1][12]          ; Merged with sphere_reg_4:sph4|pos[1][2][60]     ;
+; sphere_reg_4:sph4|pos[1][2][59]          ; Merged with sphere_reg_4:sph4|pos[1][2][60]     ;
+; sphere_reg_4:sph4|pos[1][2][43]          ; Merged with sphere_reg_4:sph4|pos[1][2][60]     ;
+; sphere_reg_4:sph4|pos[1][2][11]          ; Merged with sphere_reg_4:sph4|pos[1][2][60]     ;
+; sphere_reg_4:sph4|pos[1][1][11]          ; Merged with sphere_reg_4:sph4|pos[1][2][60]     ;
+; sphere_reg_4:sph4|pos[1][1][36]          ; Merged with sphere_reg_4:sph4|pos[1][1][40]     ;
+; sphere_reg_4:sph4|pos[1][1][37]          ; Merged with sphere_reg_4:sph4|pos[1][1][40]     ;
+; sphere_reg_4:sph4|Sphere_pos[2][63]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][0]  ;
+; sphere_reg_4:sph4|Sphere_pos[0][59]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][0]  ;
+; sphere_reg_4:sph4|Sphere_pos[1][59]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][0]  ;
+; sphere_reg_4:sph4|Sphere_pos[0][43]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][0]  ;
+; sphere_reg_4:sph4|Sphere_pos[1][3]       ; Merged with sphere_reg_4:sph4|Sphere_pos[0][0]  ;
+; sphere_reg_4:sph4|Sphere_pos[2][3]       ; Merged with sphere_reg_4:sph4|Sphere_pos[0][0]  ;
+; sphere_reg_4:sph4|Sphere_pos[0][51]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][0]  ;
+; sphere_reg_4:sph4|Sphere_pos[2][35]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][0]  ;
+; sphere_reg_4:sph4|Sphere_pos[0][35]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][0]  ;
+; sphere_reg_4:sph4|Sphere_pos[1][51]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][0]  ;
+; sphere_reg_4:sph4|Sphere_pos[0][27]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][0]  ;
+; sphere_reg_4:sph4|Sphere_pos[0][19]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][0]  ;
+; sphere_reg_4:sph4|Sphere_pos[2][51]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][0]  ;
+; sphere_reg_4:sph4|Sphere_pos[2][27]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][0]  ;
+; sphere_reg_4:sph4|Sphere_pos[1][43]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][0]  ;
+; sphere_reg_4:sph4|Sphere_pos[0][11]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][0]  ;
+; sphere_reg_4:sph4|Sphere_pos[0][3]       ; Merged with sphere_reg_4:sph4|Sphere_pos[0][0]  ;
+; sphere_reg_4:sph4|Sphere_pos[2][23]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][0]  ;
+; sphere_reg_4:sph4|Sphere_pos[1][35]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][0]  ;
+; sphere_reg_4:sph4|Sphere_pos[1][7]       ; Merged with sphere_reg_4:sph4|Sphere_pos[0][0]  ;
+; sphere_reg_4:sph4|Sphere_pos[2][7]       ; Merged with sphere_reg_4:sph4|Sphere_pos[0][0]  ;
+; sphere_reg_4:sph4|Sphere_pos[0][63]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][0]  ;
+; sphere_reg_4:sph4|Sphere_pos[2][39]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][0]  ;
+; sphere_reg_4:sph4|Sphere_pos[0][55]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][0]  ;
+; sphere_reg_4:sph4|Sphere_pos[1][63]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][0]  ;
+; sphere_reg_4:sph4|Sphere_pos[0][47]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][0]  ;
+; sphere_reg_4:sph4|Sphere_pos[2][55]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][0]  ;
+; sphere_reg_4:sph4|Sphere_pos[0][39]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][0]  ;
+; sphere_reg_4:sph4|Sphere_pos[1][55]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][0]  ;
+; sphere_reg_4:sph4|Sphere_pos[0][31]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][0]  ;
+; sphere_reg_4:sph4|Sphere_pos[2][31]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][0]  ;
+; sphere_reg_4:sph4|Sphere_pos[0][23]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][0]  ;
+; sphere_reg_4:sph4|Sphere_pos[1][47]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][0]  ;
+; sphere_reg_4:sph4|Sphere_pos[0][15]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][0]  ;
+; sphere_reg_4:sph4|Sphere_pos[0][7]       ; Merged with sphere_reg_4:sph4|Sphere_pos[0][0]  ;
+; sphere_reg_4:sph4|Sphere_pos[1][39]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][0]  ;
+; sphere_reg_4:sph4|Sphere_pos[2][49]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][0]  ;
+; sphere_reg_4:sph4|Sphere_pos[1][33]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][0]  ;
+; sphere_reg_4:sph4|Sphere_pos[2][21]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][0]  ;
+; sphere_reg_4:sph4|Sphere_pos[1][31]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][0]  ;
+; sphere_reg_4:sph4|Sphere_pos[1][29]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][0]  ;
+; sphere_reg_4:sph4|Sphere_pos[2][61]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][0]  ;
+; sphere_reg_4:sph4|Sphere_pos[2][47]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][0]  ;
+; sphere_reg_4:sph4|Sphere_pos[2][19]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][0]  ;
+; sphere_reg_4:sph4|Sphere_pos[1][27]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][0]  ;
+; sphere_reg_4:sph4|Sphere_pos[1][25]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][0]  ;
+; sphere_reg_4:sph4|Sphere_pos[2][17]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][0]  ;
+; sphere_reg_4:sph4|Sphere_pos[1][23]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][0]  ;
+; sphere_reg_4:sph4|Sphere_pos[1][9]       ; Merged with sphere_reg_4:sph4|Sphere_pos[0][0]  ;
+; sphere_reg_4:sph4|Sphere_pos[2][9]       ; Merged with sphere_reg_4:sph4|Sphere_pos[0][0]  ;
+; sphere_reg_4:sph4|Sphere_pos[1][5]       ; Merged with sphere_reg_4:sph4|Sphere_pos[0][0]  ;
+; sphere_reg_4:sph4|Sphere_pos[2][41]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][0]  ;
+; sphere_reg_4:sph4|Sphere_pos[1][1]       ; Merged with sphere_reg_4:sph4|Sphere_pos[0][0]  ;
+; sphere_reg_4:sph4|Sphere_pos[2][5]       ; Merged with sphere_reg_4:sph4|Sphere_pos[0][0]  ;
+; sphere_reg_4:sph4|Sphere_pos[0][61]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][0]  ;
+; sphere_reg_4:sph4|Sphere_pos[2][57]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][0]  ;
+; sphere_reg_4:sph4|Sphere_pos[0][57]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][0]  ;
+; sphere_reg_4:sph4|Sphere_pos[2][1]       ; Merged with sphere_reg_4:sph4|Sphere_pos[0][0]  ;
+; sphere_reg_4:sph4|Sphere_pos[0][53]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][0]  ;
+; sphere_reg_4:sph4|Sphere_pos[2][37]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][0]  ;
+; sphere_reg_4:sph4|Sphere_pos[0][49]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][0]  ;
+; sphere_reg_4:sph4|Sphere_pos[1][61]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][0]  ;
+; sphere_reg_4:sph4|Sphere_pos[0][45]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][0]  ;
+; sphere_reg_4:sph4|Sphere_pos[0][44]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][0]  ;
+; sphere_reg_4:sph4|Sphere_pos[0][41]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][0]  ;
+; sphere_reg_4:sph4|Sphere_pos[1][57]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][0]  ;
+; sphere_reg_4:sph4|Sphere_pos[0][37]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][0]  ;
+; sphere_reg_4:sph4|Sphere_pos[2][33]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][0]  ;
+; sphere_reg_4:sph4|Sphere_pos[0][33]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][0]  ;
+; sphere_reg_4:sph4|Sphere_pos[1][53]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][0]  ;
+; sphere_reg_4:sph4|Sphere_pos[0][29]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][0]  ;
+; sphere_reg_4:sph4|Sphere_pos[2][53]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][0]  ;
+; sphere_reg_4:sph4|Sphere_pos[0][25]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][0]  ;
+; sphere_reg_4:sph4|Sphere_pos[1][49]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][0]  ;
+; sphere_reg_4:sph4|Sphere_pos[0][21]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][0]  ;
+; sphere_reg_4:sph4|Sphere_pos[2][29]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][0]  ;
+; sphere_reg_4:sph4|Sphere_pos[0][17]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][0]  ;
+; sphere_reg_4:sph4|Sphere_pos[1][45]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][0]  ;
+; sphere_reg_4:sph4|Sphere_pos[0][13]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][0]  ;
+; sphere_reg_4:sph4|Sphere_pos[0][12]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][0]  ;
+; sphere_reg_4:sph4|Sphere_pos[0][9]       ; Merged with sphere_reg_4:sph4|Sphere_pos[0][0]  ;
+; sphere_reg_4:sph4|Sphere_pos[1][41]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][0]  ;
+; sphere_reg_4:sph4|Sphere_pos[0][5]       ; Merged with sphere_reg_4:sph4|Sphere_pos[0][0]  ;
+; sphere_reg_4:sph4|Sphere_pos[2][25]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][0]  ;
+; sphere_reg_4:sph4|Sphere_pos[0][1]       ; Merged with sphere_reg_4:sph4|Sphere_pos[0][0]  ;
+; sphere_reg_4:sph4|Sphere_pos[2][24]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][0]  ;
+; sphere_reg_4:sph4|Sphere_pos[2][62]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][0]  ;
+; sphere_reg_4:sph4|Sphere_pos[1][34]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][0]  ;
+; sphere_reg_4:sph4|Sphere_pos[2][22]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][0]  ;
+; sphere_reg_4:sph4|Sphere_pos[1][32]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][0]  ;
+; sphere_reg_4:sph4|Sphere_pos[2][48]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][0]  ;
+; sphere_reg_4:sph4|Sphere_pos[1][30]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][0]  ;
+; sphere_reg_4:sph4|Sphere_pos[2][20]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][0]  ;
+; sphere_reg_4:sph4|Sphere_pos[1][28]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][0]  ;
+; sphere_reg_4:sph4|Sphere_pos[1][21]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][0]  ;
+; sphere_reg_4:sph4|Sphere_pos[1][26]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][0]  ;
+; sphere_reg_4:sph4|Sphere_pos[2][18]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][0]  ;
+; sphere_reg_4:sph4|Sphere_pos[1][24]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][0]  ;
+; sphere_reg_4:sph4|Sphere_pos[2][46]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][0]  ;
+; sphere_reg_4:sph4|Sphere_pos[1][22]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][0]  ;
+; sphere_reg_4:sph4|Sphere_pos[2][60]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][2]  ;
+; sphere_reg_4:sph4|Sphere_pos[2][16]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][2]  ;
+; sphere_reg_4:sph4|Sphere_pos[1][20]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][2]  ;
+; sphere_reg_4:sph4|Sphere_pos[2][45]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][2]  ;
+; sphere_reg_4:sph4|Sphere_pos[2][15]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][2]  ;
+; sphere_reg_4:sph4|Sphere_pos[1][19]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][2]  ;
+; sphere_reg_4:sph4|Sphere_pos[1][18]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][2]  ;
+; sphere_reg_4:sph4|Sphere_pos[2][14]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][2]  ;
+; sphere_reg_4:sph4|Sphere_pos[1][17]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][2]  ;
+; sphere_reg_4:sph4|Sphere_pos[1][16]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][2]  ;
+; sphere_reg_4:sph4|Sphere_pos[1][10]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][2]  ;
+; sphere_reg_4:sph4|Sphere_pos[2][10]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][2]  ;
+; sphere_reg_4:sph4|Sphere_pos[1][8]       ; Merged with sphere_reg_4:sph4|Sphere_pos[0][2]  ;
+; sphere_reg_4:sph4|Sphere_pos[2][42]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][2]  ;
+; sphere_reg_4:sph4|Sphere_pos[1][6]       ; Merged with sphere_reg_4:sph4|Sphere_pos[0][2]  ;
+; sphere_reg_4:sph4|Sphere_pos[2][8]       ; Merged with sphere_reg_4:sph4|Sphere_pos[0][2]  ;
+; sphere_reg_4:sph4|Sphere_pos[1][4]       ; Merged with sphere_reg_4:sph4|Sphere_pos[0][2]  ;
+; sphere_reg_4:sph4|Sphere_pos[2][58]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][2]  ;
+; sphere_reg_4:sph4|Sphere_pos[1][2]       ; Merged with sphere_reg_4:sph4|Sphere_pos[0][2]  ;
+; sphere_reg_4:sph4|Sphere_pos[2][6]       ; Merged with sphere_reg_4:sph4|Sphere_pos[0][2]  ;
+; sphere_reg_4:sph4|Sphere_pos[1][0]       ; Merged with sphere_reg_4:sph4|Sphere_pos[0][2]  ;
+; sphere_reg_4:sph4|Sphere_pos[2][40]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][2]  ;
+; sphere_reg_4:sph4|Sphere_pos[0][62]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][2]  ;
+; sphere_reg_4:sph4|Sphere_pos[2][4]       ; Merged with sphere_reg_4:sph4|Sphere_pos[0][2]  ;
+; sphere_reg_4:sph4|Sphere_pos[0][60]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][2]  ;
+; sphere_reg_4:sph4|Sphere_pos[2][44]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][2]  ;
+; sphere_reg_4:sph4|Sphere_pos[2][13]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][2]  ;
+; sphere_reg_4:sph4|Sphere_pos[1][15]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][2]  ;
+; sphere_reg_4:sph4|Sphere_pos[0][58]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][2]  ;
+; sphere_reg_4:sph4|Sphere_pos[2][2]       ; Merged with sphere_reg_4:sph4|Sphere_pos[0][2]  ;
+; sphere_reg_4:sph4|Sphere_pos[0][56]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][2]  ;
+; sphere_reg_4:sph4|Sphere_pos[2][38]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][2]  ;
+; sphere_reg_4:sph4|Sphere_pos[0][54]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][2]  ;
+; sphere_reg_4:sph4|Sphere_pos[2][0]       ; Merged with sphere_reg_4:sph4|Sphere_pos[0][2]  ;
+; sphere_reg_4:sph4|Sphere_pos[0][52]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][2]  ;
+; sphere_reg_4:sph4|Sphere_pos[2][56]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][2]  ;
+; sphere_reg_4:sph4|Sphere_pos[0][50]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][2]  ;
+; sphere_reg_4:sph4|Sphere_pos[1][62]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][2]  ;
+; sphere_reg_4:sph4|Sphere_pos[0][48]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][2]  ;
+; sphere_reg_4:sph4|Sphere_pos[2][36]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][2]  ;
+; sphere_reg_4:sph4|Sphere_pos[0][46]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][2]  ;
+; sphere_reg_4:sph4|Sphere_pos[1][60]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][2]  ;
+; sphere_reg_4:sph4|Sphere_pos[1][38]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][2]  ;
+; sphere_reg_4:sph4|Sphere_pos[0][42]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][2]  ;
+; sphere_reg_4:sph4|Sphere_pos[1][58]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][2]  ;
+; sphere_reg_4:sph4|Sphere_pos[0][40]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][2]  ;
+; sphere_reg_4:sph4|Sphere_pos[2][34]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][2]  ;
+; sphere_reg_4:sph4|Sphere_pos[0][38]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][2]  ;
+; sphere_reg_4:sph4|Sphere_pos[1][56]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][2]  ;
+; sphere_reg_4:sph4|Sphere_pos[0][36]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][2]  ;
+; sphere_reg_4:sph4|Sphere_pos[2][54]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][2]  ;
+; sphere_reg_4:sph4|Sphere_pos[0][34]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][2]  ;
+; sphere_reg_4:sph4|Sphere_pos[1][54]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][2]  ;
+; sphere_reg_4:sph4|Sphere_pos[0][32]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][2]  ;
+; sphere_reg_4:sph4|Sphere_pos[2][32]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][2]  ;
+; sphere_reg_4:sph4|Sphere_pos[0][30]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][2]  ;
+; sphere_reg_4:sph4|Sphere_pos[1][52]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][2]  ;
+; sphere_reg_4:sph4|Sphere_pos[0][28]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][2]  ;
+; sphere_reg_4:sph4|Sphere_pos[0][26]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][2]  ;
+; sphere_reg_4:sph4|Sphere_pos[1][50]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][2]  ;
+; sphere_reg_4:sph4|Sphere_pos[0][24]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][2]  ;
+; sphere_reg_4:sph4|Sphere_pos[2][30]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][2]  ;
+; sphere_reg_4:sph4|Sphere_pos[0][22]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][2]  ;
+; sphere_reg_4:sph4|Sphere_pos[1][48]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][2]  ;
+; sphere_reg_4:sph4|Sphere_pos[0][20]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][2]  ;
+; sphere_reg_4:sph4|Sphere_pos[2][52]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][2]  ;
+; sphere_reg_4:sph4|Sphere_pos[0][18]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][2]  ;
+; sphere_reg_4:sph4|Sphere_pos[1][46]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][2]  ;
+; sphere_reg_4:sph4|Sphere_pos[0][16]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][2]  ;
+; sphere_reg_4:sph4|Sphere_pos[2][28]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][2]  ;
+; sphere_reg_4:sph4|Sphere_pos[0][14]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][2]  ;
+; sphere_reg_4:sph4|Sphere_pos[1][44]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][2]  ;
+; sphere_reg_4:sph4|Sphere_pos[1][14]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][2]  ;
+; sphere_reg_4:sph4|Sphere_pos[0][10]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][2]  ;
+; sphere_reg_4:sph4|Sphere_pos[1][42]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][2]  ;
+; sphere_reg_4:sph4|Sphere_pos[0][8]       ; Merged with sphere_reg_4:sph4|Sphere_pos[0][2]  ;
+; sphere_reg_4:sph4|Sphere_pos[2][26]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][2]  ;
+; sphere_reg_4:sph4|Sphere_pos[0][6]       ; Merged with sphere_reg_4:sph4|Sphere_pos[0][2]  ;
+; sphere_reg_4:sph4|Sphere_pos[2][12]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][2]  ;
+; sphere_reg_4:sph4|Sphere_pos[1][13]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][2]  ;
+; sphere_reg_4:sph4|Sphere_pos[0][4]       ; Merged with sphere_reg_4:sph4|Sphere_pos[0][2]  ;
+; sphere_reg_4:sph4|Sphere_pos[2][50]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][2]  ;
+; sphere_reg_4:sph4|Sphere_pos[1][12]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][2]  ;
+; sphere_reg_4:sph4|Sphere_pos[2][59]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][2]  ;
+; sphere_reg_4:sph4|Sphere_pos[2][43]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][2]  ;
+; sphere_reg_4:sph4|Sphere_pos[2][11]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][2]  ;
+; sphere_reg_4:sph4|Sphere_pos[1][11]      ; Merged with sphere_reg_4:sph4|Sphere_pos[0][2]  ;
+; sphere_reg_4:sph4|Sphere_pos[1][40]      ; Merged with sphere_reg_4:sph4|Sphere_pos[1][36] ;
+; sphere_reg_4:sph4|Sphere_pos[1][37]      ; Merged with sphere_reg_4:sph4|Sphere_pos[1][36] ;
+; sphere_reg_4:sph4|pos[1][2][60]          ; Merged with sphere_reg_4:sph4|pos[1][2][63]     ;
+; sphere_reg_4:sph4|Sphere_pos[0][2]       ; Merged with sphere_reg_4:sph4|Sphere_pos[0][0]  ;
+; sphere_reg_4:sph4|pos[1][2][63]          ; Stuck at GND due to stuck port data_in          ;
+; sphere_reg_4:sph4|pos[1][1][40]          ; Stuck at VCC due to stuck port data_in          ;
+; sphere_reg_4:sph4|Sphere_pos[0][0]       ; Stuck at GND due to stuck port data_in          ;
+; sphere_reg_4:sph4|Sphere_pos[1][36]      ; Stuck at VCC due to stuck port data_in          ;
+; ray_lut:rl|cos_lut:c0|out[0..15]         ; Lost fanout                                     ;
+; ray_lut:rl|cos_lut:c1|out[0..15]         ; Lost fanout                                     ;
+; ray_lut:rl|sin_lut:s0|out[15]            ; Stuck at GND due to stuck port data_in          ;
+; ray_lut:rl|sin_lut:s1|out[15]            ; Stuck at GND due to stuck port data_in          ;
+; State~5                                  ; Lost fanout                                     ;
+; State~6                                  ; Lost fanout                                     ;
+; State~7                                  ; Lost fanout                                     ;
+; State~8                                  ; Lost fanout                                     ;
+; State~9                                  ; Lost fanout                                     ;
+; State~10                                 ; Lost fanout                                     ;
+; State~11                                 ; Lost fanout                                     ;
+; Total Number of Removed Registers = 1039 ;                                                 ;
++------------------------------------------+-------------------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                               ;
-+--------------------------------------+---------------------------+----------------------------------------+
-; Register name                        ; Reason for Removal        ; Registers Removed due to This Register ;
-+--------------------------------------+---------------------------+----------------------------------------+
-; x_ang_lut:xang|out[6]                ; Stuck at GND              ; ray_lut:rl|sin_lut:s0|out[15]          ;
-;                                      ; due to stuck port data_in ;                                        ;
-; y_ang_lut:yang|out[6]                ; Stuck at GND              ; ray_lut:rl|sin_lut:s1|out[15]          ;
-;                                      ; due to stuck port data_in ;                                        ;
-; sphere_reg:firstsph|currentpos[0][0] ; Stuck at GND              ; ray_lut:rl|cos_lut:c0|out[15]          ;
-;                                      ; due to stuck port data_in ;                                        ;
-+--------------------------------------+---------------------------+----------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                     ;
++---------------------------------+---------------------------+-------------------------------------------------------------------+
+; Register name                   ; Reason for Removal        ; Registers Removed due to This Register                            ;
++---------------------------------+---------------------------+-------------------------------------------------------------------+
+; sphere_reg_4:sph4|pos[1][2][63] ; Stuck at GND              ; sphere_reg_4:sph4|Sphere_pos[0][0], ray_lut:rl|cos_lut:c0|out[15] ;
+;                                 ; due to stuck port data_in ;                                                                   ;
+; x_ang_lut:xang|out[6]           ; Stuck at GND              ; ray_lut:rl|sin_lut:s0|out[15]                                     ;
+;                                 ; due to stuck port data_in ;                                                                   ;
+; y_ang_lut:yang|out[6]           ; Stuck at GND              ; ray_lut:rl|sin_lut:s1|out[15]                                     ;
+;                                 ; due to stuck port data_in ;                                                                   ;
+; sphere_reg_4:sph4|pos[1][1][40] ; Stuck at VCC              ; sphere_reg_4:sph4|Sphere_pos[1][36]                               ;
+;                                 ; due to stuck port data_in ;                                                                   ;
++---------------------------------+---------------------------+-------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -575,10 +1385,10 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 93    ;
-; Number of registers using Synchronous Clear  ; 4     ;
+; Total registers                              ; 169   ;
+; Number of registers using Synchronous Clear  ; 68    ;
 ; Number of registers using Synchronous Load   ; 6     ;
-; Number of registers using Asynchronous Clear ; 21    ;
+; Number of registers using Asynchronous Clear ; 27    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 13    ;
 ; Number of registers using Preset             ; 0     ;
@@ -594,17 +1404,32 @@ Encoding Type:  One-Hot
 +------------------------------------------+------------------------------+------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                    ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                          ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------+
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |final_top_level|VGA_controller:vga|h_counter[2]    ;
-; 512:1              ; 6 bits    ; 2046 LEs      ; 564 LEs              ; 1482 LEs               ; Yes        ; |final_top_level|x_ang_lut:xang|out[2]              ;
-; 512:1              ; 6 bits    ; 2046 LEs      ; 462 LEs              ; 1584 LEs               ; Yes        ; |final_top_level|y_ang_lut:yang|out[0]              ;
-; 3:1                ; 9 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; No         ; |final_top_level|VGA_controller:vga|v_counter_in[9] ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |final_top_level|increment_write:iw|WriteY[9]       ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |final_top_level|VGA_controller:vga|h_counter[3]     ;
+; 512:1              ; 6 bits    ; 2046 LEs      ; 564 LEs              ; 1482 LEs               ; Yes        ; |final_top_level|x_ang_lut:xang|out[3]               ;
+; 512:1              ; 6 bits    ; 2046 LEs      ; 462 LEs              ; 1584 LEs               ; Yes        ; |final_top_level|y_ang_lut:yang|out[1]               ;
+; 3:1                ; 9 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; No         ; |final_top_level|VGA_controller:vga|v_counter_in[2]  ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |final_top_level|increment_write:iw|WriteY[1]        ;
+; 16:1               ; 4 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |final_top_level|sphere_reg_4:sph4|rand_lut:rl|Mux0  ;
+; 16:1               ; 4 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |final_top_level|sphere_reg_4:sph4|rand_lut:rl|Mux7  ;
+; 16:1               ; 4 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |final_top_level|sphere_reg_4:sph4|rand_lut:rl|Mux11 ;
+; 16:1               ; 4 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |final_top_level|sphere_reg_4:sph4|rand_lut:rl|Mux14 ;
+; 16:1               ; 4 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |final_top_level|sphere_reg_4:sph4|rand_lut:rl|Mux17 ;
+; 16:1               ; 4 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |final_top_level|sphere_reg_4:sph4|rand_lut:rl|Mux21 ;
+; 16:1               ; 4 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |final_top_level|sphere_reg_4:sph4|rand_lut:rl|Mux24 ;
+; 16:1               ; 4 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |final_top_level|sphere_reg_4:sph4|rand_lut:rl|Mux28 ;
+; 16:1               ; 4 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |final_top_level|sphere_reg_4:sph4|rand_lut:rl|Mux35 ;
+; 16:1               ; 4 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |final_top_level|sphere_reg_4:sph4|rand_lut:rl|Mux38 ;
+; 16:1               ; 4 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |final_top_level|sphere_reg_4:sph4|rand_lut:rl|Mux42 ;
+; 16:1               ; 4 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |final_top_level|sphere_reg_4:sph4|rand_lut:rl|Mux47 ;
+; 16:1               ; 4 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |final_top_level|sphere_reg_4:sph4|rand_lut:rl|Mux50 ;
+; 16:1               ; 4 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |final_top_level|sphere_reg_4:sph4|rand_lut:rl|Mux52 ;
+; 16:1               ; 4 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |final_top_level|sphere_reg_4:sph4|rand_lut:rl|Mux56 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
 
 
 +-----------------------------------------------------------------------------------------------+
@@ -1288,20 +2113,97 @@ Note: In order to hide this table in the UI and the text report file, please set
 +---------------+--------+----------+------------------------+
 
 
-+------------------------------------------------------+
-; Port Connectivity Checks: "sphere_reg:firstsph"      ;
-+--------------------+-------+----------+--------------+
-; Port               ; Type  ; Severity ; Details      ;
-+--------------------+-------+----------+--------------+
-; nextcol            ; Input ; Info     ; Stuck at VCC ;
-; nextpos[2]         ; Input ; Info     ; Stuck at GND ;
-; nextpos[1][37..36] ; Input ; Info     ; Stuck at VCC ;
-; nextpos[1][63..41] ; Input ; Info     ; Stuck at GND ;
-; nextpos[1][39..38] ; Input ; Info     ; Stuck at GND ;
-; nextpos[1][35..0]  ; Input ; Info     ; Stuck at GND ;
-; nextpos[1][40]     ; Input ; Info     ; Stuck at VCC ;
-; nextpos[0]         ; Input ; Info     ; Stuck at GND ;
-+--------------------+-------+----------+--------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "sphere_reg_4:sph4|rand_lut:rl|random_0:r0"                                                                                                                                      ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                                                          ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; seed ; Input ; Warning  ; Input port expression (5 bits) is wider than the input port (4 bits) it drives.  The 1 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "sphere_reg_4:sph4|add_vector:pva3"                                                  ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; c    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "sphere_reg_4:sph4|add_vector:pva2"                                                  ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; c    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "sphere_reg_4:sph4|add_vector:pva1"                                                  ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; c    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "sphere_reg_4:sph4|add_vector:pva0"                                                  ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; c    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------+
+; Port Connectivity Checks: "sphere_reg_4:sph4|add_vector:va3" ;
++------+-------+----------+------------------------------------+
+; Port ; Type  ; Severity ; Details                            ;
++------+-------+----------+------------------------------------+
+; b    ; Input ; Info     ; Stuck at GND                       ;
++------+-------+----------+------------------------------------+
+
+
++--------------------------------------------------------------+
+; Port Connectivity Checks: "sphere_reg_4:sph4|add_vector:va2" ;
++------+-------+----------+------------------------------------+
+; Port ; Type  ; Severity ; Details                            ;
++------+-------+----------+------------------------------------+
+; b    ; Input ; Info     ; Stuck at GND                       ;
++------+-------+----------+------------------------------------+
+
+
++--------------------------------------------------------------+
+; Port Connectivity Checks: "sphere_reg_4:sph4|add_vector:va1" ;
++------+-------+----------+------------------------------------+
+; Port ; Type  ; Severity ; Details                            ;
++------+-------+----------+------------------------------------+
+; b    ; Input ; Info     ; Stuck at GND                       ;
++------+-------+----------+------------------------------------+
+
+
++--------------------------------------------------------------+
+; Port Connectivity Checks: "sphere_reg_4:sph4|add_vector:va0" ;
++------+-------+----------+------------------------------------+
+; Port ; Type  ; Severity ; Details                            ;
++------+-------+----------+------------------------------------+
+; b    ; Input ; Info     ; Stuck at GND                       ;
++------+-------+----------+------------------------------------+
+
+
++-------------------------------------------------+
+; Port Connectivity Checks: "sphere_reg_4:sph4"   ;
++---------------+-------+----------+--------------+
+; Port          ; Type  ; Severity ; Details      ;
++---------------+-------+----------+--------------+
+; Hit           ; Input ; Info     ; Stuck at GND ;
+; Hit_index     ; Input ; Info     ; Stuck at GND ;
+; Read_index[1] ; Input ; Info     ; Stuck at GND ;
+; Read_index[0] ; Input ; Info     ; Stuck at VCC ;
++---------------+-------+----------+--------------+
 
 
 +-----------------------------------------------------+
@@ -1310,29 +2212,29 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 34                          ;
-; cycloneiii_ff         ; 93                          ;
-;     CLR               ; 21                          ;
+; cycloneiii_ff         ; 169                         ;
+;     CLR               ; 27                          ;
 ;     ENA               ; 7                           ;
 ;     ENA SLD           ; 6                           ;
-;     SCLR              ; 4                           ;
-;     plain             ; 55                          ;
-; cycloneiii_lcell_comb ; 1777                        ;
-;     arith             ; 923                         ;
+;     SCLR              ; 68                          ;
+;     plain             ; 61                          ;
+; cycloneiii_lcell_comb ; 2525                        ;
+;     arith             ; 986                         ;
 ;         2 data inputs ; 216                         ;
-;         3 data inputs ; 707                         ;
-;     normal            ; 854                         ;
+;         3 data inputs ; 770                         ;
+;     normal            ; 1539                        ;
 ;         0 data inputs ; 2                           ;
 ;         1 data inputs ; 16                          ;
-;         2 data inputs ; 37                          ;
-;         3 data inputs ; 99                          ;
-;         4 data inputs ; 700                         ;
+;         2 data inputs ; 53                          ;
+;         3 data inputs ; 94                          ;
+;         4 data inputs ; 1374                        ;
 ; cycloneiii_mac_mult   ; 34                          ;
 ; cycloneiii_mac_out    ; 34                          ;
 ; cycloneiii_pll        ; 1                           ;
 ; cycloneiii_ram_block  ; 228                         ;
 ;                       ;                             ;
-; Max LUT depth         ; 13.30                       ;
-; Average LUT depth     ; 6.66                        ;
+; Max LUT depth         ; 77.30                       ;
+; Average LUT depth     ; 16.39                       ;
 +-----------------------+-----------------------------+
 
 
@@ -1341,7 +2243,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:16     ;
+; Top            ; 00:00:19     ;
 +----------------+--------------+
 
 
@@ -1351,9 +2253,11 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
-    Info: Processing started: Wed Apr 25 22:18:31 2018
+    Info: Processing started: Thu Apr 26 01:37:49 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off final_project -c final_project_top
 Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 1 design units, including 1 entities, in source file hexdriver.sv
+    Info (12023): Found entity 1: hexdriver
 Info (12021): Found 3 design units, including 3 entities, in source file lut.sv
     Info (12023): Found entity 1: sin_lut
     Info (12023): Found entity 2: cos_lut
@@ -1382,9 +2286,8 @@ Info (12021): Found 3 design units, including 3 entities, in source file frame_b
     Info (12023): Found entity 3: color_expand
 Info (12021): Found 1 design units, including 1 entities, in source file collision_detection.sv
     Info (12023): Found entity 1: collision_detection
-Info (12021): Found 2 design units, including 2 entities, in source file sphere_reg.sv
-    Info (12023): Found entity 1: sphere_reg
-    Info (12023): Found entity 2: sphere_reg_4
+Info (12021): Found 1 design units, including 1 entities, in source file sphere_reg.sv
+    Info (12023): Found entity 1: sphere_reg_4
 Info (12021): Found 1 design units, including 1 entities, in source file writeupdate.sv
     Info (12023): Found entity 1: increment_write
 Info (12021): Found 1 design units, including 1 entities, in source file color_mapper.sv
@@ -1411,7 +2314,49 @@ Info (12021): Found 17 design units, including 17 entities, in source file rando
     Info (12023): Found entity 16: random_14
     Info (12023): Found entity 17: random_15
 Info (12127): Elaborating entity "final_top_level" for the top level hierarchy
-Info (12128): Elaborating entity "sphere_reg" for hierarchy "sphere_reg:firstsph"
+Info (12128): Elaborating entity "sphere_reg_4" for hierarchy "sphere_reg_4:sph4"
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "pos" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "col" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "vel" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "acc" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "velacc" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "posvelacc" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "pos_n" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "vel_n" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "col_n" into its bus
+Info (12128): Elaborating entity "add_vector" for hierarchy "sphere_reg_4:sph4|add_vector:va0"
+Info (12128): Elaborating entity "rand_lut" for hierarchy "sphere_reg_4:sph4|rand_lut:rl"
+Warning (10027): Verilog HDL or VHDL warning at the random.sv(23): index expression is not wide enough to address all of the elements in the array
+Warning (10027): Verilog HDL or VHDL warning at the random.sv(24): index expression is not wide enough to address all of the elements in the array
+Warning (10027): Verilog HDL or VHDL warning at the random.sv(25): index expression is not wide enough to address all of the elements in the array
+Warning (10027): Verilog HDL or VHDL warning at the random.sv(26): index expression is not wide enough to address all of the elements in the array
+Warning (10027): Verilog HDL or VHDL warning at the random.sv(27): index expression is not wide enough to address all of the elements in the array
+Warning (10027): Verilog HDL or VHDL warning at the random.sv(28): index expression is not wide enough to address all of the elements in the array
+Warning (10027): Verilog HDL or VHDL warning at the random.sv(29): index expression is not wide enough to address all of the elements in the array
+Warning (10027): Verilog HDL or VHDL warning at the random.sv(30): index expression is not wide enough to address all of the elements in the array
+Warning (10027): Verilog HDL or VHDL warning at the random.sv(31): index expression is not wide enough to address all of the elements in the array
+Warning (10027): Verilog HDL or VHDL warning at the random.sv(32): index expression is not wide enough to address all of the elements in the array
+Warning (10027): Verilog HDL or VHDL warning at the random.sv(33): index expression is not wide enough to address all of the elements in the array
+Warning (10027): Verilog HDL or VHDL warning at the random.sv(34): index expression is not wide enough to address all of the elements in the array
+Warning (10027): Verilog HDL or VHDL warning at the random.sv(35): index expression is not wide enough to address all of the elements in the array
+Warning (10027): Verilog HDL or VHDL warning at the random.sv(36): index expression is not wide enough to address all of the elements in the array
+Warning (10027): Verilog HDL or VHDL warning at the random.sv(37): index expression is not wide enough to address all of the elements in the array
+Info (12128): Elaborating entity "random_0" for hierarchy "sphere_reg_4:sph4|rand_lut:rl|random_0:r0"
+Info (12128): Elaborating entity "random_1" for hierarchy "sphere_reg_4:sph4|rand_lut:rl|random_1:r1"
+Info (12128): Elaborating entity "random_2" for hierarchy "sphere_reg_4:sph4|rand_lut:rl|random_2:r2"
+Info (12128): Elaborating entity "random_3" for hierarchy "sphere_reg_4:sph4|rand_lut:rl|random_3:r3"
+Info (12128): Elaborating entity "random_4" for hierarchy "sphere_reg_4:sph4|rand_lut:rl|random_4:r4"
+Info (12128): Elaborating entity "random_5" for hierarchy "sphere_reg_4:sph4|rand_lut:rl|random_5:r5"
+Info (12128): Elaborating entity "random_6" for hierarchy "sphere_reg_4:sph4|rand_lut:rl|random_6:r6"
+Info (12128): Elaborating entity "random_7" for hierarchy "sphere_reg_4:sph4|rand_lut:rl|random_7:r7"
+Info (12128): Elaborating entity "random_8" for hierarchy "sphere_reg_4:sph4|rand_lut:rl|random_8:r8"
+Info (12128): Elaborating entity "random_9" for hierarchy "sphere_reg_4:sph4|rand_lut:rl|random_9:r9"
+Info (12128): Elaborating entity "random_10" for hierarchy "sphere_reg_4:sph4|rand_lut:rl|random_10:r10"
+Info (12128): Elaborating entity "random_11" for hierarchy "sphere_reg_4:sph4|rand_lut:rl|random_11:r11"
+Info (12128): Elaborating entity "random_12" for hierarchy "sphere_reg_4:sph4|rand_lut:rl|random_12:r12"
+Info (12128): Elaborating entity "random_13" for hierarchy "sphere_reg_4:sph4|rand_lut:rl|random_13:r13"
+Info (12128): Elaborating entity "random_14" for hierarchy "sphere_reg_4:sph4|rand_lut:rl|random_14:r14"
+Info (12128): Elaborating entity "random_15" for hierarchy "sphere_reg_4:sph4|rand_lut:rl|random_15:r15"
 Info (12128): Elaborating entity "color_mapper" for hierarchy "color_mapper:colmap"
 Info (12128): Elaborating entity "collision_detection" for hierarchy "collision_detection:cd"
 Info (12128): Elaborating entity "dot_product_scale" for hierarchy "collision_detection:cd|dot_product_scale:vdxc"
@@ -1586,8 +2531,16 @@ Warning (14284): Synthesized away the following node(s):
         Warning (14320): Synthesized away node "collision_detection:cd|dot_product_scale:vdxc|mult_real:y|lpm_mult:Mult0|mult_mit:auto_generated|mac_mult33"
         Warning (14320): Synthesized away node "collision_detection:cd|dot_product_scale:vdxc|mult_real:y|lpm_mult:Mult0|mult_mit:auto_generated|mac_out30"
         Warning (14320): Synthesized away node "collision_detection:cd|dot_product_scale:vdxc|mult_real:y|lpm_mult:Mult0|mult_mit:auto_generated|mac_out34"
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (13014): Ignored 2205 buffer(s)
     Info (13019): Ignored 2205 SOFT buffer(s)
+Warning (13004): Presettable and clearable registers converted to equivalent circuits with latches. Registers power-up to an undefined state, and DEVCLRn places the registers in an undefined state.
+    Warning (13310): Register "sphere_reg_4:sph4|col[1][0][6]" is converted into an equivalent circuit using register "sphere_reg_4:sph4|col[1][0][6]~_emulated" and latch "sphere_reg_4:sph4|col[1][0][6]~1"
+    Warning (13310): Register "sphere_reg_4:sph4|col[1][0][7]" is converted into an equivalent circuit using register "sphere_reg_4:sph4|col[1][0][7]~_emulated" and latch "sphere_reg_4:sph4|col[1][0][7]~1"
+    Warning (13310): Register "sphere_reg_4:sph4|col[1][1][6]" is converted into an equivalent circuit using register "sphere_reg_4:sph4|col[1][1][6]~_emulated" and latch "sphere_reg_4:sph4|col[1][1][6]~1"
+    Warning (13310): Register "sphere_reg_4:sph4|col[1][1][7]" is converted into an equivalent circuit using register "sphere_reg_4:sph4|col[1][1][7]~_emulated" and latch "sphere_reg_4:sph4|col[1][1][7]~1"
+    Warning (13310): Register "sphere_reg_4:sph4|col[1][2][6]" is converted into an equivalent circuit using register "sphere_reg_4:sph4|col[1][2][6]~_emulated" and latch "sphere_reg_4:sph4|col[1][2][6]~1"
+    Warning (13310): Register "sphere_reg_4:sph4|col[1][2][7]" is converted into an equivalent circuit using register "sphere_reg_4:sph4|col[1][2][7]~_emulated" and latch "sphere_reg_4:sph4|col[1][2][7]~1"
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "VGA_R[0]" is stuck at GND
     Warning (13410): Pin "VGA_R[1]" is stuck at GND
@@ -1609,7 +2562,7 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "VGA_B[5]" is stuck at GND
     Warning (13410): Pin "VGA_SYNC_N" is stuck at GND
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 39 registers lost all their fanouts during netlist optimizations.
+Info (17049): 633 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file D:/ECE_385/final_project/output_files/final_project_top.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
@@ -1617,16 +2570,16 @@ Warning (21074): Design contains 3 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "KEY[1]"
     Warning (15610): No output dependent on input pin "KEY[2]"
     Warning (15610): No output dependent on input pin "KEY[3]"
-Info (21057): Implemented 2128 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 2882 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 5 input pins
     Info (21059): Implemented 29 output pins
-    Info (21061): Implemented 1797 logic cells
+    Info (21061): Implemented 2551 logic cells
     Info (21064): Implemented 228 RAM segments
     Info (21065): Implemented 1 PLLs
     Info (21062): Implemented 68 DSP elements
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 40 warnings
-    Info: Peak virtual memory: 1079 megabytes
-    Info: Processing ended: Wed Apr 25 22:19:00 2018
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 63 warnings
+    Info: Peak virtual memory: 803 megabytes
+    Info: Processing ended: Thu Apr 26 01:38:18 2018
     Info: Elapsed time: 00:00:29
     Info: Total CPU time (on all processors): 00:00:42
 

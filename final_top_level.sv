@@ -20,8 +20,10 @@ logic [9:0] DrawX, DrawY, WriteX, WriteY;
 
 fixed_real dPhi, dTheta;
 
-sphere_reg firstsph(.Frame_Clk(VGA_VS), .nextcol({8'hff, 8'hff, 8'hff}), .nextpos({64'd0, 64'd304 << 32, 64'd0}),
-	.currentpos(sphere1pos), .currentcol(sphere1col));
+/*sphere_reg firstsph(.Frame_Clk(VGA_VS), .nextcol({8'hff, 8'hff, 8'hff}), .nextpos({64'd0, 64'd304 << 32, 64'd0}),
+	.currentpos(sphere1pos), .currentcol(sphere1col));*/
+	
+sphere_reg_4 sph4(.Clk(CLOCK_50),.Frame_Clk(VGA_VS),.Reset(~KEY[0]),.Hit(1'b0),.Hit_index(2'b00),.Read_index(2'b01),.Sphere_pos(sphere1pos),.Sphere_col(sphere1col));
 	
 color_mapper colmap(.is_ball(collide), .DrawX(WriteX), .DrawY(WriteY), .colin(sphere1col), .col(colorout));
 

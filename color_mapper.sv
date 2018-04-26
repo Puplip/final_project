@@ -12,17 +12,15 @@ module  color_mapper (
 always_comb begin
 	  if (is_ball == 1'b1) 
 	  begin
-			// White ball
 			col[2] = colin[2];
 			col[1] = colin[1];
 			col[0] = colin[0];
 	  end
 	  else 
 	  begin
-			// Background with nice color gradient
 			col[2] = 8'h00; 
 			col[1] = 8'h00;
-			col[0] = 8'hff;
+			col[0] = 8'h00;
 	  end
 	end 
 
