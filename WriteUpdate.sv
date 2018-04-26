@@ -8,8 +8,8 @@ parameter [9:0] V_TOTAL = 10'd480;
 
 logic [9:0] h_counter_in, v_counter_in, h_counter, v_counter;
 
-assign WriteX = h_counter_in;
-assign WriteY = v_counter_in;
+assign WriteX = h_counter;
+assign WriteY = v_counter;
 
  always_ff @ (posedge Clk or posedge Reset)
  begin

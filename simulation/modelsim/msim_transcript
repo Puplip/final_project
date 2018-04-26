@@ -1,4 +1,4 @@
-# Reading D:/altera/15.0/modelsim_ase/tcl/vsim/pref.tcl
+# Reading C:/altera/15.0/modelsim_ase/tcl/vsim/pref.tcl
 # do final_project_top_run_msim_rtl_verilog.do
 # if {[file exists rtl_work]} {
 # 	vdel -lib rtl_work -all
@@ -7,35 +7,35 @@
 # vmap work rtl_work
 # Model Technology ModelSim PE vmap 10.3d Lib Mapping Utility 2014.10 Oct  7 2014
 # vmap -modelsim_quiet work rtl_work 
-# Copying D:/altera/15.0/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Copying C:/altera/15.0/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
-# ** Warning: Copied D:/altera/15.0/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini.
+# ** Warning: Copied C:/altera/15.0/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini.
 #          Updated modelsim.ini.
 # 
-# vlog -vlog01compat -work work +incdir+D:/ECE_385/final_project {D:/ECE_385/final_project/vga_clk.v}
+# vlog -vlog01compat -work work +incdir+D:/ece_385/final_project {D:/ece_385/final_project/vga_clk.v}
 # Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 00:02:14 on Apr 26,2018
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/ECE_385/final_project" D:/ECE_385/final_project/vga_clk.v 
+# Start time: 08:29:48 on Apr 26,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/ece_385/final_project" D:/ece_385/final_project/vga_clk.v 
 # -- Compiling module vga_clk
 # 
 # Top level modules:
 # 	vga_clk
-# End time: 00:02:14 on Apr 26,2018, Elapsed time: 0:00:00
+# End time: 08:29:48 on Apr 26,2018, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+D:/ECE_385/final_project/db {D:/ECE_385/final_project/db/vga_clk_altpll1.v}
+# vlog -vlog01compat -work work +incdir+D:/ece_385/final_project/db {D:/ece_385/final_project/db/vga_clk_altpll1.v}
 # Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 00:02:14 on Apr 26,2018
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/ECE_385/final_project/db" D:/ECE_385/final_project/db/vga_clk_altpll1.v 
+# Start time: 08:29:48 on Apr 26,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/ece_385/final_project/db" D:/ece_385/final_project/db/vga_clk_altpll1.v 
 # -- Compiling module vga_clk_altpll1
 # 
 # Top level modules:
 # 	vga_clk_altpll1
-# End time: 00:02:14 on Apr 26,2018, Elapsed time: 0:00:00
+# End time: 08:29:48 on Apr 26,2018, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+D:/ECE_385/final_project {D:/ECE_385/final_project/lut.sv}
+# vlog -sv -work work +incdir+D:/ece_385/final_project {D:/ece_385/final_project/lut.sv}
 # Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 00:02:14 on Apr 26,2018
-# vlog -reportprogress 300 -sv -work work "+incdir+D:/ECE_385/final_project" D:/ECE_385/final_project/lut.sv 
+# Start time: 08:29:48 on Apr 26,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ece_385/final_project" D:/ece_385/final_project/lut.sv 
 # -- Compiling package lut_sv_unit
 # -- Compiling module sin_lut
 # -- Compiling module cos_lut
@@ -43,32 +43,32 @@
 # 
 # Top level modules:
 # 	ray_lut
-# End time: 00:02:14 on Apr 26,2018, Elapsed time: 0:00:00
+# End time: 08:29:48 on Apr 26,2018, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+D:/ECE_385/final_project {D:/ECE_385/final_project/VGA_controller.sv}
+# vlog -sv -work work +incdir+D:/ece_385/final_project {D:/ece_385/final_project/VGA_controller.sv}
 # Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 00:02:14 on Apr 26,2018
-# vlog -reportprogress 300 -sv -work work "+incdir+D:/ECE_385/final_project" D:/ECE_385/final_project/VGA_controller.sv 
+# Start time: 08:29:49 on Apr 26,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ece_385/final_project" D:/ece_385/final_project/VGA_controller.sv 
 # -- Compiling module VGA_controller
 # 
 # Top level modules:
 # 	VGA_controller
-# End time: 00:02:14 on Apr 26,2018, Elapsed time: 0:00:00
+# End time: 08:29:49 on Apr 26,2018, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+D:/ECE_385/final_project {D:/ECE_385/final_project/WriteUpdate.sv}
+# vlog -sv -work work +incdir+D:/ece_385/final_project {D:/ece_385/final_project/WriteUpdate.sv}
 # Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 00:02:14 on Apr 26,2018
-# vlog -reportprogress 300 -sv -work work "+incdir+D:/ECE_385/final_project" D:/ECE_385/final_project/WriteUpdate.sv 
+# Start time: 08:29:49 on Apr 26,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ece_385/final_project" D:/ece_385/final_project/WriteUpdate.sv 
 # -- Compiling module increment_write
 # 
 # Top level modules:
 # 	increment_write
-# End time: 00:02:14 on Apr 26,2018, Elapsed time: 0:00:00
+# End time: 08:29:49 on Apr 26,2018, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+D:/ECE_385/final_project {D:/ECE_385/final_project/ang_lut.sv}
+# vlog -sv -work work +incdir+D:/ece_385/final_project {D:/ece_385/final_project/ang_lut.sv}
 # Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 00:02:14 on Apr 26,2018
-# vlog -reportprogress 300 -sv -work work "+incdir+D:/ECE_385/final_project" D:/ECE_385/final_project/ang_lut.sv 
+# Start time: 08:29:49 on Apr 26,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ece_385/final_project" D:/ece_385/final_project/ang_lut.sv 
 # -- Compiling package ang_lut_sv_unit
 # -- Compiling module y_ang_lut
 # -- Compiling module x_ang_lut
@@ -76,12 +76,12 @@
 # Top level modules:
 # 	y_ang_lut
 # 	x_ang_lut
-# End time: 00:02:14 on Apr 26,2018, Elapsed time: 0:00:00
+# End time: 08:29:49 on Apr 26,2018, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+D:/ECE_385/final_project {D:/ECE_385/final_project/vector.sv}
+# vlog -sv -work work +incdir+D:/ece_385/final_project {D:/ece_385/final_project/vector.sv}
 # Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 00:02:14 on Apr 26,2018
-# vlog -reportprogress 300 -sv -work work "+incdir+D:/ECE_385/final_project" D:/ECE_385/final_project/vector.sv 
+# Start time: 08:29:49 on Apr 26,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ece_385/final_project" D:/ece_385/final_project/vector.sv 
 # -- Compiling package vector_sv_unit
 # -- Compiling module add_vector
 # -- Compiling module sub_vector
@@ -96,12 +96,12 @@
 # 	dot_product_scale
 # 	sqrt_real_32
 # 	sqrt_real
-# End time: 00:02:14 on Apr 26,2018, Elapsed time: 0:00:00
+# End time: 08:29:49 on Apr 26,2018, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+D:/ECE_385/final_project {D:/ECE_385/final_project/frame_buffer.sv}
+# vlog -sv -work work +incdir+D:/ece_385/final_project {D:/ece_385/final_project/frame_buffer.sv}
 # Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 00:02:14 on Apr 26,2018
-# vlog -reportprogress 300 -sv -work work "+incdir+D:/ECE_385/final_project" D:/ECE_385/final_project/frame_buffer.sv 
+# Start time: 08:29:49 on Apr 26,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ece_385/final_project" D:/ece_385/final_project/frame_buffer.sv 
 # -- Compiling package frame_buffer_sv_unit
 # -- Compiling module frame_buffer
 # -- Compiling module color_shrink
@@ -109,36 +109,36 @@
 # 
 # Top level modules:
 # 	frame_buffer
-# End time: 00:02:14 on Apr 26,2018, Elapsed time: 0:00:00
+# End time: 08:29:49 on Apr 26,2018, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+D:/ECE_385/final_project {D:/ECE_385/final_project/collision_detection.sv}
+# vlog -sv -work work +incdir+D:/ece_385/final_project {D:/ece_385/final_project/collision_detection.sv}
 # Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 00:02:15 on Apr 26,2018
-# vlog -reportprogress 300 -sv -work work "+incdir+D:/ECE_385/final_project" D:/ECE_385/final_project/collision_detection.sv 
+# Start time: 08:29:49 on Apr 26,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ece_385/final_project" D:/ece_385/final_project/collision_detection.sv 
 # -- Compiling package collision_detection_sv_unit
 # -- Compiling module collision_detection
-# ** Warning: D:/ECE_385/final_project/collision_detection.sv(24): (vlog-2182) 'bsqr' might be read before written in always_comb or always @* block.
+# ** Warning: D:/ece_385/final_project/collision_detection.sv(24): (vlog-2182) 'bsqr' might be read before written in always_comb or always @* block.
 # 
 # 
 # Top level modules:
 # 	collision_detection
-# End time: 00:02:15 on Apr 26,2018, Elapsed time: 0:00:00
+# End time: 08:29:49 on Apr 26,2018, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 1
-# vlog -sv -work work +incdir+D:/ECE_385/final_project {D:/ECE_385/final_project/color_mapper.sv}
+# vlog -sv -work work +incdir+D:/ece_385/final_project {D:/ece_385/final_project/color_mapper.sv}
 # Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 00:02:15 on Apr 26,2018
-# vlog -reportprogress 300 -sv -work work "+incdir+D:/ECE_385/final_project" D:/ECE_385/final_project/color_mapper.sv 
+# Start time: 08:29:49 on Apr 26,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ece_385/final_project" D:/ece_385/final_project/color_mapper.sv 
 # -- Compiling package color_mapper_sv_unit
 # -- Compiling module color_mapper
 # 
 # Top level modules:
 # 	color_mapper
-# End time: 00:02:15 on Apr 26,2018, Elapsed time: 0:00:00
+# End time: 08:29:49 on Apr 26,2018, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+D:/ECE_385/final_project {D:/ECE_385/final_project/random.sv}
+# vlog -sv -work work +incdir+D:/ece_385/final_project {D:/ece_385/final_project/random.sv}
 # Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 00:02:15 on Apr 26,2018
-# vlog -reportprogress 300 -sv -work work "+incdir+D:/ECE_385/final_project" D:/ECE_385/final_project/random.sv 
+# Start time: 08:29:49 on Apr 26,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ece_385/final_project" D:/ece_385/final_project/random.sv 
 # -- Compiling package random_sv_unit
 # -- Compiling module rand_lut
 # -- Compiling module random_0
@@ -160,37 +160,221 @@
 # 
 # Top level modules:
 # 	rand_lut
-# End time: 00:02:15 on Apr 26,2018, Elapsed time: 0:00:00
+# End time: 08:29:49 on Apr 26,2018, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+D:/ECE_385/final_project {D:/ECE_385/final_project/final_top_level.sv}
+# vlog -sv -work work +incdir+D:/ece_385/final_project {D:/ece_385/final_project/final_top_level.sv}
 # Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 00:02:15 on Apr 26,2018
-# vlog -reportprogress 300 -sv -work work "+incdir+D:/ECE_385/final_project" D:/ECE_385/final_project/final_top_level.sv 
+# Start time: 08:29:49 on Apr 26,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ece_385/final_project" D:/ece_385/final_project/final_top_level.sv 
 # -- Compiling package final_top_level_sv_unit
 # -- Compiling module final_top_level
 # 
 # Top level modules:
 # 	final_top_level
-# End time: 00:02:15 on Apr 26,2018, Elapsed time: 0:00:00
+# End time: 08:29:49 on Apr 26,2018, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+D:/ECE_385/final_project {D:/ECE_385/final_project/sphere_reg.sv}
+# vlog -sv -work work +incdir+D:/ece_385/final_project {D:/ece_385/final_project/sphere_reg.sv}
 # Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 00:02:15 on Apr 26,2018
-# vlog -reportprogress 300 -sv -work work "+incdir+D:/ECE_385/final_project" D:/ECE_385/final_project/sphere_reg.sv 
+# Start time: 08:29:49 on Apr 26,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ece_385/final_project" D:/ece_385/final_project/sphere_reg.sv 
 # -- Compiling package sphere_reg_sv_unit
-# -- Compiling module sphere_reg
+# -- Compiling module sphere_reg_4
+# ** Error: D:/ece_385/final_project/sphere_reg.sv(85): (vlog-2110) Illegal reference to net "curr_index".
+# 
+# End time: 08:29:49 on Apr 26,2018, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# ** Error: C:/altera/15.0/modelsim_ase/win32aloem/vlog failed.
+# Error in macro ./final_project_top_run_msim_rtl_verilog.do line 20
+# C:/altera/15.0/modelsim_ase/win32aloem/vlog failed.
+#     while executing
+# "vlog -sv -work work +incdir+D:/ece_385/final_project {D:/ece_385/final_project/sphere_reg.sv}"
+do final_project_top_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim PE vmap 10.3d Lib Mapping Utility 2014.10 Oct  7 2014
+# vmap -modelsim_quiet work rtl_work 
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+D:/ece_385/final_project {D:/ece_385/final_project/vga_clk.v}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 08:30:50 on Apr 26,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/ece_385/final_project" D:/ece_385/final_project/vga_clk.v 
+# -- Compiling module vga_clk
+# 
+# Top level modules:
+# 	vga_clk
+# End time: 08:30:50 on Apr 26,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/ece_385/final_project/db {D:/ece_385/final_project/db/vga_clk_altpll1.v}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 08:30:50 on Apr 26,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/ece_385/final_project/db" D:/ece_385/final_project/db/vga_clk_altpll1.v 
+# -- Compiling module vga_clk_altpll1
+# 
+# Top level modules:
+# 	vga_clk_altpll1
+# End time: 08:30:50 on Apr 26,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/ece_385/final_project {D:/ece_385/final_project/lut.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 08:30:50 on Apr 26,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ece_385/final_project" D:/ece_385/final_project/lut.sv 
+# -- Compiling package lut_sv_unit
+# -- Compiling module sin_lut
+# -- Compiling module cos_lut
+# -- Compiling module ray_lut
+# 
+# Top level modules:
+# 	ray_lut
+# End time: 08:30:50 on Apr 26,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/ece_385/final_project {D:/ece_385/final_project/VGA_controller.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 08:30:50 on Apr 26,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ece_385/final_project" D:/ece_385/final_project/VGA_controller.sv 
+# -- Compiling module VGA_controller
+# 
+# Top level modules:
+# 	VGA_controller
+# End time: 08:30:50 on Apr 26,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/ece_385/final_project {D:/ece_385/final_project/WriteUpdate.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 08:30:50 on Apr 26,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ece_385/final_project" D:/ece_385/final_project/WriteUpdate.sv 
+# -- Compiling module increment_write
+# 
+# Top level modules:
+# 	increment_write
+# End time: 08:30:50 on Apr 26,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/ece_385/final_project {D:/ece_385/final_project/ang_lut.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 08:30:50 on Apr 26,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ece_385/final_project" D:/ece_385/final_project/ang_lut.sv 
+# -- Compiling package ang_lut_sv_unit
+# -- Compiling module y_ang_lut
+# -- Compiling module x_ang_lut
+# 
+# Top level modules:
+# 	y_ang_lut
+# 	x_ang_lut
+# End time: 08:30:50 on Apr 26,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/ece_385/final_project {D:/ece_385/final_project/vector.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 08:30:50 on Apr 26,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ece_385/final_project" D:/ece_385/final_project/vector.sv 
+# -- Compiling package vector_sv_unit
+# -- Compiling module add_vector
+# -- Compiling module sub_vector
+# -- Compiling module mult_real
+# -- Compiling module dot_product_scale
+# -- Compiling module sqrt_real_32
+# -- Compiling module sqrt_real
+# 
+# Top level modules:
+# 	add_vector
+# 	sub_vector
+# 	dot_product_scale
+# 	sqrt_real_32
+# 	sqrt_real
+# End time: 08:30:50 on Apr 26,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/ece_385/final_project {D:/ece_385/final_project/frame_buffer.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 08:30:50 on Apr 26,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ece_385/final_project" D:/ece_385/final_project/frame_buffer.sv 
+# -- Compiling package frame_buffer_sv_unit
+# -- Compiling module frame_buffer
+# -- Compiling module color_shrink
+# -- Compiling module color_expand
+# 
+# Top level modules:
+# 	frame_buffer
+# End time: 08:30:50 on Apr 26,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/ece_385/final_project {D:/ece_385/final_project/collision_detection.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 08:30:51 on Apr 26,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ece_385/final_project" D:/ece_385/final_project/collision_detection.sv 
+# -- Compiling package collision_detection_sv_unit
+# -- Compiling module collision_detection
+# ** Warning: D:/ece_385/final_project/collision_detection.sv(24): (vlog-2182) 'bsqr' might be read before written in always_comb or always @* block.
+# 
+# 
+# Top level modules:
+# 	collision_detection
+# End time: 08:30:51 on Apr 26,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+# vlog -sv -work work +incdir+D:/ece_385/final_project {D:/ece_385/final_project/color_mapper.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 08:30:51 on Apr 26,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ece_385/final_project" D:/ece_385/final_project/color_mapper.sv 
+# -- Compiling package color_mapper_sv_unit
+# -- Compiling module color_mapper
+# 
+# Top level modules:
+# 	color_mapper
+# End time: 08:30:51 on Apr 26,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/ece_385/final_project {D:/ece_385/final_project/random.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 08:30:51 on Apr 26,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ece_385/final_project" D:/ece_385/final_project/random.sv 
+# -- Compiling package random_sv_unit
+# -- Compiling module rand_lut
+# -- Compiling module random_0
+# -- Compiling module random_1
+# -- Compiling module random_2
+# -- Compiling module random_3
+# -- Compiling module random_4
+# -- Compiling module random_5
+# -- Compiling module random_6
+# -- Compiling module random_7
+# -- Compiling module random_8
+# -- Compiling module random_9
+# -- Compiling module random_10
+# -- Compiling module random_11
+# -- Compiling module random_12
+# -- Compiling module random_13
+# -- Compiling module random_14
+# -- Compiling module random_15
+# 
+# Top level modules:
+# 	rand_lut
+# End time: 08:30:51 on Apr 26,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/ece_385/final_project {D:/ece_385/final_project/final_top_level.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 08:30:51 on Apr 26,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ece_385/final_project" D:/ece_385/final_project/final_top_level.sv 
+# -- Compiling package final_top_level_sv_unit
+# -- Compiling module final_top_level
+# 
+# Top level modules:
+# 	final_top_level
+# End time: 08:30:51 on Apr 26,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/ece_385/final_project {D:/ece_385/final_project/sphere_reg.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 08:30:51 on Apr 26,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ece_385/final_project" D:/ece_385/final_project/sphere_reg.sv 
+# -- Compiling package sphere_reg_sv_unit
 # -- Compiling module sphere_reg_4
 # 
 # Top level modules:
-# 	sphere_reg
 # 	sphere_reg_4
-# End time: 00:02:15 on Apr 26,2018, Elapsed time: 0:00:00
+# End time: 08:30:51 on Apr 26,2018, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-# vlog -sv -work work +incdir+D:/ECE_385/final_project/output_files {D:/ECE_385/final_project/output_files/testbench.sv}
+# vlog -sv -work work +incdir+D:/ece_385/final_project/output_files {D:/ece_385/final_project/output_files/testbench.sv}
 # Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 00:02:15 on Apr 26,2018
-# vlog -reportprogress 300 -sv -work work "+incdir+D:/ECE_385/final_project/output_files" D:/ECE_385/final_project/output_files/testbench.sv 
+# Start time: 08:30:51 on Apr 26,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ece_385/final_project/output_files" D:/ece_385/final_project/output_files/testbench.sv 
 # -- Compiling package testbench_sv_unit
 # -- Compiling module testbench
 # -- Compiling module random_testbench
@@ -198,12 +382,12 @@
 # Top level modules:
 # 	testbench
 # 	random_testbench
-# End time: 00:02:15 on Apr 26,2018, Elapsed time: 0:00:00
+# End time: 08:30:51 on Apr 26,2018, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  testbench
 # vsim -gui "+altera" -l msim_transcript -do "final_project_top_run_msim_rtl_verilog.do" 
-# Start time: 00:02:15 on Apr 26,2018
+# Start time: 08:30:51 on Apr 26,2018
 # Loading sv_std.std
 # Loading work.testbench_sv_unit
 # Loading work.testbench
@@ -259,11 +443,20 @@
 # Loading altera_mf_ver.cda_m_cntr
 # Loading altera_mf_ver.cda_n_cntr
 # Loading altera_mf_ver.cda_scale_cntr
-# ** Warning: (vsim-3015) D:/ECE_385/final_project/random.sv(22): [PCDPC] - Port size (4) does not match connection size (5) for port 'seed'. The port definition is at: D:/ECE_385/final_project/random.sv(54).
+# ** Warning: (vsim-3015) D:/ece_385/final_project/random.sv(22): [PCDPC] - Port size (4) does not match connection size (5) for port 'seed'. The port definition is at: D:/ece_385/final_project/random.sv(54).
 # 
 #         Region: /testbench/ftl/sph4/rl/r0
 # 
 # add wave *
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+# 
+#           File in use by: Nick  Hostname: RAREPEPE  ProcessID: 10188
+# 
+#           Attempting to use alternate WLF file "./wlft2z2fih".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+# 
+#           Using alternate file: ./wlft2z2fih
+# 
 # view structure
 # .main_pane.structure.interior.cs.body.struct
 # view signals
@@ -272,27 +465,27 @@
 #  Note : Cyclone IV E PLL locked to incoming clock
 # Time: 60000  Instance: testbench.ftl.vga_clk_instance.altpll_component.cycloneiii_pll.pll3
 add wave -position insertpoint  \
-sim:/testbench/ftl/sph4/Clk \
-sim:/testbench/ftl/sph4/Frame_Clk \
-sim:/testbench/ftl/sph4/Reset \
-sim:/testbench/ftl/sph4/Hit \
-sim:/testbench/ftl/sph4/Hit_index \
-sim:/testbench/ftl/sph4/Read_index \
-sim:/testbench/ftl/sph4/Sphere_pos \
-sim:/testbench/ftl/sph4/Sphere_col \
-sim:/testbench/ftl/sph4/pos \
-sim:/testbench/ftl/sph4/col \
-sim:/testbench/ftl/sph4/vel \
-sim:/testbench/ftl/sph4/acc \
-sim:/testbench/ftl/sph4/velacc \
-sim:/testbench/ftl/sph4/posvelacc \
-sim:/testbench/ftl/sph4/pos_n \
-sim:/testbench/ftl/sph4/vel_n \
-sim:/testbench/ftl/sph4/col_n \
-sim:/testbench/ftl/sph4/random \
-sim:/testbench/ftl/sph4/Frame_Clk_old \
-sim:/testbench/ftl/sph4/posedge_frame_clk
-restart
+sim:/testbench/ftl/State \
+sim:/testbench/ftl/State_n \
+sim:/testbench/ftl/reset_clk \
+sim:/testbench/ftl/collide \
+sim:/testbench/ftl/WritePixel \
+sim:/testbench/ftl/spherepos \
+sim:/testbench/ftl/lookray \
+sim:/testbench/ftl/spherecol \
+sim:/testbench/ftl/colorout \
+sim:/testbench/ftl/WriteX \
+sim:/testbench/ftl/WriteY \
+sim:/testbench/ftl/dPhi \
+sim:/testbench/ftl/dTheta \
+sim:/testbench/ftl/tbest \
+sim:/testbench/ftl/tbest_n \
+sim:/testbench/ftl/tcurr \
+sim:/testbench/ftl/next_sphere \
+sim:/testbench/ftl/best_in \
+sim:/testbench/ftl/best_in_n \
+sim:/testbench/ftl/curr_sphere
+restart; run 1us
 # Loading sv_std.std
 # Loading work.testbench_sv_unit
 # Loading work.testbench
@@ -340,10 +533,412 @@ restart
 # Loading work.ray_lut
 # Loading work.sin_lut
 # Loading work.cos_lut
-# ** Warning: (vsim-3015) D:/ECE_385/final_project/random.sv(22): [PCDPC] - Port size (4) does not match connection size (5) for port 'seed'. The port definition is at: D:/ECE_385/final_project/random.sv(54).
+# ** Warning: (vsim-3015) D:/ece_385/final_project/random.sv(22): [PCDPC] - Port size (4) does not match connection size (5) for port 'seed'. The port definition is at: D:/ece_385/final_project/random.sv(54).
 # 
 #         Region: /testbench/ftl/sph4/rl/r0
-run 10ms
+#  Note : Cyclone IV E PLL locked to incoming clock
+# Time: 60000  Instance: testbench.ftl.vga_clk_instance.altpll_component.cycloneiii_pll.pll3
+do final_project_top_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim PE vmap 10.3d Lib Mapping Utility 2014.10 Oct  7 2014
+# vmap -modelsim_quiet work rtl_work 
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+D:/ece_385/final_project {D:/ece_385/final_project/vga_clk.v}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 08:32:40 on Apr 26,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/ece_385/final_project" D:/ece_385/final_project/vga_clk.v 
+# -- Compiling module vga_clk
+# 
+# Top level modules:
+# 	vga_clk
+# End time: 08:32:40 on Apr 26,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/ece_385/final_project/db {D:/ece_385/final_project/db/vga_clk_altpll1.v}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 08:32:40 on Apr 26,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/ece_385/final_project/db" D:/ece_385/final_project/db/vga_clk_altpll1.v 
+# -- Compiling module vga_clk_altpll1
+# 
+# Top level modules:
+# 	vga_clk_altpll1
+# End time: 08:32:40 on Apr 26,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/ece_385/final_project {D:/ece_385/final_project/lut.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 08:32:40 on Apr 26,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ece_385/final_project" D:/ece_385/final_project/lut.sv 
+# -- Compiling package lut_sv_unit
+# -- Compiling module sin_lut
+# -- Compiling module cos_lut
+# -- Compiling module ray_lut
+# 
+# Top level modules:
+# 	ray_lut
+# End time: 08:32:40 on Apr 26,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/ece_385/final_project {D:/ece_385/final_project/VGA_controller.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 08:32:40 on Apr 26,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ece_385/final_project" D:/ece_385/final_project/VGA_controller.sv 
+# -- Compiling module VGA_controller
+# 
+# Top level modules:
+# 	VGA_controller
+# End time: 08:32:40 on Apr 26,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/ece_385/final_project {D:/ece_385/final_project/WriteUpdate.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 08:32:40 on Apr 26,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ece_385/final_project" D:/ece_385/final_project/WriteUpdate.sv 
+# -- Compiling module increment_write
+# 
+# Top level modules:
+# 	increment_write
+# End time: 08:32:40 on Apr 26,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/ece_385/final_project {D:/ece_385/final_project/ang_lut.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 08:32:40 on Apr 26,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ece_385/final_project" D:/ece_385/final_project/ang_lut.sv 
+# -- Compiling package ang_lut_sv_unit
+# -- Compiling module y_ang_lut
+# -- Compiling module x_ang_lut
+# 
+# Top level modules:
+# 	y_ang_lut
+# 	x_ang_lut
+# End time: 08:32:40 on Apr 26,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/ece_385/final_project {D:/ece_385/final_project/vector.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 08:32:40 on Apr 26,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ece_385/final_project" D:/ece_385/final_project/vector.sv 
+# -- Compiling package vector_sv_unit
+# -- Compiling module add_vector
+# -- Compiling module sub_vector
+# -- Compiling module mult_real
+# -- Compiling module dot_product_scale
+# -- Compiling module sqrt_real_32
+# -- Compiling module sqrt_real
+# 
+# Top level modules:
+# 	add_vector
+# 	sub_vector
+# 	dot_product_scale
+# 	sqrt_real_32
+# 	sqrt_real
+# End time: 08:32:40 on Apr 26,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/ece_385/final_project {D:/ece_385/final_project/frame_buffer.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 08:32:40 on Apr 26,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ece_385/final_project" D:/ece_385/final_project/frame_buffer.sv 
+# -- Compiling package frame_buffer_sv_unit
+# -- Compiling module frame_buffer
+# -- Compiling module color_shrink
+# -- Compiling module color_expand
+# 
+# Top level modules:
+# 	frame_buffer
+# End time: 08:32:41 on Apr 26,2018, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/ece_385/final_project {D:/ece_385/final_project/collision_detection.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 08:32:41 on Apr 26,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ece_385/final_project" D:/ece_385/final_project/collision_detection.sv 
+# -- Compiling package collision_detection_sv_unit
+# -- Compiling module collision_detection
+# ** Warning: D:/ece_385/final_project/collision_detection.sv(24): (vlog-2182) 'bsqr' might be read before written in always_comb or always @* block.
+# 
+# 
+# Top level modules:
+# 	collision_detection
+# End time: 08:32:41 on Apr 26,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+# vlog -sv -work work +incdir+D:/ece_385/final_project {D:/ece_385/final_project/color_mapper.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 08:32:41 on Apr 26,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ece_385/final_project" D:/ece_385/final_project/color_mapper.sv 
+# -- Compiling package color_mapper_sv_unit
+# -- Compiling module color_mapper
+# 
+# Top level modules:
+# 	color_mapper
+# End time: 08:32:41 on Apr 26,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/ece_385/final_project {D:/ece_385/final_project/random.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 08:32:41 on Apr 26,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ece_385/final_project" D:/ece_385/final_project/random.sv 
+# -- Compiling package random_sv_unit
+# -- Compiling module rand_lut
+# -- Compiling module random_0
+# -- Compiling module random_1
+# -- Compiling module random_2
+# -- Compiling module random_3
+# -- Compiling module random_4
+# -- Compiling module random_5
+# -- Compiling module random_6
+# -- Compiling module random_7
+# -- Compiling module random_8
+# -- Compiling module random_9
+# -- Compiling module random_10
+# -- Compiling module random_11
+# -- Compiling module random_12
+# -- Compiling module random_13
+# -- Compiling module random_14
+# -- Compiling module random_15
+# 
+# Top level modules:
+# 	rand_lut
+# End time: 08:32:41 on Apr 26,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/ece_385/final_project {D:/ece_385/final_project/final_top_level.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 08:32:41 on Apr 26,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ece_385/final_project" D:/ece_385/final_project/final_top_level.sv 
+# -- Compiling package final_top_level_sv_unit
+# -- Compiling module final_top_level
+# 
+# Top level modules:
+# 	final_top_level
+# End time: 08:32:41 on Apr 26,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/ece_385/final_project {D:/ece_385/final_project/sphere_reg.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 08:32:41 on Apr 26,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ece_385/final_project" D:/ece_385/final_project/sphere_reg.sv 
+# -- Compiling package sphere_reg_sv_unit
+# -- Compiling module sphere_reg_4
+# 
+# Top level modules:
+# 	sphere_reg_4
+# End time: 08:32:41 on Apr 26,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -sv -work work +incdir+D:/ece_385/final_project/output_files {D:/ece_385/final_project/output_files/testbench.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 08:32:41 on Apr 26,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ece_385/final_project/output_files" D:/ece_385/final_project/output_files/testbench.sv 
+# -- Compiling package testbench_sv_unit
+# -- Compiling module testbench
+# -- Compiling module random_testbench
+# 
+# Top level modules:
+# 	testbench
+# 	random_testbench
+# End time: 08:32:41 on Apr 26,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  testbench
+# vsim 
+# Start time: 08:32:41 on Apr 26,2018
+# Loading sv_std.std
+# Loading work.testbench_sv_unit
+# Loading work.testbench
+# Loading work.final_top_level_sv_unit
+# Loading work.final_top_level
+# Loading work.sphere_reg_sv_unit
+# Loading work.sphere_reg_4
+# Loading work.vector_sv_unit
+# Loading work.add_vector
+# Loading work.random_sv_unit
+# Loading work.rand_lut
+# Loading work.random_0
+# Loading work.random_1
+# Loading work.random_2
+# Loading work.random_3
+# Loading work.random_4
+# Loading work.random_5
+# Loading work.random_6
+# Loading work.random_7
+# Loading work.random_8
+# Loading work.random_9
+# Loading work.random_10
+# Loading work.random_11
+# Loading work.random_12
+# Loading work.random_13
+# Loading work.random_14
+# Loading work.random_15
+# Loading work.color_mapper_sv_unit
+# Loading work.color_mapper
+# Loading work.collision_detection_sv_unit
+# Loading work.collision_detection
+# Loading work.dot_product_scale
+# Loading work.mult_real
+# Loading work.sqrt_real
+# Loading work.VGA_controller
+# Loading work.frame_buffer_sv_unit
+# Loading work.frame_buffer
+# Loading work.color_shrink
+# Loading work.color_expand
+# Loading work.increment_write
+# Loading work.ang_lut_sv_unit
+# Loading work.y_ang_lut
+# Loading work.x_ang_lut
+# Loading work.lut_sv_unit
+# Loading work.ray_lut
+# Loading work.sin_lut
+# Loading work.cos_lut
+# Loading work.vga_clk
+# Loading altera_mf_ver.altpll
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.pll_iobuf
+# Loading altera_mf_ver.MF_cycloneiii_pll
+# Loading altera_mf_ver.cda_m_cntr
+# Loading altera_mf_ver.cda_n_cntr
+# Loading altera_mf_ver.cda_scale_cntr
+# ** Warning: (vsim-3015) D:/ece_385/final_project/random.sv(22): [PCDPC] - Port size (4) does not match connection size (5) for port 'seed'. The port definition is at: D:/ece_385/final_project/random.sv(54).
+# 
+#         Region: /testbench/ftl/sph4/rl/r0
+# 
+# add wave *
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+# 
+#           File in use by: Nick  Hostname: RAREPEPE  ProcessID: 10188
+# 
+#           Attempting to use alternate WLF file "./wlftkeciz7".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+# 
+#           Using alternate file: ./wlftkeciz7
+# 
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 30 us
+#  Note : Cyclone IV E PLL locked to incoming clock
+# Time: 60000  Instance: testbench.ftl.vga_clk_instance.altpll_component.cycloneiii_pll.pll3
+add wave -position insertpoint  \
+sim:/testbench/ftl/State \
+sim:/testbench/ftl/State_n \
+sim:/testbench/ftl/reset_clk \
+sim:/testbench/ftl/collide \
+sim:/testbench/ftl/WritePixel \
+sim:/testbench/ftl/spherepos \
+sim:/testbench/ftl/lookray \
+sim:/testbench/ftl/spherecol \
+sim:/testbench/ftl/colorout \
+sim:/testbench/ftl/WriteX \
+sim:/testbench/ftl/WriteY \
+sim:/testbench/ftl/dPhi \
+sim:/testbench/ftl/dTheta \
+sim:/testbench/ftl/tbest \
+sim:/testbench/ftl/tbest_n \
+sim:/testbench/ftl/tcurr \
+sim:/testbench/ftl/next_sphere \
+sim:/testbench/ftl/best_in \
+sim:/testbench/ftl/best_in_n \
+sim:/testbench/ftl/curr_sphere
+restart; run 1us
+# Loading sv_std.std
+# Loading work.testbench_sv_unit
+# Loading work.testbench
+# Loading work.final_top_level_sv_unit
+# Loading work.final_top_level
+# Loading work.sphere_reg_sv_unit
+# Loading work.sphere_reg_4
+# Loading work.vector_sv_unit
+# Loading work.add_vector
+# Loading work.random_sv_unit
+# Loading work.rand_lut
+# Loading work.random_0
+# Loading work.random_1
+# Loading work.random_2
+# Loading work.random_3
+# Loading work.random_4
+# Loading work.random_5
+# Loading work.random_6
+# Loading work.random_7
+# Loading work.random_8
+# Loading work.random_9
+# Loading work.random_10
+# Loading work.random_11
+# Loading work.random_12
+# Loading work.random_13
+# Loading work.random_14
+# Loading work.random_15
+# Loading work.color_mapper_sv_unit
+# Loading work.color_mapper
+# Loading work.collision_detection_sv_unit
+# Loading work.collision_detection
+# Loading work.dot_product_scale
+# Loading work.mult_real
+# Loading work.sqrt_real
+# Loading work.VGA_controller
+# Loading work.frame_buffer_sv_unit
+# Loading work.frame_buffer
+# Loading work.color_shrink
+# Loading work.color_expand
+# Loading work.increment_write
+# Loading work.ang_lut_sv_unit
+# Loading work.y_ang_lut
+# Loading work.x_ang_lut
+# Loading work.lut_sv_unit
+# Loading work.ray_lut
+# Loading work.sin_lut
+# Loading work.cos_lut
+# ** Warning: (vsim-3015) D:/ece_385/final_project/random.sv(22): [PCDPC] - Port size (4) does not match connection size (5) for port 'seed'. The port definition is at: D:/ece_385/final_project/random.sv(54).
+# 
+#         Region: /testbench/ftl/sph4/rl/r0
+#  Note : Cyclone IV E PLL locked to incoming clock
+# Time: 60000  Instance: testbench.ftl.vga_clk_instance.altpll_component.cycloneiii_pll.pll3
+restart; run 100us
+# Loading sv_std.std
+# Loading work.testbench_sv_unit
+# Loading work.testbench
+# Loading work.final_top_level_sv_unit
+# Loading work.final_top_level
+# Loading work.sphere_reg_sv_unit
+# Loading work.sphere_reg_4
+# Loading work.vector_sv_unit
+# Loading work.add_vector
+# Loading work.random_sv_unit
+# Loading work.rand_lut
+# Loading work.random_0
+# Loading work.random_1
+# Loading work.random_2
+# Loading work.random_3
+# Loading work.random_4
+# Loading work.random_5
+# Loading work.random_6
+# Loading work.random_7
+# Loading work.random_8
+# Loading work.random_9
+# Loading work.random_10
+# Loading work.random_11
+# Loading work.random_12
+# Loading work.random_13
+# Loading work.random_14
+# Loading work.random_15
+# Loading work.color_mapper_sv_unit
+# Loading work.color_mapper
+# Loading work.collision_detection_sv_unit
+# Loading work.collision_detection
+# Loading work.dot_product_scale
+# Loading work.mult_real
+# Loading work.sqrt_real
+# Loading work.VGA_controller
+# Loading work.frame_buffer_sv_unit
+# Loading work.frame_buffer
+# Loading work.color_shrink
+# Loading work.color_expand
+# Loading work.increment_write
+# Loading work.ang_lut_sv_unit
+# Loading work.y_ang_lut
+# Loading work.x_ang_lut
+# Loading work.lut_sv_unit
+# Loading work.ray_lut
+# Loading work.sin_lut
+# Loading work.cos_lut
+# ** Warning: (vsim-3015) D:/ece_385/final_project/random.sv(22): [PCDPC] - Port size (4) does not match connection size (5) for port 'seed'. The port definition is at: D:/ece_385/final_project/random.sv(54).
+# 
+#         Region: /testbench/ftl/sph4/rl/r0
 # GetModuleFileName: The specified module could not be found.
 # 
 # 
@@ -359,30 +954,30 @@ do final_project_top_run_msim_rtl_verilog.do
 # vmap -modelsim_quiet work rtl_work 
 # Modifying modelsim.ini
 # 
-# vlog -vlog01compat -work work +incdir+D:/ECE_385/final_project {D:/ECE_385/final_project/vga_clk.v}
+# vlog -vlog01compat -work work +incdir+D:/ece_385/final_project {D:/ece_385/final_project/vga_clk.v}
 # Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 00:37:48 on Apr 26,2018
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/ECE_385/final_project" D:/ECE_385/final_project/vga_clk.v 
+# Start time: 08:37:48 on Apr 26,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/ece_385/final_project" D:/ece_385/final_project/vga_clk.v 
 # -- Compiling module vga_clk
 # 
 # Top level modules:
 # 	vga_clk
-# End time: 00:37:48 on Apr 26,2018, Elapsed time: 0:00:00
+# End time: 08:37:48 on Apr 26,2018, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+D:/ECE_385/final_project/db {D:/ECE_385/final_project/db/vga_clk_altpll1.v}
+# vlog -vlog01compat -work work +incdir+D:/ece_385/final_project/db {D:/ece_385/final_project/db/vga_clk_altpll1.v}
 # Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 00:37:48 on Apr 26,2018
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/ECE_385/final_project/db" D:/ECE_385/final_project/db/vga_clk_altpll1.v 
+# Start time: 08:37:48 on Apr 26,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/ece_385/final_project/db" D:/ece_385/final_project/db/vga_clk_altpll1.v 
 # -- Compiling module vga_clk_altpll1
 # 
 # Top level modules:
 # 	vga_clk_altpll1
-# End time: 00:37:48 on Apr 26,2018, Elapsed time: 0:00:00
+# End time: 08:37:48 on Apr 26,2018, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+D:/ECE_385/final_project {D:/ECE_385/final_project/lut.sv}
+# vlog -sv -work work +incdir+D:/ece_385/final_project {D:/ece_385/final_project/lut.sv}
 # Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 00:37:48 on Apr 26,2018
-# vlog -reportprogress 300 -sv -work work "+incdir+D:/ECE_385/final_project" D:/ECE_385/final_project/lut.sv 
+# Start time: 08:37:48 on Apr 26,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ece_385/final_project" D:/ece_385/final_project/lut.sv 
 # -- Compiling package lut_sv_unit
 # -- Compiling module sin_lut
 # -- Compiling module cos_lut
@@ -390,32 +985,32 @@ do final_project_top_run_msim_rtl_verilog.do
 # 
 # Top level modules:
 # 	ray_lut
-# End time: 00:37:48 on Apr 26,2018, Elapsed time: 0:00:00
+# End time: 08:37:49 on Apr 26,2018, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+D:/ECE_385/final_project {D:/ECE_385/final_project/VGA_controller.sv}
+# vlog -sv -work work +incdir+D:/ece_385/final_project {D:/ece_385/final_project/VGA_controller.sv}
 # Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 00:37:49 on Apr 26,2018
-# vlog -reportprogress 300 -sv -work work "+incdir+D:/ECE_385/final_project" D:/ECE_385/final_project/VGA_controller.sv 
+# Start time: 08:37:49 on Apr 26,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ece_385/final_project" D:/ece_385/final_project/VGA_controller.sv 
 # -- Compiling module VGA_controller
 # 
 # Top level modules:
 # 	VGA_controller
-# End time: 00:37:49 on Apr 26,2018, Elapsed time: 0:00:00
+# End time: 08:37:49 on Apr 26,2018, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+D:/ECE_385/final_project {D:/ECE_385/final_project/WriteUpdate.sv}
+# vlog -sv -work work +incdir+D:/ece_385/final_project {D:/ece_385/final_project/WriteUpdate.sv}
 # Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 00:37:49 on Apr 26,2018
-# vlog -reportprogress 300 -sv -work work "+incdir+D:/ECE_385/final_project" D:/ECE_385/final_project/WriteUpdate.sv 
+# Start time: 08:37:49 on Apr 26,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ece_385/final_project" D:/ece_385/final_project/WriteUpdate.sv 
 # -- Compiling module increment_write
 # 
 # Top level modules:
 # 	increment_write
-# End time: 00:37:49 on Apr 26,2018, Elapsed time: 0:00:00
+# End time: 08:37:49 on Apr 26,2018, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+D:/ECE_385/final_project {D:/ECE_385/final_project/ang_lut.sv}
+# vlog -sv -work work +incdir+D:/ece_385/final_project {D:/ece_385/final_project/ang_lut.sv}
 # Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 00:37:49 on Apr 26,2018
-# vlog -reportprogress 300 -sv -work work "+incdir+D:/ECE_385/final_project" D:/ECE_385/final_project/ang_lut.sv 
+# Start time: 08:37:49 on Apr 26,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ece_385/final_project" D:/ece_385/final_project/ang_lut.sv 
 # -- Compiling package ang_lut_sv_unit
 # -- Compiling module y_ang_lut
 # -- Compiling module x_ang_lut
@@ -423,12 +1018,12 @@ do final_project_top_run_msim_rtl_verilog.do
 # Top level modules:
 # 	y_ang_lut
 # 	x_ang_lut
-# End time: 00:37:49 on Apr 26,2018, Elapsed time: 0:00:00
+# End time: 08:37:49 on Apr 26,2018, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+D:/ECE_385/final_project {D:/ECE_385/final_project/vector.sv}
+# vlog -sv -work work +incdir+D:/ece_385/final_project {D:/ece_385/final_project/vector.sv}
 # Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 00:37:49 on Apr 26,2018
-# vlog -reportprogress 300 -sv -work work "+incdir+D:/ECE_385/final_project" D:/ECE_385/final_project/vector.sv 
+# Start time: 08:37:49 on Apr 26,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ece_385/final_project" D:/ece_385/final_project/vector.sv 
 # -- Compiling package vector_sv_unit
 # -- Compiling module add_vector
 # -- Compiling module sub_vector
@@ -443,12 +1038,12 @@ do final_project_top_run_msim_rtl_verilog.do
 # 	dot_product_scale
 # 	sqrt_real_32
 # 	sqrt_real
-# End time: 00:37:49 on Apr 26,2018, Elapsed time: 0:00:00
+# End time: 08:37:49 on Apr 26,2018, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+D:/ECE_385/final_project {D:/ECE_385/final_project/frame_buffer.sv}
+# vlog -sv -work work +incdir+D:/ece_385/final_project {D:/ece_385/final_project/frame_buffer.sv}
 # Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 00:37:49 on Apr 26,2018
-# vlog -reportprogress 300 -sv -work work "+incdir+D:/ECE_385/final_project" D:/ECE_385/final_project/frame_buffer.sv 
+# Start time: 08:37:49 on Apr 26,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ece_385/final_project" D:/ece_385/final_project/frame_buffer.sv 
 # -- Compiling package frame_buffer_sv_unit
 # -- Compiling module frame_buffer
 # -- Compiling module color_shrink
@@ -456,36 +1051,36 @@ do final_project_top_run_msim_rtl_verilog.do
 # 
 # Top level modules:
 # 	frame_buffer
-# End time: 00:37:49 on Apr 26,2018, Elapsed time: 0:00:00
+# End time: 08:37:49 on Apr 26,2018, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+D:/ECE_385/final_project {D:/ECE_385/final_project/collision_detection.sv}
+# vlog -sv -work work +incdir+D:/ece_385/final_project {D:/ece_385/final_project/collision_detection.sv}
 # Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 00:37:49 on Apr 26,2018
-# vlog -reportprogress 300 -sv -work work "+incdir+D:/ECE_385/final_project" D:/ECE_385/final_project/collision_detection.sv 
+# Start time: 08:37:49 on Apr 26,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ece_385/final_project" D:/ece_385/final_project/collision_detection.sv 
 # -- Compiling package collision_detection_sv_unit
 # -- Compiling module collision_detection
-# ** Warning: D:/ECE_385/final_project/collision_detection.sv(24): (vlog-2182) 'bsqr' might be read before written in always_comb or always @* block.
+# ** Warning: D:/ece_385/final_project/collision_detection.sv(24): (vlog-2182) 'bsqr' might be read before written in always_comb or always @* block.
 # 
 # 
 # Top level modules:
 # 	collision_detection
-# End time: 00:37:49 on Apr 26,2018, Elapsed time: 0:00:00
+# End time: 08:37:49 on Apr 26,2018, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 1
-# vlog -sv -work work +incdir+D:/ECE_385/final_project {D:/ECE_385/final_project/color_mapper.sv}
+# vlog -sv -work work +incdir+D:/ece_385/final_project {D:/ece_385/final_project/color_mapper.sv}
 # Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 00:37:49 on Apr 26,2018
-# vlog -reportprogress 300 -sv -work work "+incdir+D:/ECE_385/final_project" D:/ECE_385/final_project/color_mapper.sv 
+# Start time: 08:37:49 on Apr 26,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ece_385/final_project" D:/ece_385/final_project/color_mapper.sv 
 # -- Compiling package color_mapper_sv_unit
 # -- Compiling module color_mapper
 # 
 # Top level modules:
 # 	color_mapper
-# End time: 00:37:49 on Apr 26,2018, Elapsed time: 0:00:00
+# End time: 08:37:49 on Apr 26,2018, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+D:/ECE_385/final_project {D:/ECE_385/final_project/random.sv}
+# vlog -sv -work work +incdir+D:/ece_385/final_project {D:/ece_385/final_project/random.sv}
 # Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 00:37:49 on Apr 26,2018
-# vlog -reportprogress 300 -sv -work work "+incdir+D:/ECE_385/final_project" D:/ECE_385/final_project/random.sv 
+# Start time: 08:37:49 on Apr 26,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ece_385/final_project" D:/ece_385/final_project/random.sv 
 # -- Compiling package random_sv_unit
 # -- Compiling module rand_lut
 # -- Compiling module random_0
@@ -507,37 +1102,35 @@ do final_project_top_run_msim_rtl_verilog.do
 # 
 # Top level modules:
 # 	rand_lut
-# End time: 00:37:49 on Apr 26,2018, Elapsed time: 0:00:00
+# End time: 08:37:49 on Apr 26,2018, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+D:/ECE_385/final_project {D:/ECE_385/final_project/final_top_level.sv}
+# vlog -sv -work work +incdir+D:/ece_385/final_project {D:/ece_385/final_project/final_top_level.sv}
 # Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 00:37:50 on Apr 26,2018
-# vlog -reportprogress 300 -sv -work work "+incdir+D:/ECE_385/final_project" D:/ECE_385/final_project/final_top_level.sv 
+# Start time: 08:37:49 on Apr 26,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ece_385/final_project" D:/ece_385/final_project/final_top_level.sv 
 # -- Compiling package final_top_level_sv_unit
 # -- Compiling module final_top_level
 # 
 # Top level modules:
 # 	final_top_level
-# End time: 00:37:50 on Apr 26,2018, Elapsed time: 0:00:00
+# End time: 08:37:49 on Apr 26,2018, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+D:/ECE_385/final_project {D:/ECE_385/final_project/sphere_reg.sv}
+# vlog -sv -work work +incdir+D:/ece_385/final_project {D:/ece_385/final_project/sphere_reg.sv}
 # Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 00:37:50 on Apr 26,2018
-# vlog -reportprogress 300 -sv -work work "+incdir+D:/ECE_385/final_project" D:/ECE_385/final_project/sphere_reg.sv 
+# Start time: 08:37:50 on Apr 26,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ece_385/final_project" D:/ece_385/final_project/sphere_reg.sv 
 # -- Compiling package sphere_reg_sv_unit
-# -- Compiling module sphere_reg
 # -- Compiling module sphere_reg_4
 # 
 # Top level modules:
-# 	sphere_reg
 # 	sphere_reg_4
-# End time: 00:37:50 on Apr 26,2018, Elapsed time: 0:00:00
+# End time: 08:37:50 on Apr 26,2018, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-# vlog -sv -work work +incdir+D:/ECE_385/final_project/output_files {D:/ECE_385/final_project/output_files/testbench.sv}
+# vlog -sv -work work +incdir+D:/ece_385/final_project/output_files {D:/ece_385/final_project/output_files/testbench.sv}
 # Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 00:37:50 on Apr 26,2018
-# vlog -reportprogress 300 -sv -work work "+incdir+D:/ECE_385/final_project/output_files" D:/ECE_385/final_project/output_files/testbench.sv 
+# Start time: 08:37:50 on Apr 26,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ece_385/final_project/output_files" D:/ece_385/final_project/output_files/testbench.sv 
 # -- Compiling package testbench_sv_unit
 # -- Compiling module testbench
 # -- Compiling module random_testbench
@@ -545,12 +1138,12 @@ do final_project_top_run_msim_rtl_verilog.do
 # Top level modules:
 # 	testbench
 # 	random_testbench
-# End time: 00:37:50 on Apr 26,2018, Elapsed time: 0:00:00
+# End time: 08:37:50 on Apr 26,2018, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  testbench
 # vsim 
-# Start time: 00:37:50 on Apr 26,2018
+# Start time: 08:37:50 on Apr 26,2018
 # Loading sv_std.std
 # Loading work.testbench_sv_unit
 # Loading work.testbench
@@ -606,11 +1199,20 @@ do final_project_top_run_msim_rtl_verilog.do
 # Loading altera_mf_ver.cda_m_cntr
 # Loading altera_mf_ver.cda_n_cntr
 # Loading altera_mf_ver.cda_scale_cntr
-# ** Warning: (vsim-3015) D:/ECE_385/final_project/random.sv(22): [PCDPC] - Port size (4) does not match connection size (5) for port 'seed'. The port definition is at: D:/ECE_385/final_project/random.sv(54).
+# ** Warning: (vsim-3015) D:/ece_385/final_project/random.sv(22): [PCDPC] - Port size (4) does not match connection size (5) for port 'seed'. The port definition is at: D:/ece_385/final_project/random.sv(54).
 # 
 #         Region: /testbench/ftl/sph4/rl/r0
 # 
 # add wave *
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+# 
+#           File in use by: Nick  Hostname: RAREPEPE  ProcessID: 10188
+# 
+#           Attempting to use alternate WLF file "./wlft2hvfir".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+# 
+#           Using alternate file: ./wlft2hvfir
+# 
 # view structure
 # .main_pane.structure.interior.cs.body.struct
 # view signals
@@ -619,27 +1221,27 @@ do final_project_top_run_msim_rtl_verilog.do
 #  Note : Cyclone IV E PLL locked to incoming clock
 # Time: 60000  Instance: testbench.ftl.vga_clk_instance.altpll_component.cycloneiii_pll.pll3
 add wave -position insertpoint  \
-sim:/testbench/ftl/sph4/Clk \
-sim:/testbench/ftl/sph4/Frame_Clk \
-sim:/testbench/ftl/sph4/Reset \
-sim:/testbench/ftl/sph4/Hit \
-sim:/testbench/ftl/sph4/Hit_index \
-sim:/testbench/ftl/sph4/Read_index \
-sim:/testbench/ftl/sph4/Sphere_pos \
-sim:/testbench/ftl/sph4/Sphere_col \
-sim:/testbench/ftl/sph4/pos \
-sim:/testbench/ftl/sph4/col \
-sim:/testbench/ftl/sph4/vel \
-sim:/testbench/ftl/sph4/acc \
-sim:/testbench/ftl/sph4/velacc \
-sim:/testbench/ftl/sph4/posvelacc \
-sim:/testbench/ftl/sph4/pos_n \
-sim:/testbench/ftl/sph4/vel_n \
-sim:/testbench/ftl/sph4/col_n \
-sim:/testbench/ftl/sph4/random \
-sim:/testbench/ftl/sph4/Frame_Clk_old \
-sim:/testbench/ftl/sph4/posedge_frame_clk
-restart
+sim:/testbench/ftl/State \
+sim:/testbench/ftl/State_n \
+sim:/testbench/ftl/reset_clk \
+sim:/testbench/ftl/collide \
+sim:/testbench/ftl/WritePixel \
+sim:/testbench/ftl/spherepos \
+sim:/testbench/ftl/lookray \
+sim:/testbench/ftl/spherecol \
+sim:/testbench/ftl/colorout \
+sim:/testbench/ftl/WriteX \
+sim:/testbench/ftl/WriteY \
+sim:/testbench/ftl/dPhi \
+sim:/testbench/ftl/dTheta \
+sim:/testbench/ftl/tbest \
+sim:/testbench/ftl/tbest_n \
+sim:/testbench/ftl/tcurr \
+sim:/testbench/ftl/next_sphere \
+sim:/testbench/ftl/best_in \
+sim:/testbench/ftl/best_in_n \
+sim:/testbench/ftl/curr_sphere
+restart; run 100us
 # Loading sv_std.std
 # Loading work.testbench_sv_unit
 # Loading work.testbench
@@ -687,277 +1289,22 @@ restart
 # Loading work.ray_lut
 # Loading work.sin_lut
 # Loading work.cos_lut
-# ** Warning: (vsim-3015) D:/ECE_385/final_project/random.sv(22): [PCDPC] - Port size (4) does not match connection size (5) for port 'seed'. The port definition is at: D:/ECE_385/final_project/random.sv(54).
+# ** Warning: (vsim-3015) D:/ece_385/final_project/random.sv(22): [PCDPC] - Port size (4) does not match connection size (5) for port 'seed'. The port definition is at: D:/ece_385/final_project/random.sv(54).
 # 
 #         Region: /testbench/ftl/sph4/rl/r0
-run 10ms
 #  Note : Cyclone IV E PLL locked to incoming clock
 # Time: 60000  Instance: testbench.ftl.vga_clk_instance.altpll_component.cycloneiii_pll.pll3
-run 10ms
-do final_project_top_run_msim_rtl_verilog.do
-# if {[file exists rtl_work]} {
-# 	vdel -lib rtl_work -all
-# }
-# vlib rtl_work
-# vmap work rtl_work
-# Model Technology ModelSim PE vmap 10.3d Lib Mapping Utility 2014.10 Oct  7 2014
-# vmap -modelsim_quiet work rtl_work 
-# Modifying modelsim.ini
-# 
-# vlog -vlog01compat -work work +incdir+D:/ECE_385/final_project {D:/ECE_385/final_project/vga_clk.v}
-# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 01:27:24 on Apr 26,2018
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/ECE_385/final_project" D:/ECE_385/final_project/vga_clk.v 
-# -- Compiling module vga_clk
-# 
-# Top level modules:
-# 	vga_clk
-# End time: 01:27:24 on Apr 26,2018, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+D:/ECE_385/final_project/db {D:/ECE_385/final_project/db/vga_clk_altpll1.v}
-# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 01:27:24 on Apr 26,2018
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/ECE_385/final_project/db" D:/ECE_385/final_project/db/vga_clk_altpll1.v 
-# -- Compiling module vga_clk_altpll1
-# 
-# Top level modules:
-# 	vga_clk_altpll1
-# End time: 01:27:24 on Apr 26,2018, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+D:/ECE_385/final_project {D:/ECE_385/final_project/lut.sv}
-# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 01:27:24 on Apr 26,2018
-# vlog -reportprogress 300 -sv -work work "+incdir+D:/ECE_385/final_project" D:/ECE_385/final_project/lut.sv 
-# -- Compiling package lut_sv_unit
-# -- Compiling module sin_lut
-# -- Compiling module cos_lut
-# -- Compiling module ray_lut
-# 
-# Top level modules:
-# 	ray_lut
-# End time: 01:27:24 on Apr 26,2018, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+D:/ECE_385/final_project {D:/ECE_385/final_project/VGA_controller.sv}
-# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 01:27:25 on Apr 26,2018
-# vlog -reportprogress 300 -sv -work work "+incdir+D:/ECE_385/final_project" D:/ECE_385/final_project/VGA_controller.sv 
-# -- Compiling module VGA_controller
-# 
-# Top level modules:
-# 	VGA_controller
-# End time: 01:27:25 on Apr 26,2018, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+D:/ECE_385/final_project {D:/ECE_385/final_project/WriteUpdate.sv}
-# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 01:27:25 on Apr 26,2018
-# vlog -reportprogress 300 -sv -work work "+incdir+D:/ECE_385/final_project" D:/ECE_385/final_project/WriteUpdate.sv 
-# -- Compiling module increment_write
-# 
-# Top level modules:
-# 	increment_write
-# End time: 01:27:25 on Apr 26,2018, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+D:/ECE_385/final_project {D:/ECE_385/final_project/ang_lut.sv}
-# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 01:27:25 on Apr 26,2018
-# vlog -reportprogress 300 -sv -work work "+incdir+D:/ECE_385/final_project" D:/ECE_385/final_project/ang_lut.sv 
-# -- Compiling package ang_lut_sv_unit
-# -- Compiling module y_ang_lut
-# -- Compiling module x_ang_lut
-# 
-# Top level modules:
-# 	y_ang_lut
-# 	x_ang_lut
-# End time: 01:27:25 on Apr 26,2018, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+D:/ECE_385/final_project {D:/ECE_385/final_project/vector.sv}
-# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 01:27:25 on Apr 26,2018
-# vlog -reportprogress 300 -sv -work work "+incdir+D:/ECE_385/final_project" D:/ECE_385/final_project/vector.sv 
-# -- Compiling package vector_sv_unit
-# -- Compiling module add_vector
-# -- Compiling module sub_vector
-# -- Compiling module mult_real
-# -- Compiling module dot_product_scale
-# -- Compiling module sqrt_real_32
-# -- Compiling module sqrt_real
-# 
-# Top level modules:
-# 	add_vector
-# 	sub_vector
-# 	dot_product_scale
-# 	sqrt_real_32
-# 	sqrt_real
-# End time: 01:27:25 on Apr 26,2018, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+D:/ECE_385/final_project {D:/ECE_385/final_project/frame_buffer.sv}
-# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 01:27:25 on Apr 26,2018
-# vlog -reportprogress 300 -sv -work work "+incdir+D:/ECE_385/final_project" D:/ECE_385/final_project/frame_buffer.sv 
-# -- Compiling package frame_buffer_sv_unit
-# -- Compiling module frame_buffer
-# -- Compiling module color_shrink
-# -- Compiling module color_expand
-# 
-# Top level modules:
-# 	frame_buffer
-# End time: 01:27:25 on Apr 26,2018, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+D:/ECE_385/final_project {D:/ECE_385/final_project/collision_detection.sv}
-# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 01:27:25 on Apr 26,2018
-# vlog -reportprogress 300 -sv -work work "+incdir+D:/ECE_385/final_project" D:/ECE_385/final_project/collision_detection.sv 
-# -- Compiling package collision_detection_sv_unit
-# -- Compiling module collision_detection
-# ** Warning: D:/ECE_385/final_project/collision_detection.sv(24): (vlog-2182) 'bsqr' might be read before written in always_comb or always @* block.
-# 
-# 
-# Top level modules:
-# 	collision_detection
-# End time: 01:27:25 on Apr 26,2018, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 1
-# vlog -sv -work work +incdir+D:/ECE_385/final_project {D:/ECE_385/final_project/color_mapper.sv}
-# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 01:27:25 on Apr 26,2018
-# vlog -reportprogress 300 -sv -work work "+incdir+D:/ECE_385/final_project" D:/ECE_385/final_project/color_mapper.sv 
-# -- Compiling package color_mapper_sv_unit
-# -- Compiling module color_mapper
-# 
-# Top level modules:
-# 	color_mapper
-# End time: 01:27:25 on Apr 26,2018, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+D:/ECE_385/final_project {D:/ECE_385/final_project/random.sv}
-# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 01:27:25 on Apr 26,2018
-# vlog -reportprogress 300 -sv -work work "+incdir+D:/ECE_385/final_project" D:/ECE_385/final_project/random.sv 
-# -- Compiling package random_sv_unit
-# -- Compiling module rand_lut
-# -- Compiling module random_0
-# -- Compiling module random_1
-# -- Compiling module random_2
-# -- Compiling module random_3
-# -- Compiling module random_4
-# -- Compiling module random_5
-# -- Compiling module random_6
-# -- Compiling module random_7
-# -- Compiling module random_8
-# -- Compiling module random_9
-# -- Compiling module random_10
-# -- Compiling module random_11
-# -- Compiling module random_12
-# -- Compiling module random_13
-# -- Compiling module random_14
-# -- Compiling module random_15
-# 
-# Top level modules:
-# 	rand_lut
-# End time: 01:27:25 on Apr 26,2018, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+D:/ECE_385/final_project {D:/ECE_385/final_project/final_top_level.sv}
-# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 01:27:25 on Apr 26,2018
-# vlog -reportprogress 300 -sv -work work "+incdir+D:/ECE_385/final_project" D:/ECE_385/final_project/final_top_level.sv 
-# -- Compiling package final_top_level_sv_unit
-# -- Compiling module final_top_level
-# 
-# Top level modules:
-# 	final_top_level
-# End time: 01:27:26 on Apr 26,2018, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+D:/ECE_385/final_project {D:/ECE_385/final_project/sphere_reg.sv}
-# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 01:27:26 on Apr 26,2018
-# vlog -reportprogress 300 -sv -work work "+incdir+D:/ECE_385/final_project" D:/ECE_385/final_project/sphere_reg.sv 
-# -- Compiling package sphere_reg_sv_unit
-# -- Compiling module sphere_reg_4
-# 
-# Top level modules:
-# 	sphere_reg_4
-# End time: 01:27:26 on Apr 26,2018, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# 
-# vlog -sv -work work +incdir+D:/ECE_385/final_project/output_files {D:/ECE_385/final_project/output_files/testbench.sv}
-# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 01:27:26 on Apr 26,2018
-# vlog -reportprogress 300 -sv -work work "+incdir+D:/ECE_385/final_project/output_files" D:/ECE_385/final_project/output_files/testbench.sv 
-# -- Compiling package testbench_sv_unit
-# -- Compiling module testbench
-# -- Compiling module random_testbench
-# 
-# Top level modules:
-# 	testbench
-# 	random_testbench
-# End time: 01:27:26 on Apr 26,2018, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# 
-# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  testbench
-# vsim 
-# Start time: 01:27:26 on Apr 26,2018
-# Loading sv_std.std
-# Loading work.testbench_sv_unit
-# Loading work.testbench
-# Loading work.final_top_level_sv_unit
-# Loading work.final_top_level
-# Loading work.sphere_reg_sv_unit
-# Loading work.sphere_reg_4
-# Loading work.vector_sv_unit
-# Loading work.add_vector
-# Loading work.random_sv_unit
-# Loading work.rand_lut
-# Loading work.random_0
-# Loading work.random_1
-# Loading work.random_2
-# Loading work.random_3
-# Loading work.random_4
-# Loading work.random_5
-# Loading work.random_6
-# Loading work.random_7
-# Loading work.random_8
-# Loading work.random_9
-# Loading work.random_10
-# Loading work.random_11
-# Loading work.random_12
-# Loading work.random_13
-# Loading work.random_14
-# Loading work.random_15
-# Loading work.color_mapper_sv_unit
-# Loading work.color_mapper
-# Loading work.collision_detection_sv_unit
-# Loading work.collision_detection
-# Loading work.dot_product_scale
-# Loading work.mult_real
-# Loading work.sqrt_real
-# Loading work.VGA_controller
-# Loading work.frame_buffer_sv_unit
-# Loading work.frame_buffer
-# Loading work.color_shrink
-# Loading work.color_expand
-# Loading work.increment_write
-# Loading work.ang_lut_sv_unit
-# Loading work.y_ang_lut
-# Loading work.x_ang_lut
-# Loading work.lut_sv_unit
-# Loading work.ray_lut
-# Loading work.sin_lut
-# Loading work.cos_lut
-# Loading work.vga_clk
-# Loading altera_mf_ver.altpll
-# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
-# Loading altera_mf_ver.pll_iobuf
-# Loading altera_mf_ver.MF_cycloneiii_pll
-# Loading altera_mf_ver.cda_m_cntr
-# Loading altera_mf_ver.cda_n_cntr
-# Loading altera_mf_ver.cda_scale_cntr
-# ** Warning: (vsim-3015) D:/ECE_385/final_project/random.sv(22): [PCDPC] - Port size (4) does not match connection size (5) for port 'seed'. The port definition is at: D:/ECE_385/final_project/random.sv(54).
-# 
-#         Region: /testbench/ftl/sph4/rl/r0
-# 
-# add wave *
-# view structure
-# .main_pane.structure.interior.cs.body.struct
-# view signals
-# .main_pane.objects.interior.cs.body.tree
-# run 30 us
-#  Note : Cyclone IV E PLL locked to incoming clock
-# Time: 60000  Instance: testbench.ftl.vga_clk_instance.altpll_component.cycloneiii_pll.pll3
+# Error opening D:/ece_385/final_project/simulation/modelsim/[PCDPC] - Port size (4) does not match connection size 
+# Path name 'D:/ece_385/final_project/simulation/modelsim/[PCDPC] - Port size (4) does not match connection size ' doesn't exist.
+# A time value could not be extracted from the current line
+# Error opening D:/ece_385/final_project/simulation/modelsim/[PCDPC] - Port size (4) does not match connection size 
+# Path name 'D:/ece_385/final_project/simulation/modelsim/[PCDPC] - Port size (4) does not match connection size ' doesn't exist.
+# A time value could not be extracted from the current line
+# Error opening D:/ece_385/final_project/simulation/modelsim/[PCDPC] - Port size (4) does not match connection size 
+# Path name 'D:/ece_385/final_project/simulation/modelsim/[PCDPC] - Port size (4) does not match connection size ' doesn't exist.
+# A time value could not be extracted from the current line
+# Error opening D:/ece_385/final_project/simulation/modelsim/[PCDPC] - Port size (4) does not match connection size 
+# Path name 'D:/ece_385/final_project/simulation/modelsim/[PCDPC] - Port size (4) does not match connection size ' doesn't exist.
+# A time value could not be extracted from the current line
+# End time: 09:08:54 on Apr 26,2018, Elapsed time: 0:31:04
+# Errors: 4, Warnings: 4

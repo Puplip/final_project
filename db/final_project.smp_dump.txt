@@ -1,5 +1,9 @@
 
 State Machine - |final_top_level|State
-Name State.Sphere1 
-State.Reset 0 
-State.Sphere1 1 
+Name State.Write State.Sphere3 State.Sphere2 State.Sphere1 State.Sphere0 State.Reset 
+State.Reset 0 0 0 0 0 0 
+State.Sphere0 0 0 0 0 1 1 
+State.Sphere1 0 0 0 1 0 1 
+State.Sphere2 0 0 1 0 0 1 
+State.Sphere3 0 1 0 0 0 1 
+State.Write 1 0 0 0 0 1 

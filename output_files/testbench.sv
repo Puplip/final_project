@@ -4,7 +4,7 @@ typedef logic [2:0] [7:0] color;
 
 module testbench();
 
-timeprecision 1ns;
+timeprecision 10ns;
 timeunit 10ns;
 
 logic CLOCK_50;
@@ -24,8 +24,6 @@ end
 
 initial begin
 KEY = 4'b1111;
-#4 KEY = 4'b1110;
-#4 KEY = 4'b1111;
 #4 KEY = 4'b1110;
 #4 KEY = 4'b1111;
 end

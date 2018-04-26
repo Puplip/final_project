@@ -11,10 +11,12 @@ fixed_real counter;
 logic [3:0] out [15:0];
 
 always_ff @ (posedge Clk) begin
-	if(Reset)
-		counter = 64'b0;
-	else
-		counter = counter + random;
+	if(Reset) begin
+		//counter <= 64'b0;
+	end
+	else begin
+		counter <= counter + random;
+	end
 end
 
 assign random = {out[15],out[14],out[13],out[12],out[11],out[10],out[9],out[8],out[7],out[6],out[5],out[4],out[3],out[2],out[1],out[0]};

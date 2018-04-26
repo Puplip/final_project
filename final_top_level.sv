@@ -11,23 +11,29 @@ module final_top_level (
 
 enum logic [7:0] {
 	Reset,
-	Sphere1} State, State_n;
+	Sphere0,
+	Sphere1,
+	Sphere2,
+	Sphere3,
+	Write} State, State_n;
 
 logic reset_clk, collide, WritePixel;
-vector sphere1pos, lookray;
-color sphere1col, colorout;
+vector spherepos, lookray;
+color spherecol, colorout;
 logic [9:0] DrawX, DrawY, WriteX, WriteY;
 
-fixed_real dPhi, dTheta;
+fixed_real dPhi, dTheta, tbest, tbest_n, tcurr;
+
+logic [1:0] next_sphere, best_in, best_in_n, curr_sphere;
 
 /*sphere_reg firstsph(.Frame_Clk(VGA_VS), .nextcol({8'hff, 8'hff, 8'hff}), .nextpos({64'd0, 64'd304 << 32, 64'd0}),
 	.currentpos(sphere1pos), .currentcol(sphere1col));*/
 	
-sphere_reg_4 sph4(.Clk(CLOCK_50),.Frame_Clk(VGA_VS),.Reset(~KEY[0]),.Hit(1'b0),.Hit_index(2'b00),.Read_index(2'b01),.Sphere_pos(sphere1pos),.Sphere_col(sphere1col));
+sphere_reg_4 sph4(.Clk(CLOCK_50),.Frame_Clk(VGA_VS),.Reset(~KEY[0]),.Hit(1'b0),.Hit_index(2'b00),.Read_index(next_sphere),.Sphere_pos(spherepos),.Sphere_col(spherecol),.curr_index(curr_sphere));
 	
-color_mapper colmap(.is_ball(collide), .DrawX(WriteX), .DrawY(WriteY), .colin(sphere1col), .col(colorout));
+color_mapper colmap(.is_ball(tbest != 64'hefffffffffffffff), .DrawX(WriteX), .DrawY(WriteY), .colin(spherecol), .col(colorout));
 
-collision_detection cd(.sphere(sphere1pos), .ray(lookray), .tbest(64'h8FFFFFFF00000000), .tnew(), .collide(collide));
+collision_detection cd(.sphere(spherepos), .ray(lookray), .tbest(tbest), .tnew(tcurr), .collide(collide));
 
 VGA_controller vga(.Clk(VGA_CLK), .Reset(~KEY[0]), .*);
 
@@ -49,24 +55,70 @@ always_ff @ (posedge CLOCK_50 or negedge KEY[0]) begin
 		State = State_n;
 		case (State_n)
 			Reset: reset_clk <= 1'b1;
+			Sphere0: reset_clk <= 1'b0;
 			Sphere1: reset_clk <= 1'b0;
+			Sphere2: reset_clk <= 1'b0;
+			Sphere3: reset_clk <= 1'b0;
+			Write: reset_clk <= 1'b0;
+		endcase
+		case (State_n)
+			Reset: tbest <= 64'hefffffffffffffff;
+			Sphere0: tbest <= 64'hefffffffffffffff;
+			Sphere1: tbest <= tbest_n;
+			Sphere2: tbest <= tbest_n;
+			Sphere3: tbest <= tbest_n;
+			Write: tbest <= tbest_n;
+		endcase
+		case (State_n)
+			Reset: best_in <= 2'b0;
+			Sphere0: best_in <= 2'b0;
+			Sphere1: best_in <= best_in_n;
+			Sphere2: best_in <= best_in_n;
+			Sphere3: best_in <= best_in_n;
+			Write: best_in <= best_in_n;
 		endcase
 	end
 end
 
 always_comb begin
-State_n = State;
-WritePixel = 0;
-case (State)
-	Reset: begin
-		State_n = Sphere1;
-	end
-	Sphere1: begin
-		State_n = Reset;
-		WritePixel = 1;
-	end
-endcase
+	State_n = State;
+	WritePixel = 0;
+	case (State)
+		Reset: begin
+			State_n = Sphere0;
+			next_sphere = 2'd0;
+		end
+		Sphere0: begin
+			State_n = Sphere1;
+			next_sphere = 2'd1;
+		end
+		Sphere1: begin
+			State_n = Sphere2;
+			next_sphere = 2'd2;
+		end
+		Sphere2: begin
+			State_n = Sphere3;
+			next_sphere = 2'd3;
+		end
+		Sphere3: begin
+			State_n = Write;
+			next_sphere = best_in;
+		end
+		Write: begin
+			State_n = Reset;
+			WritePixel = 1;
+			next_sphere = 2'd0;
+		end
+	endcase
 
+	if(tbest > tcurr)	begin
+		tbest_n = tcurr;
+		best_in_n = curr_sphere;
+	end
+	else begin
+		tbest_n = tbest;
+		best_in_n = best_in;
+	end
 end
 
 endmodule

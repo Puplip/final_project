@@ -1,6 +1,10 @@
+typedef logic [2:0] [63:0] vector;
+typedef logic [63:0] fixed_real;
+typedef logic [2:0] [7:0] color;
+
 module testbench();
 
-timeprecision 1ns;
+timeprecision 9ns;
 timeunit 10ns;
 
 logic CLOCK_50;
@@ -28,3 +32,27 @@ end
 
 endmodule
 
+module random_testbench();
+
+timeprecision 1ns;
+timeunit 10ns;
+
+logic Clk, Reset;
+fixed_real random;
+
+rand_lut rl(.*);
+
+initial begin
+Clk = 1'b1;
+end
+
+always begin
+#1 Clk = ~Clk;
+end
+
+initial begin
+Reset = 1'b1;
+#4 Reset = 1'b0;
+end
+
+endmodule
