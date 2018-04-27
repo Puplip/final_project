@@ -6,7 +6,7 @@ module collision_detection (
 	input vector sphere, ray,
 	input fixed_real tbest,
 	output fixed_real tnew,
-	output logic collide
+	output logic Collision
 );
 fixed_real v, bsqr, cdot, vsqr, disc, sqrt;
 
@@ -22,14 +22,14 @@ assign radsq = rad << 5;
 
 always_comb begin
 	disc = radsq - bsqr;
-	collide = 0;
+	Collision = 0;
 	tnew = tbest;
 	
 	//if (tbest > v - rad) begin
 	bsqr = cdot - vsqr;
 	if (radsq > bsqr) begin
 		tnew = v - sqrt;
-		collide = 1'b1;
+		Collision = 1'b1;
 	end
 	//end
 

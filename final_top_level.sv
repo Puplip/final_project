@@ -22,44 +22,40 @@ enum logic [7:0] {
 	Sphere3_1,
 	Write} State, State_n;
 
-logic reset_clk, collide, WritePixel;
-vector spherepos, lookray;
-color colorout;
-color [3:0] spherecol;
+logic Pixel_Clk, Collision, WritePixel, Frame_Clk;
+vector Curr_Sphere_pos, Cast_Ray;
+color Write_col;
+color [3:0] Sphere_col;
 logic [9:0] DrawX, DrawY, WriteX, WriteY;
 
-fixed_real dPhi, dTheta, tbest, tbest_n, tcurr;
+fixed_real dPhi, dTheta, Best_Dist, Best_Dist_n, Curr_Dist;
 
-logic [1:0] next_sphere, best_in, best_in_n, curr_sphere;
+logic [1:0] Read_Sphere_in, Best_in, Best_in_n, Curr_Sphere_in;
 
-logic click, hit;
-logic [1:0] hit_index;
+logic Click, Hit;
+logic [1:0] Hit_in;
 
-assign click = 1'b0;
-
-
-/*sphere_reg firstsph(.Frame_Clk(VGA_VS), .nextcol({8'hff, 8'hff, 8'hff}), .nextpos({64'd0, 64'd304 << 32, 64'd0}),
-	.currentpos(sphere1pos), .currentcol(sphere1col));*/
+assign Click = 1'b0;
 	
-sphere_reg_4 sph4(.Clk(CLOCK_50),.Frame_Clk(VGA_VS),.Reset(~KEY[0]),.Hit(hit),.Hit_index(hit_index),.Read_index(next_sphere),.Sphere_pos(spherepos),.Sphere_col(spherecol),.curr_index(curr_sphere));
+sphere_reg_4 sph4(.Clk(CLOCK_50),.Frame_Clk(Frame_Clk),.Reset(~KEY[0]),.Hit(Hit),.Hit_index(Hit_in),.Read_index(Read_Sphere_in),.Sphere_pos(Curr_Sphere_pos),.Sphere_col(Sphere_col),.curr_index(Curr_Sphere_in));
 	
-color_mapper colmap(.is_ball(tbest != 64'hefffffffffffffff), .DrawX(WriteX), .DrawY(WriteY), .colin(spherecol[best_in]), .col(colorout));
+color_mapper colmap(.is_ball(Best_Dist != 64'hefffffffffffffff), .DrawX(WriteX), .DrawY(WriteY), .colin(Sphere_col[Best_in]), .col(Write_col));
 
-collision_detection cd(.sphere(spherepos), .ray(lookray), .tbest(tbest), .tnew(tcurr), .collide(collide));
+collision_detection cd(.sphere(Curr_Sphere_pos), .ray(Cast_Ray), .tbest(Best_Dist), .tnew(Curr_Dist), .Collision(Collision));
 
 VGA_controller vga(.Clk(CLOCK_50), .Reset(~KEY[0]), .*);
 
-frame_buffer fb(.Clk(CLOCK_50), .Write(WritePixel), .*, .WriteColor(colorout), .ReadColor({VGA_B, VGA_G, VGA_R}));
+frame_buffer fb(.Clk(CLOCK_50), .Write(WritePixel), .*, .WriteColor(Write_col), .ReadColor({VGA_B, VGA_G, VGA_R}));
 
-increment_write iw(.Clk(reset_clk), .Reset(~KEY[0]), .*);
+increment_write iw(.Clk(Pixel_Clk), .Reset(~KEY[0]), .*);
 
 ang_lut al(.Clk(CLOCK_50), .WriteY(WriteY), .WriteX(WriteX),.dTheta(dTheta), .dPhi(dPhi));
 
-ray_lut rl(.Clk(CLOCK_50), .theta((64'd90 << 32) + dTheta), .phi((64'd90 << 32) + dPhi), .ray(lookray));
+ray_lut rl(.Clk(CLOCK_50), .theta((64'd90 << 32) + dTheta), .phi((64'd90 << 32) + dPhi), .ray(Cast_Ray));
 
 vga_clk vga_clk_instance(.inclk0(CLOCK_50), .c0(VGA_CLK));
 
-hit_detection hd(.*,.Clk(CLOCK_50),.frame_clk(VGA_VS));
+hit_detection hd(.*,.Clk(CLOCK_50));
 
 always_ff @ (posedge CLOCK_50 or negedge KEY[0]) begin
 	if(~KEY[0])begin
@@ -67,31 +63,31 @@ always_ff @ (posedge CLOCK_50 or negedge KEY[0]) begin
 	end else begin
 		State = State_n;
 		case (State_n)
-			Setup0: reset_clk <= 1'b1;
-			Setup1: reset_clk <= 1'b01;
-			Sphere0_0: reset_clk <= 1'b0;
-			Sphere0_1: reset_clk <= 1'b0;
-			Sphere1_0: reset_clk <= 1'b0;
-			Sphere1_1: reset_clk <= 1'b0;
-			Sphere2_0: reset_clk <= 1'b0;
-			Sphere2_1: reset_clk <= 1'b0;
-			Sphere3_0: reset_clk <= 1'b0;
-			Sphere3_1: reset_clk <= 1'b0;
-			Write: reset_clk <= 1'b0;
+			Setup0: Pixel_Clk <= 1'b1;
+			Setup1: Pixel_Clk <= 1'b01;
+			Sphere0_0: Pixel_Clk <= 1'b0;
+			Sphere0_1: Pixel_Clk <= 1'b0;
+			Sphere1_0: Pixel_Clk <= 1'b0;
+			Sphere1_1: Pixel_Clk <= 1'b0;
+			Sphere2_0: Pixel_Clk <= 1'b0;
+			Sphere2_1: Pixel_Clk <= 1'b0;
+			Sphere3_0: Pixel_Clk <= 1'b0;
+			Sphere3_1: Pixel_Clk <= 1'b0;
+			Write: Pixel_Clk <= 1'b0;
 		endcase
 		case (State_n)
-			Setup0: tbest <= 64'hefffffffffffffff;
-			Sphere1_0: tbest <= tbest_n;
-			Sphere2_0: tbest <= tbest_n;
-			Sphere3_0: tbest <= tbest_n;
-			Write: tbest <= tbest_n;
+			Setup0: Best_Dist <= 64'hefffffffffffffff;
+			Sphere1_0: Best_Dist <= Best_Dist_n;
+			Sphere2_0: Best_Dist <= Best_Dist_n;
+			Sphere3_0: Best_Dist <= Best_Dist_n;
+			Write: Best_Dist <= Best_Dist_n;
 		endcase
 		case (State_n)
-			Setup0: best_in <= 2'b0;
-			Sphere1_0: best_in <= best_in_n;
-			Sphere2_1: best_in <= best_in_n;
-			Sphere3_1: best_in <= best_in_n;
-			Write: best_in <= best_in_n;
+			Setup0: Best_in <= 2'b0;
+			Sphere1_0: Best_in <= Best_in_n;
+			Sphere2_1: Best_in <= Best_in_n;
+			Sphere3_1: Best_in <= Best_in_n;
+			Write: Best_in <= Best_in_n;
 		endcase
 	end
 end
@@ -102,58 +98,58 @@ always_comb begin
 	case (State)
 		Setup0: begin
 			State_n = Setup1;
-			next_sphere = 2'd0;
+			Read_Sphere_in = 2'd0;
 		end
 		Setup1: begin
 			State_n = Sphere0_0;
-			next_sphere = 2'd0;
+			Read_Sphere_in = 2'd0;
 		end
 		Sphere0_0: begin
 			State_n = Sphere0_1;
-			next_sphere = 2'd0;
+			Read_Sphere_in = 2'd0;
 		end
 		Sphere0_1: begin
 			State_n = Sphere1_0;
-			next_sphere = 2'd1;
+			Read_Sphere_in = 2'd1;
 		end
 		Sphere1_0: begin
 			State_n = Sphere1_1;
-			next_sphere = 2'd1;
+			Read_Sphere_in = 2'd1;
 		end
 		Sphere1_1: begin
 			State_n = Sphere2_0;
-			next_sphere = 2'd2;
+			Read_Sphere_in = 2'd2;
 		end
 		Sphere2_0: begin
 			State_n = Sphere2_1;
-			next_sphere = 2'd2;
+			Read_Sphere_in = 2'd2;
 		end
 		Sphere2_1: begin
 			State_n = Sphere3_0;
-			next_sphere = 2'd3;
+			Read_Sphere_in = 2'd3;
 		end
 		Sphere3_0: begin
 			State_n = Sphere3_1;
-			next_sphere = 2'd3;
+			Read_Sphere_in = 2'd3;
 		end
 		Sphere3_1: begin
 			State_n = Write;
-			next_sphere = 2'd0;
+			Read_Sphere_in = 2'd0;
 		end
 		Write: begin
 			State_n = Setup0;
 			WritePixel = 1;
-			next_sphere = 2'd0;
+			Read_Sphere_in = 2'd0;
 		end
 	endcase
 
-	if(tbest > tcurr && collide)	begin
-		tbest_n = tcurr;
-		best_in_n = curr_sphere;
+	if(Best_Dist > Curr_Dist && Collision)	begin
+		Best_Dist_n = Curr_Dist;
+		Best_in_n = Curr_Sphere_in;
 	end
 	else begin
-		tbest_n = tbest;
-		best_in_n = best_in;
+		Best_Dist_n = Best_Dist;
+		Best_in_n = Best_in;
 	end
 end
 
