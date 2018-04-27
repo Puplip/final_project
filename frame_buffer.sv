@@ -19,9 +19,11 @@ module frame_buffer (
 
 	always_ff @ (posedge Clk) begin
 		if(Write) begin
-			buffer[Write_Index] = WriteColor_small;
+			buffer[Write_Index] <= WriteColor_small;
 		end
-		ReadColor_raw = buffer[Read_Index];
+		if(DrawX < 640) begin
+			ReadColor_raw <= buffer[Read_Index];
+		end
 	end
 	
 	color_shrink shrink(.in(WriteColor),.out(WriteColor_small));
@@ -33,9 +35,9 @@ module color_shrink (
 	input color in,
 	output color_small out
 );
-assign out[0] = in[0][1:0];
-assign out[1] = in[1][1:0];
-assign out[2] = in[2][1:0];
+assign out[0] = in[0][7:6];
+assign out[1] = in[1][7:6];
+assign out[2] = in[2][7:6];
 
 endmodule
 
@@ -44,8 +46,8 @@ module color_expand (
 	output color out
 );
 
-assign out[0] = {6'b0,in[0]} << 6;
-assign out[1] = {6'b0,in[1]} << 6;
-assign out[2] = {6'b0,in[2]} << 6;
+assign out[0] = {in[0],6'b0};
+assign out[1] = {in[1],6'b0};
+assign out[2] = {in[2],6'b0};
 
 endmodule

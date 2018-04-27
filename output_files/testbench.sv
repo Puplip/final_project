@@ -24,8 +24,8 @@ end
 
 initial begin
 KEY = 4'b1111;
-#4 KEY = 4'b1110;
-#4 KEY = 4'b1111;
+#8 KEY = 4'b1110;
+#8 KEY = 4'b1111;
 end
 
 endmodule

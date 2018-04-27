@@ -46,7 +46,7 @@ assign in = angle_fixed[40:32];
 assign out_fixed = out[15]?(~out[14:0])+15'd1:out[14:0];
 assign sin = {{31{out[15]}},out_fixed,18'd0};
 
-always_ff @ (posedge Clk) begin
+always_ff @ (negedge Clk) begin
 case (in)
 9'd0: out <= 16'b0;    
 9'd1: out <= 16'b100011110;    9'd2: out <= 16'b1000111100;    9'd3: out <= 16'b1101011001;    
@@ -194,7 +194,7 @@ assign in = angle_fixed[40:32];
 assign out_fixed = out[15]?(~out[14:0])+15'd1:out[14:0];
 assign cos = {{31{out[15]}},out_fixed,18'd0};
 
-always_ff @ (posedge Clk) begin
+always_ff @ (negedge Clk) begin
 case (in)
 9'd0: out <= 16'b100000000000000;    
 9'd1: out <= 16'b11111111111110;    9'd2: out <= 16'b11111111110110;    9'd3: out <= 16'b11111111101010;    
@@ -322,23 +322,62 @@ end
 
 endmodule
 
+
+module wgt_mean (
+	input fixed_real low,
+	input fixed_real high,
+	input logic [1:0] wgt,
+	output fixed_real out
+);
+fixed_real low4, high4, low2, high2;
+
+assign low4 = {{2{low[63]}},low[63:2]};
+assign high4 = {{2{high[63]}},high[63:2]};
+assign low2 = {{1{low[63]}},low[63:1]};
+assign high2 = {{1{high[63]}},high[63:1]};
+
+always_comb begin
+	case (wgt)
+		2'b00: out = low;
+		2'b01: out = low4 + low4 + low4 + high4;
+		2'b10: out = low2 + high2;
+		2'b11: out = low4 + high4 + high4 + high4;
+	endcase
+end
+
+endmodule
+
+
 module ray_lut(
 	input logic Clk,
 	input fixed_real theta, phi,
 	output vector ray
 );
 
-fixed_real cosTheta, sinTheta, sinPhi, cosPhi,x,y,z;
+fixed_real cosTheta_0, sinTheta_0, sinPhi_0, cosPhi_0,x,y,z;
+fixed_real cosTheta_1, sinTheta_1, sinPhi_1, cosPhi_1;
+fixed_real cosTheta_fix, sinTheta_fix, sinPhi_fix, cosPhi_fix;
 
-sin_lut s0(.*,.angle(theta),.sin(sinTheta));
-sin_lut s1(.*,.angle(phi),.sin(sinPhi));
-cos_lut c0(.*,.angle(theta),.cos(cosTheta));
-cos_lut c1(.*,.angle(phi),.cos(cosPhi));
+sin_lut s0(.*,.angle(theta),.sin(sinTheta_0));
+sin_lut s1(.*,.angle(phi),.sin(sinPhi_0));
+sin_lut s2(.*,.angle(theta+(64'd1<<32)),.sin(sinTheta_1));
+sin_lut s3(.*,.angle(phi+(64'd1<<32)),.sin(sinPhi_1));
+cos_lut c0(.*,.angle(theta),.cos(cosTheta_0));
+cos_lut c1(.*,.angle(phi),.cos(cosPhi_0));
+cos_lut c2(.*,.angle(theta+(64'd1<<32)),.cos(cosTheta_1));
+cos_lut c3(.*,.angle(phi+(64'd1<<32)),.cos(cosPhi_1));
 
-mult_real m0(.a(sinTheta),.b(sinPhi),.c(y));
-mult_real m1(.a(sinTheta),.b(cosPhi),.c(z));
+wgt_mean wm0(.low(sinTheta_0),.high(sinTheta_1),.out(sinTheta_fix));
+wgt_mean wm1(.low(cosTheta_0),.high(cosTheta_1),.out(cosTheta_fix));
+wgt_mean wm2(.low(sinPhi_0),.high(sinPhi_1),.out(sinPhi_fix));
+wgt_mean wm3(.low(cosPhi_0),.high(cosPhi_1),.out(cosPhi_fix));
 
-assign x = cosTheta;
+mult_real m0(.a(sinTheta_fix),.b(sinPhi_fix),.c(y));
+mult_real m1(.a(sinTheta_fix),.b(cosPhi_fix),.c(z));
+
+
+
+assign x = cosTheta_fix;
 
 assign ray = {z,y,x};
 

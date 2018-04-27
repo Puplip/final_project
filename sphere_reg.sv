@@ -7,7 +7,7 @@ module sphere_reg_4 (
 	input logic Hit,
 	input logic [1:0] Hit_index, Read_index,
 	output vector Sphere_pos,
-	output color Sphere_col,
+	output color [3:0] Sphere_col,
 	output logic [1:0] curr_index
 );
 
@@ -17,9 +17,14 @@ vector [3:0] vel;
 vector [3:0] acc;
 vector [3:0] velacc;
 vector [3:0] posvelacc;
+
 vector [3:0] pos_n;
 vector [3:0] vel_n;
 color [3:0] col_n;
+
+vector [3:0] pos_rand;
+vector [3:0] vel_rand;
+color [3:0] col_rand;
 fixed_real random;
 logic Frame_Clk_old, posedge_frame_clk;
 
@@ -28,12 +33,27 @@ logic Frame_Clk_old, posedge_frame_clk;
 //assign acc[2] = {64'hFFFFFFFE00000000,64'd0,64'd0};
 //assign acc[3] = {64'hFFFFFFFE00000000,64'd0,64'd0};
 vector gravity;
-assign gravity = {64'd0,~(64'd1 << 16) + 64'd1,64'd0};
+assign gravity = {~(64'd1 << 24) + 64'd1,64'd0,64'd0};
 
 assign acc[0] = gravity;
 assign acc[1] = gravity;
 assign acc[2] = gravity;
 assign acc[3] = gravity;
+
+assign pos_rand[0] = {64'd0,64'd304 << 32,64'd0};
+assign pos_rand[1] = {64'd0,64'd304 << 32,64'd100 << 32};
+assign pos_rand[2] = {64'd0,64'd304 << 32,~(64'd100 << 32) + 64'd1};
+assign pos_rand[3] = {64'd100 << 32 ,64'd304 << 32,64'd0};
+
+assign vel_rand[0] = {31'd0,random[63:48],17'd0,{31{random[0]}},random[47:32],17'd0,{31{random[1]}},random[31:16],17'd0};
+assign vel_rand[1] = {31'd0,random[15:0],17'd0,{31{random[2]}},random[62:47],17'd0,{31{random[3]}},random[46:31],17'd0};
+assign vel_rand[2] = {31'd0,random[30:15],17'd0,{31{random[4]}},random[61:46],17'd0,{31{random[5]}},random[45:30],17'd0};
+assign vel_rand[3] = {31'd0,random[29:14],17'd0,{31{random[6]}},random[60:45],17'd0,{31{random[7]}},random[44:29],17'd0};
+
+assign col_rand[0] = {random[63:56],random[55:48],random[47:40]};
+assign col_rand[1] = {random[39:32],random[31:24],random[23:16]};
+assign col_rand[2] = {random[15:8],random[7:0],random[62:55]};
+assign col_rand[3] = {random[54:47],random[46:39],random[38:31]};
 
 add_vector va0(.a(vel[0]),.b(acc[0]),.c(velacc[0]));
 add_vector va1(.a(vel[1]),.b(acc[1]),.c(velacc[1]));
@@ -49,22 +69,13 @@ rand_lut rl(.*);
 
 assign posedge_frame_clk = ~Frame_Clk_old && Frame_Clk;
 
+assign Sphere_col = col;
+
 always_ff @ (posedge Clk or posedge Reset) begin
 	if(Reset) begin
-		pos[0] <= {64'd0,64'd304 << 32,64'd0};
-		pos[1] <= {64'd0,64'd304 << 32,64'd100 << 32};
-		pos[2] <= {64'd0,64'd304 << 32,~(64'd100 << 32) + 64'd1};
-		pos[3] <= {64'd0,64'd608 << 32,64'd0};
-		
-		vel[0] <= {30'd0,random[63:48],18'd0,{30{random[0]}},random[47:32],18'd0,{30{random[1]}},random[31:16],18'd0};
-		vel[1] <= {30'd0,random[15:0],18'd0,{30{random[2]}},random[62:47],18'd0,{30{random[3]}},random[46:31],18'd0};
-		vel[2] <= {30'd0,random[30:15],18'd0,{30{random[4]}},random[61:46],18'd0,{30{random[5]}},random[45:30],18'd0};
-		vel[3] <= {30'd0,random[29:14],18'd0,{30{random[6]}},random[60:45],18'd0,{30{random[7]}},random[44:29],18'd0};
-		
-		col[0] <= {random[63:56],random[55:48],random[47:40]};
-		col[1] <= {random[39:32],random[31:24],random[23:16]};
-		col[2] <= {random[15:8],random[7:0],random[62:55]};
-		col[3] <= {random[54:47],random[46:39],random[38:31]};
+		pos <= pos_rand;
+		col <= col_rand;
+		vel <= vel_rand;
 	end
 	else begin
 		if(posedge_frame_clk) begin
@@ -83,7 +94,6 @@ end
 
 always_ff @ (posedge Clk) begin
 	Sphere_pos <= pos[Read_index];
-	Sphere_col <= col[Read_index];
 	curr_index <= Read_index;
 end
 
@@ -91,28 +101,28 @@ always_comb begin
 	pos_n = posvelacc;
 	vel_n = velacc;
 	col_n = col;
-	/*
+	
 	if((pos[0][2][63]) && (~pos[0][2] + 64'b1 > (64'd1440 << 32))) begin
-		pos_n[0] = {64'b0,64'd304 << 32,64'b0};
-		vel_n[0] = {16'd0,random[63:48],32'd0,{16{random[0]}},random[47:32],32'd0,{16{random[1]}},random[31:16],32'd0};
-		col_n[0] = {random[63:56],random[55:48],random[47:40]};
+		pos_n[0] = pos_rand[0];
+		vel_n[0] = vel_rand[0];
+		col_n[0] = col_rand[0];
 	end
 	if((pos[1][2][63]) && (~pos[1][2] + 64'b1 > (64'd1440 << 32))) begin
-		pos_n[1] = {64'b0,64'd304 << 32,64'b0};
-		vel_n[1] = {16'd0,random[15:0],32'd0,{16{random[2]}},random[62:47],32'd0,{16{random[3]}},random[46:31],32'd0};
-		col_n[1] = {random[39:32],random[31:24],random[23:16]};
+		pos_n[1] = pos_rand[1];
+		vel_n[1] = vel_rand[1];
+		col_n[1] = col_rand[1];
 	end
 	if((pos[2][2][63]) && (~pos[2][2] + 64'b1 > (64'd1440 << 32))) begin
-		pos_n[2] = {64'b0,64'd304 << 32,64'b0};
-		vel_n[2] = {16'd0,random[30:15],32'd0,{16{random[4]}},random[61:46],32'd0,{16{random[5]}},random[45:30],32'd0};
-		col_n[2] = {random[15:8],random[7:0],random[62:55]};
+		pos_n[2] = pos_rand[2];
+		vel_n[2] = vel_rand[2];
+		col_n[2] = col_rand[2];
 	end
 	if((pos[3][2][63]) && (~pos[3][2] + 64'b1 > (64'd1440 << 32))) begin
-		pos_n[3] = {64'b0,64'd304 << 32,64'b0};
-		vel_n[3] = {16'd0,random[29:14],32'd0,{16{random[6]}},random[60:45],32'd0,{16{random[7]}},random[44:29],32'd0};
-		col_n[3] = {random[54:47],random[46:39],random[38:31]};	
+		pos_n[3] = pos_rand[3];
+		vel_n[3] = vel_rand[3];
+		col_n[3] = col_rand[3];
 	end
-	*/
+	
 end
 
 
