@@ -367,10 +367,10 @@ cos_lut c1(.*,.angle(phi),.cos(cosPhi_0));
 cos_lut c2(.*,.angle(theta+(64'd1<<32)),.cos(cosTheta_1));
 cos_lut c3(.*,.angle(phi+(64'd1<<32)),.cos(cosPhi_1));
 
-wgt_mean wm0(.low(sinTheta_0),.high(sinTheta_1),.out(sinTheta_fix));
-wgt_mean wm1(.low(cosTheta_0),.high(cosTheta_1),.out(cosTheta_fix));
-wgt_mean wm2(.low(sinPhi_0),.high(sinPhi_1),.out(sinPhi_fix));
-wgt_mean wm3(.low(cosPhi_0),.high(cosPhi_1),.out(cosPhi_fix));
+wgt_mean wm0(.low(sinTheta_0),.high(sinTheta_1),.out(sinTheta_fix),.wgt(theta[31:30]));
+wgt_mean wm1(.low(cosTheta_0),.high(cosTheta_1),.out(cosTheta_fix),.wgt(theta[31:30]));
+wgt_mean wm2(.low(sinPhi_0),.high(sinPhi_1),.out(sinPhi_fix),.wgt(phi[31:30]));
+wgt_mean wm3(.low(cosPhi_0),.high(cosPhi_1),.out(cosPhi_fix),.wgt(phi[31:30]));
 
 mult_real m0(.a(sinTheta_fix),.b(sinPhi_fix),.c(y));
 mult_real m1(.a(sinTheta_fix),.b(cosPhi_fix),.c(z));
