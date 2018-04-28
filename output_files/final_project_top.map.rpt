@@ -1,5 +1,5 @@
 Analysis & Synthesis report for final_project_top
-Fri Apr 27 13:43:56 2018
+Sat Apr 28 15:51:02 2018
 Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
 
 
@@ -79,15 +79,15 @@ agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Apr 27 13:43:56 2018      ;
+; Analysis & Synthesis Status        ; Successful - Sat Apr 28 15:51:02 2018      ;
 ; Quartus II 64-Bit Version          ; 15.0.0 Build 145 04/22/2015 SJ Web Edition ;
 ; Revision Name                      ; final_project_top                          ;
 ; Top-level Entity Name              ; final_top_level                            ;
 ; Family                             ; Cyclone IV E                               ;
-; Total logic elements               ; 16,124                                     ;
-;     Total combinational functions  ; 16,000                                     ;
-;     Dedicated logic registers      ; 1,456                                      ;
-; Total registers                    ; 1456                                       ;
+; Total logic elements               ; 16,105                                     ;
+;     Total combinational functions  ; 15,966                                     ;
+;     Dedicated logic registers      ; 1,455                                      ;
+; Total registers                    ; 1455                                       ;
 ; Total pins                         ; 34                                         ;
 ; Total virtual pins                 ; 0                                          ;
 ; Total memory bits                  ; 1,843,200                                  ;
@@ -189,7 +189,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 ; Processors                 ; Number ;
 +----------------------------+--------+
-; Number detected on machine ; 4      ;
+; Number detected on machine ; 8      ;
 ; Maximum allowed            ; 1      ;
 +----------------------------+--------+
 
@@ -199,46 +199,46 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                         ; Library ;
 +----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------+---------+
-; lut.sv                           ; yes             ; User SystemVerilog HDL File  ; D:/ece_385/final_project/lut.sv                                      ;         ;
-; ang_lut.sv                       ; yes             ; User SystemVerilog HDL File  ; D:/ece_385/final_project/ang_lut.sv                                  ;         ;
-; vga_clk.v                        ; yes             ; User Wizard-Generated File   ; D:/ece_385/final_project/vga_clk.v                                   ;         ;
-; VGA_controller.sv                ; yes             ; User SystemVerilog HDL File  ; D:/ece_385/final_project/VGA_controller.sv                           ;         ;
-; final_top_level.sv               ; yes             ; User SystemVerilog HDL File  ; D:/ece_385/final_project/final_top_level.sv                          ;         ;
-; vector.sv                        ; yes             ; User SystemVerilog HDL File  ; D:/ece_385/final_project/vector.sv                                   ;         ;
-; frame_buffer.sv                  ; yes             ; User SystemVerilog HDL File  ; D:/ece_385/final_project/frame_buffer.sv                             ;         ;
-; collision_detection.sv           ; yes             ; User SystemVerilog HDL File  ; D:/ece_385/final_project/collision_detection.sv                      ;         ;
-; sphere_reg.sv                    ; yes             ; User SystemVerilog HDL File  ; D:/ece_385/final_project/sphere_reg.sv                               ;         ;
-; WriteUpdate.sv                   ; yes             ; User SystemVerilog HDL File  ; D:/ece_385/final_project/WriteUpdate.sv                              ;         ;
-; color_mapper.sv                  ; yes             ; User SystemVerilog HDL File  ; D:/ece_385/final_project/color_mapper.sv                             ;         ;
-; random.sv                        ; yes             ; User SystemVerilog HDL File  ; D:/ece_385/final_project/random.sv                                   ;         ;
-; hit_detection.sv                 ; yes             ; User SystemVerilog HDL File  ; D:/ece_385/final_project/hit_detection.sv                            ;         ;
-; altpll.tdf                       ; yes             ; Megafunction                 ; c:/altera/15.0/quartus/libraries/megafunctions/altpll.tdf            ;         ;
-; aglobal150.inc                   ; yes             ; Megafunction                 ; c:/altera/15.0/quartus/libraries/megafunctions/aglobal150.inc        ;         ;
-; stratix_pll.inc                  ; yes             ; Megafunction                 ; c:/altera/15.0/quartus/libraries/megafunctions/stratix_pll.inc       ;         ;
-; stratixii_pll.inc                ; yes             ; Megafunction                 ; c:/altera/15.0/quartus/libraries/megafunctions/stratixii_pll.inc     ;         ;
-; cycloneii_pll.inc                ; yes             ; Megafunction                 ; c:/altera/15.0/quartus/libraries/megafunctions/cycloneii_pll.inc     ;         ;
-; db/vga_clk_altpll1.v             ; yes             ; Auto-Generated Megafunction  ; D:/ece_385/final_project/db/vga_clk_altpll1.v                        ;         ;
-; altsyncram.tdf                   ; yes             ; Megafunction                 ; c:/altera/15.0/quartus/libraries/megafunctions/altsyncram.tdf        ;         ;
-; stratix_ram_block.inc            ; yes             ; Megafunction                 ; c:/altera/15.0/quartus/libraries/megafunctions/stratix_ram_block.inc ;         ;
-; lpm_mux.inc                      ; yes             ; Megafunction                 ; c:/altera/15.0/quartus/libraries/megafunctions/lpm_mux.inc           ;         ;
-; lpm_decode.inc                   ; yes             ; Megafunction                 ; c:/altera/15.0/quartus/libraries/megafunctions/lpm_decode.inc        ;         ;
-; a_rdenreg.inc                    ; yes             ; Megafunction                 ; c:/altera/15.0/quartus/libraries/megafunctions/a_rdenreg.inc         ;         ;
-; altrom.inc                       ; yes             ; Megafunction                 ; c:/altera/15.0/quartus/libraries/megafunctions/altrom.inc            ;         ;
-; altram.inc                       ; yes             ; Megafunction                 ; c:/altera/15.0/quartus/libraries/megafunctions/altram.inc            ;         ;
-; altdpram.inc                     ; yes             ; Megafunction                 ; c:/altera/15.0/quartus/libraries/megafunctions/altdpram.inc          ;         ;
-; db/altsyncram_u5e1.tdf           ; yes             ; Auto-Generated Megafunction  ; D:/ece_385/final_project/db/altsyncram_u5e1.tdf                      ;         ;
-; db/decode_hua.tdf                ; yes             ; Auto-Generated Megafunction  ; D:/ece_385/final_project/db/decode_hua.tdf                           ;         ;
-; db/mux_vob.tdf                   ; yes             ; Auto-Generated Megafunction  ; D:/ece_385/final_project/db/mux_vob.tdf                              ;         ;
-; lpm_mult.tdf                     ; yes             ; Megafunction                 ; c:/altera/15.0/quartus/libraries/megafunctions/lpm_mult.tdf          ;         ;
-; lpm_add_sub.inc                  ; yes             ; Megafunction                 ; c:/altera/15.0/quartus/libraries/megafunctions/lpm_add_sub.inc       ;         ;
-; multcore.inc                     ; yes             ; Megafunction                 ; c:/altera/15.0/quartus/libraries/megafunctions/multcore.inc          ;         ;
-; bypassff.inc                     ; yes             ; Megafunction                 ; c:/altera/15.0/quartus/libraries/megafunctions/bypassff.inc          ;         ;
-; altshift.inc                     ; yes             ; Megafunction                 ; c:/altera/15.0/quartus/libraries/megafunctions/altshift.inc          ;         ;
-; db/mult_v7t.tdf                  ; yes             ; Auto-Generated Megafunction  ; D:/ece_385/final_project/db/mult_v7t.tdf                             ;         ;
-; db/mult_cdt.tdf                  ; yes             ; Auto-Generated Megafunction  ; D:/ece_385/final_project/db/mult_cdt.tdf                             ;         ;
-; db/mult_76t.tdf                  ; yes             ; Auto-Generated Megafunction  ; D:/ece_385/final_project/db/mult_76t.tdf                             ;         ;
-; db/mult_o7t.tdf                  ; yes             ; Auto-Generated Megafunction  ; D:/ece_385/final_project/db/mult_o7t.tdf                             ;         ;
-; db/mult_k6t.tdf                  ; yes             ; Auto-Generated Megafunction  ; D:/ece_385/final_project/db/mult_k6t.tdf                             ;         ;
+; lut.sv                           ; yes             ; User SystemVerilog HDL File  ; D:/ECE_385/final_project/lut.sv                                      ;         ;
+; ang_lut.sv                       ; yes             ; User SystemVerilog HDL File  ; D:/ECE_385/final_project/ang_lut.sv                                  ;         ;
+; vga_clk.v                        ; yes             ; User Wizard-Generated File   ; D:/ECE_385/final_project/vga_clk.v                                   ;         ;
+; VGA_controller.sv                ; yes             ; User SystemVerilog HDL File  ; D:/ECE_385/final_project/VGA_controller.sv                           ;         ;
+; final_top_level.sv               ; yes             ; User SystemVerilog HDL File  ; D:/ECE_385/final_project/final_top_level.sv                          ;         ;
+; vector.sv                        ; yes             ; User SystemVerilog HDL File  ; D:/ECE_385/final_project/vector.sv                                   ;         ;
+; frame_buffer.sv                  ; yes             ; User SystemVerilog HDL File  ; D:/ECE_385/final_project/frame_buffer.sv                             ;         ;
+; collision_detection.sv           ; yes             ; User SystemVerilog HDL File  ; D:/ECE_385/final_project/collision_detection.sv                      ;         ;
+; sphere_reg.sv                    ; yes             ; User SystemVerilog HDL File  ; D:/ECE_385/final_project/sphere_reg.sv                               ;         ;
+; WriteUpdate.sv                   ; yes             ; User SystemVerilog HDL File  ; D:/ECE_385/final_project/WriteUpdate.sv                              ;         ;
+; color_mapper.sv                  ; yes             ; User SystemVerilog HDL File  ; D:/ECE_385/final_project/color_mapper.sv                             ;         ;
+; random.sv                        ; yes             ; User SystemVerilog HDL File  ; D:/ECE_385/final_project/random.sv                                   ;         ;
+; hit_detection.sv                 ; yes             ; User SystemVerilog HDL File  ; D:/ECE_385/final_project/hit_detection.sv                            ;         ;
+; altpll.tdf                       ; yes             ; Megafunction                 ; d:/altera/15.0/quartus/libraries/megafunctions/altpll.tdf            ;         ;
+; aglobal150.inc                   ; yes             ; Megafunction                 ; d:/altera/15.0/quartus/libraries/megafunctions/aglobal150.inc        ;         ;
+; stratix_pll.inc                  ; yes             ; Megafunction                 ; d:/altera/15.0/quartus/libraries/megafunctions/stratix_pll.inc       ;         ;
+; stratixii_pll.inc                ; yes             ; Megafunction                 ; d:/altera/15.0/quartus/libraries/megafunctions/stratixii_pll.inc     ;         ;
+; cycloneii_pll.inc                ; yes             ; Megafunction                 ; d:/altera/15.0/quartus/libraries/megafunctions/cycloneii_pll.inc     ;         ;
+; db/vga_clk_altpll1.v             ; yes             ; Auto-Generated Megafunction  ; D:/ECE_385/final_project/db/vga_clk_altpll1.v                        ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                 ; d:/altera/15.0/quartus/libraries/megafunctions/altsyncram.tdf        ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                 ; d:/altera/15.0/quartus/libraries/megafunctions/stratix_ram_block.inc ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                 ; d:/altera/15.0/quartus/libraries/megafunctions/lpm_mux.inc           ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                 ; d:/altera/15.0/quartus/libraries/megafunctions/lpm_decode.inc        ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                 ; d:/altera/15.0/quartus/libraries/megafunctions/a_rdenreg.inc         ;         ;
+; altrom.inc                       ; yes             ; Megafunction                 ; d:/altera/15.0/quartus/libraries/megafunctions/altrom.inc            ;         ;
+; altram.inc                       ; yes             ; Megafunction                 ; d:/altera/15.0/quartus/libraries/megafunctions/altram.inc            ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                 ; d:/altera/15.0/quartus/libraries/megafunctions/altdpram.inc          ;         ;
+; db/altsyncram_u5e1.tdf           ; yes             ; Auto-Generated Megafunction  ; D:/ECE_385/final_project/db/altsyncram_u5e1.tdf                      ;         ;
+; db/decode_hua.tdf                ; yes             ; Auto-Generated Megafunction  ; D:/ECE_385/final_project/db/decode_hua.tdf                           ;         ;
+; db/mux_vob.tdf                   ; yes             ; Auto-Generated Megafunction  ; D:/ECE_385/final_project/db/mux_vob.tdf                              ;         ;
+; lpm_mult.tdf                     ; yes             ; Megafunction                 ; d:/altera/15.0/quartus/libraries/megafunctions/lpm_mult.tdf          ;         ;
+; lpm_add_sub.inc                  ; yes             ; Megafunction                 ; d:/altera/15.0/quartus/libraries/megafunctions/lpm_add_sub.inc       ;         ;
+; multcore.inc                     ; yes             ; Megafunction                 ; d:/altera/15.0/quartus/libraries/megafunctions/multcore.inc          ;         ;
+; bypassff.inc                     ; yes             ; Megafunction                 ; d:/altera/15.0/quartus/libraries/megafunctions/bypassff.inc          ;         ;
+; altshift.inc                     ; yes             ; Megafunction                 ; d:/altera/15.0/quartus/libraries/megafunctions/altshift.inc          ;         ;
+; db/mult_v7t.tdf                  ; yes             ; Auto-Generated Megafunction  ; D:/ECE_385/final_project/db/mult_v7t.tdf                             ;         ;
+; db/mult_cdt.tdf                  ; yes             ; Auto-Generated Megafunction  ; D:/ECE_385/final_project/db/mult_cdt.tdf                             ;         ;
+; db/mult_76t.tdf                  ; yes             ; Auto-Generated Megafunction  ; D:/ECE_385/final_project/db/mult_76t.tdf                             ;         ;
+; db/mult_o7t.tdf                  ; yes             ; Auto-Generated Megafunction  ; D:/ECE_385/final_project/db/mult_o7t.tdf                             ;         ;
+; db/mult_k6t.tdf                  ; yes             ; Auto-Generated Megafunction  ; D:/ECE_385/final_project/db/mult_k6t.tdf                             ;         ;
 +----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------+---------+
 
 
@@ -247,20 +247,20 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimated Total logic elements              ; 16,124         ;
+; Estimated Total logic elements              ; 16,105         ;
 ;                                             ;                ;
-; Total combinational functions               ; 16000          ;
+; Total combinational functions               ; 15966          ;
 ; Logic element usage by number of LUT inputs ;                ;
-;     -- 4 input functions                    ; 6989           ;
-;     -- 3 input functions                    ; 6605           ;
-;     -- <=2 input functions                  ; 2406           ;
+;     -- 4 input functions                    ; 6973           ;
+;     -- 3 input functions                    ; 6602           ;
+;     -- <=2 input functions                  ; 2391           ;
 ;                                             ;                ;
 ; Logic elements by mode                      ;                ;
-;     -- normal mode                          ; 10198          ;
-;     -- arithmetic mode                      ; 5802           ;
+;     -- normal mode                          ; 10184          ;
+;     -- arithmetic mode                      ; 5782           ;
 ;                                             ;                ;
-; Total registers                             ; 1456           ;
-;     -- Dedicated logic registers            ; 1456           ;
+; Total registers                             ; 1455           ;
+;     -- Dedicated logic registers            ; 1455           ;
 ;     -- I/O registers                        ; 0              ;
 ;                                             ;                ;
 ; I/O pins                                    ; 34             ;
@@ -272,8 +272,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;     -- PLLs                                 ; 1              ;
 ;                                             ;                ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
-; Maximum fan-out                             ; 1641           ;
-; Total fan-out                               ; 67579          ;
+; Maximum fan-out                             ; 1640           ;
+; Total fan-out                               ; 67472          ;
 ; Average fan-out                             ; 3.76           ;
 +---------------------------------------------+----------------+
 
@@ -283,7 +283,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                               ; Library Name ;
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------+--------------+
-; |final_top_level                          ; 16000 (178)       ; 1456 (78)    ; 1843200     ; 212          ; 0       ; 106       ; 34   ; 0            ; |final_top_level                                                                                                  ; work         ;
+; |final_top_level                          ; 15966 (178)       ; 1455 (78)    ; 1843200     ; 212          ; 0       ; 106       ; 34   ; 0            ; |final_top_level                                                                                                  ; work         ;
 ;    |VGA_controller:vga|                   ; 60 (60)           ; 23 (23)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|VGA_controller:vga                                                                               ; work         ;
 ;    |ang_lut:al|                           ; 2874 (2748)       ; 96 (96)      ; 0           ; 12           ; 0       ; 6         ; 0    ; 0            ; |final_top_level|ang_lut:al                                                                                       ; work         ;
 ;       |mult_real:m|                       ; 126 (0)           ; 0 (0)        ; 0           ; 12           ; 0       ; 6         ; 0    ; 0            ; |final_top_level|ang_lut:al|mult_real:m                                                                           ; work         ;
@@ -321,50 +321,50 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;             |decode_hua:decode2|          ; 47 (47)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|frame_buffer:fb|altsyncram:buffer_rtl_0|altsyncram_u5e1:auto_generated|decode_hua:decode2        ; work         ;
 ;             |mux_vob:mux3|                ; 189 (189)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|frame_buffer:fb|altsyncram:buffer_rtl_0|altsyncram_u5e1:auto_generated|mux_vob:mux3              ; work         ;
 ;    |increment_write:iw|                   ; 32 (32)           ; 21 (21)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|increment_write:iw                                                                               ; work         ;
-;    |ray_lut:rl|                           ; 4730 (21)         ; 128 (0)      ; 0           ; 16           ; 0       ; 8         ; 0    ; 0            ; |final_top_level|ray_lut:rl                                                                                       ; work         ;
-;       |cos_lut:c0|                        ; 518 (518)         ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|ray_lut:rl|cos_lut:c0                                                                            ; work         ;
+;    |ray_lut:rl|                           ; 4731 (21)         ; 128 (0)      ; 0           ; 16           ; 0       ; 8         ; 0    ; 0            ; |final_top_level|ray_lut:rl                                                                                       ; work         ;
+;       |cos_lut:c0|                        ; 516 (516)         ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|ray_lut:rl|cos_lut:c0                                                                            ; work         ;
 ;       |cos_lut:c1|                        ; 488 (488)         ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|ray_lut:rl|cos_lut:c1                                                                            ; work         ;
-;       |cos_lut:c2|                        ; 490 (490)         ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|ray_lut:rl|cos_lut:c2                                                                            ; work         ;
-;       |cos_lut:c3|                        ; 479 (479)         ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|ray_lut:rl|cos_lut:c3                                                                            ; work         ;
+;       |cos_lut:c2|                        ; 491 (491)         ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|ray_lut:rl|cos_lut:c2                                                                            ; work         ;
+;       |cos_lut:c3|                        ; 481 (481)         ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|ray_lut:rl|cos_lut:c3                                                                            ; work         ;
 ;       |mult_real:m0|                      ; 104 (0)           ; 0 (0)        ; 0           ; 8            ; 0       ; 4         ; 0    ; 0            ; |final_top_level|ray_lut:rl|mult_real:m0                                                                          ; work         ;
 ;          |lpm_mult:Mult0|                 ; 104 (0)           ; 0 (0)        ; 0           ; 8            ; 0       ; 4         ; 0    ; 0            ; |final_top_level|ray_lut:rl|mult_real:m0|lpm_mult:Mult0                                                           ; work         ;
 ;             |mult_76t:auto_generated|     ; 104 (104)         ; 0 (0)        ; 0           ; 8            ; 0       ; 4         ; 0    ; 0            ; |final_top_level|ray_lut:rl|mult_real:m0|lpm_mult:Mult0|mult_76t:auto_generated                                   ; work         ;
 ;       |mult_real:m1|                      ; 104 (0)           ; 0 (0)        ; 0           ; 8            ; 0       ; 4         ; 0    ; 0            ; |final_top_level|ray_lut:rl|mult_real:m1                                                                          ; work         ;
 ;          |lpm_mult:Mult0|                 ; 104 (0)           ; 0 (0)        ; 0           ; 8            ; 0       ; 4         ; 0    ; 0            ; |final_top_level|ray_lut:rl|mult_real:m1|lpm_mult:Mult0                                                           ; work         ;
 ;             |mult_76t:auto_generated|     ; 104 (104)         ; 0 (0)        ; 0           ; 8            ; 0       ; 4         ; 0    ; 0            ; |final_top_level|ray_lut:rl|mult_real:m1|lpm_mult:Mult0|mult_76t:auto_generated                                   ; work         ;
-;       |sin_lut:s0|                        ; 506 (506)         ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|ray_lut:rl|sin_lut:s0                                                                            ; work         ;
+;       |sin_lut:s0|                        ; 508 (508)         ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|ray_lut:rl|sin_lut:s0                                                                            ; work         ;
 ;       |sin_lut:s1|                        ; 524 (524)         ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|ray_lut:rl|sin_lut:s1                                                                            ; work         ;
 ;       |sin_lut:s2|                        ; 495 (495)         ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|ray_lut:rl|sin_lut:s2                                                                            ; work         ;
-;       |sin_lut:s3|                        ; 493 (493)         ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|ray_lut:rl|sin_lut:s3                                                                            ; work         ;
+;       |sin_lut:s3|                        ; 491 (491)         ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|ray_lut:rl|sin_lut:s3                                                                            ; work         ;
 ;       |wgt_mean:wm0|                      ; 127 (127)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|ray_lut:rl|wgt_mean:wm0                                                                          ; work         ;
 ;       |wgt_mean:wm1|                      ; 127 (127)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|ray_lut:rl|wgt_mean:wm1                                                                          ; work         ;
 ;       |wgt_mean:wm2|                      ; 127 (127)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|ray_lut:rl|wgt_mean:wm2                                                                          ; work         ;
 ;       |wgt_mean:wm3|                      ; 127 (127)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|ray_lut:rl|wgt_mean:wm3                                                                          ; work         ;
-;    |sphere_reg_4:sph4|                    ; 2837 (1260)       ; 1104 (1040)  ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|sphere_reg_4:sph4                                                                                ; work         ;
+;    |sphere_reg_4:sph4|                    ; 2802 (1243)       ; 1103 (1039)  ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|sphere_reg_4:sph4                                                                                ; work         ;
 ;       |add_vector:pva0|                   ; 94 (94)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|sphere_reg_4:sph4|add_vector:pva0                                                                ; work         ;
 ;       |add_vector:pva1|                   ; 188 (188)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|sphere_reg_4:sph4|add_vector:pva1                                                                ; work         ;
 ;       |add_vector:pva2|                   ; 188 (188)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|sphere_reg_4:sph4|add_vector:pva2                                                                ; work         ;
 ;       |add_vector:pva3|                   ; 188 (188)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|sphere_reg_4:sph4|add_vector:pva3                                                                ; work         ;
-;       |add_vector:va0|                    ; 40 (40)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|sphere_reg_4:sph4|add_vector:va0                                                                 ; work         ;
-;       |add_vector:va1|                    ; 40 (40)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|sphere_reg_4:sph4|add_vector:va1                                                                 ; work         ;
-;       |add_vector:va2|                    ; 40 (40)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|sphere_reg_4:sph4|add_vector:va2                                                                 ; work         ;
-;       |add_vector:va3|                    ; 40 (40)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|sphere_reg_4:sph4|add_vector:va3                                                                 ; work         ;
-;       |rand_lut:rl|                       ; 759 (660)         ; 64 (64)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|sphere_reg_4:sph4|rand_lut:rl                                                                    ; work         ;
+;       |add_vector:va0|                    ; 35 (35)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|sphere_reg_4:sph4|add_vector:va0                                                                 ; work         ;
+;       |add_vector:va1|                    ; 35 (35)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|sphere_reg_4:sph4|add_vector:va1                                                                 ; work         ;
+;       |add_vector:va2|                    ; 35 (35)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|sphere_reg_4:sph4|add_vector:va2                                                                 ; work         ;
+;       |add_vector:va3|                    ; 35 (35)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|sphere_reg_4:sph4|add_vector:va3                                                                 ; work         ;
+;       |rand_lut:rl|                       ; 761 (660)         ; 64 (64)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|sphere_reg_4:sph4|rand_lut:rl                                                                    ; work         ;
 ;          |random_0:r0|                    ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|sphere_reg_4:sph4|rand_lut:rl|random_0:r0                                                        ; work         ;
 ;          |random_10:r10|                  ; 9 (9)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|sphere_reg_4:sph4|rand_lut:rl|random_10:r10                                                      ; work         ;
 ;          |random_11:r11|                  ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|sphere_reg_4:sph4|rand_lut:rl|random_11:r11                                                      ; work         ;
 ;          |random_12:r12|                  ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|sphere_reg_4:sph4|rand_lut:rl|random_12:r12                                                      ; work         ;
 ;          |random_13:r13|                  ; 9 (9)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|sphere_reg_4:sph4|rand_lut:rl|random_13:r13                                                      ; work         ;
-;          |random_14:r14|                  ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|sphere_reg_4:sph4|rand_lut:rl|random_14:r14                                                      ; work         ;
+;          |random_14:r14|                  ; 9 (9)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|sphere_reg_4:sph4|rand_lut:rl|random_14:r14                                                      ; work         ;
 ;          |random_15:r15|                  ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|sphere_reg_4:sph4|rand_lut:rl|random_15:r15                                                      ; work         ;
 ;          |random_1:r1|                    ; 10 (10)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|sphere_reg_4:sph4|rand_lut:rl|random_1:r1                                                        ; work         ;
 ;          |random_2:r2|                    ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|sphere_reg_4:sph4|rand_lut:rl|random_2:r2                                                        ; work         ;
 ;          |random_3:r3|                    ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|sphere_reg_4:sph4|rand_lut:rl|random_3:r3                                                        ; work         ;
-;          |random_4:r4|                    ; 9 (9)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|sphere_reg_4:sph4|rand_lut:rl|random_4:r4                                                        ; work         ;
+;          |random_4:r4|                    ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|sphere_reg_4:sph4|rand_lut:rl|random_4:r4                                                        ; work         ;
 ;          |random_5:r5|                    ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|sphere_reg_4:sph4|rand_lut:rl|random_5:r5                                                        ; work         ;
-;          |random_6:r6|                    ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|sphere_reg_4:sph4|rand_lut:rl|random_6:r6                                                        ; work         ;
+;          |random_6:r6|                    ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|sphere_reg_4:sph4|rand_lut:rl|random_6:r6                                                        ; work         ;
 ;          |random_7:r7|                    ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|sphere_reg_4:sph4|rand_lut:rl|random_7:r7                                                        ; work         ;
-;          |random_8:r8|                    ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|sphere_reg_4:sph4|rand_lut:rl|random_8:r8                                                        ; work         ;
+;          |random_8:r8|                    ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|sphere_reg_4:sph4|rand_lut:rl|random_8:r8                                                        ; work         ;
 ;          |random_9:r9|                    ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|sphere_reg_4:sph4|rand_lut:rl|random_9:r9                                                        ; work         ;
 ;    |vga_clk:vga_clk_instance|             ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|vga_clk:vga_clk_instance                                                                         ; work         ;
 ;       |altpll:altpll_component|           ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|vga_clk:vga_clk_instance|altpll:altpll_component                                                 ; work         ;
@@ -1141,6 +1141,7 @@ Encoding Type:  One-Hot
 ; sphere_reg_4:sph4|vel[3][0][26]         ; Merged with sphere_reg_4:sph4|col[3][0][7]  ;
 ; sphere_reg_4:sph4|vel[0][2][23]         ; Merged with sphere_reg_4:sph4|col[0][1][6]  ;
 ; sphere_reg_4:sph4|vel[3][1][17]         ; Merged with sphere_reg_4:sph4|col[3][1][6]  ;
+; sphere_reg_4:sph4|vel[0][2][24]         ; Merged with sphere_reg_4:sph4|col[0][1][7]  ;
 ; sphere_reg_4:sph4|vel[1][0][17]         ; Merged with sphere_reg_4:sph4|col[1][1][7]  ;
 ; sphere_reg_4:sph4|vel[3][1][18]         ; Merged with sphere_reg_4:sph4|col[3][1][7]  ;
 ; sphere_reg_4:sph4|vel[1][0][24]         ; Merged with sphere_reg_4:sph4|col[1][2][6]  ;
@@ -1148,7 +1149,7 @@ Encoding Type:  One-Hot
 ; sphere_reg_4:sph4|vel[1][0][25]         ; Merged with sphere_reg_4:sph4|col[1][2][7]  ;
 ; sphere_reg_4:sph4|vel[2][2][17]         ; Merged with sphere_reg_4:sph4|col[2][2][7]  ;
 ; sphere_reg_4:sph4|vel[3][1][26]         ; Merged with sphere_reg_4:sph4|col[3][2][7]  ;
-; Total Number of Removed Registers = 723 ;                                             ;
+; Total Number of Removed Registers = 724 ;                                             ;
 +-----------------------------------------+---------------------------------------------+
 
 
@@ -1267,12 +1268,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 1456  ;
+; Total registers                              ; 1455  ;
 ; Number of registers using Synchronous Clear  ; 239   ;
 ; Number of registers using Synchronous Load   ; 136   ;
-; Number of registers using Asynchronous Clear ; 928   ;
+; Number of registers using Asynchronous Clear ; 927   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 1269  ;
+; Number of registers using Clock Enable       ; 1268  ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -1346,14 +1347,14 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                           ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |final_top_level|VGA_controller:vga|h_counter[3]     ;
-; 4:1                ; 63 bits   ; 126 LEs       ; 63 LEs               ; 63 LEs                 ; Yes        ; |final_top_level|Best_Dist[11]                       ;
-; 512:1              ; 32 bits   ; 10912 LEs     ; 7680 LEs             ; 3232 LEs               ; Yes        ; |final_top_level|ray_lut:rl|cos_lut:c0|out[15]       ;
-; 512:1              ; 32 bits   ; 10912 LEs     ; 6848 LEs             ; 4064 LEs               ; Yes        ; |final_top_level|ang_lut:al|dTheta_raw[29]           ;
-; 512:1              ; 32 bits   ; 10912 LEs     ; 7680 LEs             ; 3232 LEs               ; Yes        ; |final_top_level|ray_lut:rl|cos_lut:c1|out[7]        ;
-; 512:1              ; 32 bits   ; 10912 LEs     ; 7680 LEs             ; 3232 LEs               ; Yes        ; |final_top_level|ray_lut:rl|sin_lut:s2|out[5]        ;
-; 512:1              ; 32 bits   ; 10912 LEs     ; 7680 LEs             ; 3232 LEs               ; Yes        ; |final_top_level|ray_lut:rl|sin_lut:s3|out[7]        ;
-; 4:1                ; 141 bits  ; 282 LEs       ; 282 LEs              ; 0 LEs                  ; Yes        ; |final_top_level|sphere_reg_4:sph4|Sphere_pos[0][50] ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |final_top_level|VGA_controller:vga|h_counter[0]     ;
+; 4:1                ; 63 bits   ; 126 LEs       ; 63 LEs               ; 63 LEs                 ; Yes        ; |final_top_level|Best_Dist[19]                       ;
+; 512:1              ; 32 bits   ; 10912 LEs     ; 7680 LEs             ; 3232 LEs               ; Yes        ; |final_top_level|ray_lut:rl|sin_lut:s0|out[7]        ;
+; 512:1              ; 32 bits   ; 10912 LEs     ; 6848 LEs             ; 4064 LEs               ; Yes        ; |final_top_level|ang_lut:al|dTheta_raw[0]            ;
+; 512:1              ; 32 bits   ; 10912 LEs     ; 7680 LEs             ; 3232 LEs               ; Yes        ; |final_top_level|ray_lut:rl|cos_lut:c1|out[5]        ;
+; 512:1              ; 32 bits   ; 10912 LEs     ; 7680 LEs             ; 3232 LEs               ; Yes        ; |final_top_level|ray_lut:rl|sin_lut:s2|out[6]        ;
+; 512:1              ; 32 bits   ; 10912 LEs     ; 7680 LEs             ; 3232 LEs               ; Yes        ; |final_top_level|ray_lut:rl|cos_lut:c3|out[12]       ;
+; 4:1                ; 141 bits  ; 282 LEs       ; 282 LEs              ; 0 LEs                  ; Yes        ; |final_top_level|sphere_reg_4:sph4|Sphere_pos[0][60] ;
 ; 512:1              ; 32 bits   ; 10912 LEs     ; 6848 LEs             ; 4064 LEs               ; Yes        ; |final_top_level|ang_lut:al|y_scaler_raw[6]          ;
 ; 512:1              ; 32 bits   ; 10912 LEs     ; 5120 LEs             ; 5792 LEs               ; Yes        ; |final_top_level|ang_lut:al|y_raw[26]                ;
 ; 3:1                ; 9 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; No         ; |final_top_level|VGA_controller:vga|v_counter_in[4]  ;
@@ -2410,8 +2411,8 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Port         ; Type  ; Severity ; Details                    ;
 +--------------+-------+----------+----------------------------+
 ; b[1..0]      ; Input ; Info     ; Stuck at GND               ;
-; b[2][63..24] ; Input ; Info     ; Stuck at VCC               ;
-; b[2][23..0]  ; Input ; Info     ; Stuck at GND               ;
+; b[2][63..29] ; Input ; Info     ; Stuck at VCC               ;
+; b[2][28..0]  ; Input ; Info     ; Stuck at GND               ;
 +--------------+-------+----------+----------------------------+
 
 
@@ -2421,8 +2422,8 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Port         ; Type  ; Severity ; Details                    ;
 +--------------+-------+----------+----------------------------+
 ; b[1..0]      ; Input ; Info     ; Stuck at GND               ;
-; b[2][63..24] ; Input ; Info     ; Stuck at VCC               ;
-; b[2][23..0]  ; Input ; Info     ; Stuck at GND               ;
+; b[2][63..29] ; Input ; Info     ; Stuck at VCC               ;
+; b[2][28..0]  ; Input ; Info     ; Stuck at GND               ;
 +--------------+-------+----------+----------------------------+
 
 
@@ -2432,8 +2433,8 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Port         ; Type  ; Severity ; Details                    ;
 +--------------+-------+----------+----------------------------+
 ; b[1..0]      ; Input ; Info     ; Stuck at GND               ;
-; b[2][63..24] ; Input ; Info     ; Stuck at VCC               ;
-; b[2][23..0]  ; Input ; Info     ; Stuck at GND               ;
+; b[2][63..29] ; Input ; Info     ; Stuck at VCC               ;
+; b[2][28..0]  ; Input ; Info     ; Stuck at GND               ;
 +--------------+-------+----------+----------------------------+
 
 
@@ -2443,8 +2444,8 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Port         ; Type  ; Severity ; Details                    ;
 +--------------+-------+----------+----------------------------+
 ; b[1..0]      ; Input ; Info     ; Stuck at GND               ;
-; b[2][63..24] ; Input ; Info     ; Stuck at VCC               ;
-; b[2][23..0]  ; Input ; Info     ; Stuck at GND               ;
+; b[2][63..29] ; Input ; Info     ; Stuck at VCC               ;
+; b[2][28..0]  ; Input ; Info     ; Stuck at GND               ;
 +--------------+-------+----------+----------------------------+
 
 
@@ -2454,32 +2455,32 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 34                          ;
-; cycloneiii_ff         ; 1456                        ;
+; cycloneiii_ff         ; 1455                        ;
 ;     CLR               ; 21                          ;
 ;     ENA               ; 226                         ;
-;     ENA CLR           ; 672                         ;
+;     ENA CLR           ; 671                         ;
 ;     ENA CLR SCLR      ; 235                         ;
 ;     ENA SLD           ; 136                         ;
 ;     SCLR              ; 4                           ;
 ;     plain             ; 162                         ;
-; cycloneiii_lcell_comb ; 16017                       ;
-;     arith             ; 5802                        ;
+; cycloneiii_lcell_comb ; 15983                       ;
+;     arith             ; 5782                        ;
 ;         1 data inputs ; 2                           ;
-;         2 data inputs ; 1582                        ;
+;         2 data inputs ; 1562                        ;
 ;         3 data inputs ; 4218                        ;
-;     normal            ; 10215                       ;
+;     normal            ; 10201                       ;
 ;         0 data inputs ; 19                          ;
 ;         1 data inputs ; 61                          ;
-;         2 data inputs ; 759                         ;
-;         3 data inputs ; 2387                        ;
-;         4 data inputs ; 6989                        ;
+;         2 data inputs ; 764                         ;
+;         3 data inputs ; 2384                        ;
+;         4 data inputs ; 6973                        ;
 ; cycloneiii_mac_mult   ; 106                         ;
 ; cycloneiii_mac_out    ; 106                         ;
 ; cycloneiii_pll        ; 1                           ;
 ; cycloneiii_ram_block  ; 228                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 182.50                      ;
-; Average LUT depth     ; 62.97                       ;
+; Average LUT depth     ; 63.07                       ;
 +-----------------------+-----------------------------+
 
 
@@ -2488,7 +2489,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:01:12     ;
+; Top            ; 00:01:22     ;
 +----------------+--------------+
 
 
@@ -2498,7 +2499,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
-    Info: Processing started: Fri Apr 27 13:42:33 2018
+    Info: Processing started: Sat Apr 28 15:49:27 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off final_project -c final_project_top
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file hexdriver.sv
@@ -2560,6 +2561,8 @@ Info (12021): Found 17 design units, including 17 entities, in source file rando
     Info (12023): Found entity 17: random_15
 Info (12021): Found 1 design units, including 1 entities, in source file hit_detection.sv
     Info (12023): Found entity 1: hit_detection
+Info (12021): Found 1 design units, including 1 entities, in source file output_files/input_handler.sv
+    Info (12023): Found entity 1: input_handler
 Info (12127): Elaborating entity "final_top_level" for the top level hierarchy
 Info (10264): Verilog HDL Case Statement information at final_top_level.sv(78): all case item expressions in this case statement are onehot
 Info (10264): Verilog HDL Case Statement information at final_top_level.sv(85): all case item expressions in this case statement are onehot
@@ -2892,7 +2895,6 @@ Warning (13004): Presettable and clearable registers converted to equivalent cir
     Warning (13310): Register "sphere_reg_4:sph4|vel[0][2][20]" is converted into an equivalent circuit using register "sphere_reg_4:sph4|vel[0][2][20]~_emulated" and latch "sphere_reg_4:sph4|vel[0][2][20]~1"
     Warning (13310): Register "sphere_reg_4:sph4|vel[0][2][21]" is converted into an equivalent circuit using register "sphere_reg_4:sph4|vel[0][2][21]~_emulated" and latch "sphere_reg_4:sph4|vel[0][2][21]~1"
     Warning (13310): Register "sphere_reg_4:sph4|vel[0][2][22]" is converted into an equivalent circuit using register "sphere_reg_4:sph4|vel[0][2][22]~_emulated" and latch "sphere_reg_4:sph4|col[3][2][6]~1"
-    Warning (13310): Register "sphere_reg_4:sph4|vel[0][2][24]" is converted into an equivalent circuit using register "sphere_reg_4:sph4|vel[0][2][24]~_emulated" and latch "sphere_reg_4:sph4|col[0][1][7]~1"
     Warning (13310): Register "sphere_reg_4:sph4|vel[0][2][25]" is converted into an equivalent circuit using register "sphere_reg_4:sph4|vel[0][2][25]~_emulated" and latch "sphere_reg_4:sph4|vel[0][2][25]~1"
     Warning (13310): Register "sphere_reg_4:sph4|vel[0][2][26]" is converted into an equivalent circuit using register "sphere_reg_4:sph4|vel[0][2][26]~_emulated" and latch "sphere_reg_4:sph4|vel[0][2][26]~1"
     Warning (13310): Register "sphere_reg_4:sph4|vel[0][2][27]" is converted into an equivalent circuit using register "sphere_reg_4:sph4|vel[0][2][27]~_emulated" and latch "sphere_reg_4:sph4|vel[0][2][27]~1"
@@ -3078,30 +3080,30 @@ Info (17016): Found the following redundant logic cells in design
     Info (17048): Logic cell "collision_detection:cd|Add2~122"
     Info (17048): Logic cell "collision_detection:cd|Add2~124"
     Info (17048): Logic cell "collision_detection:cd|Add2~126"
-Info (144001): Generated suppressed messages file D:/ece_385/final_project/output_files/final_project_top.map.smsg
+Info (144001): Generated suppressed messages file D:/ECE_385/final_project/output_files/final_project_top.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 3 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "KEY[1]"
     Warning (15610): No output dependent on input pin "KEY[2]"
     Warning (15610): No output dependent on input pin "KEY[3]"
-Info (21057): Implemented 16683 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 16667 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 5 input pins
     Info (21059): Implemented 29 output pins
-    Info (21061): Implemented 16208 logic cells
+    Info (21061): Implemented 16192 logic cells
     Info (21064): Implemented 228 RAM segments
     Info (21065): Implemented 1 PLLs
     Info (21062): Implemented 212 DSP elements
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 261 warnings
-    Info: Peak virtual memory: 884 megabytes
-    Info: Processing ended: Fri Apr 27 13:43:56 2018
-    Info: Elapsed time: 00:01:23
-    Info: Total CPU time (on all processors): 00:01:31
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 260 warnings
+    Info: Peak virtual memory: 889 megabytes
+    Info: Processing ended: Sat Apr 28 15:51:03 2018
+    Info: Elapsed time: 00:01:36
+    Info: Total CPU time (on all processors): 00:01:48
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in D:/ece_385/final_project/output_files/final_project_top.map.smsg.
+The suppressed messages can be found in D:/ECE_385/final_project/output_files/final_project_top.map.smsg.
 
 

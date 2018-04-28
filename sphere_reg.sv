@@ -33,22 +33,22 @@ logic Frame_Clk_old, posedge_frame_clk;
 //assign acc[2] = {64'hFFFFFFFE00000000,64'd0,64'd0};
 //assign acc[3] = {64'hFFFFFFFE00000000,64'd0,64'd0};
 vector gravity;
-assign gravity = {~(64'd1 << 24) + 64'd1,64'd0,64'd0};
+assign gravity = {~(64'd4 << 32) + 64'd1,64'd0,64'd0};
 
 assign acc[0] = gravity;
 assign acc[1] = gravity;
 assign acc[2] = gravity;
 assign acc[3] = gravity;
 
-assign pos_rand[0] = {64'd0,64'd304 << 32,64'd0};
-assign pos_rand[1] = {64'd0,64'd304 << 32,64'd100 << 32};
-assign pos_rand[2] = {64'd0,64'd304 << 32,~(64'd100 << 32) + 64'd1};
-assign pos_rand[3] = {64'd100 << 32 ,64'd304 << 32,64'd0};
+assign pos_rand[0] = {~(64'd2400 << 32) + 64'd1,64'd4800 << 32,64'd2400 << 32};
+assign pos_rand[1] = {~(64'd2400 << 32) + 64'd1,64'd4800 << 32,~(64'd2400 << 32) + 64'd1};
+assign pos_rand[2] = {~(64'd2400 << 32) + 64'd1,64'd9600 << 32,~(64'd2400 << 32) + 64'd1};
+assign pos_rand[3] = {~(64'd2400 << 32) + 64'd1,64'd9600 << 32,64'd2400 << 32};
 
-assign vel_rand[0] = {31'd0,random[63:48],17'd0,{31{random[0]}},random[47:32],17'd0,{31{random[1]}},random[31:16],17'd0};
-assign vel_rand[1] = {31'd0,random[15:0],17'd0,{31{random[2]}},random[62:47],17'd0,{31{random[3]}},random[46:31],17'd0};
-assign vel_rand[2] = {31'd0,random[30:15],17'd0,{31{random[4]}},random[61:46],17'd0,{31{random[5]}},random[45:30],17'd0};
-assign vel_rand[3] = {31'd0,random[29:14],17'd0,{31{random[6]}},random[60:45],17'd0,{31{random[7]}},random[44:29],17'd0};
+assign vel_rand[0] = {64'd48 << 32,{31{random[0]}},random[47:32],17'd0,{31{random[1]}},random[31:16],17'd0};
+assign vel_rand[1] = {64'd48 << 32,{31{random[2]}},random[62:47],17'd0,{31{random[3]}},random[46:31],17'd0};
+assign vel_rand[2] = {64'd48 << 32,{31{random[4]}},random[61:46],17'd0,{31{random[5]}},random[45:30],17'd0};
+assign vel_rand[3] = {64'd48 << 32,{31{random[6]}},random[60:45],17'd0,{31{random[7]}},random[44:29],17'd0};
 
 assign col_rand[0] = {random[63:56],random[55:48],random[47:40]};
 assign col_rand[1] = {random[39:32],random[31:24],random[23:16]};
@@ -102,22 +102,22 @@ always_comb begin
 	vel_n = velacc;
 	col_n = col;
 	
-	if((pos[0][2][63]) && (~pos[0][2] + 64'b1 > (64'd1440 << 32))) begin
+	if((pos[0][2][63]) && (~pos[0][2] + 64'b1 > (64'd2880 << 32))) begin
 		pos_n[0] = pos_rand[0];
 		vel_n[0] = vel_rand[0];
 		col_n[0] = col_rand[0];
 	end
-	if((pos[1][2][63]) && (~pos[1][2] + 64'b1 > (64'd1440 << 32))) begin
+	if((pos[1][2][63]) && (~pos[1][2] + 64'b1 > (64'd2880 << 32))) begin
 		pos_n[1] = pos_rand[1];
 		vel_n[1] = vel_rand[1];
 		col_n[1] = col_rand[1];
 	end
-	if((pos[2][2][63]) && (~pos[2][2] + 64'b1 > (64'd1440 << 32))) begin
+	if((pos[2][2][63]) && (~pos[2][2] + 64'b1 > (64'd2880 << 32))) begin
 		pos_n[2] = pos_rand[2];
 		vel_n[2] = vel_rand[2];
 		col_n[2] = col_rand[2];
 	end
-	if((pos[3][2][63]) && (~pos[3][2] + 64'b1 > (64'd1440 << 32))) begin
+	if((pos[3][2][63]) && (~pos[3][2] + 64'b1 > (64'd2880 << 32))) begin
 		pos_n[3] = pos_rand[3];
 		vel_n[3] = vel_rand[3];
 		col_n[3] = col_rand[3];

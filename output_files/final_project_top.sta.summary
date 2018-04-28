@@ -3,67 +3,67 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Setup 'CLOCK_50'
-Slack : -204.919
-TNS   : -50802.457
+Slack : -223.884
+TNS   : -54828.063
 
 Type  : Setup 'KEY[0]'
-Slack : -59.094
-TNS   : -2061.752
+Slack : -61.602
+TNS   : -2124.740
 
-Type  : Setup 'reset_clk'
-Slack : -4.879
-TNS   : -64.167
+Type  : Setup 'Pixel_Clk'
+Slack : -5.509
+TNS   : -75.880
 
 Type  : Setup 'vga_clk_instance|altpll_component|auto_generated|pll1|clk[0]'
-Slack : -4.677
-TNS   : -68.964
+Slack : -4.692
+TNS   : -69.482
 
 Type  : Hold 'CLOCK_50'
 Slack : 0.383
 TNS   : 0.000
 
 Type  : Hold 'vga_clk_instance|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 0.386
+Slack : 0.405
 TNS   : 0.000
 
-Type  : Hold 'reset_clk'
-Slack : 0.657
+Type  : Hold 'Pixel_Clk'
+Slack : 0.654
 TNS   : 0.000
 
 Type  : Hold 'KEY[0]'
-Slack : 2.772
+Slack : 2.433
 TNS   : 0.000
 
-Type  : Recovery 'reset_clk'
-Slack : -1.117
-TNS   : -21.514
+Type  : Recovery 'Pixel_Clk'
+Slack : -1.443
+TNS   : -28.861
 
 Type  : Recovery 'CLOCK_50'
-Slack : -1.071
-TNS   : -833.398
+Slack : -1.310
+TNS   : -821.576
 
 Type  : Removal 'CLOCK_50'
-Slack : 0.655
+Slack : 0.671
 TNS   : 0.000
 
-Type  : Removal 'reset_clk'
-Slack : 0.702
+Type  : Removal 'Pixel_Clk'
+Slack : 1.022
 TNS   : 0.000
 
 Type  : Minimum Pulse Width 'KEY[0]'
 Slack : -3.000
 TNS   : -3.000
 
-Type  : Minimum Pulse Width 'reset_clk'
+Type  : Minimum Pulse Width 'Pixel_Clk'
 Slack : -1.285
-TNS   : -25.700
+TNS   : -26.985
 
 Type  : Minimum Pulse Width 'CLOCK_50'
-Slack : 9.411
+Slack : 9.410
 TNS   : 0.000
 
 Type  : Minimum Pulse Width 'vga_clk_instance|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 19.715
+Slack : 19.707
 TNS   : 0.000
 
 ------------------------------------------------------------
