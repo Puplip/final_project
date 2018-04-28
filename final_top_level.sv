@@ -28,14 +28,12 @@ color Write_col;
 color [3:0] Sphere_col;
 logic [9:0] DrawX, DrawY, WriteX, WriteY;
 
-fixed_real dPhi, dTheta, Best_Dist, Best_Dist_n, Curr_Dist;
+fixed_real dPhi, dTheta, Best_Dist, Best_Dist_n, Curr_Dist, Theta, Phi;
 
 logic [1:0] Read_Sphere_in, Best_in, Best_in_n, Curr_Sphere_in;
 
 logic Click, Hit;
 logic [1:0] Hit_in;
-
-assign Click = 1'b0;
 	
 sphere_reg_4 sph4(.Clk(CLOCK_50),.Frame_Clk(Frame_Clk),.Reset(~KEY[0]),.Hit(Hit),.Hit_index(Hit_in),.Read_index(Read_Sphere_in),.Sphere_pos(Curr_Sphere_pos),.Sphere_col(Sphere_col),.curr_index(Curr_Sphere_in));
 	
@@ -56,6 +54,20 @@ ray_lut rl(.Clk(CLOCK_50), .theta((64'd90 << 32) + dTheta), .phi((64'd90 << 32) 
 vga_clk vga_clk_instance(.inclk0(CLOCK_50), .c0(VGA_CLK));
 
 hit_detection hd(.*,.Clk(CLOCK_50));
+
+logic [8:0] mouse_dx, mouse_dy;
+logic mouse_m1, mouse_packet;
+ 
+ps2_mouse_controller mouse(.Clk(CLOCK_50), .Reset(~KEY[0]),.PS2_MSCLK(PS2_KBCLK),.PS2_MSDAT(PS2_KBDAT),.Mouse_LeftClick(mouse_m1),.Mouse_dx(mouse_dx),.Mouse_dy(mouse_dy),.packetRecieved(mouse_packet));
+
+input logic Frame_Clk, Clk, Reset,
+	input logic new_data,
+	input logic [8:0] dx, dy,
+	input logic m1, m2, m3,
+	output fixed_real Theta, Phi,
+	output logic Click
+	
+input_handler ih(.*, Clk(CLOCK_50),.m1(mouse_m1),.m2(),.m3(),.dx(mouse_dx),.dy(mouse_dy),.new_data(mouse_packet));
 
 always_ff @ (posedge CLOCK_50 or negedge KEY[0]) begin
 	if(~KEY[0])begin
