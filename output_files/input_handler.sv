@@ -1,8 +1,7 @@
 module input_handler (
 	input logic Frame_Clk, Clk, Reset,
 	input logic new_data,
-	input logic [7:0] dx, dy,
-	input logic dx_sign, dy_sign,
+	input logic [8:0] dx, dy,
 	input logic m1, m2, m3,
 	output fixed_real Theta, Phi,
 	output logic Click
@@ -58,8 +57,8 @@ module input_handler (
 			Click_n = 1'b0;
 		end
 		else if(new_data_rising_edge) begin
-			x_buffer_n = x_buffer + dx_sign?~{24'b0,dx}+32'd1:{24'b0,dx};
-			y_buffer_n = y_buffer + dy_sign?~{24'b0,dy}+32'd1:{24'b0,dy};
+			x_buffer_n = x_buffer + {{23{dx[8]}},dx};
+			y_buffer_n = y_buffer + {{23{dy[8]}},dy};
 			old_m1_n = m1;
 			if( m1 && ~old_m1) begin
 				Click_n = 1'b1;

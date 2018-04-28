@@ -28,10 +28,6 @@ color [3:0] col_rand;
 fixed_real random;
 logic Frame_Clk_old, posedge_frame_clk;
 
-//assign acc[0] = {64'hFFFFFFFE00000000,64'd0,64'd0};
-//assign acc[1] = {64'hFFFFFFFE00000000,64'd0,64'd0};
-//assign acc[2] = {64'hFFFFFFFE00000000,64'd0,64'd0};
-//assign acc[3] = {64'hFFFFFFFE00000000,64'd0,64'd0};
 vector gravity;
 assign gravity = {~(64'd4 << 32) + 64'd1,64'd0,64'd0};
 
