@@ -50,7 +50,7 @@ increment_write iw(.Clk(Pixel_Clk), .Reset(~KEY[0]), .*);
 
 ang_lut al(.Clk(CLOCK_50), .WriteY(WriteY), .WriteX(WriteX),.dTheta(dTheta), .dPhi(dPhi));
 
-ray_lut rl(.Clk(CLOCK_50), .theta((64'd90 << 32) + dTheta), .phi((64'd90 << 32) + dPhi), .ray(Cast_Ray));
+ray_lut rl(.Clk(CLOCK_50), .theta(Theta + dTheta), .phi(Phi + dPhi), .ray(Cast_Ray));
 
 vga_clk vga_clk_instance(.inclk0(CLOCK_50), .c0(VGA_CLK));
 
@@ -59,16 +59,9 @@ hit_detection hd(.*,.Clk(CLOCK_50));
 logic [8:0] mouse_dx, mouse_dy;
 logic mouse_m1, mouse_packet;
  
-ps2_mouse_controller mouse(.Clk(CLOCK_50), .Reset(~KEY[0]),.PS2_MSCLK(PS2_KBCLK),.PS2_MSDAT(PS2_KBDAT),.Mouse_LeftClick(mouse_m1),.Mouse_dx(mouse_dx),.Mouse_dy(mouse_dy),.packetRecieved(mouse_packet));
+ps2_mouse_controller mouse(.Clk(CLOCK_50), .Reset(~KEY[0]),.PS2_MSCLK(PS2_KBCLK),.PS2_MSDAT(PS2_KBDAT),.Mouse_LeftClick(mouse_m1),.Mouse_dx(mouse_dx),.Mouse_dy(mouse_dy),.packetReceived(mouse_packet));
 
-input logic Frame_Clk, Clk, Reset,
-	input logic new_data,
-	input logic [8:0] dx, dy,
-	input logic m1, m2, m3,
-	output fixed_real Theta, Phi,
-	output logic Click
-	
-input_handler ih(.*, Clk(CLOCK_50),.m1(mouse_m1),.m2(),.m3(),.dx(mouse_dx),.dy(mouse_dy),.new_data(mouse_packet));
+input_handler ih(.*,.Reset(~KEY[0]),.Clk(CLOCK_50),.m1(mouse_m1),.m2(),.m3(),.dx(mouse_dx),.dy(mouse_dy),.new_data(mouse_packet));
 
 always_ff @ (posedge CLOCK_50 or negedge KEY[0]) begin
 	if(~KEY[0])begin

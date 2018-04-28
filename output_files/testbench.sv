@@ -11,6 +11,7 @@ logic CLOCK_50;
 logic [3:0] KEY;
 logic [7:0] VGA_R, VGA_G, VGA_B;
 logic VGA_CLK, VGA_SYNC_N, VGA_BLANK_N, VGA_VS, VGA_HS;
+logic PS2_KBCLK, PS2_KBDAT;
 
 final_top_level ftl(.*);
 
