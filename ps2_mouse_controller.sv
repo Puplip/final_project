@@ -16,8 +16,8 @@ module ps2_mouse_controller(
  logic [7:0] Count, Count_n;
  logic firstTime = 1'b1;
 
- logic [8:0] X_Move, Y_Move;
- logic [15:0] X_Move_Signed, Y_Move_Signed;
+ logic [7:0] X_Move, Y_Move;
+ logic [8:0] X_Move_Signed, Y_Move_Signed;
  logic Y_Overflow,X_Overflow,Y_Sign,X_Sign;
  logic Mouse3,Mouse2,Mouse1;
  
@@ -156,8 +156,8 @@ logic [32:0] Bytes;
 assign X_Move_Signed = {X_Move[7],X_Move};
 assign Y_Move_Signed = {Y_Move[7],Y_Move};
  
-assign Mouse_dx = (X_Overflow)?(0):X_Move_Signed;
-assign Mouse_dy = (Y_Overflow)?(0):Y_Move_Signed;
+assign Mouse_dx = (X_Overflow)?(9'b0):X_Move_Signed;
+assign Mouse_dy = (Y_Overflow)?(9'b0):Y_Move_Signed;
 
 //mouse buttons
 assign Mouse_LeftClick = Mouse1;
