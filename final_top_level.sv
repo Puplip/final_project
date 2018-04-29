@@ -40,7 +40,7 @@ logic [1:0] Hit_in;
 	
 sphere_reg_4 sph4(.Clk(CLOCK_50),.Frame_Clk(Frame_Clk),.Reset(~KEY[0]),.Hit(Hit),.Hit_index(Hit_in),.Read_index(Read_Sphere_in),.Sphere_pos(Curr_Sphere_pos),.Sphere_col(Sphere_col),.curr_index(Curr_Sphere_in));
 	
-color_mapper colmap(.is_ball(Best_Dist != 64'hefffffffffffffff), .DrawX(WriteX), .DrawY(WriteY), .colin(Sphere_col[Best_in]), .col(Write_col), .phi(Phi));
+color_mapper colmap(.is_ball(Best_Dist != 64'hefffffffffffffff), .DrawX(WriteX), .DrawY(WriteY), .colin(Sphere_col[Best_in]), .col(Write_col), .phi(Phi + dPhi));
 
 collision_detection cd(.sphere(Curr_Sphere_pos), .ray(Cast_Ray), .tbest(Best_Dist), .tnew(Curr_Dist), .Collision(Collision));
 
@@ -70,7 +70,7 @@ assign LEDG[2] = 1'b1;
 assign LEDG[0] = mouse_m1;
 assign LEDG[1] = mouse_packet;
 assign LEDR[17:9] = mouse_dx;
-assign LEDR[7:0] = test_state;
+assign LEDR[8:0] = mouse_dy;
 
 
 always_ff @ (posedge CLOCK_50 or negedge KEY[0]) begin

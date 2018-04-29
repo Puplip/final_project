@@ -3,31 +3,31 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Setup 'CLOCK_50'
-Slack : -225.313
-TNS   : -33080.284
+Slack : -225.053
+TNS   : -33030.669
 
 Type  : Setup 'KEY[0]'
-Slack : -55.905
-TNS   : -698.455
+Slack : -55.283
+TNS   : -694.472
 
 Type  : Setup 'Pixel_Clk'
-Slack : -5.451
-TNS   : -75.926
+Slack : -6.173
+TNS   : -76.608
 
 Type  : Setup 'vga_clk_instance|altpll_component|auto_generated|pll1|clk[0]'
-Slack : -4.668
-TNS   : -61.037
+Slack : -4.660
+TNS   : -59.306
 
 Type  : Setup 'PS2_KBCLK'
-Slack : -3.616
-TNS   : -119.784
+Slack : -4.018
+TNS   : -116.037
 
 Type  : Hold 'CLOCK_50'
-Slack : 0.384
+Slack : 0.382
 TNS   : 0.000
 
 Type  : Hold 'vga_clk_instance|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 0.401
+Slack : 0.403
 TNS   : 0.000
 
 Type  : Hold 'PS2_KBCLK'
@@ -35,40 +35,40 @@ Slack : 0.440
 TNS   : 0.000
 
 Type  : Hold 'Pixel_Clk'
-Slack : 0.658
+Slack : 0.654
 TNS   : 0.000
 
 Type  : Hold 'KEY[0]'
-Slack : 3.084
+Slack : 2.324
 TNS   : 0.000
 
 Type  : Recovery 'Pixel_Clk'
-Slack : -1.006
-TNS   : -16.646
+Slack : -1.319
+TNS   : -26.391
 
 Type  : Recovery 'PS2_KBCLK'
-Slack : -0.897
-TNS   : -5.382
+Slack : -0.846
+TNS   : -5.076
 
 Type  : Recovery 'CLOCK_50'
-Slack : -0.710
-TNS   : -7.810
-
-Type  : Removal 'Pixel_Clk'
-Slack : 0.610
-TNS   : 0.000
+Slack : -0.708
+TNS   : -7.788
 
 Type  : Removal 'CLOCK_50'
-Slack : 0.675
+Slack : 0.678
+TNS   : 0.000
+
+Type  : Removal 'Pixel_Clk'
+Slack : 0.759
 TNS   : 0.000
 
 Type  : Removal 'PS2_KBCLK'
-Slack : 0.825
+Slack : 0.839
 TNS   : 0.000
 
 Type  : Minimum Pulse Width 'PS2_KBCLK'
 Slack : -3.210
-TNS   : -67.460
+TNS   : -62.320
 
 Type  : Minimum Pulse Width 'KEY[0]'
 Slack : -3.000
@@ -79,11 +79,11 @@ Slack : -1.285
 TNS   : -26.985
 
 Type  : Minimum Pulse Width 'CLOCK_50'
-Slack : 9.415
+Slack : 9.412
 TNS   : 0.000
 
 Type  : Minimum Pulse Width 'vga_clk_instance|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 19.707
+Slack : 19.710
 TNS   : 0.000
 
 ------------------------------------------------------------
