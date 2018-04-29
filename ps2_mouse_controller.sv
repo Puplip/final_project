@@ -5,12 +5,12 @@
 
 module ps2_mouse_controller(
  input logic Clk, Reset,
- inout wire PS2_MSCLK,
- inout wire PS2_MSDAT,
+ inout PS2_MSCLK,
+ inout PS2_MSDAT,
  output logic Mouse_LeftClick, Mouse_RightClick,
  output logic [8:0] Mouse_dx, Mouse_dy,
- output logic packetReceived,
- output logic [7:0] State
+ output logic [3:0] hex,
+ output logic packetReceived
 );
 
  logic [7:0] Count, Count_n;
@@ -21,17 +21,18 @@ module ps2_mouse_controller(
  logic Y_Overflow,X_Overflow,Y_Sign,X_Sign;
  logic Mouse3,Mouse2,Mouse1;
  
- assign State = curr_state;
  
  enum logic[7:0] {
  Wait=8'd0,
  One=8'd1,
+ Two=8'd2,
  Four=8'd3,
  Six=8'd5,
  Seven=8'd6,
  Nine=8'd7,
  TenEleven=8'd8,
- Read=8'd10
+ Read=8'd10,
+ Twelve=8'd12
  } next_state, curr_state;
  
  logic[27:0] count, count_n;
@@ -41,7 +42,7 @@ module ps2_mouse_controller(
 assign PS2_MSCLK = selc ? 1'b0 : 1'bz;
 assign PS2_MSDAT = seld ? psd : 1'bz;
  
-logic [5:0] bcount = 6'd9;
+logic [5:0] bcount = 6'd10;
 logic [32:0] Bytes;
 
  
@@ -60,8 +61,8 @@ logic [32:0] Bytes;
    One: begin
     selc = 1'b1;
     count = count + 27'd1;
-    if (count == 27'd10000000) begin 
-     next_state = Four;
+    if (count == 27'd1000000) begin 
+     next_state = Two;
 	  psd = 0;
      seld = 1'b1;
      count = 27'd0;
@@ -69,6 +70,10 @@ logic [32:0] Bytes;
     end
     
    end
+	Two: begin
+		if (PS2_MSCLK == 1'b1)
+			next_state = Four;
+	end
    Four: begin
     if (PS2_MSCLK == 1'b0) begin
      next_state = Six;
@@ -96,10 +101,14 @@ logic [32:0] Bytes;
     
    end
    TenEleven: begin
-    if (PS2_MSCLK == 1'b0 & PS2_MSDAT == 1'b0)
-     next_state = Read;
+    if (PS2_MSDAT == 1'b0)
+		next_state = Twelve;
     
    end
+	Twelve: begin
+		if (PS2_MSCLK == 1'b0)
+			next_state = Read;
+	end
   endcase
   
   if (Reset) begin
@@ -113,11 +122,14 @@ logic [32:0] Bytes;
    curr_state = next_state;
   end
   end
+  
  end
  
+ 
  always_ff @ (negedge PS2_MSCLK or posedge Reset) begin
+
   if (Reset) begin
-		bcount = 27'd9;
+		bcount = 6'd10;
 	end else if (curr_state == Read) begin
 		packetReceived = 1'b0;
 		Bytes[bcount] = PS2_MSDAT;
