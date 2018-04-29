@@ -17,8 +17,8 @@ sqrt_real rbsqrt(.a(disc), .c(sqrt));
 
 //radius of sphere: d'32 = b'10 0000
 fixed_real rad, radsq;
-assign rad = 64'd240 << 32;
-assign radsq = 64'd2760 << 32;
+assign rad = 64'd480 << 32;
+assign radsq = 64'd230400 << 32;
 
 always_comb begin
 	disc = radsq - bsqr;

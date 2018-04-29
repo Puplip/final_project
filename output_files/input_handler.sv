@@ -28,6 +28,7 @@ module input_handler (
 			Click <= 1'b0;
 			old_m1 <= 1'b1;
 			old_frame_clk <= 1'b1;
+			old_new_data <= 1'b1;
 		end
 		else begin
 			x_buffer <= x_buffer_n;
@@ -38,6 +39,7 @@ module input_handler (
 			old_m1 <= old_m1_n;
 		end
 		old_frame_clk <= Frame_Clk;
+		old_new_data <= new_data;
 	end
 	
 	always_comb begin

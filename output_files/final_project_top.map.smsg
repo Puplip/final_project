@@ -1,4 +1,4 @@
 Warning (10273): Verilog HDL warning at hexdriver.sv(25): extended using "x" or "z"
-Info (10281): Verilog HDL Declaration information at ps2_mouse_controller.sv(15): object "Count" differs only in case from object "count" in the same scope
-Info (10281): Verilog HDL Declaration information at ps2_mouse_controller.sv(15): object "Count_n" differs only in case from object "count_n" in the same scope
-Warning (10268): Verilog HDL information at final_top_level.sv(66): always construct contains both blocking and non-blocking assignments
+Info (10281): Verilog HDL Declaration information at ps2_mouse_controller.sv(16): object "Count" differs only in case from object "count" in the same scope
+Info (10281): Verilog HDL Declaration information at ps2_mouse_controller.sv(16): object "Count_n" differs only in case from object "count_n" in the same scope
+Warning (10268): Verilog HDL information at final_top_level.sv(76): always construct contains both blocking and non-blocking assignments

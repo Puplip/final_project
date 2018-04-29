@@ -9,7 +9,8 @@ module ps2_mouse_controller(
  inout wire PS2_MSDAT,
  output logic Mouse_LeftClick, Mouse_RightClick,
  output logic [8:0] Mouse_dx, Mouse_dy,
- output logic packetReceived
+ output logic packetReceived,
+ output logic [7:0] State
 );
 
  logic [7:0] Count, Count_n;
@@ -20,6 +21,7 @@ module ps2_mouse_controller(
  logic Y_Overflow,X_Overflow,Y_Sign,X_Sign;
  logic Mouse3,Mouse2,Mouse1;
  
+ assign State = curr_state;
  
  enum logic[7:0] {
  Wait=8'd0,
@@ -58,7 +60,7 @@ logic [32:0] Bytes;
    One: begin
     selc = 1'b1;
     count = count + 27'd1;
-    if (count == 27'd1000000) begin 
+    if (count == 27'd10000000) begin 
      next_state = Four;
 	  psd = 0;
      seld = 1'b1;

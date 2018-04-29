@@ -13,7 +13,7 @@ State.Sphere3_0 0 0 1 0 0 0 0 0 0 0 1
 State.Sphere3_1 0 1 0 0 0 0 0 0 0 0 1 
 State.Write 1 0 0 0 0 0 0 0 0 0 1 
 
-State Machine - |final_top_level|ps2_mouse_controller:mouse|next_state
+State Machine - |final_top_level|ps2_mouse_controller:ps2m|next_state
 Name next_state.Read next_state.TenEleven next_state.Nine next_state.Seven next_state.Six next_state.Four next_state.One 
 next_state.One 0 0 0 0 0 0 0 
 next_state.Four 0 0 0 0 0 1 1 
@@ -23,7 +23,7 @@ next_state.Nine 0 0 1 0 0 0 1
 next_state.TenEleven 0 1 0 0 0 0 1 
 next_state.Read 1 0 0 0 0 0 1 
 
-State Machine - |final_top_level|ps2_mouse_controller:mouse|curr_state
+State Machine - |final_top_level|ps2_mouse_controller:ps2m|curr_state
 Name curr_state.Read curr_state.TenEleven curr_state.Nine curr_state.Seven curr_state.Six curr_state.Four curr_state.One 
 curr_state.One 0 0 0 0 0 0 0 
 curr_state.Four 0 0 0 0 0 1 1 

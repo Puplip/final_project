@@ -7,7 +7,9 @@ module final_top_level (
 	input logic [3:0] KEY,
 	inout wire PS2_KBCLK, PS2_KBDAT,
 	output logic [7:0] VGA_R, VGA_G, VGA_B,      
-	output logic VGA_CLK, VGA_SYNC_N, VGA_BLANK_N, VGA_VS, VGA_HS
+	output logic VGA_CLK, VGA_SYNC_N, VGA_BLANK_N, VGA_VS, VGA_HS,
+	output logic [17:0] LEDR,
+	output logic [7:0] LEDG
 );
 
 enum logic [7:0] {
@@ -58,10 +60,18 @@ hit_detection hd(.*,.Clk(CLOCK_50));
 
 logic [8:0] mouse_dx, mouse_dy;
 logic mouse_m1, mouse_packet;
- 
-ps2_mouse_controller mouse(.Clk(CLOCK_50), .Reset(~KEY[0]),.PS2_MSCLK(PS2_KBCLK),.PS2_MSDAT(PS2_KBDAT),.Mouse_LeftClick(mouse_m1),.Mouse_dx(mouse_dx),.Mouse_dy(mouse_dy),.packetReceived(mouse_packet));
+logic [7:0] test_state;
+
+ps2_mouse_controller ps2m(.Clk(CLOCK_50), .Reset(~KEY[0]),.PS2_MSCLK(PS2_KBCLK),.PS2_MSDAT(PS2_KBDAT),.Mouse_LeftClick(mouse_m1),.Mouse_dx(mouse_dx),.Mouse_dy(mouse_dy),.packetReceived(mouse_packet),.State(test_state));
 
 input_handler ih(.*,.Reset(~KEY[0]),.Clk(CLOCK_50),.m1(mouse_m1),.m2(),.m3(),.dx(mouse_dx),.dy(mouse_dy),.new_data(mouse_packet));
+
+assign LEDG[2] = 1'b1;
+assign LEDG[0] = mouse_m1;
+assign LEDG[1] = mouse_packet;
+assign LEDR[17:9] = mouse_dx;
+assign LEDR[7:0] = test_state;
+
 
 always_ff @ (posedge CLOCK_50 or negedge KEY[0]) begin
 	if(~KEY[0])begin

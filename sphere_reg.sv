@@ -41,10 +41,10 @@ assign pos_rand[1] = {~(64'd2400 << 32) + 64'd1,64'd4800 << 32,~(64'd2400 << 32)
 assign pos_rand[2] = {~(64'd2400 << 32) + 64'd1,64'd9600 << 32,~(64'd2400 << 32) + 64'd1};
 assign pos_rand[3] = {~(64'd2400 << 32) + 64'd1,64'd9600 << 32,64'd2400 << 32};
 
-assign vel_rand[0] = {64'd48 << 32,{31{random[0]}},random[47:32],17'd0,{31{random[1]}},random[31:16],17'd0};
-assign vel_rand[1] = {64'd48 << 32,{31{random[2]}},random[62:47],17'd0,{31{random[3]}},random[46:31],17'd0};
-assign vel_rand[2] = {64'd48 << 32,{31{random[4]}},random[61:46],17'd0,{31{random[5]}},random[45:30],17'd0};
-assign vel_rand[3] = {64'd48 << 32,{31{random[6]}},random[60:45],17'd0,{31{random[7]}},random[44:29],17'd0};
+assign vel_rand[0] = {64'd200 << 32,{31{random[0]}},random[47:32],17'd0,{31{random[1]}},random[31:16],17'd0};
+assign vel_rand[1] = {64'd200 << 32,{31{random[2]}},random[62:47],17'd0,{31{random[3]}},random[46:31],17'd0};
+assign vel_rand[2] = {64'd200 << 32,{31{random[4]}},random[61:46],17'd0,{31{random[5]}},random[45:30],17'd0};
+assign vel_rand[3] = {64'd200 << 32,{31{random[6]}},random[60:45],17'd0,{31{random[7]}},random[44:29],17'd0};
 
 assign col_rand[0] = {random[63:56],random[55:48],random[47:40]};
 assign col_rand[1] = {random[39:32],random[31:24],random[23:16]};
