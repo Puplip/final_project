@@ -21,12 +21,12 @@ assign rad = 64'd480 << 32;
 assign radsq = 64'd230400 << 32;
 
 always_comb begin
+	bsqr = cdot - vsqr;
 	disc = radsq - bsqr;
 	Collision = 0;
 	tnew = tbest;
 	
 	//if (tbest > v - rad) begin
-	bsqr = cdot - vsqr;
 	if (radsq > bsqr) begin
 		tnew = v - sqrt;
 		Collision = 1'b1;
