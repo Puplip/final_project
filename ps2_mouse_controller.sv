@@ -153,8 +153,8 @@ logic [32:0] Bytes;
 	end
  end
  
-assign X_Move_Signed = (X_Sign)?(~{1'b0,X_Move})+1'b1:{1'b0,X_Move};
-assign Y_Move_Signed = (Y_Sign)?(~{1'b0,Y_Move})+1'b1:{1'b0,Y_Move};
+assign X_Move_Signed = {X_Sign,X_Move};
+assign Y_Move_Signed = {Y_Sign,Y_Move};
  
 assign Mouse_dx = (X_Overflow)?(0):X_Move_Signed;
 assign Mouse_dy = (Y_Overflow)?(0):Y_Move_Signed;

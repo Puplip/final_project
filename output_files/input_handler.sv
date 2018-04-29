@@ -50,13 +50,15 @@ module input_handler (
 		Click_n = Click;
 		old_m1_n = old_m1;
 		if(frame_clk_rising_edge) begin
-			if(Phi_n_raw[63]) Phi_n = 63'b0;
-			else if(Phi_n_raw > 64'd180 << 32) Phi_n = 63'd180 << 32;
+			if(Phi_n_raw[63]) Phi_n = 64'b0;
+			else if(Phi_n_raw > 64'd180 << 32) Phi_n = 64'd180 << 32;
 			else Phi_n = Phi_n_raw;
-			if(Theta_n_raw[63]) Theta_n = 63'b0;
-			else if(Theta_n_raw > 64'd180 << 32) Theta_n = 63'd180 << 32;
+			if(Theta_n_raw[63]) Theta_n = 64'b0;
+			else if(Theta_n_raw > 64'd180 << 32) Theta_n = 64'd180 << 32;
 			else Theta_n = Theta_n_raw;
 			Click_n = 1'b0;
+			x_buffer_n = 9'b0;
+			y_buffer_n = 9'b0;
 		end
 		else if(new_data_rising_edge) begin
 			x_buffer_n = x_buffer + {{23{dx[8]}},dx};
