@@ -1,5 +1,5 @@
 Analysis & Synthesis report for final_project_top
-Sun Apr 29 23:02:29 2018
+Mon Apr 30 01:06:32 2018
 Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
 
 
@@ -87,15 +87,15 @@ agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Apr 29 23:02:28 2018      ;
+; Analysis & Synthesis Status        ; Successful - Mon Apr 30 01:06:31 2018      ;
 ; Quartus II 64-Bit Version          ; 15.0.0 Build 145 04/22/2015 SJ Web Edition ;
 ; Revision Name                      ; final_project_top                          ;
 ; Top-level Entity Name              ; final_top_level                            ;
 ; Family                             ; Cyclone IV E                               ;
-; Total logic elements               ; 16,230                                     ;
-;     Total combinational functions  ; 16,191                                     ;
-;     Dedicated logic registers      ; 1,182                                      ;
-; Total registers                    ; 1182                                       ;
+; Total logic elements               ; 16,250                                     ;
+;     Total combinational functions  ; 16,211                                     ;
+;     Dedicated logic registers      ; 1,188                                      ;
+; Total registers                    ; 1188                                       ;
 ; Total pins                         ; 70                                         ;
 ; Total virtual pins                 ; 0                                          ;
 ; Total memory bits                  ; 1,843,200                                  ;
@@ -258,20 +258,20 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimated Total logic elements              ; 16,230         ;
+; Estimated Total logic elements              ; 16,250         ;
 ;                                             ;                ;
-; Total combinational functions               ; 16191          ;
+; Total combinational functions               ; 16211          ;
 ; Logic element usage by number of LUT inputs ;                ;
-;     -- 4 input functions                    ; 6794           ;
-;     -- 3 input functions                    ; 7015           ;
-;     -- <=2 input functions                  ; 2382           ;
+;     -- 4 input functions                    ; 6811           ;
+;     -- 3 input functions                    ; 7025           ;
+;     -- <=2 input functions                  ; 2375           ;
 ;                                             ;                ;
 ; Logic elements by mode                      ;                ;
-;     -- normal mode                          ; 9889           ;
-;     -- arithmetic mode                      ; 6302           ;
+;     -- normal mode                          ; 9901           ;
+;     -- arithmetic mode                      ; 6310           ;
 ;                                             ;                ;
-; Total registers                             ; 1182           ;
-;     -- Dedicated logic registers            ; 1182           ;
+; Total registers                             ; 1188           ;
+;     -- Dedicated logic registers            ; 1188           ;
 ;     -- I/O registers                        ; 0              ;
 ;                                             ;                ;
 ; I/O pins                                    ; 70             ;
@@ -283,8 +283,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;     -- PLLs                                 ; 1              ;
 ;                                             ;                ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
-; Maximum fan-out                             ; 1322           ;
-; Total fan-out                               ; 66655          ;
+; Maximum fan-out                             ; 1328           ;
+; Total fan-out                               ; 66756          ;
 ; Average fan-out                             ; 3.70           ;
 +---------------------------------------------+----------------+
 
@@ -294,13 +294,13 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                               ; Library Name ;
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------+--------------+
-; |final_top_level                          ; 16191 (233)       ; 1182 (78)    ; 1843200     ; 272          ; 0       ; 136       ; 70   ; 0            ; |final_top_level                                                                                                  ; work         ;
+; |final_top_level                          ; 16211 (239)       ; 1188 (79)    ; 1843200     ; 272          ; 0       ; 136       ; 70   ; 0            ; |final_top_level                                                                                                  ; work         ;
 ;    |VGA_controller:vga|                   ; 60 (60)           ; 23 (23)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|VGA_controller:vga                                                                               ; work         ;
 ;    |ang_lut:al|                           ; 2852 (2726)       ; 96 (96)      ; 0           ; 12           ; 0       ; 6         ; 0    ; 0            ; |final_top_level|ang_lut:al                                                                                       ; work         ;
 ;       |mult_real:m|                       ; 126 (0)           ; 0 (0)        ; 0           ; 12           ; 0       ; 6         ; 0    ; 0            ; |final_top_level|ang_lut:al|mult_real:m                                                                           ; work         ;
 ;          |lpm_mult:Mult0|                 ; 126 (0)           ; 0 (0)        ; 0           ; 12           ; 0       ; 6         ; 0    ; 0            ; |final_top_level|ang_lut:al|mult_real:m|lpm_mult:Mult0                                                            ; work         ;
 ;             |mult_cdt:auto_generated|     ; 126 (126)         ; 0 (0)        ; 0           ; 12           ; 0       ; 6         ; 0    ; 0            ; |final_top_level|ang_lut:al|mult_real:m|lpm_mult:Mult0|mult_cdt:auto_generated                                    ; work         ;
-;    |collision_detection:cd|               ; 4970 (247)        ; 0 (0)        ; 0           ; 184          ; 0       ; 92        ; 0    ; 0            ; |final_top_level|collision_detection:cd                                                                           ; work         ;
+;    |collision_detection:cd|               ; 4971 (248)        ; 0 (0)        ; 0           ; 184          ; 0       ; 92        ; 0    ; 0            ; |final_top_level|collision_detection:cd                                                                           ; work         ;
 ;       |dot_product_scale:cc|              ; 1186 (106)        ; 0 (0)        ; 0           ; 90           ; 0       ; 45        ; 0    ; 0            ; |final_top_level|collision_detection:cd|dot_product_scale:cc                                                      ; work         ;
 ;          |mult_real:x|                    ; 360 (0)           ; 0 (0)        ; 0           ; 30           ; 0       ; 15        ; 0    ; 0            ; |final_top_level|collision_detection:cd|dot_product_scale:cc|mult_real:x                                          ; work         ;
 ;             |lpm_mult:Mult0|              ; 360 (0)           ; 0 (0)        ; 0           ; 30           ; 0       ; 15        ; 0    ; 0            ; |final_top_level|collision_detection:cd|dot_product_scale:cc|mult_real:x|lpm_mult:Mult0                           ; work         ;
@@ -325,41 +325,41 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;          |lpm_mult:Mult0|                 ; 360 (0)           ; 0 (0)        ; 0           ; 30           ; 0       ; 15        ; 0    ; 0            ; |final_top_level|collision_detection:cd|mult_real:vsqrmod|lpm_mult:Mult0                                          ; work         ;
 ;             |mult_v7t:auto_generated|     ; 360 (360)         ; 0 (0)        ; 0           ; 30           ; 0       ; 15        ; 0    ; 0            ; |final_top_level|collision_detection:cd|mult_real:vsqrmod|lpm_mult:Mult0|mult_v7t:auto_generated                  ; work         ;
 ;       |sqrt_real:rbsqrt|                  ; 2172 (2172)       ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|collision_detection:cd|sqrt_real:rbsqrt                                                          ; work         ;
-;    |color_mapper:colmap|                  ; 43 (43)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|color_mapper:colmap                                                                              ; work         ;
+;    |color_mapper:colmap|                  ; 42 (42)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|color_mapper:colmap                                                                              ; work         ;
 ;    |frame_buffer:fb|                      ; 281 (45)          ; 6 (0)        ; 1843200     ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|frame_buffer:fb                                                                                  ; work         ;
 ;       |altsyncram:buffer_rtl_0|           ; 236 (0)           ; 6 (0)        ; 1843200     ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|frame_buffer:fb|altsyncram:buffer_rtl_0                                                          ; work         ;
 ;          |altsyncram_u5e1:auto_generated| ; 236 (0)           ; 6 (6)        ; 1843200     ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|frame_buffer:fb|altsyncram:buffer_rtl_0|altsyncram_u5e1:auto_generated                           ; work         ;
 ;             |decode_hua:decode2|          ; 47 (47)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|frame_buffer:fb|altsyncram:buffer_rtl_0|altsyncram_u5e1:auto_generated|decode_hua:decode2        ; work         ;
 ;             |mux_vob:mux3|                ; 189 (189)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|frame_buffer:fb|altsyncram:buffer_rtl_0|altsyncram_u5e1:auto_generated|mux_vob:mux3              ; work         ;
 ;    |increment_write:iw|                   ; 32 (32)           ; 21 (21)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|increment_write:iw                                                                               ; work         ;
-;    |input_handler:ih|                     ; 1034 (398)        ; 90 (90)      ; 0           ; 60           ; 0       ; 30        ; 0    ; 0            ; |final_top_level|input_handler:ih                                                                                 ; work         ;
+;    |input_handler:ih|                     ; 1042 (406)        ; 94 (94)      ; 0           ; 60           ; 0       ; 30        ; 0    ; 0            ; |final_top_level|input_handler:ih                                                                                 ; work         ;
 ;       |mult_real:mx|                      ; 318 (0)           ; 0 (0)        ; 0           ; 30           ; 0       ; 15        ; 0    ; 0            ; |final_top_level|input_handler:ih|mult_real:mx                                                                    ; work         ;
 ;          |lpm_mult:Mult0|                 ; 318 (0)           ; 0 (0)        ; 0           ; 30           ; 0       ; 15        ; 0    ; 0            ; |final_top_level|input_handler:ih|mult_real:mx|lpm_mult:Mult0                                                     ; work         ;
 ;             |mult_0ft:auto_generated|     ; 318 (318)         ; 0 (0)        ; 0           ; 30           ; 0       ; 15        ; 0    ; 0            ; |final_top_level|input_handler:ih|mult_real:mx|lpm_mult:Mult0|mult_0ft:auto_generated                             ; work         ;
 ;       |mult_real:my|                      ; 318 (0)           ; 0 (0)        ; 0           ; 30           ; 0       ; 15        ; 0    ; 0            ; |final_top_level|input_handler:ih|mult_real:my                                                                    ; work         ;
 ;          |lpm_mult:Mult0|                 ; 318 (0)           ; 0 (0)        ; 0           ; 30           ; 0       ; 15        ; 0    ; 0            ; |final_top_level|input_handler:ih|mult_real:my|lpm_mult:Mult0                                                     ; work         ;
 ;             |mult_0ft:auto_generated|     ; 318 (318)         ; 0 (0)        ; 0           ; 30           ; 0       ; 15        ; 0    ; 0            ; |final_top_level|input_handler:ih|mult_real:my|lpm_mult:Mult0|mult_0ft:auto_generated                             ; work         ;
-;    |ps2_mouse_controller:ps2m|            ; 176 (176)         ; 86 (86)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|ps2_mouse_controller:ps2m                                                                        ; work         ;
-;    |ray_lut:rl|                           ; 4686 (64)         ; 128 (0)      ; 0           ; 16           ; 0       ; 8         ; 0    ; 0            ; |final_top_level|ray_lut:rl                                                                                       ; work         ;
+;    |ps2_mouse_controller:ps2m|            ; 177 (177)         ; 86 (86)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|ps2_mouse_controller:ps2m                                                                        ; work         ;
+;    |ray_lut:rl|                           ; 4690 (64)         ; 128 (0)      ; 0           ; 16           ; 0       ; 8         ; 0    ; 0            ; |final_top_level|ray_lut:rl                                                                                       ; work         ;
 ;       |cos_lut:c0|                        ; 492 (492)         ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|ray_lut:rl|cos_lut:c0                                                                            ; work         ;
-;       |cos_lut:c1|                        ; 480 (480)         ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|ray_lut:rl|cos_lut:c1                                                                            ; work         ;
-;       |cos_lut:c2|                        ; 495 (495)         ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|ray_lut:rl|cos_lut:c2                                                                            ; work         ;
-;       |cos_lut:c3|                        ; 481 (481)         ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|ray_lut:rl|cos_lut:c3                                                                            ; work         ;
+;       |cos_lut:c1|                        ; 482 (482)         ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|ray_lut:rl|cos_lut:c1                                                                            ; work         ;
+;       |cos_lut:c2|                        ; 493 (493)         ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|ray_lut:rl|cos_lut:c2                                                                            ; work         ;
+;       |cos_lut:c3|                        ; 480 (480)         ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|ray_lut:rl|cos_lut:c3                                                                            ; work         ;
 ;       |mult_real:m0|                      ; 104 (0)           ; 0 (0)        ; 0           ; 8            ; 0       ; 4         ; 0    ; 0            ; |final_top_level|ray_lut:rl|mult_real:m0                                                                          ; work         ;
 ;          |lpm_mult:Mult0|                 ; 104 (0)           ; 0 (0)        ; 0           ; 8            ; 0       ; 4         ; 0    ; 0            ; |final_top_level|ray_lut:rl|mult_real:m0|lpm_mult:Mult0                                                           ; work         ;
 ;             |mult_76t:auto_generated|     ; 104 (104)         ; 0 (0)        ; 0           ; 8            ; 0       ; 4         ; 0    ; 0            ; |final_top_level|ray_lut:rl|mult_real:m0|lpm_mult:Mult0|mult_76t:auto_generated                                   ; work         ;
 ;       |mult_real:m1|                      ; 104 (0)           ; 0 (0)        ; 0           ; 8            ; 0       ; 4         ; 0    ; 0            ; |final_top_level|ray_lut:rl|mult_real:m1                                                                          ; work         ;
 ;          |lpm_mult:Mult0|                 ; 104 (0)           ; 0 (0)        ; 0           ; 8            ; 0       ; 4         ; 0    ; 0            ; |final_top_level|ray_lut:rl|mult_real:m1|lpm_mult:Mult0                                                           ; work         ;
 ;             |mult_76t:auto_generated|     ; 104 (104)         ; 0 (0)        ; 0           ; 8            ; 0       ; 4         ; 0    ; 0            ; |final_top_level|ray_lut:rl|mult_real:m1|lpm_mult:Mult0|mult_76t:auto_generated                                   ; work         ;
-;       |sin_lut:s0|                        ; 484 (484)         ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|ray_lut:rl|sin_lut:s0                                                                            ; work         ;
-;       |sin_lut:s1|                        ; 494 (494)         ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|ray_lut:rl|sin_lut:s1                                                                            ; work         ;
-;       |sin_lut:s2|                        ; 485 (485)         ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|ray_lut:rl|sin_lut:s2                                                                            ; work         ;
-;       |sin_lut:s3|                        ; 493 (493)         ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|ray_lut:rl|sin_lut:s3                                                                            ; work         ;
+;       |sin_lut:s0|                        ; 486 (486)         ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|ray_lut:rl|sin_lut:s0                                                                            ; work         ;
+;       |sin_lut:s1|                        ; 492 (492)         ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|ray_lut:rl|sin_lut:s1                                                                            ; work         ;
+;       |sin_lut:s2|                        ; 488 (488)         ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|ray_lut:rl|sin_lut:s2                                                                            ; work         ;
+;       |sin_lut:s3|                        ; 495 (495)         ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|ray_lut:rl|sin_lut:s3                                                                            ; work         ;
 ;       |wgt_mean:wm0|                      ; 128 (128)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|ray_lut:rl|wgt_mean:wm0                                                                          ; work         ;
 ;       |wgt_mean:wm1|                      ; 128 (128)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|ray_lut:rl|wgt_mean:wm1                                                                          ; work         ;
 ;       |wgt_mean:wm2|                      ; 127 (127)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|ray_lut:rl|wgt_mean:wm2                                                                          ; work         ;
 ;       |wgt_mean:wm3|                      ; 127 (127)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|ray_lut:rl|wgt_mean:wm3                                                                          ; work         ;
-;    |sphere_reg_4:sph4|                    ; 1824 (303)        ; 654 (590)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|sphere_reg_4:sph4                                                                                ; work         ;
+;    |sphere_reg_4:sph4|                    ; 1825 (304)        ; 655 (591)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|sphere_reg_4:sph4                                                                                ; work         ;
 ;       |add_vector:pva0|                   ; 236 (236)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|sphere_reg_4:sph4|add_vector:pva0                                                                ; work         ;
 ;       |add_vector:pva1|                   ; 176 (176)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|sphere_reg_4:sph4|add_vector:pva1                                                                ; work         ;
 ;       |add_vector:pva2|                   ; 176 (176)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|sphere_reg_4:sph4|add_vector:pva2                                                                ; work         ;
@@ -501,6 +501,12 @@ Encoding Type:  One-Hot
 ; sphere_reg_4:sph4|col[0][1][6]                 ; Stuck at GND due to stuck port data_in                     ;
 ; sphere_reg_4:sph4|col[0][0][7]                 ; Stuck at VCC due to stuck port data_in                     ;
 ; sphere_reg_4:sph4|col[0][0][6]                 ; Stuck at VCC due to stuck port data_in                     ;
+; Best_col[0][7]                                 ; Merged with Best_col[0][6]                                 ;
+; Best_col[1][7]                                 ; Merged with Best_col[1][6]                                 ;
+; Best_col[2][7]                                 ; Merged with Best_col[2][6]                                 ;
+; sphere_reg_4:sph4|Sphere_col[0][7]             ; Merged with sphere_reg_4:sph4|Sphere_col[0][6]             ;
+; sphere_reg_4:sph4|Sphere_col[1][7]             ; Merged with sphere_reg_4:sph4|Sphere_col[1][6]             ;
+; sphere_reg_4:sph4|Sphere_col[2][7]             ; Merged with sphere_reg_4:sph4|Sphere_col[2][6]             ;
 ; sphere_reg_4:sph4|pos[1][2][63]                ; Merged with sphere_reg_4:sph4|pos[0][2][63]                ;
 ; sphere_reg_4:sph4|pos[2][2][63]                ; Merged with sphere_reg_4:sph4|pos[0][2][63]                ;
 ; sphere_reg_4:sph4|pos[3][2][63]                ; Merged with sphere_reg_4:sph4|pos[0][2][63]                ;
@@ -1376,8 +1382,8 @@ Encoding Type:  One-Hot
 ; sphere_reg_4:sph4|vel[2][2][34]                ; Merged with sphere_reg_4:sph4|vel[0][2][34]                ;
 ; sphere_reg_4:sph4|vel[3][2][34]                ; Merged with sphere_reg_4:sph4|vel[0][2][34]                ;
 ; sphere_reg_4:sph4|vel[0][0][0]                 ; Stuck at GND due to stuck port data_in                     ;
-; input_handler:ih|Phi[0..27]                    ; Stuck at GND due to stuck port data_in                     ;
-; input_handler:ih|Theta[0..27]                  ; Stuck at GND due to stuck port data_in                     ;
+; input_handler:ih|Phi[0..25]                    ; Stuck at GND due to stuck port data_in                     ;
+; input_handler:ih|Theta[0..25]                  ; Stuck at GND due to stuck port data_in                     ;
 ; sphere_reg_4:sph4|pos[3][1][19]                ; Stuck at GND due to stuck port data_in                     ;
 ; sphere_reg_4:sph4|pos[3][1][18]                ; Stuck at GND due to stuck port data_in                     ;
 ; sphere_reg_4:sph4|pos[3][1][17]                ; Stuck at GND due to stuck port data_in                     ;
@@ -1683,7 +1689,7 @@ Encoding Type:  One-Hot
 ; sphere_reg_4:sph4|pos[3][0][8]                 ; Merged with sphere_reg_4:sph4|pos[1][0][11]                ;
 ; input_handler:ih|Phi[40..60]                   ; Stuck at GND due to stuck port data_in                     ;
 ; input_handler:ih|Theta[40..60]                 ; Stuck at GND due to stuck port data_in                     ;
-; Total Number of Removed Registers = 1302       ;                                                            ;
+; Total Number of Removed Registers = 1304       ;                                                            ;
 +------------------------------------------------+------------------------------------------------------------+
 
 
@@ -1840,12 +1846,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 1182  ;
+; Total registers                              ; 1188  ;
 ; Number of registers using Synchronous Clear  ; 37    ;
 ; Number of registers using Synchronous Load   ; 142   ;
 ; Number of registers using Asynchronous Clear ; 506   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 1003  ;
+; Number of registers using Clock Enable       ; 1008  ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -1855,8 +1861,8 @@ Encoding Type:  One-Hot
 +-----------------------------------------+---------+
 ; Inverted Register                       ; Fan out ;
 +-----------------------------------------+---------+
-; ps2_mouse_controller:ps2m|bcount[3]     ; 11      ;
-; ps2_mouse_controller:ps2m|bcount[1]     ; 13      ;
+; ps2_mouse_controller:ps2m|bcount[3]     ; 12      ;
+; ps2_mouse_controller:ps2m|bcount[1]     ; 15      ;
 ; ps2_mouse_controller:ps2m|firstTime     ; 4       ;
 ; sphere_reg_4:sph4|pos[2][0][54]         ; 2       ;
 ; sphere_reg_4:sph4|pos[0][0][54]         ; 2       ;
@@ -1973,41 +1979,41 @@ Encoding Type:  One-Hot
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                            ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------+
 ; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |final_top_level|VGA_controller:vga|h_counter[3]      ;
-; 4:1                ; 63 bits   ; 126 LEs       ; 63 LEs               ; 63 LEs                 ; Yes        ; |final_top_level|input_handler:ih|x_buffer[3]         ;
-; 4:1                ; 63 bits   ; 126 LEs       ; 63 LEs               ; 63 LEs                 ; Yes        ; |final_top_level|Best_Dist[14]                        ;
-; 5:1                ; 36 bits   ; 108 LEs       ; 72 LEs               ; 36 LEs                 ; Yes        ; |final_top_level|input_handler:ih|Phi[58]             ;
-; 5:1                ; 36 bits   ; 108 LEs       ; 72 LEs               ; 36 LEs                 ; Yes        ; |final_top_level|input_handler:ih|Theta[44]           ;
-; 8:1                ; 28 bits   ; 140 LEs       ; 28 LEs               ; 112 LEs                ; Yes        ; |final_top_level|ps2_mouse_controller:ps2m|count[16]  ;
-; 512:1              ; 32 bits   ; 10912 LEs     ; 7680 LEs             ; 3232 LEs               ; Yes        ; |final_top_level|ray_lut:rl|cos_lut:c1|out[4]         ;
-; 512:1              ; 32 bits   ; 10912 LEs     ; 6848 LEs             ; 4064 LEs               ; Yes        ; |final_top_level|ang_lut:al|dTheta_raw[20]            ;
-; 512:1              ; 32 bits   ; 10912 LEs     ; 7680 LEs             ; 3232 LEs               ; Yes        ; |final_top_level|ray_lut:rl|sin_lut:s0|out[1]         ;
-; 512:1              ; 32 bits   ; 10912 LEs     ; 7680 LEs             ; 3232 LEs               ; Yes        ; |final_top_level|ray_lut:rl|cos_lut:c2|out[4]         ;
-; 512:1              ; 32 bits   ; 10912 LEs     ; 7680 LEs             ; 3232 LEs               ; Yes        ; |final_top_level|ray_lut:rl|cos_lut:c3|out[14]        ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |final_top_level|sphere_reg_4:sph4|Sphere_pos[0][8]   ;
-; 4:1                ; 88 bits   ; 176 LEs       ; 176 LEs              ; 0 LEs                  ; Yes        ; |final_top_level|sphere_reg_4:sph4|Sphere_pos[0][57]  ;
-; 512:1              ; 32 bits   ; 10912 LEs     ; 6848 LEs             ; 4064 LEs               ; Yes        ; |final_top_level|ang_lut:al|y_scaler_raw[16]          ;
-; 512:1              ; 32 bits   ; 10912 LEs     ; 5120 LEs             ; 5792 LEs               ; Yes        ; |final_top_level|ang_lut:al|y_raw[10]                 ;
+; 4:1                ; 63 bits   ; 126 LEs       ; 63 LEs               ; 63 LEs                 ; Yes        ; |final_top_level|input_handler:ih|y_buffer[4]         ;
+; 4:1                ; 63 bits   ; 126 LEs       ; 63 LEs               ; 63 LEs                 ; Yes        ; |final_top_level|Best_Dist[50]                        ;
+; 5:1                ; 38 bits   ; 114 LEs       ; 76 LEs               ; 38 LEs                 ; Yes        ; |final_top_level|input_handler:ih|Phi[54]             ;
+; 5:1                ; 38 bits   ; 114 LEs       ; 76 LEs               ; 38 LEs                 ; Yes        ; |final_top_level|input_handler:ih|Theta[55]           ;
+; 8:1                ; 28 bits   ; 140 LEs       ; 28 LEs               ; 112 LEs                ; Yes        ; |final_top_level|ps2_mouse_controller:ps2m|count[15]  ;
+; 512:1              ; 32 bits   ; 10912 LEs     ; 7680 LEs             ; 3232 LEs               ; Yes        ; |final_top_level|ray_lut:rl|cos_lut:c1|out[15]        ;
+; 512:1              ; 32 bits   ; 10912 LEs     ; 6848 LEs             ; 4064 LEs               ; Yes        ; |final_top_level|ang_lut:al|dTheta_raw[26]            ;
+; 512:1              ; 32 bits   ; 10912 LEs     ; 7680 LEs             ; 3232 LEs               ; Yes        ; |final_top_level|ray_lut:rl|sin_lut:s0|out[2]         ;
+; 512:1              ; 32 bits   ; 10912 LEs     ; 7680 LEs             ; 3232 LEs               ; Yes        ; |final_top_level|ray_lut:rl|sin_lut:s2|out[4]         ;
+; 512:1              ; 32 bits   ; 10912 LEs     ; 7680 LEs             ; 3232 LEs               ; Yes        ; |final_top_level|ray_lut:rl|sin_lut:s3|out[8]         ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |final_top_level|sphere_reg_4:sph4|Sphere_pos[0][5]   ;
+; 4:1                ; 88 bits   ; 176 LEs       ; 176 LEs              ; 0 LEs                  ; Yes        ; |final_top_level|sphere_reg_4:sph4|Sphere_pos[1][48]  ;
+; 512:1              ; 32 bits   ; 10912 LEs     ; 6848 LEs             ; 4064 LEs               ; Yes        ; |final_top_level|ang_lut:al|y_scaler_raw[18]          ;
+; 512:1              ; 32 bits   ; 10912 LEs     ; 5120 LEs             ; 5792 LEs               ; Yes        ; |final_top_level|ang_lut:al|y_raw[12]                 ;
 ; 3:1                ; 9 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; No         ; |final_top_level|VGA_controller:vga|v_counter_in[1]   ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |final_top_level|ray_lut:rl|wgt_mean:wm2|Mux0         ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |final_top_level|ray_lut:rl|wgt_mean:wm3|Mux30        ;
 ; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |final_top_level|ray_lut:rl|wgt_mean:wm3|Mux47        ;
 ; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |final_top_level|ray_lut:rl|wgt_mean:wm3|Mux46        ;
-; 4:1                ; 30 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; No         ; |final_top_level|ray_lut:rl|wgt_mean:wm3|Mux33        ;
+; 4:1                ; 30 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; No         ; |final_top_level|ray_lut:rl|wgt_mean:wm3|Mux32        ;
 ; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |final_top_level|ray_lut:rl|wgt_mean:wm1|Mux47        ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |final_top_level|ray_lut:rl|wgt_mean:wm1|Mux46        ;
-; 4:1                ; 30 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; No         ; |final_top_level|ray_lut:rl|wgt_mean:wm0|Mux31        ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |final_top_level|ray_lut:rl|wgt_mean:wm1|Mux30        ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |final_top_level|ray_lut:rl|wgt_mean:wm0|Mux46        ;
+; 4:1                ; 30 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; No         ; |final_top_level|ray_lut:rl|wgt_mean:wm1|Mux33        ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |final_top_level|ray_lut:rl|wgt_mean:wm1|Mux0         ;
 ; 3:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |final_top_level|color_mapper:colmap|col[0][6]        ;
-; 16:1               ; 4 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |final_top_level|sphere_reg_4:sph4|rand_lut:rl|Mux2   ;
-; 16:1               ; 4 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |final_top_level|sphere_reg_4:sph4|rand_lut:rl|Mux6   ;
-; 16:1               ; 4 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |final_top_level|sphere_reg_4:sph4|rand_lut:rl|Mux11  ;
+; 16:1               ; 4 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |final_top_level|sphere_reg_4:sph4|rand_lut:rl|Mux1   ;
+; 16:1               ; 4 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |final_top_level|sphere_reg_4:sph4|rand_lut:rl|Mux7   ;
+; 16:1               ; 4 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |final_top_level|sphere_reg_4:sph4|rand_lut:rl|Mux10  ;
 ; 16:1               ; 4 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |final_top_level|sphere_reg_4:sph4|rand_lut:rl|Mux12  ;
 ; 16:1               ; 4 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |final_top_level|sphere_reg_4:sph4|rand_lut:rl|Mux16  ;
 ; 16:1               ; 4 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |final_top_level|sphere_reg_4:sph4|rand_lut:rl|Mux21  ;
-; 16:1               ; 4 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |final_top_level|sphere_reg_4:sph4|rand_lut:rl|Mux27  ;
-; 16:1               ; 4 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |final_top_level|sphere_reg_4:sph4|rand_lut:rl|Mux28  ;
-; 16:1               ; 4 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |final_top_level|sphere_reg_4:sph4|rand_lut:rl|Mux34  ;
-; 16:1               ; 4 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |final_top_level|sphere_reg_4:sph4|rand_lut:rl|Mux38  ;
-; 16:1               ; 4 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |final_top_level|sphere_reg_4:sph4|rand_lut:rl|Mux40  ;
+; 16:1               ; 4 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |final_top_level|sphere_reg_4:sph4|rand_lut:rl|Mux26  ;
+; 16:1               ; 4 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |final_top_level|sphere_reg_4:sph4|rand_lut:rl|Mux31  ;
+; 16:1               ; 4 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |final_top_level|sphere_reg_4:sph4|rand_lut:rl|Mux32  ;
+; 16:1               ; 4 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |final_top_level|sphere_reg_4:sph4|rand_lut:rl|Mux39  ;
+; 16:1               ; 4 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |final_top_level|sphere_reg_4:sph4|rand_lut:rl|Mux43  ;
 ; 16:1               ; 4 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |final_top_level|sphere_reg_4:sph4|rand_lut:rl|Mux45  ;
 ; 16:1               ; 4 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |final_top_level|sphere_reg_4:sph4|rand_lut:rl|Mux48  ;
 ; 16:1               ; 4 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |final_top_level|sphere_reg_4:sph4|rand_lut:rl|Mux53  ;
@@ -3086,7 +3092,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------+-------+----------+-----------------------------+
 ; Port     ; Type  ; Severity ; Details                     ;
 +----------+-------+----------+-----------------------------+
-; a[27..0] ; Input ; Info     ; Stuck at GND                ;
+; a[25..0] ; Input ; Info     ; Stuck at GND                ;
 +----------+-------+----------+-----------------------------+
 
 
@@ -3095,7 +3101,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------+-------+----------+-----------------------------+
 ; Port     ; Type  ; Severity ; Details                     ;
 +----------+-------+----------+-----------------------------+
-; a[27..0] ; Input ; Info     ; Stuck at GND                ;
+; a[25..0] ; Input ; Info     ; Stuck at GND                ;
 +----------+-------+----------+-----------------------------+
 
 
@@ -3220,32 +3226,32 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 70                          ;
-; cycloneiii_ff         ; 1182                        ;
+; cycloneiii_ff         ; 1188                        ;
 ;     CLR               ; 21                          ;
-;     ENA               ; 344                         ;
+;     ENA               ; 349                         ;
 ;     ENA CLR           ; 485                         ;
 ;     ENA SCLR          ; 32                          ;
 ;     ENA SLD           ; 142                         ;
 ;     SCLR              ; 5                           ;
-;     plain             ; 153                         ;
+;     plain             ; 154                         ;
 ; cycloneiii_io_obuf    ; 2                           ;
-; cycloneiii_lcell_comb ; 16209                       ;
-;     arith             ; 6302                        ;
+; cycloneiii_lcell_comb ; 16229                       ;
+;     arith             ; 6310                        ;
 ;         2 data inputs ; 1501                        ;
-;         3 data inputs ; 4801                        ;
-;     normal            ; 9907                        ;
+;         3 data inputs ; 4809                        ;
+;     normal            ; 9919                        ;
 ;         0 data inputs ; 18                          ;
 ;         1 data inputs ; 117                         ;
-;         2 data inputs ; 764                         ;
-;         3 data inputs ; 2214                        ;
-;         4 data inputs ; 6794                        ;
+;         2 data inputs ; 757                         ;
+;         3 data inputs ; 2216                        ;
+;         4 data inputs ; 6811                        ;
 ; cycloneiii_mac_mult   ; 136                         ;
 ; cycloneiii_mac_out    ; 136                         ;
 ; cycloneiii_pll        ; 1                           ;
 ; cycloneiii_ram_block  ; 228                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 182.50                      ;
-; Average LUT depth     ; 55.65                       ;
+; Average LUT depth     ; 55.61                       ;
 +-----------------------+-----------------------------+
 
 
@@ -3254,7 +3260,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:01:37     ;
+; Top            ; 00:01:34     ;
 +----------------+--------------+
 
 
@@ -3264,7 +3270,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
-    Info: Processing started: Sun Apr 29 23:00:36 2018
+    Info: Processing started: Mon Apr 30 01:04:45 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off final_project -c final_project_top
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file hexdriver.sv
@@ -3329,12 +3335,11 @@ Info (12021): Found 1 design units, including 1 entities, in source file hit_det
 Info (12021): Found 1 design units, including 1 entities, in source file output_files/input_handler.sv
     Info (12023): Found entity 1: input_handler
 Info (12127): Elaborating entity "final_top_level" for the top level hierarchy
-Info (10264): Verilog HDL Case Statement information at final_top_level.sv(95): all case item expressions in this case statement are onehot
-Info (10264): Verilog HDL Case Statement information at final_top_level.sv(102): all case item expressions in this case statement are onehot
+Info (10264): Verilog HDL Case Statement information at final_top_level.sv(97): all case item expressions in this case statement are onehot
+Info (10264): Verilog HDL Case Statement information at final_top_level.sv(104): all case item expressions in this case statement are onehot
+Info (10264): Verilog HDL Case Statement information at final_top_level.sv(111): all case item expressions in this case statement are onehot
 Warning (10034): Output port "LEDG[7..3]" at final_top_level.sv(12) has no driver
-Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "Sphere_col" into its bus
 Info (12128): Elaborating entity "sphere_reg_4" for hierarchy "sphere_reg_4:sph4"
-Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "Sphere_col" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "pos" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "col" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "vel" into its bus
@@ -3349,7 +3354,6 @@ Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "vel_rand" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "vel_reset" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "col_rand" into its bus
-Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "Sphere_col" into its bus
 Info (12128): Elaborating entity "add_vector" for hierarchy "sphere_reg_4:sph4|add_vector:va0"
 Info (12128): Elaborating entity "rand_lut" for hierarchy "sphere_reg_4:sph4|rand_lut:rl"
 Warning (10027): Verilog HDL or VHDL warning at the random.sv(25): index expression is not wide enough to address all of the elements in the array
@@ -3468,8 +3472,6 @@ Warning (10036): Verilog HDL or VHDL warning at ps2_mouse_controller.sv(22): obj
 Info (10264): Verilog HDL Case Statement information at ps2_mouse_controller.sv(60): all case item expressions in this case statement are onehot
 Warning (10034): Output port "hex" at ps2_mouse_controller.sv(12) has no driver
 Info (12128): Elaborating entity "input_handler" for hierarchy "input_handler:ih"
-Warning (10230): Verilog HDL assignment warning at input_handler.sv(19): truncated value with size 66 to match size of target (64)
-Warning (10230): Verilog HDL assignment warning at input_handler.sv(20): truncated value with size 66 to match size of target (64)
 Warning (276027): Inferred dual-clock RAM node "frame_buffer:fb|buffer_rtl_0" from synchronous design logic.  The read-during-write behavior of a dual-clock RAM is undefined and may not match the behavior of the original design.
 Info (19000): Inferred 1 megafunctions from design logic
     Info (276029): Inferred altsyncram megafunction from the following design logic: "frame_buffer:fb|buffer_rtl_0" 
@@ -3669,8 +3671,8 @@ Warning (14284): Synthesized away the following node(s):
         Warning (14320): Synthesized away node "collision_detection:cd|mult_real:vsqrmod|lpm_mult:Mult0|mult_v7t:auto_generated|mac_mult31"
         Warning (14320): Synthesized away node "collision_detection:cd|mult_real:vsqrmod|lpm_mult:Mult0|mult_v7t:auto_generated|mac_out32"
 Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Info (13014): Ignored 9165 buffer(s)
-    Info (13019): Ignored 9165 SOFT buffer(s)
+Info (13014): Ignored 9167 buffer(s)
+    Info (13019): Ignored 9167 SOFT buffer(s)
 Info (13000): Registers with preset signals will power-up high
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Warning (13024): Output pins are stuck at VCC or GND
@@ -3725,18 +3727,18 @@ Warning (21074): Design contains 3 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "KEY[1]"
     Warning (15610): No output dependent on input pin "KEY[2]"
     Warning (15610): No output dependent on input pin "KEY[3]"
-Info (21057): Implemented 16879 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 16900 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 13 input pins
     Info (21059): Implemented 55 output pins
     Info (21060): Implemented 2 bidirectional pins
-    Info (21061): Implemented 16308 logic cells
+    Info (21061): Implemented 16329 logic cells
     Info (21064): Implemented 228 RAM segments
     Info (21065): Implemented 1 PLLs
     Info (21062): Implemented 272 DSP elements
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 80 warnings
-    Info: Peak virtual memory: 906 megabytes
-    Info: Processing ended: Sun Apr 29 23:02:29 2018
-    Info: Elapsed time: 00:01:53
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 78 warnings
+    Info: Peak virtual memory: 925 megabytes
+    Info: Processing ended: Mon Apr 30 01:06:32 2018
+    Info: Elapsed time: 00:01:47
     Info: Total CPU time (on all processors): 00:02:00
 
 

@@ -29,19 +29,21 @@ enum logic [7:0] {
 logic Pixel_Clk, Collision, WritePixel, Frame_Clk;
 vector Curr_Sphere_pos, Cast_Ray;
 color Write_col;
-color [3:0] Sphere_col;
+color Sphere_col;
 logic [9:0] DrawX, DrawY, WriteX, WriteY;
 
 fixed_real dPhi, dTheta, Best_Dist, Best_Dist_n, Curr_Dist, Theta, Phi;
 
 logic [1:0] Read_Sphere_in, Best_in, Best_in_n, Curr_Sphere_in;
 
+color Best_col, Best_col_n;
+
 logic Click, Hit;
 logic [1:0] Hit_in;
 	
 sphere_reg_4 sph4(.Clk(CLOCK_50),.Frame_Clk(Frame_Clk),.Reset(~KEY[0]),.Hit(Hit),.Hit_index(Hit_in),.Read_index(Read_Sphere_in),.Sphere_pos(Curr_Sphere_pos),.Sphere_col(Sphere_col),.curr_index(Curr_Sphere_in));
 	
-color_mapper colmap(.is_ball(Best_Dist != 64'hefffffffffffffff), .DrawX(WriteX), .DrawY(WriteY), .colin(Sphere_col[Best_in]), .col(Write_col), .phi(Phi + dPhi));
+color_mapper colmap(.is_ball(Best_Dist != 64'hefffffffffffffff), .DrawX(WriteX), .DrawY(WriteY), .colin(Best_col), .col(Write_col), .phi(Phi + dPhi));
 
 collision_detection cd(.sphere(Curr_Sphere_pos), .ray(Cast_Ray), .tbest(Best_Dist), .tnew(Curr_Dist), .Collision(Collision));
 
@@ -106,6 +108,13 @@ always_ff @ (posedge CLOCK_50 or negedge KEY[0]) begin
 			Sphere3_1: Best_in <= Best_in_n;
 			Write: Best_in <= Best_in_n;
 		endcase
+		case (State_n)
+			Setup1: Best_col <= 24'b0;
+			Sphere1_0: Best_col <= Best_col_n;
+			Sphere2_1: Best_col <= Best_col_n;
+			Sphere3_1: Best_col <= Best_col_n;
+			Write: Best_col <= Best_col_n;
+		endcase
 	end
 end
 
@@ -162,10 +171,12 @@ always_comb begin
 
 	if(Best_Dist > Curr_Dist && Collision)	begin
 		Best_Dist_n = Curr_Dist;
+		Best_col_n = Sphere_col;
 		Best_in_n = Curr_Sphere_in;
 	end
 	else begin
 		Best_Dist_n = Best_Dist;
+		Best_col_n = Best_col;
 		Best_in_n = Best_in;
 	end
 end

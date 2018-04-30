@@ -7,7 +7,7 @@ module sphere_reg_4 (
 	input logic Hit,
 	input logic [1:0] Hit_index, Read_index,
 	output vector Sphere_pos,
-	output color [3:0] Sphere_col,
+	output color Sphere_col,
 	output logic [1:0] curr_index
 );
 
@@ -104,8 +104,6 @@ rand_lut rl(.*);
 
 assign posedge_frame_clk = ~Frame_Clk_old && Frame_Clk;
 
-assign Sphere_col = col;
-
 always_ff @ (posedge Clk or posedge Reset) begin
 	if(Reset) begin
 		pos <= pos_reset;
@@ -130,6 +128,7 @@ end
 always_ff @ (posedge Clk) begin
 	Sphere_pos <= pos[Read_index];
 	curr_index <= Read_index;
+	Sphere_col <= col[Read_index];
 end
 
 always_comb begin

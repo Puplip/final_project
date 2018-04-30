@@ -16,8 +16,8 @@ module input_handler (
 	fixed_real Phi_n, Theta_n, x_buffer_scaled, y_buffer_scaled, Phi_n_raw, Theta_n_raw;
 	fixed_real x_buffer_shifted, y_buffer_shifted;
 	
-	assign x_buffer_shifted = {{6{x_buffer[31]}},x_buffer_fix,28'b0};
-	assign y_buffer_shifted = ~{{6{y_buffer[31]}},y_buffer_fix,28'b0} + 64'd1;
+	assign x_buffer_shifted = {{6{x_buffer[31]}},x_buffer_fix,26'b0};
+	assign y_buffer_shifted = ~{{6{y_buffer[31]}},y_buffer_fix,26'b0} + 64'd1;
 	
 	mult_real mx(.a(x_buffer_shifted),.b(sensitivity),.c(x_buffer_scaled));
 	mult_real my(.a(y_buffer_shifted),.b(sensitivity),.c(y_buffer_scaled));	
