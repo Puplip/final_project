@@ -41,7 +41,7 @@ for(var i = 0; i <= 320; i++) {
 out += "\nendcase\nend\n";
 console.log(out);
 */
-always_ff @ (negedge Clk) begin
+always_ff @ (posedge Clk) begin
 case (inx)
 9'd0: dTheta_raw <= 32'h0;    
 9'd1: dTheta_raw <= 32'hf475e8;    9'd2: dTheta_raw <= 32'h1e8e9a5;    9'd3: dTheta_raw <= 32'h2dd5908;    
@@ -171,7 +171,7 @@ for(var i = 0; i <= 320; i++) {
 out += "\nendcase\nend\n";
 console.log(out);
 */
-always_ff @ (negedge Clk) begin
+always_ff @ (posedge Clk) begin
 case (inx)
 9'd0: y_scaler_raw <= 32'h80000000;    
 9'd1: y_scaler_raw <= 32'h7fffd1a5;    9'd2: y_scaler_raw <= 32'h7fff4694;    9'd3: y_scaler_raw <= 32'h7ffe5ed1;    9'd4: y_scaler_raw <= 32'h7ffd1a63;    9'd5: y_scaler_raw <= 32'h7ffb7952;    
@@ -257,7 +257,7 @@ for(var i = 0; i <= 240; i++) {
 out += "\nendcase\nend\n";
 console.log(out);
 */
-always_ff @ (negedge Clk) begin
+always_ff @ (posedge Clk) begin
 case (iny)
 9'd0: y_raw <= 32'h0;    
 9'd1: y_raw <= 32'hf475e8;    9'd2: y_raw <= 32'h1e8e9a5;    9'd3: y_raw <= 32'h2dd5908;    9'd4: y_raw <= 32'h3d1c1e8;    9'd5: y_raw <= 32'h4c62217;    

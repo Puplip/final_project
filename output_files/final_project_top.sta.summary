@@ -3,23 +3,19 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Setup 'CLOCK_50'
-Slack : -224.982
-TNS   : -32751.407
-
-Type  : Setup 'Pixel_Clk'
-Slack : -6.542
-TNS   : -79.863
+Slack : -213.444
+TNS   : -20483.999
 
 Type  : Setup 'PS2_KBCLK'
-Slack : -3.328
-TNS   : -87.777
+Slack : -2.729
+TNS   : -73.947
 
 Type  : Setup 'vga_clk_instance|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 30.998
+Slack : 29.139
 TNS   : 0.000
 
 Type  : Hold 'CLOCK_50'
-Slack : 0.384
+Slack : 0.179
 TNS   : 0.000
 
 Type  : Hold 'vga_clk_instance|altpll_component|auto_generated|pll1|clk[0]'
@@ -30,17 +26,9 @@ Type  : Hold 'PS2_KBCLK'
 Slack : 0.440
 TNS   : 0.000
 
-Type  : Hold 'Pixel_Clk'
-Slack : 0.654
-TNS   : 0.000
-
 Type  : Minimum Pulse Width 'PS2_KBCLK'
 Slack : -3.210
 TNS   : -62.320
-
-Type  : Minimum Pulse Width 'Pixel_Clk'
-Slack : -1.285
-TNS   : -26.985
 
 Type  : Minimum Pulse Width 'CLOCK_50'
 Slack : 9.412

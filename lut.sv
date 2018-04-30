@@ -46,7 +46,7 @@ assign in = angle_fixed[40:32];
 assign out_fixed = out[15]?(~out[14:0])+15'd1:out[14:0];
 assign sin = {{31{out[15]}},out_fixed,18'd0};
 
-always_ff @ (negedge Clk) begin
+always_ff @ (posedge Clk) begin
 case (in)
 9'd0: out <= 16'b0;    
 9'd1: out <= 16'b100011110;    9'd2: out <= 16'b1000111100;    9'd3: out <= 16'b1101011001;    
@@ -194,7 +194,7 @@ assign in = angle_fixed[40:32];
 assign out_fixed = out[15]?(~out[14:0])+15'd1:out[14:0];
 assign cos = {{31{out[15]}},out_fixed,18'd0};
 
-always_ff @ (negedge Clk) begin
+always_ff @ (posedge Clk) begin
 case (in)
 9'd0: out <= 16'b100000000000000;    
 9'd1: out <= 16'b11111111111110;    9'd2: out <= 16'b11111111110110;    9'd3: out <= 16'b11111111101010;    
@@ -374,8 +374,6 @@ wgt_mean wm3(.low(cosPhi_0),.high(cosPhi_1),.out(cosPhi_fix),.wgt(phi[31:30]));
 
 mult_real m0(.a(sinTheta_fix),.b(sinPhi_fix),.c(y));
 mult_real m1(.a(sinTheta_fix),.b(cosPhi_fix),.c(z));
-
-
 
 assign x = cosTheta_fix;
 

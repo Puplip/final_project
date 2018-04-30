@@ -16,6 +16,7 @@ module final_top_level (
 enum logic [7:0] {
 	Setup0,
 	Setup1,
+	Setup2,
 	Sphere0_0,
 	Sphere0_1,
 	Sphere1_0,
@@ -26,11 +27,11 @@ enum logic [7:0] {
 	Sphere3_1,
 	Write} State, State_n;
 
-logic Pixel_Clk, Collision, WritePixel, Frame_Clk;
+logic Collision, WritePixel, Frame_Clk, Frame_Clk_n;
 vector Curr_Sphere_pos, Cast_Ray;
 color Write_col;
 color Sphere_col;
-logic [9:0] DrawX, DrawY, WriteX, WriteY;
+logic [9:0] DrawX, DrawY, WriteX, WriteY, WriteX_n, WriteY_n, WriteX_inc, WriteY_inc;
 
 fixed_real dPhi, dTheta, Best_Dist, Best_Dist_n, Curr_Dist, Theta, Phi;
 
@@ -51,7 +52,7 @@ VGA_controller vga(.Clk(CLOCK_50), .Reset(~KEY[0]), .*);
 
 frame_buffer fb(.Clk(CLOCK_50), .Write(WritePixel), .*, .WriteColor(Write_col), .ReadColor({VGA_B, VGA_G, VGA_R}));
 
-increment_write iw(.Clk(Pixel_Clk), .Reset(~KEY[0]), .*);
+increment_write iw(.*);
 
 ang_lut al(.Clk(CLOCK_50), .WriteY(WriteY), .WriteX(WriteX),.dTheta(dTheta), .dPhi(dPhi));
 
@@ -78,106 +79,106 @@ assign LEDR[8:0] = mouse_dy;
 
 always_ff @ (posedge CLOCK_50 or negedge KEY[0]) begin
 	if(~KEY[0])begin
-		State = Setup0;
+		State <= Setup0;
+		Best_Dist <= 64'hefffffffffffffff;
+		Best_col <= 24'h000000;
+		Best_in <= 2'b00;
+		WriteX <= 10'd0;
+		WriteY <= 10'd0;
+		Frame_Clk <= 1'b1;
 	end else begin
-		State = State_n;
-		case (State_n)
-			Setup0: Pixel_Clk <= 1'b1;
-			Setup1: Pixel_Clk <= 1'b1;
-			Sphere0_0: Pixel_Clk <= 1'b0;
-			Sphere0_1: Pixel_Clk <= 1'b0;
-			Sphere1_0: Pixel_Clk <= 1'b0;
-			Sphere1_1: Pixel_Clk <= 1'b0;
-			Sphere2_0: Pixel_Clk <= 1'b0;
-			Sphere2_1: Pixel_Clk <= 1'b0;
-			Sphere3_0: Pixel_Clk <= 1'b0;
-			Sphere3_1: Pixel_Clk <= 1'b0;
-			Write: Pixel_Clk <= 1'b0;
-		endcase
-		case (State_n)
-			Setup0: Best_Dist <= 64'hefffffffffffffff;
-			Sphere1_0: Best_Dist <= Best_Dist_n;
-			Sphere2_0: Best_Dist <= Best_Dist_n;
-			Sphere3_0: Best_Dist <= Best_Dist_n;
-			Write: Best_Dist <= Best_Dist_n;
-		endcase
-		case (State_n)
-			Setup1: Best_in <= 2'b0;
-			Sphere1_0: Best_in <= Best_in_n;
-			Sphere2_1: Best_in <= Best_in_n;
-			Sphere3_1: Best_in <= Best_in_n;
-			Write: Best_in <= Best_in_n;
-		endcase
-		case (State_n)
-			Setup1: Best_col <= 24'b0;
-			Sphere1_0: Best_col <= Best_col_n;
-			Sphere2_1: Best_col <= Best_col_n;
-			Sphere3_1: Best_col <= Best_col_n;
-			Write: Best_col <= Best_col_n;
-		endcase
+		State <= State_n;
+		Best_Dist <= Best_Dist_n;
+		Best_col <= Best_col_n;
+		Best_in <= Best_in_n;
+		WriteX <= WriteX_n;
+		WriteY <= WriteY_n;
+		Frame_Clk <= Frame_Clk_n;
 	end
 end
 
 always_comb begin
 	State_n = State;
-	WritePixel = 0;
+	WriteX_n = WriteX;
+	WriteY_n = WriteY;
+	Best_in_n = Best_in;
+	Best_col_n = Best_col;
+	Best_Dist_n = Best_Dist;
+	Read_Sphere_in = 2'd0;
+	WritePixel = 1'b0;
+	Frame_Clk_n = 1'b0;
 	case (State)
 		Setup0: begin
 			State_n = Setup1;
-			Read_Sphere_in = 2'd0;
 		end
 		Setup1: begin
+			State_n = Setup2;
+		end
+		Setup2: begin
 			State_n = Sphere0_0;
-			Read_Sphere_in = 2'd0;
+			Read_Sphere_in = 2'b00;
 		end
 		Sphere0_0: begin
 			State_n = Sphere0_1;
-			Read_Sphere_in = 2'd0;
+			Read_Sphere_in = 2'b00;
+			Best_Dist_n = 64'hefffffffffffffff;
 		end
 		Sphere0_1: begin
 			State_n = Sphere1_0;
-			Read_Sphere_in = 2'd1;
+			Read_Sphere_in = 2'b01;
+			if(Collision && ~Curr_Dist[63] && Curr_Dist < Best_Dist) begin
+				Best_Dist_n = Curr_Dist;
+				Best_col_n = Sphere_col;
+				Best_in_n = Curr_Sphere_in;
+			end
 		end
 		Sphere1_0: begin
 			State_n = Sphere1_1;
-			Read_Sphere_in = 2'd1;
+			Read_Sphere_in = 2'b01;
 		end
 		Sphere1_1: begin
 			State_n = Sphere2_0;
-			Read_Sphere_in = 2'd2;
+			Read_Sphere_in = 2'b10;
+			if(Collision && ~Curr_Dist[63] && Curr_Dist < Best_Dist) begin
+				Best_Dist_n = Curr_Dist;
+				Best_col_n = Sphere_col;
+				Best_in_n = Curr_Sphere_in;
+			end
 		end
 		Sphere2_0: begin
 			State_n = Sphere2_1;
-			Read_Sphere_in = 2'd2;
+			Read_Sphere_in = 2'b10;
 		end
 		Sphere2_1: begin
 			State_n = Sphere3_0;
-			Read_Sphere_in = 2'd3;
+			Read_Sphere_in = 2'b11;
+			if(Collision && ~Curr_Dist[63] && Curr_Dist < Best_Dist) begin
+				Best_Dist_n = Curr_Dist;
+				Best_col_n = Sphere_col;
+				Best_in_n = Curr_Sphere_in;
+			end
 		end
 		Sphere3_0: begin
 			State_n = Sphere3_1;
-			Read_Sphere_in = 2'd3;
+			Read_Sphere_in = 2'b11;
 		end
 		Sphere3_1: begin
 			State_n = Write;
-			Read_Sphere_in = 2'd0;
+			if(Collision && ~Curr_Dist[63] && Curr_Dist < Best_Dist) begin
+				Best_Dist_n = Curr_Dist;
+				Best_col_n = Sphere_col;
+				Best_in_n = Curr_Sphere_in;
+			end
 		end
 		Write: begin
 			State_n = Setup0;
-			WritePixel = 1;
-			Read_Sphere_in = 2'd0;
+			WritePixel = 1'b1;
+			WriteX_n = WriteX_inc;
+			WriteY_n = WriteY_inc;
 		end
 	endcase
-
-	if(Best_Dist > Curr_Dist && Collision)	begin
-		Best_Dist_n = Curr_Dist;
-		Best_col_n = Sphere_col;
-		Best_in_n = Curr_Sphere_in;
-	end
-	else begin
-		Best_Dist_n = Best_Dist;
-		Best_col_n = Best_col;
-		Best_in_n = Best_in;
+	if(WriteX_inc == 10'b0 && WriteY_inc == 10'b0) begin
+		Frame_Clk_n = 1'b1;
 	end
 end
 
