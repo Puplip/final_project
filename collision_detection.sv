@@ -27,7 +27,7 @@ always_comb begin
 	
 	//if (tbest > v - rad) begin
 	bsqr = cdot - vsqr;
-	if (radsq > bsqr) begin
+	if (radsq > bsqr || bsqr[63]) begin
 		tnew = v - sqrt;
 		Collision = 1'b1;
 	end

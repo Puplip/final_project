@@ -7,15 +7,26 @@ module input_handler (
 	input logic new_data,
 	input logic [8:0] dx, dy,
 	input logic m1, m2, m3,
+	input fixed_real sensitivity,
 	output fixed_real Theta, Phi,
 	output logic Click
 );
 	logic old_frame_clk, frame_clk_rising_edge, new_data_rising_edge, old_new_data, old_m1, old_m1_n, Click_n;
-	logic [31:0] x_buffer, y_buffer, x_buffer_n, y_buffer_n;
+	logic [31:0] x_buffer, y_buffer, x_buffer_n, y_buffer_n, x_buffer_mag, y_buffer_mag, x_buffer_fix, y_buffer_fix;
 	fixed_real Phi_n, Theta_n, x_buffer_scaled, y_buffer_scaled, Phi_n_raw, Theta_n_raw;
+	fixed_real x_buffer_shifted, y_buffer_shifted;
 	
-	assign x_buffer_scaled = {{4{x_buffer[31]}},x_buffer,28'b0};
-	assign y_buffer_scaled = ~{{4{y_buffer[31]}},y_buffer,28'b0} + 64'd1;
+	assign x_buffer_shifted = {{6{x_buffer[31]}},x_buffer_fix,28'b0};
+	assign y_buffer_shifted = ~{{6{y_buffer[31]}},y_buffer_fix,28'b0} + 64'd1;
+	
+	mult_real mx(.a(x_buffer_shifted),.b(sensitivity),.c(x_buffer_scaled));
+	mult_real my(.a(y_buffer_shifted),.b(sensitivity),.c(y_buffer_scaled));	
+	
+	assign x_buffer_mag = x_buffer[31]?(~x_buffer) + 32'd1:x_buffer;
+	assign y_buffer_mag = y_buffer[31]?(~y_buffer) + 32'd1:y_buffer;
+	
+	assign x_buffer_fix = (x_buffer_mag > 32'b111111)?32'b0:x_buffer;
+	assign y_buffer_fix = (y_buffer_mag > 32'b111111)?32'b0:y_buffer;
 	
 	assign Theta_n_raw = x_buffer_scaled + Theta;
 	assign Phi_n_raw = y_buffer_scaled + Phi;

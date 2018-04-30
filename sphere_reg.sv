@@ -33,10 +33,10 @@ logic Frame_Clk_old, posedge_frame_clk;
 vector gravity;
 assign gravity = {~(64'd4 << 32) + 64'd1,64'd0,64'd0};
 
-assign acc[0] = 192'd0;
-assign acc[1] = 192'd0;
-assign acc[2] = 192'd0;
-assign acc[3] = 192'd0;
+assign acc[0] = gravity;
+assign acc[1] = gravity;
+assign acc[2] = gravity;
+assign acc[3] = gravity;
 
 /*assign pos_rand[0] = {~(64'd2400 << 32) + 64'd1,64'd2880 << 32 + {19'b0,random[63:60],9'b0,32'b0},{{20{random[47]}},random[43:40],8'b0,32'b0}};
 assign pos_rand[1] = {~(64'd2400 << 32) + 64'd1,64'd2880 << 32 + {19'b0,random[59:56],9'b0,32'b0},{{20{random[46]}},random[39:36],8'b0,32'b0}};
@@ -52,12 +52,13 @@ assign vel_reset[0] = 192'b0;
 assign vel_reset[1] = 192'b0;
 assign vel_reset[2] = 192'b0;
 assign vel_reset[3] = 192'b0;
+*/
 
 assign vel_rand[0] = {64'd200 << 32,{28{random[0]}},random[47:32],20'd0,{28{random[1]}},random[31:16],20'd0};
 assign vel_rand[1] = {64'd200 << 32,{28{random[2]}},random[62:47],20'd0,{28{random[3]}},random[46:31],20'd0};
 assign vel_rand[2] = {64'd200 << 32,{28{random[4]}},random[61:46],20'd0,{28{random[5]}},random[45:30],20'd0};
 assign vel_rand[3] = {64'd200 << 32,{28{random[6]}},random[60:45],20'd0,{28{random[7]}},random[44:29],20'd0};
-*/
+
 assign pos_rand[0] = {~(64'd2400 << 32) + 64'd1,64'd4800 << 32,~(64'd2400 << 32) + 64'd1};
 assign pos_rand[1] = {~(64'd2400 << 32) + 64'd1,64'd4800 << 32,64'd2400};
 assign pos_rand[2] = {~(64'd2400 << 32) + 64'd1,64'd9600 << 32,~(64'd2400 << 32) + 64'd1};
@@ -73,15 +74,21 @@ assign vel_reset[1] = 192'b0;
 assign vel_reset[2] = 192'b0;
 assign vel_reset[3] = 192'b0;
 
-assign vel_rand[0] = 192'b0;
-assign vel_rand[1] = 192'b0;
-assign vel_rand[2] = 192'b0;
-assign vel_rand[3] = 192'b0;
+//assign vel_rand[0] = 192'b0;
+//assign vel_rand[1] = 192'b0;
+//assign vel_rand[2] = 192'b0;
+//assign vel_rand[3] = 192'b0;
 
-assign col_rand[0] = {random[63:56],random[55:48],random[47:40]};
-assign col_rand[1] = {random[39:32],random[31:24],random[23:16]};
-assign col_rand[2] = {random[15:8],random[7:0],random[62:55]};
-assign col_rand[3] = {random[54:47],random[46:39],random[38:31]};
+//assign col_rand[0] = {random[63:56],random[55:48],random[47:40]};
+//assign col_rand[1] = {random[39:32],random[31:24],random[23:16]};
+//assign col_rand[2] = {random[15:8],random[7:0],random[62:55]};
+//assign col_rand[3] = {random[54:47],random[46:39],random[38:31]};
+
+assign col_rand[0] = 24'h0000ff;
+assign col_rand[1] = 24'h00ff00;
+assign col_rand[2] = 24'hff0000;
+assign col_rand[3] = 24'hffff00;
+
 
 add_vector va0(.a(vel[0]),.b(acc[0]),.c(velacc[0]));
 add_vector va1(.a(vel[1]),.b(acc[1]),.c(velacc[1]));

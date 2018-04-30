@@ -9,7 +9,8 @@ module final_top_level (
 	output logic [7:0] VGA_R, VGA_G, VGA_B,      
 	output logic VGA_CLK, VGA_SYNC_N, VGA_BLANK_N, VGA_VS, VGA_HS,
 	output logic [17:0] LEDR,
-	output logic [7:0] LEDG
+	output logic [7:0] LEDG,
+	input logic [7:0] SW
 );
 
 enum logic [7:0] {
@@ -64,7 +65,7 @@ logic [7:0] test_state;
 
 ps2_mouse_controller ps2m(.Clk(CLOCK_50), .Reset(~KEY[0]),.PS2_MSCLK(PS2_KBCLK),.PS2_MSDAT(PS2_KBDAT),.Mouse_LeftClick(mouse_m1),.Mouse_dx(mouse_dx),.Mouse_dy(mouse_dy),.packetReceived(mouse_packet));
 
-input_handler ih(.*,.Reset(~KEY[0]),.Clk(CLOCK_50),.m1(mouse_m1),.m2(),.m3(),.dx(mouse_dx),.dy(mouse_dy),.new_data(mouse_packet));
+input_handler ih(.*,.Reset(~KEY[0]),.Clk(CLOCK_50),.m1(mouse_m1),.m2(),.m3(),.dx(mouse_dx),.dy(mouse_dy),.new_data(mouse_packet),.sensitivity({24'd0,SW,32'd0}));
 
 assign LEDG[2] = 1'b1;
 assign LEDG[0] = mouse_m1;
@@ -80,7 +81,7 @@ always_ff @ (posedge CLOCK_50 or negedge KEY[0]) begin
 		State = State_n;
 		case (State_n)
 			Setup0: Pixel_Clk <= 1'b1;
-			Setup1: Pixel_Clk <= 1'b01;
+			Setup1: Pixel_Clk <= 1'b1;
 			Sphere0_0: Pixel_Clk <= 1'b0;
 			Sphere0_1: Pixel_Clk <= 1'b0;
 			Sphere1_0: Pixel_Clk <= 1'b0;
@@ -99,7 +100,7 @@ always_ff @ (posedge CLOCK_50 or negedge KEY[0]) begin
 			Write: Best_Dist <= Best_Dist_n;
 		endcase
 		case (State_n)
-			Setup0: Best_in <= 2'b0;
+			Setup1: Best_in <= 2'b0;
 			Sphere1_0: Best_in <= Best_in_n;
 			Sphere2_1: Best_in <= Best_in_n;
 			Sphere3_1: Best_in <= Best_in_n;

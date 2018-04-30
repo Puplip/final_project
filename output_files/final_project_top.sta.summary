@@ -3,87 +3,51 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Setup 'CLOCK_50'
-Slack : -228.634
-TNS   : -34471.107
-
-Type  : Setup 'KEY[0]'
-Slack : -56.793
-TNS   : -704.825
+Slack : -225.924
+TNS   : -32623.823
 
 Type  : Setup 'Pixel_Clk'
-Slack : -5.628
-TNS   : -78.474
-
-Type  : Setup 'vga_clk_instance|altpll_component|auto_generated|pll1|clk[0]'
-Slack : -4.660
-TNS   : -67.682
+Slack : -5.825
+TNS   : -75.888
 
 Type  : Setup 'PS2_KBCLK'
-Slack : -4.093
-TNS   : -106.812
+Slack : -2.524
+TNS   : -74.118
 
-Type  : Hold 'CLOCK_50'
-Slack : 0.383
+Type  : Setup 'vga_clk_instance|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 25.411
 TNS   : 0.000
 
-Type  : Hold 'vga_clk_instance|altpll_component|auto_generated|pll1|clk[0]'
+Type  : Hold 'CLOCK_50'
 Slack : 0.385
 TNS   : 0.000
 
+Type  : Hold 'vga_clk_instance|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 0.401
+TNS   : 0.000
+
 Type  : Hold 'PS2_KBCLK'
-Slack : 0.440
+Slack : 0.425
 TNS   : 0.000
 
 Type  : Hold 'Pixel_Clk'
-Slack : 0.653
-TNS   : 0.000
-
-Type  : Hold 'KEY[0]'
-Slack : 2.567
-TNS   : 0.000
-
-Type  : Recovery 'Pixel_Clk'
-Slack : -1.374
-TNS   : -26.691
-
-Type  : Recovery 'CLOCK_50'
-Slack : -0.865
-TNS   : -9.396
-
-Type  : Recovery 'PS2_KBCLK'
-Slack : -0.756
-TNS   : -4.536
-
-Type  : Removal 'CLOCK_50'
-Slack : 0.704
-TNS   : 0.000
-
-Type  : Removal 'Pixel_Clk'
-Slack : 0.892
-TNS   : 0.000
-
-Type  : Removal 'PS2_KBCLK'
-Slack : 0.905
+Slack : 0.656
 TNS   : 0.000
 
 Type  : Minimum Pulse Width 'PS2_KBCLK'
 Slack : -3.210
-TNS   : -62.320
-
-Type  : Minimum Pulse Width 'KEY[0]'
-Slack : -3.000
-TNS   : -3.000
+TNS   : -62.364
 
 Type  : Minimum Pulse Width 'Pixel_Clk'
 Slack : -1.285
 TNS   : -26.985
 
 Type  : Minimum Pulse Width 'CLOCK_50'
-Slack : 9.527
+Slack : 9.412
 TNS   : 0.000
 
 Type  : Minimum Pulse Width 'vga_clk_instance|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 19.711
+Slack : 19.708
 TNS   : 0.000
 
 ------------------------------------------------------------
