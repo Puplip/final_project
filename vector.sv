@@ -89,18 +89,32 @@ uses cross product to get the thing under the sqrt
 then sqrt's to get the magnitude.
 then just rescales by 1/magnitude (there is a division step first).
 */
-/*
+
 module normalize_vector (
 	input vector a,
 	output vector b
 );
 	fixed_real Mag, Cross, InvMag;
+	fixed_real div0, div1, div2;
+	fixed_real amag0, amag1, amag2;
 	dot_product_scale dps0(.a(a),.b(a),.c(Cross));
-	fake_sqrt fs0(.a(Cross),.b(Mag));
-	fake_div fd0(.a(1 << 16),.b(Mag),.c(InvMag));
-	dot_product_scale dps1(.a(a),.b({InvMag,InvMag,InvMag}),.s(b));
+	sqrt_real_32 sqrt0(.a(Cross[55:24]),.c(Mag[51:20]));
+	
+	assign Mag[63:52] = 12'b0;
+	assign Mag[19:0] = 20'b0;
+	
+	assign amag0 = a[0][63]?(~a[0]) + 64'd1:a[0];
+	assign amag1 = a[1][63]?(~a[1]) + 64'd1:a[1];
+	assign amag2 = a[2][63]?(~a[2]) + 64'd1:a[2];
+	
+	assign div0 = {amag0[47:0],16'b0}/{16'b0,Mag[63:16]};
+	assign div1 = {amag1[47:0],16'b0}/{16'b0,Mag[63:16]};
+	assign div2 = {amag2[47:0],16'b0}/{16'b0,Mag[63:16]};
+	
+	assign b[0] = a[0][63]?~div0 + 64'd1:div0;
+	assign b[1] = a[1][63]?~div1 + 64'd1:div1;
+	assign b[2] = a[2][63]?~div2 + 64'd1:div2;
 endmodule
-*/
 
 
 /*
@@ -108,11 +122,11 @@ uses a digit by digit method to compute the square root.
 at the time of writing the code I understood how it worked... it works I swear.
 */
 module sqrt_real_32 (
-	input fixed_real a,
-	output fixed_real c
+	input logic [31:0] a,
+	output logic [31:0] c
 );
 	logic [15:0] res;
-	fixed_real [15:0] sub, sum, try;
+	logic [15:0] [31:0] sub, sum, try;
 	
 	
 	assign sum[15] = (a[31])?((~a)+1):(a);

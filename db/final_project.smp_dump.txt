@@ -11,6 +11,14 @@ State.Sphere3_0 0 1 0 0 0 0 0 1 0
 State.Sphere3_1 1 0 0 0 0 0 0 1 0 
 State.Write 0 0 0 0 0 0 0 1 1 
 
+State Machine - |final_top_level|input_handler:ih|State
+Name State.Cam0 State.Cam3 State.Cam2 State.Cam1 State.Cam4 
+State.Cam4 0 0 0 0 0 
+State.Cam1 0 0 0 1 1 
+State.Cam2 0 0 1 0 1 
+State.Cam3 0 1 0 0 1 
+State.Cam0 1 0 0 0 1 
+
 State Machine - |final_top_level|ps2_mouse_controller:ps2m|next_state
 Name next_state.Twelve next_state.Read next_state.TenEleven next_state.Nine next_state.Seven next_state.Six next_state.Four next_state.Two next_state.One 
 next_state.One 0 0 0 0 0 0 0 0 0 

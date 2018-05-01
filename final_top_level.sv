@@ -26,14 +26,14 @@ enum logic [7:0] {
 	Write} State, State_n;
 
 logic Collision, WritePixel, Frame_Clk, Frame_Clk_n;
-vector Curr_Sphere_pos, Cast_Ray, Cast_Ray_n, Cast_Ray_out;
+vector Curr_Sphere_pos, Cast_Ray, Cast_Ray_n;
 color Write_col;
 color Sphere_col;
 logic [9:0] DrawX, DrawY, WriteX, WriteY, WriteX_n, WriteY_n, WriteX_inc, WriteY_inc;
 logic [15:0] Score, Lives;
 logic [3:0] Dropped;
 
-fixed_real dPhi, dTheta, Best_Dist, Best_Dist_n, Curr_Dist, Theta, Phi, dTheta_out, dPhi_out, dTheta_n, dPhi_n;
+fixed_real Best_Dist, Best_Dist_n, Curr_Dist, Theta, Phi;
 
 logic [1:0] Read_Sphere_in, Best_in, Best_in_n, Curr_Sphere_in;
 
@@ -44,7 +44,7 @@ logic [1:0] Hit_in;
 	
 sphere_reg_4 sph4(.Clk(CLOCK_50),.Frame_Clk(Frame_Clk),.Reset(~KEY[0]),.Hit(Hit),.Hit_index(Hit_in),.Read_index(Read_Sphere_in),.Sphere_pos(Curr_Sphere_pos),.Sphere_col(Sphere_col),.curr_index(Curr_Sphere_in),.dropped(Dropped));
 	
-color_mapper colmap(.is_ball(Best_Dist != 64'hefffffffffffffff), .DrawX(WriteX), .DrawY(WriteY), .colin(Best_col), .col(Write_col), .phi(Phi + dPhi));
+color_mapper colmap(.is_ball(Best_Dist != 64'hefffffffffffffff), .DrawX(WriteX), .DrawY(WriteY), .colin(Best_col), .col(Write_col), .phi(Cast_Ray[2]));
 
 collision_detection cd(.sphere(Curr_Sphere_pos), .ray(Cast_Ray), .tbest(Best_Dist), .tnew(Curr_Dist), .Collision(Collision));
 
@@ -54,9 +54,22 @@ frame_buffer fb(.Clk(CLOCK_50), .Write(WritePixel), .*, .WriteColor(Write_col), 
 
 increment_write iw(.*);
 
-ang_lut al(.Clk(CLOCK_50), .WriteY(WriteY_inc), .WriteX(WriteX_inc),.dTheta(dTheta_out), .dPhi(dPhi_out));
 
-ray_lut rl(.Clk(CLOCK_50), .theta(Theta + dTheta_out), .phi(Phi + dPhi_out), .ray(Cast_Ray_out));
+vector dxcx, dycy, dxcy, sv_raw, sv_norm, Camera_Ray, CameraX, CameraY, dxcx_n, dycy_n, Cam_scale_out, Cam_dim;
+
+normalize_vector nvsv(.a(sv_raw),.b(sv_norm));
+
+fixed_real WriteX_scale, WriteY_scale, Cam_scale;
+
+assign WriteX_scale = {22'd0,WriteX_inc,32'd0} - (64'd320 << 32);
+
+assign WriteY_scale = {22'd0,WriteY_inc,32'd0} - (64'd240 << 32);
+
+dot_product_scale dpsx(.a({Cam_scale,Cam_scale,Cam_scale}),.b(Cam_dim),.s(Cam_scale_out));
+
+add_vector av0(.a(dxcx),.b(dycy),.c(dxcy));
+
+add_vector av1(.a(dxcy),.b(Camera_Ray),.c(sv_raw));
 
 vga_clk vga_clk_instance(.inclk0(CLOCK_50), .c0(VGA_CLK));
 
@@ -94,12 +107,12 @@ always_ff @ (posedge CLOCK_50 or negedge KEY[0]) begin
 		Best_Dist <= 64'hefffffffffffffff;
 		Best_col <= 24'h000000;
 		Best_in <= 2'b00;
-		WriteX <= 10'd0;
-		WriteY <= 10'd0;
+		WriteX <= 10'd630;
+		WriteY <= 10'd479;
 		Frame_Clk <= 1'b1;
-		dTheta <= 64'b0;
-		dPhi <= 64'b0;
-		Cast_Ray = 192'b0;
+		Cast_Ray <= 192'b0;
+		dxcx <= 192'b0;
+		dycy <= 192'b0;
 	end else begin
 		State <= State_n;
 		Best_Dist <= Best_Dist_n;
@@ -108,9 +121,9 @@ always_ff @ (posedge CLOCK_50 or negedge KEY[0]) begin
 		WriteX <= WriteX_n;
 		WriteY <= WriteY_n;
 		Frame_Clk <= Frame_Clk_n;
-		dTheta <= dTheta_n;
-		dPhi <= dPhi_n;
-		Cast_Ray = Cast_Ray_n;
+		Cast_Ray <= Cast_Ray_n;
+		dxcx <= dxcx_n;
+		dycy <= dycy_n;
 	end
 end
 
@@ -124,14 +137,19 @@ always_comb begin
 	Read_Sphere_in = 2'd0;
 	WritePixel = 1'b0;
 	Frame_Clk_n = Frame_Clk;
-	dTheta_n = dTheta;
-	dPhi_n = dPhi;
 	Cast_Ray_n = Cast_Ray;
+	dxcx_n = dxcx;
+	dycy_n = dycy;
+	Cam_scale = 64'b0;
+	Cam_dim = 192'b0;
 	case (State)
 		Sphere0_0: begin
 			State_n = Sphere0_1;
 			Read_Sphere_in = 2'b00;
 			Best_Dist_n = 64'hefffffffffffffff;
+			Cam_scale = WriteX_scale;
+			Cam_dim = CameraX;
+			dxcx_n = Cam_scale_out;
 		end
 		Sphere0_1: begin
 			State_n = Sphere1_0;
@@ -141,6 +159,9 @@ always_comb begin
 				Best_col_n = Sphere_col;
 				Best_in_n = Curr_Sphere_in;
 			end
+			Cam_scale = WriteY_scale;
+			Cam_dim = CameraY;
+			dycy_n = Cam_scale_out;
 		end
 		Sphere1_0: begin
 			State_n = Sphere1_1;
@@ -185,11 +206,9 @@ always_comb begin
 			WritePixel = 1'b1;
 			WriteX_n = WriteX_inc;
 			WriteY_n = WriteY_inc;
-			Cast_Ray_n = Cast_Ray_out;
-			dPhi_n = dPhi_out;
-			dTheta_n = dTheta_out;
+			Cast_Ray_n = sv_norm;
 			Read_Sphere_in = 2'b00;
-			if(WriteX_inc == 10'b0 && WriteY_inc == 10'b0) begin
+			if(WriteX_inc == 10'd638 && WriteY_inc == 10'd479) begin
 				Frame_Clk_n = 1'b1;
 			end else begin
 				Frame_Clk_n = 1'b0;

@@ -39,10 +39,10 @@ assign acc[1] = gravity;
 assign acc[2] = gravity;
 assign acc[3] = gravity;
 
-assign pos_rand[0] = {~(64'd2400 << 32) + 64'd1,64'd2880 << 32 + {19'b0,random[63:60],9'b0,32'b0},{20{random[47]}},random[43:40],8'b0,32'b0};
-assign pos_rand[1] = {~(64'd2400 << 32) + 64'd1,64'd2880 << 32 + {19'b0,random[59:56],9'b0,32'b0},{20{random[46]}},random[39:36],8'b0,32'b0};
-assign pos_rand[2] = {~(64'd2400 << 32) + 64'd1,64'd2880 << 32 + {19'b0,random[55:52],9'b0,32'b0},{20{random[45]}},random[35:32],8'b0,32'b0};
-assign pos_rand[3] = {~(64'd2400 << 32) + 64'd1,64'd2880 << 32 + {19'b0,random[51:48],9'b0,32'b0},{20{random[44]}},random[31:28],8'b0,32'b0};
+assign pos_rand[0] = {~(64'd2400 << 32) + 64'd1,64'd3840 << 32,64'b0};
+assign pos_rand[1] = {~(64'd2400 << 32) + 64'd1,64'd4800 << 32,64'b0};
+assign pos_rand[2] = {~(64'd2400 << 32) + 64'd1,64'd5760 << 32,64'b0};
+assign pos_rand[3] = {~(64'd2400 << 32) + 64'd1,64'd7680 << 32,64'b0};
 
 assign vel_rand[0] = {64'd200 << 32,{26{random[0]}},random[47:32],22'd0,{26{random[1]}},random[31:16],22'd0};
 assign vel_rand[1] = {64'd200 << 32,{26{random[2]}},random[62:47],22'd0,{26{random[3]}},random[46:31],22'd0};
@@ -71,15 +71,15 @@ assign vel_reset[1] = vel_rand[1];
 assign vel_reset[2] = vel_rand[2];
 assign vel_reset[3] = vel_rand[3];
 
-//assign col_rand[0] = {random[63:56],random[55:48],random[47:40]};
-//assign col_rand[1] = {random[39:32],random[31:24],random[23:16]};
-//assign col_rand[2] = {random[15:8],random[7:0],random[62:55]};
-//assign col_rand[3] = {random[54:47],random[46:39],random[38:31]};
+assign col_rand[0] = {random[63:56],random[55:48],random[47:40]};
+assign col_rand[1] = {random[39:32],random[31:24],random[23:16]};
+assign col_rand[2] = {random[15:8],random[7:0],random[62:55]};
+assign col_rand[3] = {random[54:47],random[46:39],random[38:31]};
 
-assign col_rand[0] = 24'h0000ff;
+/*assign col_rand[0] = 24'h0000ff;
 assign col_rand[1] = 24'h00ff00;
 assign col_rand[2] = 24'hff0000;
-assign col_rand[3] = 24'hffff00;
+assign col_rand[3] = 24'hffff00;*/
 
 
 add_vector va0(.a(vel[0]),.b(acc[0]),.c(velacc[0]));

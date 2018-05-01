@@ -9,11 +9,15 @@ timeunit 10ns;
 
 logic CLOCK_50;
 logic [3:0] KEY;
-logic [7:0] VGA_R, VGA_G, VGA_B;
-logic VGA_CLK, VGA_SYNC_N, VGA_BLANK_N, VGA_VS, VGA_HS;
-logic PS2_KBCLK, PS2_KBDAT;
-
-//final_top_level ftl(.*);
+wire PS2_KBCLK, PS2_KBDAT;
+ logic [7:0] VGA_R, VGA_G, VGA_B;
+ logic VGA_CLK, VGA_SYNC_N, VGA_BLANK_N, VGA_VS, VGA_HS;
+ logic [17:0] LEDR;
+ logic [7:0] LEDG;
+logic [7:0] SW;
+ logic [6:0] HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, HEX6, HEX7;
+ 
+final_top_level ftl(.*);
 
 initial begin
 CLOCK_50 = 1'b1;
@@ -31,27 +35,3 @@ end
 
 endmodule
 
-module random_testbench();
-
-timeprecision 1ns;
-timeunit 10ns;
-
-logic Clk, Reset;
-fixed_real random;
-
-rand_lut rl(.*);
-
-initial begin
-Clk = 1'b1;
-end
-
-always begin
-#1 Clk = ~Clk;
-end
-
-initial begin
-Reset = 1'b1;
-#4 Reset = 1'b0;
-end
-
-endmodule
