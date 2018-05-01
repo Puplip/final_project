@@ -1,18 +1,15 @@
 
 State Machine - |final_top_level|State
-Name State.Write State.Sphere3_1 State.Sphere3_0 State.Sphere2_1 State.Sphere2_0 State.Sphere1_1 State.Sphere1_0 State.Sphere0_1 State.Sphere0_0 State.Setup2 State.Setup1 State.Setup0 
-State.Setup0 0 0 0 0 0 0 0 0 0 0 0 0 
-State.Setup1 0 0 0 0 0 0 0 0 0 0 1 1 
-State.Setup2 0 0 0 0 0 0 0 0 0 1 0 1 
-State.Sphere0_0 0 0 0 0 0 0 0 0 1 0 0 1 
-State.Sphere0_1 0 0 0 0 0 0 0 1 0 0 0 1 
-State.Sphere1_0 0 0 0 0 0 0 1 0 0 0 0 1 
-State.Sphere1_1 0 0 0 0 0 1 0 0 0 0 0 1 
-State.Sphere2_0 0 0 0 0 1 0 0 0 0 0 0 1 
-State.Sphere2_1 0 0 0 1 0 0 0 0 0 0 0 1 
-State.Sphere3_0 0 0 1 0 0 0 0 0 0 0 0 1 
-State.Sphere3_1 0 1 0 0 0 0 0 0 0 0 0 1 
-State.Write 1 0 0 0 0 0 0 0 0 0 0 1 
+Name State.Sphere3_1 State.Sphere3_0 State.Sphere2_1 State.Sphere2_0 State.Sphere1_1 State.Sphere1_0 State.Sphere0_1 State.Sphere0_0 State.Write 
+State.Sphere0_0 0 0 0 0 0 0 0 0 0 
+State.Sphere0_1 0 0 0 0 0 0 1 1 0 
+State.Sphere1_0 0 0 0 0 0 1 0 1 0 
+State.Sphere1_1 0 0 0 0 1 0 0 1 0 
+State.Sphere2_0 0 0 0 1 0 0 0 1 0 
+State.Sphere2_1 0 0 1 0 0 0 0 1 0 
+State.Sphere3_0 0 1 0 0 0 0 0 1 0 
+State.Sphere3_1 1 0 0 0 0 0 0 1 0 
+State.Write 0 0 0 0 0 0 0 1 1 
 
 State Machine - |final_top_level|ps2_mouse_controller:ps2m|next_state
 Name next_state.Twelve next_state.Read next_state.TenEleven next_state.Nine next_state.Seven next_state.Six next_state.Four next_state.Two next_state.One 

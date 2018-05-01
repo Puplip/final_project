@@ -25,8 +25,8 @@ module input_handler (
 	assign x_buffer_mag = x_buffer[31]?(~x_buffer) + 32'd1:x_buffer;
 	assign y_buffer_mag = y_buffer[31]?(~y_buffer) + 32'd1:y_buffer;
 	
-	assign x_buffer_fix = (x_buffer_mag > 32'b111111)?32'b0:x_buffer;
-	assign y_buffer_fix = (y_buffer_mag > 32'b111111)?32'b0:y_buffer;
+	assign x_buffer_fix = (x_buffer_mag > 32'b011111)?32'b0:x_buffer;
+	assign y_buffer_fix = (y_buffer_mag > 32'b011111)?32'b0:y_buffer;
 	
 	assign Theta_n_raw = x_buffer_scaled + Theta;
 	assign Phi_n_raw = y_buffer_scaled + Phi;
@@ -68,9 +68,11 @@ module input_handler (
 			if(Phi_n_raw[63]) Phi_n = 64'b0;
 			else if(Phi_n_raw > 64'd180 << 32) Phi_n = 64'd180 << 32;
 			else Phi_n = Phi_n_raw;
+			
 			if(Theta_n_raw[63]) Theta_n = 64'b0;
 			else if(Theta_n_raw > 64'd180 << 32) Theta_n = 64'd180 << 32;
 			else Theta_n = Theta_n_raw;
+			
 			Click_n = 1'b0;
 			x_buffer_n = 32'b0;
 			y_buffer_n = 32'b0;

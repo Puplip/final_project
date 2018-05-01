@@ -1,0 +1,6 @@
+module score_handler (
+	input logic Clk, Frame_Clk, Reset,
+	input logic Hit,
+	output logic [15:0] Score,
+	output logic [15:0] Lives
+)

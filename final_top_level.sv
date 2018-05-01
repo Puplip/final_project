@@ -10,13 +10,11 @@ module final_top_level (
 	output logic VGA_CLK, VGA_SYNC_N, VGA_BLANK_N, VGA_VS, VGA_HS,
 	output logic [17:0] LEDR,
 	output logic [7:0] LEDG,
-	input logic [7:0] SW
+	input logic [7:0] SW,
+	output logic [6:0] HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, HEX6, HEX7
 );
 
 enum logic [7:0] {
-	Setup0,
-	Setup1,
-	Setup2,
 	Sphere0_0,
 	Sphere0_1,
 	Sphere1_0,
@@ -28,12 +26,14 @@ enum logic [7:0] {
 	Write} State, State_n;
 
 logic Collision, WritePixel, Frame_Clk, Frame_Clk_n;
-vector Curr_Sphere_pos, Cast_Ray;
+vector Curr_Sphere_pos, Cast_Ray, Cast_Ray_n, Cast_Ray_out;
 color Write_col;
 color Sphere_col;
 logic [9:0] DrawX, DrawY, WriteX, WriteY, WriteX_n, WriteY_n, WriteX_inc, WriteY_inc;
+logic [15:0] Score, Lives;
+logic [3:0] Dropped;
 
-fixed_real dPhi, dTheta, Best_Dist, Best_Dist_n, Curr_Dist, Theta, Phi;
+fixed_real dPhi, dTheta, Best_Dist, Best_Dist_n, Curr_Dist, Theta, Phi, dTheta_out, dPhi_out, dTheta_n, dPhi_n;
 
 logic [1:0] Read_Sphere_in, Best_in, Best_in_n, Curr_Sphere_in;
 
@@ -42,7 +42,7 @@ color Best_col, Best_col_n;
 logic Click, Hit;
 logic [1:0] Hit_in;
 	
-sphere_reg_4 sph4(.Clk(CLOCK_50),.Frame_Clk(Frame_Clk),.Reset(~KEY[0]),.Hit(Hit),.Hit_index(Hit_in),.Read_index(Read_Sphere_in),.Sphere_pos(Curr_Sphere_pos),.Sphere_col(Sphere_col),.curr_index(Curr_Sphere_in));
+sphere_reg_4 sph4(.Clk(CLOCK_50),.Frame_Clk(Frame_Clk),.Reset(~KEY[0]),.Hit(Hit),.Hit_index(Hit_in),.Read_index(Read_Sphere_in),.Sphere_pos(Curr_Sphere_pos),.Sphere_col(Sphere_col),.curr_index(Curr_Sphere_in),.dropped(Dropped));
 	
 color_mapper colmap(.is_ball(Best_Dist != 64'hefffffffffffffff), .DrawX(WriteX), .DrawY(WriteY), .colin(Best_col), .col(Write_col), .phi(Phi + dPhi));
 
@@ -54,13 +54,24 @@ frame_buffer fb(.Clk(CLOCK_50), .Write(WritePixel), .*, .WriteColor(Write_col), 
 
 increment_write iw(.*);
 
-ang_lut al(.Clk(CLOCK_50), .WriteY(WriteY), .WriteX(WriteX),.dTheta(dTheta), .dPhi(dPhi));
+ang_lut al(.Clk(CLOCK_50), .WriteY(WriteY_inc), .WriteX(WriteX_inc),.dTheta(dTheta_out), .dPhi(dPhi_out));
 
-ray_lut rl(.Clk(CLOCK_50), .theta(Theta + dTheta), .phi(Phi + dPhi), .ray(Cast_Ray));
+ray_lut rl(.Clk(CLOCK_50), .theta(Theta + dTheta_out), .phi(Phi + dPhi_out), .ray(Cast_Ray_out));
 
 vga_clk vga_clk_instance(.inclk0(CLOCK_50), .c0(VGA_CLK));
 
 hit_detection hd(.*,.Clk(CLOCK_50));
+
+score_handler sh(.Clk(CLOCK_50),.Reset(~KEY[0]),.*);
+
+hexdriver h0(.In(Score[3:0]),.Out(HEX0));
+hexdriver h1(.In(Score[7:4]),.Out(HEX1));
+hexdriver h2(.In(Score[11:8]),.Out(HEX2));
+hexdriver h3(.In(Score[15:12]),.Out(HEX3));
+
+hexdriver h4(.In(Lives[3:0]),.Out(HEX4));
+hexdriver h5(.In(Lives[7:4]),.Out(HEX5));
+
 
 logic [8:0] mouse_dx, mouse_dy;
 logic mouse_m1, mouse_packet;
@@ -79,13 +90,16 @@ assign LEDR[8:0] = mouse_dy;
 
 always_ff @ (posedge CLOCK_50 or negedge KEY[0]) begin
 	if(~KEY[0])begin
-		State <= Setup0;
+		State <= Sphere0_0;
 		Best_Dist <= 64'hefffffffffffffff;
 		Best_col <= 24'h000000;
 		Best_in <= 2'b00;
 		WriteX <= 10'd0;
 		WriteY <= 10'd0;
 		Frame_Clk <= 1'b1;
+		dTheta <= 64'b0;
+		dPhi <= 64'b0;
+		Cast_Ray = 192'b0;
 	end else begin
 		State <= State_n;
 		Best_Dist <= Best_Dist_n;
@@ -94,6 +108,9 @@ always_ff @ (posedge CLOCK_50 or negedge KEY[0]) begin
 		WriteX <= WriteX_n;
 		WriteY <= WriteY_n;
 		Frame_Clk <= Frame_Clk_n;
+		dTheta <= dTheta_n;
+		dPhi <= dPhi_n;
+		Cast_Ray = Cast_Ray_n;
 	end
 end
 
@@ -106,18 +123,11 @@ always_comb begin
 	Best_Dist_n = Best_Dist;
 	Read_Sphere_in = 2'd0;
 	WritePixel = 1'b0;
-	Frame_Clk_n = 1'b0;
+	Frame_Clk_n = Frame_Clk;
+	dTheta_n = dTheta;
+	dPhi_n = dPhi;
+	Cast_Ray_n = Cast_Ray;
 	case (State)
-		Setup0: begin
-			State_n = Setup1;
-		end
-		Setup1: begin
-			State_n = Setup2;
-		end
-		Setup2: begin
-			State_n = Sphere0_0;
-			Read_Sphere_in = 2'b00;
-		end
 		Sphere0_0: begin
 			State_n = Sphere0_1;
 			Read_Sphere_in = 2'b00;
@@ -171,15 +181,22 @@ always_comb begin
 			end
 		end
 		Write: begin
-			State_n = Setup0;
+			State_n = Sphere0_0;
 			WritePixel = 1'b1;
 			WriteX_n = WriteX_inc;
 			WriteY_n = WriteY_inc;
+			Cast_Ray_n = Cast_Ray_out;
+			dPhi_n = dPhi_out;
+			dTheta_n = dTheta_out;
+			Read_Sphere_in = 2'b00;
+			if(WriteX_inc == 10'b0 && WriteY_inc == 10'b0) begin
+				Frame_Clk_n = 1'b1;
+			end else begin
+				Frame_Clk_n = 1'b0;
+			end
 		end
 	endcase
-	if(WriteX_inc == 10'b0 && WriteY_inc == 10'b0) begin
-		Frame_Clk_n = 1'b1;
-	end
+	
 end
 
 endmodule
