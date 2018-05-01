@@ -1,5 +1,5 @@
 Analysis & Synthesis report for final_project_top
-Tue May 01 03:43:26 2018
+Tue May 01 12:43:06 2018
 Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 Patches 0.01we SJ Web Edition
 
 
@@ -91,15 +91,15 @@ agreement for further details.
 +------------------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                                   ;
 +------------------------------------+-----------------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue May 01 03:43:26 2018                     ;
+; Analysis & Synthesis Status        ; Successful - Tue May 01 12:43:05 2018                     ;
 ; Quartus II 64-Bit Version          ; 15.0.0 Build 145 04/22/2015 Patches 0.01we SJ Web Edition ;
 ; Revision Name                      ; final_project_top                                         ;
 ; Top-level Entity Name              ; final_top_level                                           ;
 ; Family                             ; Cyclone IV E                                              ;
-; Total logic elements               ; 20,016                                                    ;
-;     Total combinational functions  ; 19,946                                                    ;
-;     Dedicated logic registers      ; 1,606                                                     ;
-; Total registers                    ; 1606                                                      ;
+; Total logic elements               ; 20,056                                                    ;
+;     Total combinational functions  ; 19,968                                                    ;
+;     Dedicated logic registers      ; 1,642                                                     ;
+; Total registers                    ; 1642                                                      ;
 ; Total pins                         ; 112                                                       ;
 ; Total virtual pins                 ; 0                                                         ;
 ; Total memory bits                  ; 1,843,200                                                 ;
@@ -274,20 +274,20 @@ agreement for further details.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimated Total logic elements              ; 20,016         ;
+; Estimated Total logic elements              ; 20,056         ;
 ;                                             ;                ;
-; Total combinational functions               ; 19946          ;
+; Total combinational functions               ; 19968          ;
 ; Logic element usage by number of LUT inputs ;                ;
-;     -- 4 input functions                    ; 8592           ;
-;     -- 3 input functions                    ; 8595           ;
-;     -- <=2 input functions                  ; 2759           ;
+;     -- 4 input functions                    ; 8745           ;
+;     -- 3 input functions                    ; 8454           ;
+;     -- <=2 input functions                  ; 2769           ;
 ;                                             ;                ;
 ; Logic elements by mode                      ;                ;
-;     -- normal mode                          ; 12478          ;
-;     -- arithmetic mode                      ; 7468           ;
+;     -- normal mode                          ; 12495          ;
+;     -- arithmetic mode                      ; 7473           ;
 ;                                             ;                ;
-; Total registers                             ; 1606           ;
-;     -- Dedicated logic registers            ; 1606           ;
+; Total registers                             ; 1642           ;
+;     -- Dedicated logic registers            ; 1642           ;
 ;     -- I/O registers                        ; 0              ;
 ;                                             ;                ;
 ; I/O pins                                    ; 112            ;
@@ -299,9 +299,9 @@ agreement for further details.
 ;     -- PLLs                                 ; 1              ;
 ;                                             ;                ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
-; Maximum fan-out                             ; 1765           ;
-; Total fan-out                               ; 81533          ;
-; Average fan-out                             ; 3.65           ;
+; Maximum fan-out                             ; 1801           ;
+; Total fan-out                               ; 81928          ;
+; Average fan-out                             ; 3.66           ;
 +---------------------------------------------+----------------+
 
 
@@ -310,9 +310,9 @@ agreement for further details.
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                               ; Library Name ;
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------+--------------+
-; |final_top_level                          ; 19946 (240)       ; 1606 (105)   ; 1843200     ; 296          ; 0       ; 148       ; 112  ; 0            ; |final_top_level                                                                                                  ; work         ;
+; |final_top_level                          ; 19968 (240)       ; 1642 (105)   ; 1843200     ; 296          ; 0       ; 148       ; 112  ; 0            ; |final_top_level                                                                                                  ; work         ;
 ;    |VGA_controller:vga|                   ; 60 (60)           ; 23 (23)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|VGA_controller:vga                                                                               ; work         ;
-;    |ang_lut:al|                           ; 2852 (2726)       ; 95 (95)      ; 0           ; 12           ; 0       ; 6         ; 0    ; 0            ; |final_top_level|ang_lut:al                                                                                       ; work         ;
+;    |ang_lut:al|                           ; 2847 (2721)       ; 95 (95)      ; 0           ; 12           ; 0       ; 6         ; 0    ; 0            ; |final_top_level|ang_lut:al                                                                                       ; work         ;
 ;       |mult_real:m|                       ; 126 (0)           ; 0 (0)        ; 0           ; 12           ; 0       ; 6         ; 0    ; 0            ; |final_top_level|ang_lut:al|mult_real:m                                                                           ; work         ;
 ;          |lpm_mult:Mult0|                 ; 126 (0)           ; 0 (0)        ; 0           ; 12           ; 0       ; 6         ; 0    ; 0            ; |final_top_level|ang_lut:al|mult_real:m|lpm_mult:Mult0                                                            ; work         ;
 ;             |mult_cdt:auto_generated|     ; 126 (126)         ; 0 (0)        ; 0           ; 12           ; 0       ; 6         ; 0    ; 0            ; |final_top_level|ang_lut:al|mult_real:m|lpm_mult:Mult0|mult_cdt:auto_generated                                    ; work         ;
@@ -345,13 +345,13 @@ agreement for further details.
 ;             |mult_v7t:auto_generated|     ; 360 (360)         ; 0 (0)        ; 0           ; 30           ; 0       ; 15        ; 0    ; 0            ; |final_top_level|collision_detection:cd|mult_real:vsqrmod|lpm_mult:Mult0|mult_v7t:auto_generated                  ; work         ;
 ;       |sqrt_real:rbsqrt|                  ; 2172 (2172)       ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|collision_detection:cd|sqrt_real:rbsqrt                                                          ; work         ;
 ;       |sqrt_real_32:sqrtsmall|            ; 572 (572)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|collision_detection:cd|sqrt_real_32:sqrtsmall                                                    ; work         ;
-;    |color_mapper:colmap|                  ; 982 (127)         ; 2 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|color_mapper:colmap                                                                              ; work         ;
-;       |gameoverlut:gol|                   ; 587 (587)         ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|color_mapper:colmap|gameoverlut:gol                                                              ; work         ;
-;       |pauselut:pl|                       ; 268 (268)         ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|color_mapper:colmap|pauselut:pl                                                                  ; work         ;
-;    |frame_buffer:fb|                      ; 281 (45)          ; 6 (0)        ; 1843200     ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|frame_buffer:fb                                                                                  ; work         ;
-;       |altsyncram:buffer_rtl_0|           ; 236 (0)           ; 6 (0)        ; 1843200     ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|frame_buffer:fb|altsyncram:buffer_rtl_0                                                          ; work         ;
-;          |altsyncram_u5e1:auto_generated| ; 236 (0)           ; 6 (6)        ; 1843200     ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|frame_buffer:fb|altsyncram:buffer_rtl_0|altsyncram_u5e1:auto_generated                           ; work         ;
-;             |decode_hua:decode2|          ; 47 (47)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|frame_buffer:fb|altsyncram:buffer_rtl_0|altsyncram_u5e1:auto_generated|decode_hua:decode2        ; work         ;
+;    |color_mapper:colmap|                  ; 967 (122)         ; 2 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|color_mapper:colmap                                                                              ; work         ;
+;       |gameoverlut:gol|                   ; 574 (574)         ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|color_mapper:colmap|gameoverlut:gol                                                              ; work         ;
+;       |pauselut:pl|                       ; 271 (271)         ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|color_mapper:colmap|pauselut:pl                                                                  ; work         ;
+;    |frame_buffer:fb|                      ; 282 (45)          ; 6 (0)        ; 1843200     ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|frame_buffer:fb                                                                                  ; work         ;
+;       |altsyncram:buffer_rtl_0|           ; 237 (0)           ; 6 (0)        ; 1843200     ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|frame_buffer:fb|altsyncram:buffer_rtl_0                                                          ; work         ;
+;          |altsyncram_u5e1:auto_generated| ; 237 (0)           ; 6 (6)        ; 1843200     ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|frame_buffer:fb|altsyncram:buffer_rtl_0|altsyncram_u5e1:auto_generated                           ; work         ;
+;             |decode_hua:decode2|          ; 48 (48)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|frame_buffer:fb|altsyncram:buffer_rtl_0|altsyncram_u5e1:auto_generated|decode_hua:decode2        ; work         ;
 ;             |mux_vob:mux3|                ; 189 (189)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|frame_buffer:fb|altsyncram:buffer_rtl_0|altsyncram_u5e1:auto_generated|mux_vob:mux3              ; work         ;
 ;    |hexdriver:hd0|                        ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|hexdriver:hd0                                                                                    ; work         ;
 ;    |hexdriver:hd1|                        ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|hexdriver:hd1                                                                                    ; work         ;
@@ -361,7 +361,7 @@ agreement for further details.
 ;    |hexdriver:hd5|                        ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|hexdriver:hd5                                                                                    ; work         ;
 ;    |hit_detection:hd|                     ; 7 (7)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|hit_detection:hd                                                                                 ; work         ;
 ;    |increment_write:iw|                   ; 39 (39)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|increment_write:iw                                                                               ; work         ;
-;    |input_handler:ih|                     ; 1053 (417)        ; 98 (98)      ; 0           ; 60           ; 0       ; 30        ; 0    ; 0            ; |final_top_level|input_handler:ih                                                                                 ; work         ;
+;    |input_handler:ih|                     ; 1054 (418)        ; 98 (98)      ; 0           ; 60           ; 0       ; 30        ; 0    ; 0            ; |final_top_level|input_handler:ih                                                                                 ; work         ;
 ;       |mult_real:mx|                      ; 318 (0)           ; 0 (0)        ; 0           ; 30           ; 0       ; 15        ; 0    ; 0            ; |final_top_level|input_handler:ih|mult_real:mx                                                                    ; work         ;
 ;          |lpm_mult:Mult0|                 ; 318 (0)           ; 0 (0)        ; 0           ; 30           ; 0       ; 15        ; 0    ; 0            ; |final_top_level|input_handler:ih|mult_real:mx|lpm_mult:Mult0                                                     ; work         ;
 ;             |mult_0ft:auto_generated|     ; 318 (318)         ; 0 (0)        ; 0           ; 30           ; 0       ; 15        ; 0    ; 0            ; |final_top_level|input_handler:ih|mult_real:mx|lpm_mult:Mult0|mult_0ft:auto_generated                             ; work         ;
@@ -369,27 +369,27 @@ agreement for further details.
 ;          |lpm_mult:Mult0|                 ; 318 (0)           ; 0 (0)        ; 0           ; 30           ; 0       ; 15        ; 0    ; 0            ; |final_top_level|input_handler:ih|mult_real:my|lpm_mult:Mult0                                                     ; work         ;
 ;             |mult_0ft:auto_generated|     ; 318 (318)         ; 0 (0)        ; 0           ; 30           ; 0       ; 15        ; 0    ; 0            ; |final_top_level|input_handler:ih|mult_real:my|lpm_mult:Mult0|mult_0ft:auto_generated                             ; work         ;
 ;    |ps2_mouse_controller:ps2m|            ; 176 (176)         ; 88 (88)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|ps2_mouse_controller:ps2m                                                                        ; work         ;
-;    |ray_lut:rl|                           ; 4698 (64)         ; 128 (0)      ; 0           ; 16           ; 0       ; 8         ; 0    ; 0            ; |final_top_level|ray_lut:rl                                                                                       ; work         ;
-;       |cos_lut:c0|                        ; 462 (462)         ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|ray_lut:rl|cos_lut:c0                                                                            ; work         ;
-;       |cos_lut:c1|                        ; 504 (504)         ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|ray_lut:rl|cos_lut:c1                                                                            ; work         ;
-;       |cos_lut:c2|                        ; 463 (463)         ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|ray_lut:rl|cos_lut:c2                                                                            ; work         ;
-;       |cos_lut:c3|                        ; 517 (517)         ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|ray_lut:rl|cos_lut:c3                                                                            ; work         ;
+;    |ray_lut:rl|                           ; 4694 (64)         ; 128 (0)      ; 0           ; 16           ; 0       ; 8         ; 0    ; 0            ; |final_top_level|ray_lut:rl                                                                                       ; work         ;
+;       |cos_lut:c0|                        ; 464 (464)         ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|ray_lut:rl|cos_lut:c0                                                                            ; work         ;
+;       |cos_lut:c1|                        ; 509 (509)         ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|ray_lut:rl|cos_lut:c1                                                                            ; work         ;
+;       |cos_lut:c2|                        ; 461 (461)         ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|ray_lut:rl|cos_lut:c2                                                                            ; work         ;
+;       |cos_lut:c3|                        ; 513 (513)         ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|ray_lut:rl|cos_lut:c3                                                                            ; work         ;
 ;       |mult_real:m0|                      ; 104 (0)           ; 0 (0)        ; 0           ; 8            ; 0       ; 4         ; 0    ; 0            ; |final_top_level|ray_lut:rl|mult_real:m0                                                                          ; work         ;
 ;          |lpm_mult:Mult0|                 ; 104 (0)           ; 0 (0)        ; 0           ; 8            ; 0       ; 4         ; 0    ; 0            ; |final_top_level|ray_lut:rl|mult_real:m0|lpm_mult:Mult0                                                           ; work         ;
 ;             |mult_76t:auto_generated|     ; 104 (104)         ; 0 (0)        ; 0           ; 8            ; 0       ; 4         ; 0    ; 0            ; |final_top_level|ray_lut:rl|mult_real:m0|lpm_mult:Mult0|mult_76t:auto_generated                                   ; work         ;
 ;       |mult_real:m1|                      ; 104 (0)           ; 0 (0)        ; 0           ; 8            ; 0       ; 4         ; 0    ; 0            ; |final_top_level|ray_lut:rl|mult_real:m1                                                                          ; work         ;
 ;          |lpm_mult:Mult0|                 ; 104 (0)           ; 0 (0)        ; 0           ; 8            ; 0       ; 4         ; 0    ; 0            ; |final_top_level|ray_lut:rl|mult_real:m1|lpm_mult:Mult0                                                           ; work         ;
 ;             |mult_76t:auto_generated|     ; 104 (104)         ; 0 (0)        ; 0           ; 8            ; 0       ; 4         ; 0    ; 0            ; |final_top_level|ray_lut:rl|mult_real:m1|lpm_mult:Mult0|mult_76t:auto_generated                                   ; work         ;
-;       |sin_lut:s0|                        ; 513 (513)         ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|ray_lut:rl|sin_lut:s0                                                                            ; work         ;
-;       |sin_lut:s1|                        ; 468 (468)         ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|ray_lut:rl|sin_lut:s1                                                                            ; work         ;
-;       |sin_lut:s2|                        ; 521 (521)         ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|ray_lut:rl|sin_lut:s2                                                                            ; work         ;
-;       |sin_lut:s3|                        ; 468 (468)         ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|ray_lut:rl|sin_lut:s3                                                                            ; work         ;
+;       |sin_lut:s0|                        ; 514 (514)         ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|ray_lut:rl|sin_lut:s0                                                                            ; work         ;
+;       |sin_lut:s1|                        ; 466 (466)         ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|ray_lut:rl|sin_lut:s1                                                                            ; work         ;
+;       |sin_lut:s2|                        ; 515 (515)         ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|ray_lut:rl|sin_lut:s2                                                                            ; work         ;
+;       |sin_lut:s3|                        ; 470 (470)         ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|ray_lut:rl|sin_lut:s3                                                                            ; work         ;
 ;       |wgt_mean:wm0|                      ; 128 (128)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|ray_lut:rl|wgt_mean:wm0                                                                          ; work         ;
 ;       |wgt_mean:wm1|                      ; 128 (128)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|ray_lut:rl|wgt_mean:wm1                                                                          ; work         ;
 ;       |wgt_mean:wm2|                      ; 127 (127)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|ray_lut:rl|wgt_mean:wm2                                                                          ; work         ;
 ;       |wgt_mean:wm3|                      ; 127 (127)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|ray_lut:rl|wgt_mean:wm3                                                                          ; work         ;
-;    |score_handler:sh|                     ; 57 (57)           ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|score_handler:sh                                                                                 ; work         ;
-;    |sphere_reg_4:sph4|                    ; 3494 (2025)       ; 1025 (961)   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|sphere_reg_4:sph4                                                                                ; work         ;
+;    |score_handler:sh|                     ; 63 (63)           ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|score_handler:sh                                                                                 ; work         ;
+;    |sphere_reg_4:sph4|                    ; 3532 (2077)       ; 1061 (997)   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|sphere_reg_4:sph4                                                                                ; work         ;
 ;       |add_vector:pva0|                   ; 144 (144)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|sphere_reg_4:sph4|add_vector:pva0                                                                ; work         ;
 ;       |add_vector:pva1|                   ; 144 (144)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|sphere_reg_4:sph4|add_vector:pva1                                                                ; work         ;
 ;       |add_vector:pva2|                   ; 144 (144)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|sphere_reg_4:sph4|add_vector:pva2                                                                ; work         ;
@@ -398,22 +398,22 @@ agreement for further details.
 ;       |add_vector:va1|                    ; 30 (30)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|sphere_reg_4:sph4|add_vector:va1                                                                 ; work         ;
 ;       |add_vector:va2|                    ; 30 (30)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|sphere_reg_4:sph4|add_vector:va2                                                                 ; work         ;
 ;       |add_vector:va3|                    ; 30 (30)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|sphere_reg_4:sph4|add_vector:va3                                                                 ; work         ;
-;       |rand_lut:rl|                       ; 773 (659)         ; 64 (64)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|sphere_reg_4:sph4|rand_lut:rl                                                                    ; work         ;
+;       |rand_lut:rl|                       ; 759 (659)         ; 64 (64)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|sphere_reg_4:sph4|rand_lut:rl                                                                    ; work         ;
 ;          |random_0:r0|                    ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|sphere_reg_4:sph4|rand_lut:rl|random_0:r0                                                        ; work         ;
-;          |random_10:r10|                  ; 9 (9)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|sphere_reg_4:sph4|rand_lut:rl|random_10:r10                                                      ; work         ;
-;          |random_11:r11|                  ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|sphere_reg_4:sph4|rand_lut:rl|random_11:r11                                                      ; work         ;
+;          |random_10:r10|                  ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|sphere_reg_4:sph4|rand_lut:rl|random_10:r10                                                      ; work         ;
+;          |random_11:r11|                  ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|sphere_reg_4:sph4|rand_lut:rl|random_11:r11                                                      ; work         ;
 ;          |random_12:r12|                  ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|sphere_reg_4:sph4|rand_lut:rl|random_12:r12                                                      ; work         ;
-;          |random_13:r13|                  ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|sphere_reg_4:sph4|rand_lut:rl|random_13:r13                                                      ; work         ;
+;          |random_13:r13|                  ; 9 (9)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|sphere_reg_4:sph4|rand_lut:rl|random_13:r13                                                      ; work         ;
 ;          |random_14:r14|                  ; 9 (9)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|sphere_reg_4:sph4|rand_lut:rl|random_14:r14                                                      ; work         ;
 ;          |random_15:r15|                  ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|sphere_reg_4:sph4|rand_lut:rl|random_15:r15                                                      ; work         ;
 ;          |random_1:r1|                    ; 10 (10)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|sphere_reg_4:sph4|rand_lut:rl|random_1:r1                                                        ; work         ;
 ;          |random_2:r2|                    ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|sphere_reg_4:sph4|rand_lut:rl|random_2:r2                                                        ; work         ;
 ;          |random_3:r3|                    ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|sphere_reg_4:sph4|rand_lut:rl|random_3:r3                                                        ; work         ;
-;          |random_4:r4|                    ; 11 (11)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|sphere_reg_4:sph4|rand_lut:rl|random_4:r4                                                        ; work         ;
-;          |random_5:r5|                    ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|sphere_reg_4:sph4|rand_lut:rl|random_5:r5                                                        ; work         ;
-;          |random_6:r6|                    ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|sphere_reg_4:sph4|rand_lut:rl|random_6:r6                                                        ; work         ;
+;          |random_4:r4|                    ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|sphere_reg_4:sph4|rand_lut:rl|random_4:r4                                                        ; work         ;
+;          |random_5:r5|                    ; 9 (9)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|sphere_reg_4:sph4|rand_lut:rl|random_5:r5                                                        ; work         ;
+;          |random_6:r6|                    ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|sphere_reg_4:sph4|rand_lut:rl|random_6:r6                                                        ; work         ;
 ;          |random_7:r7|                    ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|sphere_reg_4:sph4|rand_lut:rl|random_7:r7                                                        ; work         ;
-;          |random_8:r8|                    ; 11 (11)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|sphere_reg_4:sph4|rand_lut:rl|random_8:r8                                                        ; work         ;
+;          |random_8:r8|                    ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|sphere_reg_4:sph4|rand_lut:rl|random_8:r8                                                        ; work         ;
 ;          |random_9:r9|                    ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|sphere_reg_4:sph4|rand_lut:rl|random_9:r9                                                        ; work         ;
 ;    |vga_clk:vga_clk_instance|             ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|vga_clk:vga_clk_instance                                                                         ; work         ;
 ;       |altpll:altpll_component|           ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final_top_level|vga_clk:vga_clk_instance|altpll:altpll_component                                                 ; work         ;
@@ -1061,12 +1061,6 @@ Encoding Type:  One-Hot
 ; sphere_reg_4:sph4|pos[3][2][2]                 ; Stuck at GND due to stuck port data_in                     ;
 ; sphere_reg_4:sph4|pos[3][2][1]                 ; Stuck at GND due to stuck port data_in                     ;
 ; sphere_reg_4:sph4|pos[3][2][0]                 ; Stuck at GND due to stuck port data_in                     ;
-; sphere_reg_4:sph4|pos[3][1][11]                ; Stuck at GND due to stuck port data_in                     ;
-; sphere_reg_4:sph4|pos[3][1][10]                ; Stuck at GND due to stuck port data_in                     ;
-; sphere_reg_4:sph4|pos[3][1][9]                 ; Stuck at GND due to stuck port data_in                     ;
-; sphere_reg_4:sph4|pos[3][1][8]                 ; Stuck at GND due to stuck port data_in                     ;
-; sphere_reg_4:sph4|pos[3][1][7]                 ; Stuck at GND due to stuck port data_in                     ;
-; sphere_reg_4:sph4|pos[3][1][6]                 ; Stuck at GND due to stuck port data_in                     ;
 ; sphere_reg_4:sph4|pos[3][1][5]                 ; Stuck at GND due to stuck port data_in                     ;
 ; sphere_reg_4:sph4|pos[3][1][4]                 ; Stuck at GND due to stuck port data_in                     ;
 ; sphere_reg_4:sph4|pos[3][1][3]                 ; Stuck at GND due to stuck port data_in                     ;
@@ -1129,12 +1123,6 @@ Encoding Type:  One-Hot
 ; sphere_reg_4:sph4|pos[2][2][2]                 ; Stuck at GND due to stuck port data_in                     ;
 ; sphere_reg_4:sph4|pos[2][2][1]                 ; Stuck at GND due to stuck port data_in                     ;
 ; sphere_reg_4:sph4|pos[2][2][0]                 ; Stuck at GND due to stuck port data_in                     ;
-; sphere_reg_4:sph4|pos[2][1][11]                ; Stuck at GND due to stuck port data_in                     ;
-; sphere_reg_4:sph4|pos[2][1][10]                ; Stuck at GND due to stuck port data_in                     ;
-; sphere_reg_4:sph4|pos[2][1][9]                 ; Stuck at GND due to stuck port data_in                     ;
-; sphere_reg_4:sph4|pos[2][1][8]                 ; Stuck at GND due to stuck port data_in                     ;
-; sphere_reg_4:sph4|pos[2][1][7]                 ; Stuck at GND due to stuck port data_in                     ;
-; sphere_reg_4:sph4|pos[2][1][6]                 ; Stuck at GND due to stuck port data_in                     ;
 ; sphere_reg_4:sph4|pos[2][1][5]                 ; Stuck at GND due to stuck port data_in                     ;
 ; sphere_reg_4:sph4|pos[2][1][4]                 ; Stuck at GND due to stuck port data_in                     ;
 ; sphere_reg_4:sph4|pos[2][1][3]                 ; Stuck at GND due to stuck port data_in                     ;
@@ -1197,12 +1185,6 @@ Encoding Type:  One-Hot
 ; sphere_reg_4:sph4|pos[1][2][2]                 ; Stuck at GND due to stuck port data_in                     ;
 ; sphere_reg_4:sph4|pos[1][2][1]                 ; Stuck at GND due to stuck port data_in                     ;
 ; sphere_reg_4:sph4|pos[1][2][0]                 ; Stuck at GND due to stuck port data_in                     ;
-; sphere_reg_4:sph4|pos[1][1][11]                ; Stuck at GND due to stuck port data_in                     ;
-; sphere_reg_4:sph4|pos[1][1][10]                ; Stuck at GND due to stuck port data_in                     ;
-; sphere_reg_4:sph4|pos[1][1][9]                 ; Stuck at GND due to stuck port data_in                     ;
-; sphere_reg_4:sph4|pos[1][1][8]                 ; Stuck at GND due to stuck port data_in                     ;
-; sphere_reg_4:sph4|pos[1][1][7]                 ; Stuck at GND due to stuck port data_in                     ;
-; sphere_reg_4:sph4|pos[1][1][6]                 ; Stuck at GND due to stuck port data_in                     ;
 ; sphere_reg_4:sph4|pos[1][1][5]                 ; Stuck at GND due to stuck port data_in                     ;
 ; sphere_reg_4:sph4|pos[1][1][4]                 ; Stuck at GND due to stuck port data_in                     ;
 ; sphere_reg_4:sph4|pos[1][1][3]                 ; Stuck at GND due to stuck port data_in                     ;
@@ -1265,12 +1247,6 @@ Encoding Type:  One-Hot
 ; sphere_reg_4:sph4|pos[0][2][2]                 ; Stuck at GND due to stuck port data_in                     ;
 ; sphere_reg_4:sph4|pos[0][2][1]                 ; Stuck at GND due to stuck port data_in                     ;
 ; sphere_reg_4:sph4|pos[0][2][0]                 ; Stuck at GND due to stuck port data_in                     ;
-; sphere_reg_4:sph4|pos[0][1][11]                ; Stuck at GND due to stuck port data_in                     ;
-; sphere_reg_4:sph4|pos[0][1][10]                ; Stuck at GND due to stuck port data_in                     ;
-; sphere_reg_4:sph4|pos[0][1][9]                 ; Stuck at GND due to stuck port data_in                     ;
-; sphere_reg_4:sph4|pos[0][1][8]                 ; Stuck at GND due to stuck port data_in                     ;
-; sphere_reg_4:sph4|pos[0][1][7]                 ; Stuck at GND due to stuck port data_in                     ;
-; sphere_reg_4:sph4|pos[0][1][6]                 ; Stuck at GND due to stuck port data_in                     ;
 ; sphere_reg_4:sph4|pos[0][1][5]                 ; Stuck at GND due to stuck port data_in                     ;
 ; sphere_reg_4:sph4|pos[0][1][4]                 ; Stuck at GND due to stuck port data_in                     ;
 ; sphere_reg_4:sph4|pos[0][1][3]                 ; Stuck at GND due to stuck port data_in                     ;
@@ -1327,12 +1303,6 @@ Encoding Type:  One-Hot
 ; sphere_reg_4:sph4|Sphere_pos[1][3]             ; Stuck at GND due to stuck port data_in                     ;
 ; sphere_reg_4:sph4|Sphere_pos[1][4]             ; Stuck at GND due to stuck port data_in                     ;
 ; sphere_reg_4:sph4|Sphere_pos[1][5]             ; Stuck at GND due to stuck port data_in                     ;
-; sphere_reg_4:sph4|Sphere_pos[1][6]             ; Stuck at GND due to stuck port data_in                     ;
-; sphere_reg_4:sph4|Sphere_pos[1][7]             ; Stuck at GND due to stuck port data_in                     ;
-; sphere_reg_4:sph4|Sphere_pos[1][8]             ; Stuck at GND due to stuck port data_in                     ;
-; sphere_reg_4:sph4|Sphere_pos[1][9]             ; Stuck at GND due to stuck port data_in                     ;
-; sphere_reg_4:sph4|Sphere_pos[1][10]            ; Stuck at GND due to stuck port data_in                     ;
-; sphere_reg_4:sph4|Sphere_pos[1][11]            ; Stuck at GND due to stuck port data_in                     ;
 ; sphere_reg_4:sph4|Sphere_pos[2][0]             ; Stuck at GND due to stuck port data_in                     ;
 ; sphere_reg_4:sph4|Sphere_pos[2][1]             ; Stuck at GND due to stuck port data_in                     ;
 ; sphere_reg_4:sph4|Sphere_pos[2][2]             ; Stuck at GND due to stuck port data_in                     ;
@@ -1407,7 +1377,7 @@ Encoding Type:  One-Hot
 ; ang_lut:al|y_scaler_raw[31]                    ; Merged with ang_lut:al|y_scaler_raw[30]                    ;
 ; input_handler:ih|Phi[39..60]                   ; Stuck at GND due to stuck port data_in                     ;
 ; input_handler:ih|Theta[40..60]                 ; Stuck at GND due to stuck port data_in                     ;
-; Total Number of Removed Registers = 989        ;                                                            ;
+; Total Number of Removed Registers = 959        ;                                                            ;
 +------------------------------------------------+------------------------------------------------------------+
 
 
@@ -1484,18 +1454,6 @@ Encoding Type:  One-Hot
 ;                                 ; due to stuck port data_in ;                                        ;
 ; sphere_reg_4:sph4|pos[3][2][0]  ; Stuck at GND              ; sphere_reg_4:sph4|Sphere_pos[2][0]     ;
 ;                                 ; due to stuck port data_in ;                                        ;
-; sphere_reg_4:sph4|pos[3][1][11] ; Stuck at GND              ; sphere_reg_4:sph4|Sphere_pos[1][11]    ;
-;                                 ; due to stuck port data_in ;                                        ;
-; sphere_reg_4:sph4|pos[3][1][10] ; Stuck at GND              ; sphere_reg_4:sph4|Sphere_pos[1][10]    ;
-;                                 ; due to stuck port data_in ;                                        ;
-; sphere_reg_4:sph4|pos[3][1][9]  ; Stuck at GND              ; sphere_reg_4:sph4|Sphere_pos[1][9]     ;
-;                                 ; due to stuck port data_in ;                                        ;
-; sphere_reg_4:sph4|pos[3][1][8]  ; Stuck at GND              ; sphere_reg_4:sph4|Sphere_pos[1][8]     ;
-;                                 ; due to stuck port data_in ;                                        ;
-; sphere_reg_4:sph4|pos[3][1][7]  ; Stuck at GND              ; sphere_reg_4:sph4|Sphere_pos[1][7]     ;
-;                                 ; due to stuck port data_in ;                                        ;
-; sphere_reg_4:sph4|pos[3][1][6]  ; Stuck at GND              ; sphere_reg_4:sph4|Sphere_pos[1][6]     ;
-;                                 ; due to stuck port data_in ;                                        ;
 ; sphere_reg_4:sph4|pos[3][1][5]  ; Stuck at GND              ; sphere_reg_4:sph4|Sphere_pos[1][5]     ;
 ;                                 ; due to stuck port data_in ;                                        ;
 ; sphere_reg_4:sph4|pos[3][1][4]  ; Stuck at GND              ; sphere_reg_4:sph4|Sphere_pos[1][4]     ;
@@ -1560,12 +1518,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 1606  ;
+; Total registers                              ; 1642  ;
 ; Number of registers using Synchronous Clear  ; 63    ;
 ; Number of registers using Synchronous Load   ; 142   ;
-; Number of registers using Asynchronous Clear ; 940   ;
+; Number of registers using Asynchronous Clear ; 970   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 1365  ;
+; Number of registers using Clock Enable       ; 1389  ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -1639,33 +1597,9 @@ Encoding Type:  One-Hot
 ; Best_Dist[1]                              ; 4       ;
 ; Best_Dist[0]                              ; 4       ;
 ; ps2_mouse_controller:ps2m|bcount[3]       ; 10      ;
-; ps2_mouse_controller:ps2m|bcount[1]       ; 14      ;
-; Frame_Clk                                 ; 45      ;
+; ps2_mouse_controller:ps2m|bcount[1]       ; 12      ;
+; Frame_Clk                                 ; 46      ;
 ; sphere_reg_4:sph4|Frame_Clk_old           ; 1       ;
-; sphere_reg_4:sph4|pos[1][2][60]           ; 3       ;
-; sphere_reg_4:sph4|pos[1][2][59]           ; 3       ;
-; sphere_reg_4:sph4|pos[1][2][58]           ; 3       ;
-; sphere_reg_4:sph4|pos[1][2][57]           ; 3       ;
-; sphere_reg_4:sph4|pos[1][2][56]           ; 3       ;
-; sphere_reg_4:sph4|pos[1][2][55]           ; 3       ;
-; sphere_reg_4:sph4|pos[1][2][54]           ; 3       ;
-; sphere_reg_4:sph4|pos[1][2][53]           ; 3       ;
-; sphere_reg_4:sph4|pos[1][2][52]           ; 3       ;
-; sphere_reg_4:sph4|pos[1][2][51]           ; 3       ;
-; sphere_reg_4:sph4|pos[1][2][50]           ; 3       ;
-; sphere_reg_4:sph4|pos[1][2][49]           ; 3       ;
-; sphere_reg_4:sph4|pos[1][2][48]           ; 3       ;
-; sphere_reg_4:sph4|pos[1][2][47]           ; 3       ;
-; sphere_reg_4:sph4|pos[1][2][46]           ; 3       ;
-; sphere_reg_4:sph4|pos[1][2][45]           ; 3       ;
-; sphere_reg_4:sph4|pos[1][2][44]           ; 3       ;
-; sphere_reg_4:sph4|pos[1][2][42]           ; 3       ;
-; sphere_reg_4:sph4|pos[1][2][41]           ; 3       ;
-; sphere_reg_4:sph4|pos[1][2][39]           ; 3       ;
-; sphere_reg_4:sph4|pos[1][2][37]           ; 3       ;
-; sphere_reg_4:sph4|pos[1][2][61]           ; 3       ;
-; sphere_reg_4:sph4|pos[1][2][62]           ; 3       ;
-; sphere_reg_4:sph4|pos[1][2][63]           ; 4       ;
 ; sphere_reg_4:sph4|pos[0][2][60]           ; 3       ;
 ; sphere_reg_4:sph4|pos[0][2][59]           ; 3       ;
 ; sphere_reg_4:sph4|pos[0][2][58]           ; 3       ;
@@ -1675,6 +1609,30 @@ Encoding Type:  One-Hot
 ; sphere_reg_4:sph4|pos[0][2][54]           ; 3       ;
 ; sphere_reg_4:sph4|pos[0][2][53]           ; 3       ;
 ; sphere_reg_4:sph4|pos[0][2][52]           ; 3       ;
+; sphere_reg_4:sph4|pos[0][2][51]           ; 3       ;
+; sphere_reg_4:sph4|pos[0][2][50]           ; 3       ;
+; sphere_reg_4:sph4|pos[0][2][49]           ; 3       ;
+; sphere_reg_4:sph4|pos[0][2][48]           ; 3       ;
+; sphere_reg_4:sph4|pos[0][2][47]           ; 3       ;
+; sphere_reg_4:sph4|pos[0][2][46]           ; 3       ;
+; sphere_reg_4:sph4|pos[0][2][45]           ; 3       ;
+; sphere_reg_4:sph4|pos[0][2][44]           ; 3       ;
+; sphere_reg_4:sph4|pos[0][2][42]           ; 3       ;
+; sphere_reg_4:sph4|pos[0][2][41]           ; 3       ;
+; sphere_reg_4:sph4|pos[0][2][39]           ; 3       ;
+; sphere_reg_4:sph4|pos[0][2][37]           ; 3       ;
+; sphere_reg_4:sph4|pos[0][2][61]           ; 3       ;
+; sphere_reg_4:sph4|pos[0][2][62]           ; 3       ;
+; sphere_reg_4:sph4|pos[0][2][63]           ; 4       ;
+; sphere_reg_4:sph4|pos[1][2][63]           ; 108     ;
+; sphere_reg_4:sph4|pos[1][2][60]           ; 3       ;
+; sphere_reg_4:sph4|pos[1][2][59]           ; 3       ;
+; sphere_reg_4:sph4|pos[1][2][58]           ; 3       ;
+; sphere_reg_4:sph4|pos[1][2][57]           ; 3       ;
+; sphere_reg_4:sph4|pos[1][2][56]           ; 3       ;
+; sphere_reg_4:sph4|pos[1][2][55]           ; 3       ;
+; sphere_reg_4:sph4|pos[1][2][54]           ; 3       ;
+; sphere_reg_4:sph4|pos[1][2][53]           ; 3       ;
 ; Total number of inverted registers = 239* ;         ;
 +-------------------------------------------+---------+
 * Table truncated at 100 items. To change the number of inverted registers reported, set the "Number of Inverted Registers Reported" option under Assignments->Settings->Analysis and Synthesis Settings->More Settings
@@ -1694,86 +1652,86 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                            ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------+
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |final_top_level|VGA_controller:vga|h_counter[0]      ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |final_top_level|hit_detection:hd|save_hit_index[0]   ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |final_top_level|Best_col[0][6]                       ;
-; 4:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |final_top_level|sphere_reg_4:sph4|Sphere_col[0][7]   ;
-; 4:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |final_top_level|score_handler:sh|Score[10]           ;
-; 4:1                ; 46 bits   ; 92 LEs        ; 46 LEs               ; 46 LEs                 ; Yes        ; |final_top_level|sphere_reg_4:sph4|vel[3][2][50]      ;
-; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |final_top_level|sphere_reg_4:sph4|pos[3][0][36]      ;
-; 4:1                ; 46 bits   ; 92 LEs        ; 46 LEs               ; 46 LEs                 ; Yes        ; |final_top_level|sphere_reg_4:sph4|vel[2][2][51]      ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |final_top_level|sphere_reg_4:sph4|pos[2][0][38]      ;
-; 4:1                ; 46 bits   ; 92 LEs        ; 46 LEs               ; 46 LEs                 ; Yes        ; |final_top_level|sphere_reg_4:sph4|vel[1][2][47]      ;
-; 4:1                ; 23 bits   ; 46 LEs        ; 46 LEs               ; 0 LEs                  ; Yes        ; |final_top_level|sphere_reg_4:sph4|pos[1][0][60]      ;
-; 4:1                ; 46 bits   ; 92 LEs        ; 46 LEs               ; 46 LEs                 ; Yes        ; |final_top_level|sphere_reg_4:sph4|vel[0][2][63]      ;
-; 4:1                ; 21 bits   ; 42 LEs        ; 42 LEs               ; 0 LEs                  ; Yes        ; |final_top_level|sphere_reg_4:sph4|pos[0][0][45]      ;
-; 4:1                ; 63 bits   ; 126 LEs       ; 63 LEs               ; 63 LEs                 ; Yes        ; |final_top_level|input_handler:ih|x_buffer[6]         ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |final_top_level|input_handler:ih|old_m1              ;
-; 5:1                ; 38 bits   ; 114 LEs       ; 76 LEs               ; 38 LEs                 ; Yes        ; |final_top_level|input_handler:ih|Phi[51]             ;
-; 5:1                ; 38 bits   ; 114 LEs       ; 76 LEs               ; 38 LEs                 ; Yes        ; |final_top_level|input_handler:ih|Theta[59]           ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |final_top_level|VGA_controller:vga|h_counter[1]      ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |final_top_level|hit_detection:hd|save_hit_index[1]   ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |final_top_level|Best_col[2][6]                       ;
+; 4:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |final_top_level|sphere_reg_4:sph4|Sphere_col[0][6]   ;
+; 4:1                ; 46 bits   ; 92 LEs        ; 46 LEs               ; 46 LEs                 ; Yes        ; |final_top_level|sphere_reg_4:sph4|vel[3][2][63]      ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |final_top_level|sphere_reg_4:sph4|pos[3][0][40]      ;
+; 4:1                ; 46 bits   ; 92 LEs        ; 46 LEs               ; 46 LEs                 ; Yes        ; |final_top_level|sphere_reg_4:sph4|vel[2][2][58]      ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |final_top_level|sphere_reg_4:sph4|pos[2][0][34]      ;
+; 4:1                ; 46 bits   ; 92 LEs        ; 46 LEs               ; 46 LEs                 ; Yes        ; |final_top_level|sphere_reg_4:sph4|vel[1][2][48]      ;
+; 4:1                ; 23 bits   ; 46 LEs        ; 46 LEs               ; 0 LEs                  ; Yes        ; |final_top_level|sphere_reg_4:sph4|pos[1][0][51]      ;
+; 4:1                ; 46 bits   ; 92 LEs        ; 46 LEs               ; 46 LEs                 ; Yes        ; |final_top_level|sphere_reg_4:sph4|vel[0][2][47]      ;
+; 4:1                ; 21 bits   ; 42 LEs        ; 42 LEs               ; 0 LEs                  ; Yes        ; |final_top_level|sphere_reg_4:sph4|pos[0][0][63]      ;
+; 4:1                ; 63 bits   ; 126 LEs       ; 63 LEs               ; 63 LEs                 ; Yes        ; |final_top_level|input_handler:ih|x_buffer[1]         ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |final_top_level|input_handler:ih|old_m2              ;
+; 5:1                ; 16 bits   ; 48 LEs        ; 16 LEs               ; 32 LEs                 ; Yes        ; |final_top_level|score_handler:sh|Score[8]            ;
+; 5:1                ; 38 bits   ; 114 LEs       ; 76 LEs               ; 38 LEs                 ; Yes        ; |final_top_level|input_handler:ih|Phi[41]             ;
+; 5:1                ; 38 bits   ; 114 LEs       ; 76 LEs               ; 38 LEs                 ; Yes        ; |final_top_level|input_handler:ih|Theta[53]           ;
 ; 5:1                ; 15 bits   ; 45 LEs        ; 30 LEs               ; 15 LEs                 ; Yes        ; |final_top_level|score_handler:sh|Lives[2]            ;
-; 8:1                ; 28 bits   ; 140 LEs       ; 28 LEs               ; 112 LEs                ; Yes        ; |final_top_level|ps2_mouse_controller:ps2m|count[19]  ;
-; 512:1              ; 32 bits   ; 10912 LEs     ; 7680 LEs             ; 3232 LEs               ; Yes        ; |final_top_level|ray_lut:rl|sin_lut:s1|out[6]         ;
+; 8:1                ; 28 bits   ; 140 LEs       ; 28 LEs               ; 112 LEs                ; Yes        ; |final_top_level|ps2_mouse_controller:ps2m|count[1]   ;
+; 512:1              ; 32 bits   ; 10912 LEs     ; 7680 LEs             ; 3232 LEs               ; Yes        ; |final_top_level|ray_lut:rl|cos_lut:c1|out[5]         ;
 ; 512:1              ; 32 bits   ; 10912 LEs     ; 6848 LEs             ; 4064 LEs               ; Yes        ; |final_top_level|ang_lut:al|dTheta_raw[7]             ;
-; 512:1              ; 32 bits   ; 10912 LEs     ; 7680 LEs             ; 3232 LEs               ; Yes        ; |final_top_level|ray_lut:rl|sin_lut:s0|out[13]        ;
-; 512:1              ; 32 bits   ; 10912 LEs     ; 7680 LEs             ; 3232 LEs               ; Yes        ; |final_top_level|ray_lut:rl|sin_lut:s2|out[11]        ;
-; 512:1              ; 32 bits   ; 10912 LEs     ; 7680 LEs             ; 3232 LEs               ; Yes        ; |final_top_level|ray_lut:rl|cos_lut:c3|out[14]        ;
-; 4:1                ; 124 bits  ; 248 LEs       ; 248 LEs              ; 0 LEs                  ; Yes        ; |final_top_level|sphere_reg_4:sph4|Sphere_pos[0][36]  ;
-; 4:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |final_top_level|sphere_reg_4:sph4|pos[3][1][17]      ;
-; 4:1                ; 40 bits   ; 80 LEs        ; 40 LEs               ; 40 LEs                 ; Yes        ; |final_top_level|sphere_reg_4:sph4|vel[3][1][35]      ;
-; 4:1                ; 28 bits   ; 56 LEs        ; 28 LEs               ; 28 LEs                 ; Yes        ; |final_top_level|sphere_reg_4:sph4|pos[3][2][39]      ;
+; 512:1              ; 32 bits   ; 10912 LEs     ; 7680 LEs             ; 3232 LEs               ; Yes        ; |final_top_level|ray_lut:rl|sin_lut:s0|out[9]         ;
+; 512:1              ; 32 bits   ; 10912 LEs     ; 7680 LEs             ; 3232 LEs               ; Yes        ; |final_top_level|ray_lut:rl|sin_lut:s2|out[9]         ;
+; 512:1              ; 32 bits   ; 10912 LEs     ; 7680 LEs             ; 3232 LEs               ; Yes        ; |final_top_level|ray_lut:rl|sin_lut:s3|out[1]         ;
+; 4:1                ; 130 bits  ; 260 LEs       ; 260 LEs              ; 0 LEs                  ; Yes        ; |final_top_level|sphere_reg_4:sph4|Sphere_pos[1][22]  ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |final_top_level|sphere_reg_4:sph4|pos[3][1][11]      ;
+; 4:1                ; 40 bits   ; 80 LEs        ; 40 LEs               ; 40 LEs                 ; Yes        ; |final_top_level|sphere_reg_4:sph4|vel[3][0][34]      ;
+; 4:1                ; 28 bits   ; 56 LEs        ; 28 LEs               ; 28 LEs                 ; Yes        ; |final_top_level|sphere_reg_4:sph4|pos[3][2][59]      ;
 ; 4:1                ; 23 bits   ; 46 LEs        ; 46 LEs               ; 0 LEs                  ; Yes        ; |final_top_level|sphere_reg_4:sph4|pos[3][0][57]      ;
-; 4:1                ; 13 bits   ; 26 LEs        ; 13 LEs               ; 13 LEs                 ; Yes        ; |final_top_level|sphere_reg_4:sph4|pos[3][1][30]      ;
-; 4:1                ; 29 bits   ; 58 LEs        ; 58 LEs               ; 0 LEs                  ; Yes        ; |final_top_level|sphere_reg_4:sph4|pos[3][1][48]      ;
-; 4:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |final_top_level|sphere_reg_4:sph4|pos[2][1][14]      ;
-; 4:1                ; 40 bits   ; 80 LEs        ; 40 LEs               ; 40 LEs                 ; Yes        ; |final_top_level|sphere_reg_4:sph4|vel[2][1][31]      ;
-; 4:1                ; 28 bits   ; 56 LEs        ; 28 LEs               ; 28 LEs                 ; Yes        ; |final_top_level|sphere_reg_4:sph4|pos[2][2][37]      ;
-; 4:1                ; 24 bits   ; 48 LEs        ; 48 LEs               ; 0 LEs                  ; Yes        ; |final_top_level|sphere_reg_4:sph4|pos[2][0][50]      ;
-; 4:1                ; 13 bits   ; 26 LEs        ; 13 LEs               ; 13 LEs                 ; Yes        ; |final_top_level|sphere_reg_4:sph4|pos[2][1][23]      ;
-; 4:1                ; 29 bits   ; 58 LEs        ; 58 LEs               ; 0 LEs                  ; Yes        ; |final_top_level|sphere_reg_4:sph4|pos[2][1][61]      ;
-; 4:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |final_top_level|sphere_reg_4:sph4|pos[1][1][17]      ;
-; 4:1                ; 40 bits   ; 80 LEs        ; 40 LEs               ; 40 LEs                 ; Yes        ; |final_top_level|sphere_reg_4:sph4|col[1][1][6]       ;
-; 4:1                ; 28 bits   ; 56 LEs        ; 28 LEs               ; 28 LEs                 ; Yes        ; |final_top_level|sphere_reg_4:sph4|pos[1][2][47]      ;
-; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |final_top_level|sphere_reg_4:sph4|pos[1][0][43]      ;
-; 4:1                ; 13 bits   ; 26 LEs        ; 13 LEs               ; 13 LEs                 ; Yes        ; |final_top_level|sphere_reg_4:sph4|pos[1][1][31]      ;
-; 4:1                ; 29 bits   ; 58 LEs        ; 58 LEs               ; 0 LEs                  ; Yes        ; |final_top_level|sphere_reg_4:sph4|pos[1][1][62]      ;
-; 4:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |final_top_level|sphere_reg_4:sph4|pos[0][1][15]      ;
-; 4:1                ; 40 bits   ; 80 LEs        ; 40 LEs               ; 40 LEs                 ; Yes        ; |final_top_level|sphere_reg_4:sph4|col[0][0][7]       ;
-; 4:1                ; 28 bits   ; 56 LEs        ; 28 LEs               ; 28 LEs                 ; Yes        ; |final_top_level|sphere_reg_4:sph4|pos[0][2][62]      ;
-; 4:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; Yes        ; |final_top_level|sphere_reg_4:sph4|pos[0][0][40]      ;
-; 4:1                ; 13 bits   ; 26 LEs        ; 13 LEs               ; 13 LEs                 ; Yes        ; |final_top_level|sphere_reg_4:sph4|pos[0][1][30]      ;
-; 4:1                ; 29 bits   ; 58 LEs        ; 58 LEs               ; 0 LEs                  ; Yes        ; |final_top_level|sphere_reg_4:sph4|pos[0][1][60]      ;
-; 4:1                ; 63 bits   ; 126 LEs       ; 63 LEs               ; 63 LEs                 ; Yes        ; |final_top_level|Best_Dist[24]                        ;
-; 512:1              ; 32 bits   ; 10912 LEs     ; 6848 LEs             ; 4064 LEs               ; Yes        ; |final_top_level|ang_lut:al|y_scaler_raw[0]           ;
-; 512:1              ; 32 bits   ; 10912 LEs     ; 5120 LEs             ; 5792 LEs               ; Yes        ; |final_top_level|ang_lut:al|y_raw[23]                 ;
-; 3:1                ; 9 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; No         ; |final_top_level|VGA_controller:vga|v_counter_in[3]   ;
+; 4:1                ; 13 bits   ; 26 LEs        ; 13 LEs               ; 13 LEs                 ; Yes        ; |final_top_level|sphere_reg_4:sph4|pos[3][1][25]      ;
+; 4:1                ; 29 bits   ; 58 LEs        ; 58 LEs               ; 0 LEs                  ; Yes        ; |final_top_level|sphere_reg_4:sph4|pos[3][1][55]      ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |final_top_level|sphere_reg_4:sph4|pos[2][1][6]       ;
+; 4:1                ; 40 bits   ; 80 LEs        ; 40 LEs               ; 40 LEs                 ; Yes        ; |final_top_level|sphere_reg_4:sph4|vel[2][0][27]      ;
+; 4:1                ; 28 bits   ; 56 LEs        ; 28 LEs               ; 28 LEs                 ; Yes        ; |final_top_level|sphere_reg_4:sph4|pos[2][2][58]      ;
+; 4:1                ; 24 bits   ; 48 LEs        ; 48 LEs               ; 0 LEs                  ; Yes        ; |final_top_level|sphere_reg_4:sph4|pos[2][0][56]      ;
+; 4:1                ; 13 bits   ; 26 LEs        ; 13 LEs               ; 13 LEs                 ; Yes        ; |final_top_level|sphere_reg_4:sph4|pos[2][1][26]      ;
+; 4:1                ; 29 bits   ; 58 LEs        ; 58 LEs               ; 0 LEs                  ; Yes        ; |final_top_level|sphere_reg_4:sph4|pos[2][1][63]      ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |final_top_level|sphere_reg_4:sph4|pos[1][1][9]       ;
+; 4:1                ; 40 bits   ; 80 LEs        ; 40 LEs               ; 40 LEs                 ; Yes        ; |final_top_level|sphere_reg_4:sph4|vel[1][1][26]      ;
+; 4:1                ; 28 bits   ; 56 LEs        ; 28 LEs               ; 28 LEs                 ; Yes        ; |final_top_level|sphere_reg_4:sph4|pos[1][2][53]      ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |final_top_level|sphere_reg_4:sph4|pos[1][0][34]      ;
+; 4:1                ; 13 bits   ; 26 LEs        ; 13 LEs               ; 13 LEs                 ; Yes        ; |final_top_level|sphere_reg_4:sph4|pos[1][1][25]      ;
+; 4:1                ; 29 bits   ; 58 LEs        ; 58 LEs               ; 0 LEs                  ; Yes        ; |final_top_level|sphere_reg_4:sph4|pos[1][1][57]      ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |final_top_level|sphere_reg_4:sph4|pos[0][1][18]      ;
+; 4:1                ; 40 bits   ; 80 LEs        ; 40 LEs               ; 40 LEs                 ; Yes        ; |final_top_level|sphere_reg_4:sph4|vel[0][1][30]      ;
+; 4:1                ; 28 bits   ; 56 LEs        ; 28 LEs               ; 28 LEs                 ; Yes        ; |final_top_level|sphere_reg_4:sph4|pos[0][2][58]      ;
+; 4:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; Yes        ; |final_top_level|sphere_reg_4:sph4|pos[0][0][38]      ;
+; 4:1                ; 13 bits   ; 26 LEs        ; 13 LEs               ; 13 LEs                 ; Yes        ; |final_top_level|sphere_reg_4:sph4|pos[0][1][32]      ;
+; 4:1                ; 29 bits   ; 58 LEs        ; 58 LEs               ; 0 LEs                  ; Yes        ; |final_top_level|sphere_reg_4:sph4|pos[0][1][58]      ;
+; 4:1                ; 63 bits   ; 126 LEs       ; 63 LEs               ; 63 LEs                 ; Yes        ; |final_top_level|Best_Dist[27]                        ;
+; 512:1              ; 32 bits   ; 10912 LEs     ; 6848 LEs             ; 4064 LEs               ; Yes        ; |final_top_level|ang_lut:al|y_scaler_raw[16]          ;
+; 512:1              ; 32 bits   ; 10912 LEs     ; 5120 LEs             ; 5792 LEs               ; Yes        ; |final_top_level|ang_lut:al|y_raw[26]                 ;
+; 3:1                ; 9 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; No         ; |final_top_level|VGA_controller:vga|v_counter_in[8]   ;
 ; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |final_top_level|ray_lut:rl|wgt_mean:wm3|Mux30        ;
 ; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |final_top_level|ray_lut:rl|wgt_mean:wm2|Mux47        ;
 ; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |final_top_level|ray_lut:rl|wgt_mean:wm3|Mux46        ;
-; 4:1                ; 30 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; No         ; |final_top_level|ray_lut:rl|wgt_mean:wm2|Mux41        ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |final_top_level|increment_write:iw|WriteY_inc[5]     ;
-; 4:1                ; 25 bits   ; 50 LEs        ; 50 LEs               ; 0 LEs                  ; No         ; |final_top_level|sphere_reg_4:sph4|Mux221             ;
+; 4:1                ; 30 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; No         ; |final_top_level|ray_lut:rl|wgt_mean:wm2|Mux36        ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |final_top_level|increment_write:iw|WriteY_inc[6]     ;
+; 4:1                ; 25 bits   ; 50 LEs        ; 50 LEs               ; 0 LEs                  ; No         ; |final_top_level|sphere_reg_4:sph4|Mux227             ;
 ; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |final_top_level|ray_lut:rl|wgt_mean:wm0|Mux47        ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |final_top_level|ray_lut:rl|wgt_mean:wm1|Mux46        ;
-; 4:1                ; 30 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; No         ; |final_top_level|ray_lut:rl|wgt_mean:wm1|Mux44        ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |final_top_level|ray_lut:rl|wgt_mean:wm0|Mux30        ;
-; 4:1                ; 38 bits   ; 76 LEs        ; 76 LEs               ; 0 LEs                  ; No         ; |final_top_level|sphere_reg_4:sph4|Mux293             ;
-; 16:1               ; 4 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |final_top_level|sphere_reg_4:sph4|rand_lut:rl|Mux5   ;
-; 16:1               ; 4 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |final_top_level|sphere_reg_4:sph4|rand_lut:rl|Mux17  ;
-; 16:1               ; 4 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |final_top_level|sphere_reg_4:sph4|rand_lut:rl|Mux20  ;
-; 16:1               ; 4 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |final_top_level|sphere_reg_4:sph4|rand_lut:rl|Mux24  ;
-; 16:1               ; 4 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |final_top_level|sphere_reg_4:sph4|rand_lut:rl|Mux29  ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |final_top_level|ray_lut:rl|wgt_mean:wm0|Mux46        ;
+; 4:1                ; 30 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; No         ; |final_top_level|ray_lut:rl|wgt_mean:wm1|Mux31        ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |final_top_level|ray_lut:rl|wgt_mean:wm1|Mux0         ;
+; 4:1                ; 38 bits   ; 76 LEs        ; 76 LEs               ; 0 LEs                  ; No         ; |final_top_level|sphere_reg_4:sph4|Mux268             ;
+; 16:1               ; 4 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |final_top_level|sphere_reg_4:sph4|rand_lut:rl|Mux7   ;
+; 16:1               ; 4 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |final_top_level|sphere_reg_4:sph4|rand_lut:rl|Mux16  ;
+; 16:1               ; 4 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |final_top_level|sphere_reg_4:sph4|rand_lut:rl|Mux23  ;
+; 16:1               ; 4 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |final_top_level|sphere_reg_4:sph4|rand_lut:rl|Mux27  ;
+; 16:1               ; 4 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |final_top_level|sphere_reg_4:sph4|rand_lut:rl|Mux31  ;
 ; 16:1               ; 4 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |final_top_level|sphere_reg_4:sph4|rand_lut:rl|Mux40  ;
-; 16:1               ; 4 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |final_top_level|sphere_reg_4:sph4|rand_lut:rl|Mux48  ;
-; 16:1               ; 4 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |final_top_level|sphere_reg_4:sph4|rand_lut:rl|Mux52  ;
-; 16:1               ; 4 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |final_top_level|sphere_reg_4:sph4|rand_lut:rl|Mux57  ;
-; 16:1               ; 4 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |final_top_level|sphere_reg_4:sph4|rand_lut:rl|Mux0   ;
-; 16:1               ; 4 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |final_top_level|sphere_reg_4:sph4|rand_lut:rl|Mux10  ;
+; 16:1               ; 4 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |final_top_level|sphere_reg_4:sph4|rand_lut:rl|Mux50  ;
+; 16:1               ; 4 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |final_top_level|sphere_reg_4:sph4|rand_lut:rl|Mux53  ;
+; 16:1               ; 4 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |final_top_level|sphere_reg_4:sph4|rand_lut:rl|Mux56  ;
+; 16:1               ; 4 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |final_top_level|sphere_reg_4:sph4|rand_lut:rl|Mux3   ;
+; 16:1               ; 4 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |final_top_level|sphere_reg_4:sph4|rand_lut:rl|Mux8   ;
 ; 16:1               ; 4 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |final_top_level|sphere_reg_4:sph4|rand_lut:rl|Mux15  ;
-; 16:1               ; 4 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |final_top_level|sphere_reg_4:sph4|rand_lut:rl|Mux35  ;
-; 16:1               ; 4 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |final_top_level|sphere_reg_4:sph4|rand_lut:rl|Mux39  ;
+; 16:1               ; 4 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |final_top_level|sphere_reg_4:sph4|rand_lut:rl|Mux33  ;
+; 16:1               ; 4 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |final_top_level|sphere_reg_4:sph4|rand_lut:rl|Mux36  ;
 ; 16:1               ; 4 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |final_top_level|sphere_reg_4:sph4|rand_lut:rl|Mux47  ;
-; 6:1                ; 6 bits    ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |final_top_level|color_mapper:colmap|col[2][7]        ;
+; 6:1                ; 6 bits    ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |final_top_level|color_mapper:colmap|col[1][6]        ;
 ; 12:1               ; 4 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; No         ; |final_top_level|ps2_mouse_controller:ps2m|next_state ;
 ; 14:1               ; 2 bits    ; 18 LEs        ; 6 LEs                ; 12 LEs                 ; No         ; |final_top_level|ps2_mouse_controller:ps2m|next_state ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------+
@@ -3055,33 +3013,33 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 112                         ;
-; cycloneiii_ff         ; 1606                        ;
-;     CLR               ; 67                          ;
+; cycloneiii_ff         ; 1642                        ;
+;     CLR               ; 73                          ;
 ;     ENA               ; 300                         ;
-;     ENA CLR           ; 864                         ;
+;     ENA CLR           ; 888                         ;
 ;     ENA CLR SCLR      ; 9                           ;
 ;     ENA SCLR          ; 50                          ;
 ;     ENA SLD           ; 142                         ;
 ;     SCLR              ; 4                           ;
-;     plain             ; 170                         ;
+;     plain             ; 176                         ;
 ; cycloneiii_io_obuf    ; 2                           ;
-; cycloneiii_lcell_comb ; 19970                       ;
-;     arith             ; 7468                        ;
-;         2 data inputs ; 2206                        ;
-;         3 data inputs ; 5262                        ;
-;     normal            ; 12502                       ;
+; cycloneiii_lcell_comb ; 19992                       ;
+;     arith             ; 7473                        ;
+;         2 data inputs ; 2210                        ;
+;         3 data inputs ; 5263                        ;
+;     normal            ; 12519                       ;
 ;         0 data inputs ; 22                          ;
 ;         1 data inputs ; 88                          ;
-;         2 data inputs ; 467                         ;
-;         3 data inputs ; 3333                        ;
-;         4 data inputs ; 8592                        ;
+;         2 data inputs ; 473                         ;
+;         3 data inputs ; 3191                        ;
+;         4 data inputs ; 8745                        ;
 ; cycloneiii_mac_mult   ; 148                         ;
 ; cycloneiii_mac_out    ; 148                         ;
 ; cycloneiii_pll        ; 1                           ;
 ; cycloneiii_ram_block  ; 228                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 183.50                      ;
-; Average LUT depth     ; 53.25                       ;
+; Average LUT depth     ; 52.97                       ;
 +-----------------------+-----------------------------+
 
 
@@ -3090,7 +3048,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:03:47     ;
+; Top            ; 00:04:11     ;
 +----------------+--------------+
 
 
@@ -3100,7 +3058,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 15.0.0 Build 145 04/22/2015 Patches 0.01we SJ Web Edition
-    Info: Processing started: Tue May 01 03:39:25 2018
+    Info: Processing started: Tue May 01 12:38:32 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off final_project -c final_project_top
 Info (11104): Parallel Compilation has detected 4 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 2 of the 2 physical processors detected instead.
 Info (12021): Found 1 design units, including 1 entities, in source file score_handler.sv
@@ -3181,12 +3139,6 @@ Info (10041): Inferred latch for "difficulty[2]" at sphere_reg.sv(110)
 Info (10041): Inferred latch for "difficulty[3]" at sphere_reg.sv(110)
 Info (10041): Inferred latch for "difficulty[4]" at sphere_reg.sv(110)
 Info (10041): Inferred latch for "difficulty[5]" at sphere_reg.sv(110)
-Info (10041): Inferred latch for "difficulty[6]" at sphere_reg.sv(110)
-Info (10041): Inferred latch for "difficulty[7]" at sphere_reg.sv(110)
-Info (10041): Inferred latch for "difficulty[8]" at sphere_reg.sv(110)
-Info (10041): Inferred latch for "difficulty[9]" at sphere_reg.sv(110)
-Info (10041): Inferred latch for "difficulty[10]" at sphere_reg.sv(110)
-Info (10041): Inferred latch for "difficulty[11]" at sphere_reg.sv(110)
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "pos" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "col" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "vel" into its bus
@@ -3565,6 +3517,30 @@ Warning (13004): Presettable and clearable registers converted to equivalent cir
     Warning (13310): Register "sphere_reg_4:sph4|col[2][2][7]" is converted into an equivalent circuit using register "sphere_reg_4:sph4|col[2][2][7]~_emulated" and latch "sphere_reg_4:sph4|col[2][2][7]~1"
     Warning (13310): Register "sphere_reg_4:sph4|col[0][2][7]" is converted into an equivalent circuit using register "sphere_reg_4:sph4|col[0][2][7]~_emulated" and latch "sphere_reg_4:sph4|col[0][2][7]~1"
     Warning (13310): Register "sphere_reg_4:sph4|col[3][2][7]" is converted into an equivalent circuit using register "sphere_reg_4:sph4|col[3][2][7]~_emulated" and latch "sphere_reg_4:sph4|col[0][1][6]~1"
+    Warning (13310): Register "sphere_reg_4:sph4|pos[2][1][6]" is converted into an equivalent circuit using register "sphere_reg_4:sph4|pos[2][1][6]~_emulated" and latch "sphere_reg_4:sph4|pos[2][1][6]~1"
+    Warning (13310): Register "sphere_reg_4:sph4|pos[1][1][6]" is converted into an equivalent circuit using register "sphere_reg_4:sph4|pos[1][1][6]~_emulated" and latch "sphere_reg_4:sph4|pos[2][1][6]~1"
+    Warning (13310): Register "sphere_reg_4:sph4|pos[0][1][6]" is converted into an equivalent circuit using register "sphere_reg_4:sph4|pos[0][1][6]~_emulated" and latch "sphere_reg_4:sph4|pos[2][1][6]~1"
+    Warning (13310): Register "sphere_reg_4:sph4|pos[3][1][6]" is converted into an equivalent circuit using register "sphere_reg_4:sph4|pos[3][1][6]~_emulated" and latch "sphere_reg_4:sph4|pos[2][1][6]~1"
+    Warning (13310): Register "sphere_reg_4:sph4|pos[1][1][7]" is converted into an equivalent circuit using register "sphere_reg_4:sph4|pos[1][1][7]~_emulated" and latch "sphere_reg_4:sph4|pos[1][1][7]~1"
+    Warning (13310): Register "sphere_reg_4:sph4|pos[2][1][7]" is converted into an equivalent circuit using register "sphere_reg_4:sph4|pos[2][1][7]~_emulated" and latch "sphere_reg_4:sph4|pos[1][1][7]~1"
+    Warning (13310): Register "sphere_reg_4:sph4|pos[0][1][7]" is converted into an equivalent circuit using register "sphere_reg_4:sph4|pos[0][1][7]~_emulated" and latch "sphere_reg_4:sph4|pos[1][1][7]~1"
+    Warning (13310): Register "sphere_reg_4:sph4|pos[3][1][7]" is converted into an equivalent circuit using register "sphere_reg_4:sph4|pos[3][1][7]~_emulated" and latch "sphere_reg_4:sph4|pos[1][1][7]~1"
+    Warning (13310): Register "sphere_reg_4:sph4|pos[2][1][8]" is converted into an equivalent circuit using register "sphere_reg_4:sph4|pos[2][1][8]~_emulated" and latch "sphere_reg_4:sph4|pos[2][1][8]~1"
+    Warning (13310): Register "sphere_reg_4:sph4|pos[1][1][8]" is converted into an equivalent circuit using register "sphere_reg_4:sph4|pos[1][1][8]~_emulated" and latch "sphere_reg_4:sph4|pos[2][1][8]~1"
+    Warning (13310): Register "sphere_reg_4:sph4|pos[0][1][8]" is converted into an equivalent circuit using register "sphere_reg_4:sph4|pos[0][1][8]~_emulated" and latch "sphere_reg_4:sph4|pos[2][1][8]~1"
+    Warning (13310): Register "sphere_reg_4:sph4|pos[3][1][8]" is converted into an equivalent circuit using register "sphere_reg_4:sph4|pos[3][1][8]~_emulated" and latch "sphere_reg_4:sph4|pos[2][1][8]~1"
+    Warning (13310): Register "sphere_reg_4:sph4|pos[1][1][9]" is converted into an equivalent circuit using register "sphere_reg_4:sph4|pos[1][1][9]~_emulated" and latch "sphere_reg_4:sph4|pos[1][1][9]~1"
+    Warning (13310): Register "sphere_reg_4:sph4|pos[2][1][9]" is converted into an equivalent circuit using register "sphere_reg_4:sph4|pos[2][1][9]~_emulated" and latch "sphere_reg_4:sph4|pos[1][1][9]~1"
+    Warning (13310): Register "sphere_reg_4:sph4|pos[0][1][9]" is converted into an equivalent circuit using register "sphere_reg_4:sph4|pos[0][1][9]~_emulated" and latch "sphere_reg_4:sph4|pos[1][1][9]~1"
+    Warning (13310): Register "sphere_reg_4:sph4|pos[3][1][9]" is converted into an equivalent circuit using register "sphere_reg_4:sph4|pos[3][1][9]~_emulated" and latch "sphere_reg_4:sph4|pos[1][1][9]~1"
+    Warning (13310): Register "sphere_reg_4:sph4|pos[2][1][10]" is converted into an equivalent circuit using register "sphere_reg_4:sph4|pos[2][1][10]~_emulated" and latch "sphere_reg_4:sph4|pos[2][1][10]~1"
+    Warning (13310): Register "sphere_reg_4:sph4|pos[1][1][10]" is converted into an equivalent circuit using register "sphere_reg_4:sph4|pos[1][1][10]~_emulated" and latch "sphere_reg_4:sph4|pos[2][1][10]~1"
+    Warning (13310): Register "sphere_reg_4:sph4|pos[0][1][10]" is converted into an equivalent circuit using register "sphere_reg_4:sph4|pos[0][1][10]~_emulated" and latch "sphere_reg_4:sph4|pos[2][1][10]~1"
+    Warning (13310): Register "sphere_reg_4:sph4|pos[3][1][10]" is converted into an equivalent circuit using register "sphere_reg_4:sph4|pos[3][1][10]~_emulated" and latch "sphere_reg_4:sph4|pos[2][1][10]~1"
+    Warning (13310): Register "sphere_reg_4:sph4|pos[1][1][11]" is converted into an equivalent circuit using register "sphere_reg_4:sph4|pos[1][1][11]~_emulated" and latch "sphere_reg_4:sph4|pos[1][1][11]~1"
+    Warning (13310): Register "sphere_reg_4:sph4|pos[2][1][11]" is converted into an equivalent circuit using register "sphere_reg_4:sph4|pos[2][1][11]~_emulated" and latch "sphere_reg_4:sph4|pos[1][1][11]~1"
+    Warning (13310): Register "sphere_reg_4:sph4|pos[0][1][11]" is converted into an equivalent circuit using register "sphere_reg_4:sph4|pos[0][1][11]~_emulated" and latch "sphere_reg_4:sph4|pos[1][1][11]~1"
+    Warning (13310): Register "sphere_reg_4:sph4|pos[3][1][11]" is converted into an equivalent circuit using register "sphere_reg_4:sph4|pos[3][1][11]~_emulated" and latch "sphere_reg_4:sph4|pos[1][1][11]~1"
     Warning (13310): Register "sphere_reg_4:sph4|pos[2][1][12]" is converted into an equivalent circuit using register "sphere_reg_4:sph4|pos[2][1][12]~_emulated" and latch "sphere_reg_4:sph4|pos[2][1][12]~1"
     Warning (13310): Register "sphere_reg_4:sph4|pos[1][1][12]" is converted into an equivalent circuit using register "sphere_reg_4:sph4|pos[1][1][12]~_emulated" and latch "sphere_reg_4:sph4|pos[2][1][12]~1"
     Warning (13310): Register "sphere_reg_4:sph4|pos[0][1][12]" is converted into an equivalent circuit using register "sphere_reg_4:sph4|pos[0][1][12]~_emulated" and latch "sphere_reg_4:sph4|pos[2][1][12]~1"
@@ -3961,19 +3937,19 @@ Warning (21074): Design contains 3 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "KEY[1]"
     Warning (15610): No output dependent on input pin "KEY[2]"
     Warning (15610): No output dependent on input pin "KEY[3]"
-Info (21057): Implemented 20720 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 20766 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 13 input pins
     Info (21059): Implemented 97 output pins
     Info (21060): Implemented 2 bidirectional pins
-    Info (21061): Implemented 20083 logic cells
+    Info (21061): Implemented 20129 logic cells
     Info (21064): Implemented 228 RAM segments
     Info (21065): Implemented 1 PLLs
     Info (21062): Implemented 296 DSP elements
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 447 warnings
-    Info: Peak virtual memory: 944 megabytes
-    Info: Processing ended: Tue May 01 03:43:26 2018
-    Info: Elapsed time: 00:04:01
-    Info: Total CPU time (on all processors): 00:04:14
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 471 warnings
+    Info: Peak virtual memory: 1128 megabytes
+    Info: Processing ended: Tue May 01 12:43:06 2018
+    Info: Elapsed time: 00:04:34
+    Info: Total CPU time (on all processors): 00:04:42
 
 
 +------------------------------------------+

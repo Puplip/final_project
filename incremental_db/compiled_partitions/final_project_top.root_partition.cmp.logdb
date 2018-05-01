@@ -15,7 +15,7 @@ PORT_SWAPPING,PORT_SWAP_TYPE_DSPMULT,collision_detection:cd|mult_real:vsqrmod|lp
 PORT_SWAPPING,PORT_SWAP_TYPE_DSPMULT,collision_detection:cd|mult_real:vsqrmod|lpm_mult:Mult0|mult_v7t:auto_generated|mac_mult25,
 PORT_SWAPPING,PORT_SWAP_TYPE_DSPMULT,collision_detection:cd|mult_real:vsqrmod|lpm_mult:Mult0|mult_v7t:auto_generated|mac_mult29,
 PORT_SWAPPING,PORT_SWAP_TYPE_DSPMULT,collision_detection:cd|dot_product_scale:cc|mult_real:y|lpm_mult:Mult0|mult_v7t:auto_generated|mac_mult27,
-PORT_SWAPPING,PORT_SWAP_TYPE_DSPMULT,collision_detection:cd|dot_product_scale:cc|mult_real:y|lpm_mult:Mult0|mult_v7t:auto_generated|mac_mult7,
+PORT_SWAPPING,PORT_SWAP_TYPE_DSPMULT,collision_detection:cd|dot_product_scale:cc|mult_real:y|lpm_mult:Mult0|mult_v7t:auto_generated|mac_mult25,
 PORT_SWAPPING,PORT_SWAP_TYPE_DSPMULT,collision_detection:cd|dot_product_scale:cc|mult_real:y|lpm_mult:Mult0|mult_v7t:auto_generated|mac_mult5,
 PORT_SWAPPING,PORT_SWAP_TYPE_DSPMULT,collision_detection:cd|dot_product_scale:cc|mult_real:y|lpm_mult:Mult0|mult_v7t:auto_generated|mac_mult3,
 PORT_SWAPPING,PORT_SWAP_TYPE_DSPMULT,collision_detection:cd|dot_product_scale:cc|mult_real:y|lpm_mult:Mult0|mult_v7t:auto_generated|mac_mult29,
