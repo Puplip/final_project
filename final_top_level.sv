@@ -83,7 +83,7 @@ logic [8:0] mouse_dx, mouse_dy;
 logic mouse_m1, mouse_m2, mouse_packet;
 logic [7:0] test_state;
 
-ps2_mouse_controller ps2m(.Clk(CLOCK_50), .Reset(~KEY[0]),.PS2_MSCLK(PS2_KBCLK),.PS2_MSDAT(PS2_KBDAT),.Mouse_LeftClick(mouse_m1), .Mouse_RightClick(mouse_m2),.Mouse_dx(mouse_dx),.Mouse_dy(mouse_dy),.packetReceived(mouse_packet));
+ps2_mouse_controller ps2m(.Clk(CLOCK_50), .Reset(~KEY[0] || ~KEY[1]),.PS2_MSCLK(PS2_KBCLK),.PS2_MSDAT(PS2_KBDAT),.Mouse_LeftClick(mouse_m1), .Mouse_RightClick(mouse_m2),.Mouse_dx(mouse_dx),.Mouse_dy(mouse_dy),.packetReceived(mouse_packet));
 
 input_handler ih(.*,.Reset(~KEY[0]),.Clk(CLOCK_50),.m1(mouse_m1),.m2(mouse_m2),.m3(),.dx(mouse_dx),.dy(mouse_dy),.new_data(mouse_packet),.sensitivity({24'd0,SW,32'd0}), .gameOver(endGame));
 

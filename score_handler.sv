@@ -17,7 +17,7 @@ assign Frame_Clk_posedge = ~Frame_Clk_old && Frame_Clk;
 always_ff @ (posedge Clk) begin
 	if(Reset) begin
 		Score <= 16'd0;
-		Lives <= 16'd10;
+		Lives <= 16'd5;
 		Frame_Clk_old <= 1'b1;
 	end else begin
 		if (~gameOver)

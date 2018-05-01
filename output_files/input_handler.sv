@@ -19,8 +19,8 @@ module input_handler (
 	
 	logic ClickRight;
 	
-	assign x_buffer_shifted = {{6{x_buffer[31]}},x_buffer_fix,26'b0};
-	assign y_buffer_shifted = ~{{6{y_buffer[31]}},y_buffer_fix,26'b0} + 64'd1;
+	assign x_buffer_shifted = {{6{x_buffer_fix[31]}},x_buffer_fix,26'b0};
+	assign y_buffer_shifted = ~{{6{y_buffer_fix[31]}},y_buffer_fix,26'b0} + 64'd1;
 	
 	mult_real mx(.a(x_buffer_shifted),.b(sensitivity),.c(x_buffer_scaled));
 	mult_real my(.a(y_buffer_shifted),.b(sensitivity),.c(y_buffer_scaled));	
@@ -87,8 +87,8 @@ module input_handler (
 			if(Phi_n_raw[63]) Phi_n = 64'b0;
 			else if(Phi_n_raw > 64'd120 << 32) Phi_n = 64'd120 << 32;
 			else Phi_n = Phi_n_raw;
-			if(Theta_n_raw[63] || Theta_n_raw < 64'd20 << 32) Theta_n = 64'd20 << 32;
-			else if(Theta_n_raw > 64'd160 << 32) Theta_n = 64'd160 << 32;
+			if(Theta_n_raw[63]) Theta_n = 64'd0;
+			else if(Theta_n_raw > 64'd180 << 32) Theta_n = 64'd180 << 32;
 			else Theta_n = Theta_n_raw;
 			Click_n = 1'b0;
 			ClickRight_n = 1'b0;
