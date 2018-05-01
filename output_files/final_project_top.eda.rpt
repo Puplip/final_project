@@ -1,5 +1,5 @@
 EDA Netlist Writer report for final_project_top
-Tue May 01 14:49:06 2018
+Tue May 01 15:02:30 2018
 Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 Patches 0.01we SJ Web Edition
 
 
@@ -37,7 +37,7 @@ agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Tue May 01 14:49:06 2018 ;
+; EDA Netlist Writer Status ; Successful - Tue May 01 15:02:30 2018 ;
 ; Revision Name             ; final_project_top                     ;
 ; Top-level Entity Name     ; final_top_level                       ;
 ; Family                    ; Cyclone IV E                          ;
@@ -87,7 +87,7 @@ agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit EDA Netlist Writer
     Info: Version 15.0.0 Build 145 04/22/2015 Patches 0.01we SJ Web Edition
-    Info: Processing started: Tue May 01 14:48:50 2018
+    Info: Processing started: Tue May 01 15:02:12 2018
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off final_project -c final_project_top
 Info (204019): Generated file final_project_top_7_1200mv_85c_slow.svo in folder "C:/altera/15.0/Programs/385FinalProject/simulation/modelsim/" for EDA simulation tool
 Info (204019): Generated file final_project_top_min_1200mv_0c_fast.svo in folder "C:/altera/15.0/Programs/385FinalProject/simulation/modelsim/" for EDA simulation tool
@@ -97,8 +97,8 @@ Info (204019): Generated file final_project_top_min_1200mv_0c_v_fast.sdo in fold
 Info (204019): Generated file final_project_top_v.sdo in folder "C:/altera/15.0/Programs/385FinalProject/simulation/modelsim/" for EDA simulation tool
 Info: Quartus II 64-Bit EDA Netlist Writer was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 892 megabytes
-    Info: Processing ended: Tue May 01 14:49:07 2018
-    Info: Elapsed time: 00:00:17
-    Info: Total CPU time (on all processors): 00:00:16
+    Info: Processing ended: Tue May 01 15:02:30 2018
+    Info: Elapsed time: 00:00:18
+    Info: Total CPU time (on all processors): 00:00:17
 
 
