@@ -39,15 +39,17 @@ assign acc[1] = gravity;
 assign acc[2] = gravity;
 assign acc[3] = gravity;
 
-assign pos_rand[0] = {~(64'd2400 << 32) + 64'd1,64'd3840 << 32,64'b0};
-assign pos_rand[1] = {~(64'd2400 << 32) + 64'd1,64'd4800 << 32,64'b0};
-assign pos_rand[2] = {~(64'd2400 << 32) + 64'd1,64'd5760 << 32,64'b0};
-assign pos_rand[3] = {~(64'd2400 << 32) + 64'd1,64'd7680 << 32,64'b0};
+fixed_real difficulty = 64'd0;
 
-assign vel_rand[0] = {64'd200 << 32,{26{random[0]}},random[47:32],22'd0,{26{random[1]}},random[31:16],22'd0};
-assign vel_rand[1] = {64'd200 << 32,{26{random[2]}},random[62:47],22'd0,{26{random[3]}},random[46:31],22'd0};
-assign vel_rand[2] = {64'd200 << 32,{26{random[4]}},random[61:46],22'd0,{26{random[5]}},random[45:30],22'd0};
-assign vel_rand[3] = {64'd200 << 32,{26{random[6]}},random[60:45],22'd0,{26{random[7]}},random[44:29],22'd0};
+assign pos_rand[0] = {~(64'd2400 << 32) + 64'd1,(64'd3840 << 32) + difficulty,64'd1500 << 32};
+assign pos_rand[1] = {~(64'd2400 << 32) + 64'd1,(64'd4800 << 32) + difficulty,64'd2500 << 32};
+assign pos_rand[2] = {~(64'd2400 << 32) + 64'd1,(64'd5760 << 32) + difficulty,~(64'd1000 << 32) + 64'd1};
+assign pos_rand[3] = {~(64'd2400 << 32) + 64'd1,(64'd2680 << 32) + difficulty,~(64'd3000 << 32) + 64'd1};
+
+assign vel_rand[0] = {64'd300 << 32,{26{random[0]}},random[47:32],22'd0,{26{random[1]}},random[31:16],22'd0};
+assign vel_rand[1] = {64'd300 << 32,{26{random[2]}},random[62:47],22'd0,{26{random[3]}},random[46:31],22'd0};
+assign vel_rand[2] = {64'd300 << 32,{26{random[4]}},random[61:46],22'd0,{26{random[5]}},random[45:30],22'd0};
+assign vel_rand[3] = {64'd300 << 32,{26{random[6]}},random[60:45],22'd0,{26{random[7]}},random[44:29],22'd0};
 
 /*assign pos_rand[0] = {~(64'd2400 << 32) + 64'd1,64'd4800 << 32,~(64'd2400 << 32) + 64'd1};
 assign pos_rand[1] = {~(64'd2400 << 32) + 64'd1,64'd4800 << 32,64'd2400 << 32};
@@ -101,12 +103,14 @@ always_ff @ (posedge Clk or posedge Reset) begin
 		pos <= pos_reset;
 		col <= col_rand;
 		vel <= vel_reset;
-		Frame_Clk_old = 1'b1;
+		Frame_Clk_old <= 1'b1;
+		difficulty <= 64'd0;
 	end
 	else begin
 		pos <= pos_n;
 		vel <= vel_n;
 		col <= col_n;
+		difficulty = difficulty + 64'h0000000000000040;
 		Frame_Clk_old <= Frame_Clk;
 	end
 end

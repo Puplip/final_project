@@ -6,12 +6,20 @@ module  color_mapper (
 	input is_ball,
 	input fixed_real zcomp,
    input [9:0] DrawX, DrawY,
+	input endGame,
+	input Pause,
+	input Clk,
 	input color colin,
 	output color col
 );
 
+
+logic out, outpause;
 fixed_real zcompfixed;
 logic [7:0] shade;
+
+pauselut pl(.*, .out(outpause), .in({2'b00, DrawX - 10'd272, 2'b00, DrawY - 10'd192}));
+gameoverlut gol(.*, .in({2'b00, DrawX - 10'd272, 2'b00, DrawY - 10'd192}));
 
 always_comb begin
 	
@@ -50,29 +58,6 @@ always_comb begin
 			col[1] = 8'h00;
 			col[0] = 8'h00;
 		end
-		/*
-		end else if (zcomp[63] == 1'b0) begin
-			distance = 64'h0000000600000000 / zcomp;
-			//distance = 64'h0000000600000000 / ((~zcomp) + 1'b1);
-			
-			ovdist = distance[15:0];
-			ovrand = {13'd0, random[4:0]};
-			
-			mult = ovdist * ovrand;
-			
-			if (mult > 16'h01FE)
-				mult = 16'h01FE;
-			
-			col[2] = {8'hFF - mult[8:1]};
-			col[1] = {8'hFF - mult[8:1]};
-			col[0] = {8'hFF - mult[8:1]};
-		end else
-		begin
-			col[2] = 8'h00;
-			col[1] = 8'h00;
-			col[0] = 8'h00;
-		end
-		*/
 		
 		if ((DrawX == 10'd320 & (DrawY < 10'd244 & DrawY > 10'd236)) ||
 			(DrawY == 10'd240 & (DrawX < 10'd324 & DrawX > 10'd316)))
@@ -80,6 +65,17 @@ always_comb begin
 			col[2] = ~col[2];
 			col[1] = ~col[1];
 			col[0] = ~col[0];
+		end
+		
+		if (out && endGame) begin
+			col[2] = 8'hff;
+			col[1] = 8'hff;
+			col[0] = 8'hff;
+		end
+		if (outpause && Pause) begin
+			col[2] = 8'hff;
+			col[1] = 8'h00;
+			col[0] = 8'h00;
 		end
 end
 endmodule 

@@ -10,7 +10,8 @@ module final_top_level (
 	output logic VGA_CLK, VGA_SYNC_N, VGA_BLANK_N, VGA_VS, VGA_HS,
 	output logic [17:0] LEDR,
 	output logic [7:0] LEDG,
-	input logic [7:0] SW
+	input logic [7:0] SW,
+	output logic [6:0] HEX0, HEX1, HEX2, HEX3, HEX4, HEX5
 );
 
 enum logic [7:0] {
@@ -42,9 +43,23 @@ color Best_col, Best_col_n;
 logic Click, Hit;
 logic [1:0] Hit_in;
 	
-sphere_reg_4 sph4(.Clk(CLOCK_50),.Frame_Clk(Frame_Clk),.Reset(~KEY[0]),.Hit(Hit),.Hit_index(Hit_in),.Read_index(Read_Sphere_in),.Sphere_pos(Curr_Sphere_pos),.Sphere_col(Sphere_col),.curr_index(Curr_Sphere_in));
+logic [3:0] Dropped;	
+logic [15:0] Score, Lives;
+logic Pause;
+
+logic endGame = 1'b0;
+
+hexdriver hd0(.In(Score[3:0]), .Out(HEX0));
+hexdriver hd1(.In(Score[7:4]), .Out(HEX1));
+hexdriver hd2(.In(Score[11:8]), .Out(HEX2));
+hexdriver hd3(.In(Score[15:12]), .Out(HEX3));
+
+hexdriver hd4(.In(Lives[3:0]), .Out(HEX4));
+hexdriver hd5(.In(Lives[7:4]), .Out(HEX5));
+
+sphere_reg_4 sph4(.Clk(CLOCK_50),.Frame_Clk(Frame_Clk & ~Pause),.Reset(~KEY[0]),.Hit(Hit),.Hit_index(Hit_in),.Read_index(Read_Sphere_in),.Sphere_pos(Curr_Sphere_pos),.Sphere_col(Sphere_col),.curr_index(Curr_Sphere_in), .dropped(Dropped));
 	
-color_mapper colmap(.is_ball(Best_Dist != 64'hefffffffffffffff), .DrawX(WriteX), .DrawY(WriteY), .colin(Best_col), .col(Write_col), .phi(Phi + dPhi));
+color_mapper colmap(.is_ball(Best_Dist != 64'hefffffffffffffff), .DrawX(WriteX), .DrawY(WriteY), .colin(Best_col), .col(Write_col), .zcomp(Phi + dPhi), .Clk(CLOCK_50), .endGame(endGame), .Pause(Pause));
 
 collision_detection cd(.sphere(Curr_Sphere_pos), .ray(Cast_Ray), .tbest(Best_Dist), .tnew(Curr_Dist), .Collision(Collision));
 
@@ -62,13 +77,15 @@ vga_clk vga_clk_instance(.inclk0(CLOCK_50), .c0(VGA_CLK));
 
 hit_detection hd(.*,.Clk(CLOCK_50));
 
+score_handler sh (.*, .Clk(CLOCK_50), .Reset(~KEY[0]), .gameOver(endGame));
+
 logic [8:0] mouse_dx, mouse_dy;
-logic mouse_m1, mouse_packet;
+logic mouse_m1, mouse_m2, mouse_packet;
 logic [7:0] test_state;
 
-ps2_mouse_controller ps2m(.Clk(CLOCK_50), .Reset(~KEY[0]),.PS2_MSCLK(PS2_KBCLK),.PS2_MSDAT(PS2_KBDAT),.Mouse_LeftClick(mouse_m1),.Mouse_dx(mouse_dx),.Mouse_dy(mouse_dy),.packetReceived(mouse_packet));
+ps2_mouse_controller ps2m(.Clk(CLOCK_50), .Reset(~KEY[0]),.PS2_MSCLK(PS2_KBCLK),.PS2_MSDAT(PS2_KBDAT),.Mouse_LeftClick(mouse_m1), .Mouse_RightClick(mouse_m2),.Mouse_dx(mouse_dx),.Mouse_dy(mouse_dy),.packetReceived(mouse_packet));
 
-input_handler ih(.*,.Reset(~KEY[0]),.Clk(CLOCK_50),.m1(mouse_m1),.m2(),.m3(),.dx(mouse_dx),.dy(mouse_dy),.new_data(mouse_packet),.sensitivity({24'd0,SW,32'd0}));
+input_handler ih(.*,.Reset(~KEY[0]),.Clk(CLOCK_50),.m1(mouse_m1),.m2(mouse_m2),.m3(),.dx(mouse_dx),.dy(mouse_dy),.new_data(mouse_packet),.sensitivity({24'd0,SW,32'd0}), .gameOver(endGame));
 
 assign LEDG[2] = 1'b1;
 assign LEDG[0] = mouse_m1;

@@ -3,35 +3,63 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Setup 'CLOCK_50'
-Slack : -213.444
-TNS   : -20483.999
+Slack : -215.271
+TNS   : -38257.884
 
-Type  : Setup 'PS2_KBCLK'
-Slack : -2.729
-TNS   : -73.947
+Type  : Setup 'KEY[0]'
+Slack : -61.189
+TNS   : -2524.273
 
 Type  : Setup 'vga_clk_instance|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 29.139
-TNS   : 0.000
+Slack : -4.713
+TNS   : -82.958
+
+Type  : Setup 'PS2_KBCLK'
+Slack : -3.088
+TNS   : -101.713
 
 Type  : Hold 'CLOCK_50'
-Slack : 0.179
+Slack : 0.402
 TNS   : 0.000
 
 Type  : Hold 'vga_clk_instance|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 0.404
+Slack : 0.403
 TNS   : 0.000
 
 Type  : Hold 'PS2_KBCLK'
 Slack : 0.440
 TNS   : 0.000
 
+Type  : Hold 'KEY[0]'
+Slack : 1.052
+TNS   : 0.000
+
+Type  : Recovery 'PS2_KBCLK'
+Slack : -1.332
+TNS   : -7.992
+
+Type  : Recovery 'CLOCK_50'
+Slack : -1.120
+TNS   : -841.748
+
+Type  : Removal 'CLOCK_50'
+Slack : 0.609
+TNS   : 0.000
+
+Type  : Removal 'PS2_KBCLK'
+Slack : 1.487
+TNS   : 0.000
+
 Type  : Minimum Pulse Width 'PS2_KBCLK'
 Slack : -3.210
-TNS   : -62.320
+TNS   : -66.175
+
+Type  : Minimum Pulse Width 'KEY[0]'
+Slack : -3.000
+TNS   : -3.000
 
 Type  : Minimum Pulse Width 'CLOCK_50'
-Slack : 9.412
+Slack : 9.411
 TNS   : 0.000
 
 Type  : Minimum Pulse Width 'vga_clk_instance|altpll_component|auto_generated|pll1|clk[0]'

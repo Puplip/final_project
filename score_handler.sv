@@ -3,7 +3,8 @@ module score_handler (
 	input logic Hit,
 	input logic [3:0] Dropped,
 	output logic [15:0] Score,
-	output logic [15:0] Lives
+	output logic [15:0] Lives,
+	output logic gameOver
 );
 
 logic [15:0] Score_n, Lives_n, Dropped_Count;
@@ -19,8 +20,13 @@ always_ff @ (posedge Clk) begin
 		Lives <= 16'd10;
 		Frame_Clk_old <= 1'b1;
 	end else begin
-		Score <= Score_n;
-		Lives <= Lives_n;
+		if (~gameOver)
+			Score <= Score_n;
+		if (~Lives_n[15])
+			Lives <= Lives_n;
+		else
+			Lives <= 16'd0;
+			
 		Frame_Clk_old <= Frame_Clk;
 	end
 end
@@ -28,14 +34,18 @@ end
 always_comb begin
 	Score_n = Score;
 	Lives_n = Lives;
+	gameOver = 1'b0;
 	if(Frame_Clk_posedge) begin
-		if(Hit) begin
+		if(Hit && ~gameOver) begin
 			Score_n = Score + 16'd1;
 		end
 		if(Dropped_Count != 16'b0) begin
 			Lives_n = Lives - Dropped_Count;
 		end
 	end
+	
+	if (Lives == 16'd0)
+		gameOver = 1'b1;
 end
 
 endmodule

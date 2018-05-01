@@ -4,7 +4,7 @@ typedef logic [2:0] [7:0] color;
 
 module hit_detection (
 	input logic Clk, Frame_Clk,
-	input logic Click, WritePixel,
+	input logic Click, Pause, WritePixel,
 	input logic [1:0] Best_in,
 	input logic [9:0] WriteX, WriteY,
 	input fixed_real Best_Dist,
