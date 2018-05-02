@@ -1,0 +1,43 @@
+Quartus II Archive log --	D:/ECE_385/final_project/final_project_tmp_archive.qarlog
+
+Archive:	D:/ECE_385/final_project/final_project_tmp_archive.qar
+Date:		Tue May 01 17:26:30 2018
+Quartus II 64-Bit		15.0.0 Build 145 04/22/2015 SJ Web Edition
+
+	=========== Files Selected: ===========
+D:/ECE_385/final_project/VGA_controller.sv
+D:/ECE_385/final_project/WriteUpdate.sv
+D:/ECE_385/final_project/ang_lut.sv
+D:/ECE_385/final_project/collision_detection.sv
+D:/ECE_385/final_project/color_mapper.sv
+D:/ECE_385/final_project/final_project.qpf
+D:/ECE_385/final_project/final_project_top.out.sdc
+D:/ECE_385/final_project/final_project_top.qsf
+D:/ECE_385/final_project/final_top_level.sv
+D:/ECE_385/final_project/frame_buffer.sv
+D:/ECE_385/final_project/gameoverlut.sv
+D:/ECE_385/final_project/hexdriver.sv
+D:/ECE_385/final_project/hit_detection.sv
+D:/ECE_385/final_project/lut.sv
+D:/ECE_385/final_project/output_files/input_handler.sv
+D:/ECE_385/final_project/output_files/testbench.sv
+D:/ECE_385/final_project/pauselut.sv
+D:/ECE_385/final_project/ps2_mouse_controller.sv
+D:/ECE_385/final_project/random.sv
+D:/ECE_385/final_project/score_handler.sv
+D:/ECE_385/final_project/sphere_reg.sv
+D:/ECE_385/final_project/vector.sv
+D:/ECE_385/final_project/vga_clk.ppf
+D:/ECE_385/final_project/vga_clk.qip
+D:/ECE_385/final_project/vga_clk.v
+d:/altera/15.0/quartus/bin64/assignment_defaults.qdf
+	======= Total: 26 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.
+
+
+******* Archived project restoration attempt on Tue May 01 17:26:33 2018
+Source archive file:	D:/ECE_385/final_project/final_project_tmp_archive.qar
+Archive was extracted into	F:/nth2_erikj2_final/
+		 - successfully.

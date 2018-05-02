@@ -32,7 +32,6 @@ fixed_real random;
 logic Frame_Clk_old, posedge_frame_clk;
 
 vector gravity;
-assign gravity = {~(64'd4 << 32) + 64'd1,64'd0,64'd0};
 
 assign acc[0] = gravity;
 assign acc[1] = gravity;
@@ -41,10 +40,10 @@ assign acc[3] = gravity;
 
 fixed_real difficulty = 64'd0;
 
-assign pos_rand[0] = {~(64'd2400 << 32) + 64'd1,(64'd2840 << 32) + difficulty,64'd1500 << 32};
-assign pos_rand[1] = {~(64'd2400 << 32) + 64'd1,(64'd3800 << 32) + difficulty,64'd3500 << 32};
-assign pos_rand[2] = {~(64'd2400 << 32) + 64'd1,(64'd4760 << 32) + difficulty,~(64'd1000 << 32) + 64'd1};
-assign pos_rand[3] = {~(64'd2400 << 32) + 64'd1,(64'd3680 << 32) + difficulty,~(64'd4000 << 32) + 64'd1};
+assign pos_rand[0] = {~(64'd2400 << 32) + 64'd1,(64'd3340 << 32) + difficulty,64'd1500 << 32};
+assign pos_rand[1] = {~(64'd2400 << 32) + 64'd1,(64'd4300 << 32) + difficulty,64'd3500 << 32};
+assign pos_rand[2] = {~(64'd2400 << 32) + 64'd1,(64'd5260 << 32) + difficulty,~(64'd1000 << 32) + 64'd1};
+assign pos_rand[3] = {~(64'd2400 << 32) + 64'd1,(64'd4180 << 32) + difficulty,~(64'd4000 << 32) + 64'd1};
 
 assign vel_rand[0] = {64'd200 << 32,{26{random[0]}},random[47:32],22'd0,{26{random[1]}},random[31:16],22'd0};
 assign vel_rand[1] = {64'd200 << 32,{26{random[2]}},random[62:47],22'd0,{26{random[3]}},random[46:31],22'd0};
@@ -105,12 +104,14 @@ always_ff @ (posedge Clk or posedge Reset) begin
 		vel <= vel_reset;
 		Frame_Clk_old <= 1'b1;
 		difficulty <= 64'd0;
+		gravity <= {~(64'd4 << 32) + 64'd1,64'd0,64'd0};
 	end
 	else begin
 		pos <= pos_n;
 		vel <= vel_n;
 		col <= col_n;
-		difficulty = difficulty + 64'h0000000000000002;
+		difficulty <= difficulty + 64'h0000000000000F00;
+		gravity[2] = gravity[2] - 64'h0000000000000002;
 		Frame_Clk_old <= Frame_Clk;
 	end
 end
@@ -164,4 +165,3 @@ end
 
 
 endmodule
-

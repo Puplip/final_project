@@ -372,10 +372,10 @@ wgt_mean wm1(.low(cosTheta_0),.high(cosTheta_1),.out(cosTheta_fix),.wgt(theta[31
 wgt_mean wm2(.low(sinPhi_0),.high(sinPhi_1),.out(sinPhi_fix),.wgt(phi[31:30]));
 wgt_mean wm3(.low(cosPhi_0),.high(cosPhi_1),.out(cosPhi_fix),.wgt(phi[31:30]));
 
-mult_real m0(.a(sinTheta_fix),.b(sinPhi_fix),.c(y));
-mult_real m1(.a(sinTheta_fix),.b(cosPhi_fix),.c(z));
+mult_real m0(.a(sinPhi_fix),.b(sinTheta_fix),.c(y));
+mult_real m1(.a(sinPhi_fix),.b(cosTheta_fix),.c(x));
 
-assign x = cosTheta_fix;
+assign z = cosPhi_fix;
 
 assign ray = {z,y,x};
 

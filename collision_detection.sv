@@ -15,10 +15,8 @@ logic [31:0] sqrtsmol;
 dot_product_scale vdxc(.a(ray), .b(sphere), .c(v), .s()); //3 mults
 dot_product_scale cc(.a(sphere), .b(sphere), .c(cdot), .s()); //3 mults
 mult_real vsqrmod(.a(v), .b(v), .c(vsqr)); // 1 mult
-sqrt_real rbsqrt(.a(disc), .c(sqrt));
 
 sqrt_real_32 sqrtsmall(.a(disc[63:32]), .c(sqrtsmol));
-mult_real belowFloor(.a(v-sqrtsmol), .b(~ray[2]+1), .c(out));
 
 
 //radius of sphere: d'32 = b'10 0000
@@ -33,8 +31,8 @@ always_comb begin
 	tnew = tbest;
 	
 	//if (tbest > v - rad) begin
-	if ((radsq > bsqr || bsqr[63]) && (out < (64'd2400 << 32) || ray[2][63] == 1'b0)) begin
-		tnew = v - sqrt;
+	if ((radsq > bsqr || bsqr[63])) begin
+		tnew = v - {8'b0,sqrtsmol,24'b0};
 		Collision = 1'b1;
 	end
 	

@@ -30,22 +30,17 @@ always_comb begin
 			col[2] = colin[2];
 			col[1] = colin[1];
 			col[0] = colin[0];
-		end else if (zcomp > (64'd90 << 32) && zcomp < (64'd270 << 32)) begin
-			if (zcomp > 64'd180 << 32)
-				zcompfixed = (64'd270 << 32) - zcomp;
-			else	
-				zcompfixed = zcomp - (64'd90 << 32);
-				
-				
-			if (zcompfixed[39:32] < 64'd4)
+		end else if (zcomp[63]) begin
+			zcompfixed = ~zcomp+64'b1;
+			if (zcompfixed < 64'd1 << 29)
 				shade = 8'b00111111 + (8'b01000000 && {8{(DrawX[0] ^ DrawY[0])}});
-			else if (zcompfixed[39:32] < 64'd12)
+			else if (zcompfixed < 64'd1 << 30)
 				shade = 8'b01111111;
-			else if (zcompfixed[39:32] < 64'd21)
+			else if (zcompfixed < 64'd2 << 30)
 				shade = 8'b01111111 + (8'b01000000 && {8{(DrawX[0] ^ DrawY[0])}});
-			else if (zcompfixed[39:32] < 64'd30)
+			else if (zcompfixed < 64'd3 << 30)
 				shade = 8'b10111111;
-			else if (zcompfixed[39:32] < 64'd40)
+			else if (zcompfixed < 64'd7 << 29)
 				shade = 8'b10111111 + (8'b01000000 && {8{(DrawX[0] ^ DrawY[0])}});
 			else
 				shade = 8'b11111111;
